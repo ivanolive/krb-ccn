@@ -1,0 +1,38 @@
+library(plotly)
+
+sk50 = read.csv("./1024/public_key/throughput_pk_50_50.csv",sep=',')$thput
+pk50 = read.csv("./1024/symm_key/throughput_sk_50_50.csv",sep=',')$thput
+
+sk100 = read.csv("./1024/public_key/throughput_pk_100_100.csv",sep=',')$thput
+pk100 = read.csv("./1024/symm_key/throughput_sk_100_100.csv",sep=',')$thput
+
+sk150 = read.csv("./1024/public_key/throughput_pk_150_150.csv",sep=',')$thput
+pk150 = read.csv("./1024/symm_key/throughput_sk_150_150.csv",sep=',')$thput
+
+sk200 = read.csv("./1024/public_key/throughput_pk_200_200.csv",sep=',')$thput
+pk200 = read.csv("./1024/symm_key/throughput_sk_200_200.csv",sep=',')$thput
+
+sk250 = read.csv("./1024/public_key/throughput_pk_250_250.csv",sep=',')$thput
+pk250 = read.csv("./1024/symm_key/throughput_sk_250_250.csv",sep=',')$thput
+
+sk300 = read.csv("./1024/public_key/throughput_pk_300_300.csv",sep=',')$thput
+pk300 = read.csv("./1024/symm_key/throughput_sk_300_300.csv",sep=',')$thput
+
+CLIENTS = c("050","100","150","200","250","300")
+
+SYMM = c(mean(sk50),mean(sk100),mean(sk150),mean(sk200),mean(sk250),mean(sk300))
+PKE = c(mean(pk50),mean(pk100),mean(pk150),mean(pk200),mean(pk250),mean(pk300))
+
+symm_sd = c(sd(sk50),sd(sk100),sd(sk150),sd(sk200),sd(sk250),sd(sk300))
+pk_sd = c(sd(pk50),sd(pk100),sd(pk150),sd(pk200),sd(pk250),sd(pk300))
+
+data <- data.frame(CLIENTS, SYMM, PKE)
+
+png("teste_plotly.png")
+
+p <- plot_ly(data, x = ~CLIENTS, y = ~SYMM, type = 'bar', name = 'SYMM') %>%
+  add_trace(y = ~PKE, name = 'PKE') %>%
+  layout(yaxis = list(title = 'Throughput (Mbps)'), barmode = 'group')
+
+dev.off()
+

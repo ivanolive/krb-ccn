@@ -1,0 +1,93 @@
+\documentclass[conference,letterpaper,10pt]{IEEEtran}
+\usepackage{blindtext, graphicx, url, paralist}
+
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+
+\usepackage{microtype}
+
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{fixltx2e}
+
+\usepackage{multirow}
+
+\usepackage{algorithm2e}
+\usepackage{algorithm,algorithmic}
+\usepackage{xcolor}
+\newcommand\todo[1]{\textcolor{red}{#1}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newtheorem{definition}{\textbf{Definition}}[section]
+\newtheorem{theorem}{\textbf{Claim}}[section]
+\newtheorem{corollary}{\textbf{Corollary}}[theorem]
+\newtheorem{lemma}[theorem]{\textbf{Lemma}}
+
+\begin{document}
+
+\title{Tunnels to Towers: Secure Virtual Private Networking for CCN}
+
+
+\maketitle
+
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+%Human Mobility, Group Detection, Group Dynamics, Periodicity, Opportunistic Routing.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\input{01-introduction}
+\input{02-overview}
+\input{03-related}
+\input{04-design}
+\input{05-sec-analysis}
+\input{06-perf-analysis}
+\input{07-experiment}
+%\input{08-security}
+
+\section{Conclusion}\label{conclusion}
+\todo{TODO}
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\tiny
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{picture}}]{John Doe}
+% \blindtext
+% \end{IEEEbiography}
+
+\end{document}

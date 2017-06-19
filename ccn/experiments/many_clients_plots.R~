@@ -1,0 +1,24 @@
+
+v1 = read.csv("./public_key/throughput_pk_10_1.csv",sep=',')
+v2 = read.csv("./symm_key/throughput_sk_10_1.csv",sep=',')
+
+v10 = read.csv("./public_key/throughput_pk_100_1.csv",sep=',')
+v20 = read.csv("./symm_key/throughput_sk_100_1.csv",sep=',')
+
+v100 = read.csv("./public_key/throughput_pk_1000_1.csv",sep=',')
+v200 = read.csv("./symm_key/throughput_sk_1000_1.csv",sep=',')
+
+v1000 = read.csv("./public_key/throughput_pk_1000_1.csv",sep=',')
+v2000 = read.csv("./symm_key/throughput_sk_1000_1.csv",sep=',')
+
+
+png("many_throughput.png")
+y1 = c(10*mean(v1$thput),100*mean(v10$thput),1000*mean(v100$thput),2000*mean(v1000$thput))
+y2 = c(10*mean(v2$thput),100*mean(v20$thput),1000*mean(v200$thput),2000*mean(v2000$thput))
+barplot(cex.lab=1.5, cex.axis=1.5, cex.main=2.0, cex.sub=2.0,8*(y1)/1000000,names=c("10","100","1000","2000"),xlab="Number of consumers",ylab="Sum of total data rate received by all consumers [mbps]", col="darkgreen",ylim=c(0,10+max(8*(y1)/1000000,8*(y2)/1000000)),space=1)
+par(new = TRUE)
+barplot(cex.lab=1.5, cex.axis=1.5, cex.main=2.0, cex.sub=2.0,8*(y2)/1000000, col="yellow",space=1.5,ylim=c(0,10+max(8*(y1)/1000000,8*(y2)/1000000)))
+legend('topleft', c("Symmetric","PKE"), fill=c("darkgreen", "yellow"), cex=1.5)
+dev.off()
+
+
