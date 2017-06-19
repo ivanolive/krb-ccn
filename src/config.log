@@ -681,11 +681,11 @@ conftest.c:43:22: warning: null argument where non-null required (argument 1) [-
                       pthread_create(0,0,0,0); pthread_cleanup_pop(0);
                       ^
 conftest.c:43:22: warning: null argument where non-null required (argument 3) [-Wnonnull]
-/tmp/ccqtR2aC.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:41: undefined reference to `pthread_join'
-/home/ivan/workspace/ccn-krb/src/conftest.c:42: undefined reference to `__pthread_register_cancel'
-/home/ivan/workspace/ccn-krb/src/conftest.c:43: undefined reference to `pthread_create'
-/home/ivan/workspace/ccn-krb/src/conftest.c:43: undefined reference to `__pthread_unregister_cancel'
+/tmp/cccQ8g5u.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:41: undefined reference to `pthread_join'
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:42: undefined reference to `__pthread_register_cancel'
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:43: undefined reference to `pthread_create'
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:43: undefined reference to `__pthread_unregister_cancel'
 collect2: error: ld returned 1 exit status
 configure:6005: $? = 1
 configure: failed program was:
@@ -926,8 +926,8 @@ configure:6168: PTHREAD_CFLAGS = -pthread
 configure:6170: PTHREAD_LIBS = 
 configure:6219: checking for pthread_once
 configure:6219: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/ccsrHTjU.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:72: undefined reference to `pthread_once'
+/tmp/ccxGfVdO.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:72: undefined reference to `pthread_once'
 collect2: error: ld returned 1 exit status
 configure:6219: $? = 1
 configure: failed program was:
@@ -1009,8 +1009,8 @@ configure: failed program was:
 configure:6219: result: no
 configure:6219: checking for pthread_rwlock_init
 configure:6219: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/ccAvmCuO.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:72: undefined reference to `pthread_rwlock_init'
+/tmp/cc97XRYS.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:72: undefined reference to `pthread_rwlock_init'
 collect2: error: ld returned 1 exit status
 configure:6219: $? = 1
 configure: failed program was:
@@ -1097,8 +1097,8 @@ configure:6263: $? = 0
 configure:6272: result: yes
 configure:6287: checking for library containing dlopen
 configure:6318: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/ccM76nCW.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:50: undefined reference to `dlopen'
+/tmp/ccnpvdzQ.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:50: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:6318: $? = 1
 configure: failed program was:
@@ -1906,8 +1906,8 @@ configure:7942: $? = 0
 configure:7942: result: yes
 configure:7942: checking for strlcpy
 configure:7942: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/cczP2V3j.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:89: undefined reference to `strlcpy'
+/tmp/ccj474W9.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:89: undefined reference to `strlcpy'
 collect2: error: ld returned 1 exit status
 configure:7942: $? = 1
 configure: failed program was:
@@ -2540,12 +2540,12 @@ configure:9032: checking lex output file root
 configure:9046: result: lex.yy
 configure:9051: checking lex library
 configure:9065: gcc -o conftest -g -O2   conftest.c  -lresolv  >&5
-/tmp/cchNzZzv.o: In function `input':
-/home/ivan/workspace/ccn-krb/src/lex.yy.c:1183: undefined reference to `yywrap'
-/tmp/cchNzZzv.o: In function `yylex':
-/home/ivan/workspace/ccn-krb/src/lex.yy.c:882: undefined reference to `yywrap'
-/tmp/cchNzZzv.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.l:18: undefined reference to `yywrap'
+/tmp/ccAkoNmk.o: In function `input':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/lex.yy.c:1183: undefined reference to `yywrap'
+/tmp/ccAkoNmk.o: In function `yylex':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/lex.yy.c:882: undefined reference to `yywrap'
+/tmp/ccAkoNmk.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.l:18: undefined reference to `yywrap'
 collect2: error: ld returned 1 exit status
 configure:9065: $? = 1
 configure: failed program was:
@@ -4518,8 +4518,8 @@ configure:9450: $? = 0
 configure:9450: result: yes
 configure:9450: checking for bswap16
 configure:9450: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/ccLWinpo.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:131: undefined reference to `bswap16'
+/tmp/ccr2APFh.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:131: undefined reference to `bswap16'
 collect2: error: ld returned 1 exit status
 configure:9450: $? = 1
 configure: failed program was:
@@ -4660,8 +4660,8 @@ configure: failed program was:
 configure:9450: result: no
 configure:9450: checking for bswap64
 configure:9450: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/ccd0llZo.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:131: undefined reference to `bswap64'
+/tmp/ccJvqogi.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:131: undefined reference to `bswap64'
 collect2: error: ld returned 1 exit status
 configure:9450: $? = 1
 configure: failed program was:
@@ -7363,8 +7363,8 @@ configure:9890: $? = 0
 configure:9915: result: gid_t
 configure:9924: checking for sigsetjmp
 configure:9924: gcc -o conftest -g -O2   conftest.c -lresolv  >&5
-/tmp/cc9VpJ8d.o: In function `main':
-/home/ivan/workspace/ccn-krb/src/conftest.c:165: undefined reference to `sigsetjmp'
+/tmp/cc8CJBm7.o: In function `main':
+/home/ivan/workspace/krb-ccn/krb-ccn/src/conftest.c:165: undefined reference to `sigsetjmp'
 collect2: error: ld returned 1 exit status
 configure:9924: $? = 1
 configure: failed program was:
@@ -13615,215 +13615,9 @@ configure:12717: checking for readline support
 configure:12737: result: not using any
 configure:12810: checking for verto_set_flags in -lverto
 configure:12835: gcc -o conftest -g -O2   conftest.c -lverto  -lresolv  >&5
-/usr/bin/ld: cannot find -lverto
-collect2: error: ld returned 1 exit status
-configure:12835: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "Kerberos 5"
-| #define PACKAGE_TARNAME "krb5"
-| #define PACKAGE_VERSION "1.15.1"
-| #define PACKAGE_STRING "Kerberos 5 1.15.1"
-| #define PACKAGE_BUGREPORT "krb5-bugs@mit.edu"
-| #define PACKAGE_URL ""
-| #define STDC_HEADERS 1
-| #define HAVE_SYS_TYPES_H 1
-| #define HAVE_SYS_STAT_H 1
-| #define HAVE_STDLIB_H 1
-| #define HAVE_STRING_H 1
-| #define HAVE_MEMORY_H 1
-| #define HAVE_STRINGS_H 1
-| #define HAVE_INTTYPES_H 1
-| #define HAVE_STDINT_H 1
-| #define HAVE_UNISTD_H 1
-| #define _GNU_SOURCE 1
-| #define __STDC_WANT_LIB_EXT1__ 1
-| #define HAVE_COM_ERR_INTL 1
-| #define HAVE_BT_RSEQ 1
-| #define KRB5_DNS_LOOKUP 1
-| #define HAVE_LIBRESOLV 1
-| #define HAVE_RES_NINIT 1
-| #define HAVE_RES_NCLOSE 1
-| #define HAVE_RES_NSEARCH 1
-| #define HAVE_NS_INITPARSE 1
-| #define HAVE_NS_NAME_UNCOMPRESS 1
-| #define HAVE_DN_SKIPNAME 1
-| #define HAVE_RES_SEARCH 1
-| #define HAVE_PRAGMA_WEAK_REF 1
-| #define DELAY_INITIALIZER 1
-| #define CONSTRUCTOR_ATTR_WORKS 1
-| #define DESTRUCTOR_ATTR_WORKS 1
-| #define ENABLE_THREADS 1
-| #define HAVE_PTHREAD 1
-| #define HAVE_PTHREAD_RWLOCK_INIT_IN_THREAD_LIB 1
-| #define USE_DLOPEN 1
-| #define HAS_VA_COPY 1
-| #define HAVE_REGCOMP 1
-| #define GETSOCKNAME_ARG2_TYPE struct sockaddr
-| #define GETSOCKNAME_ARG3_TYPE socklen_t
-| #define GETPEERNAME_ARG2_TYPE GETSOCKNAME_ARG2_TYPE
-| #define GETPEERNAME_ARG3_TYPE GETSOCKNAME_ARG3_TYPE
-| #define HAVE_LIBUTIL 1
-| #define ENABLE_NLS 1
-| #define HAVE_IFADDRS_H 1
-| #define HAVE_UNISTD_H 1
-| #define HAVE_FNMATCH_H 1
-| #define HAVE_STRFTIME 1
-| #define HAVE_VSPRINTF 1
-| #define HAVE_VASPRINTF 1
-| #define HAVE_VSNPRINTF 1
-| #define HAVE_FNMATCH 1
-| #define HAVE_GETOPT 1
-| #define HAVE_GETOPT_LONG 1
-| #define HAVE_SYS_TYPES_H 1
-| #define HAVE_SYS_SOCKET_H 1
-| #define HAVE_NETINET_IN_H 1
-| #define HAVE_NETDB_H 1
-| #define HAVE_INET_NTOP 1
-| #define HAVE_INET_PTON 1
-| #define HAVE_GETNAMEINFO 1
-| #define HAVE_GETADDRINFO 1
-| #define POSIX_SIGNALS 1
-| #define FORTUNA 1
-| #define HAVE_OPENSSL_CMS 1
-| #define TLS_IMPL_OPENSSL 1
-| #define HAVE_CPUID_H 1
-| #define RETSIGTYPE void
-| #define YYTEXT_POINTER 1
-| #define HAVE_DIRENT_H 1
-| #define HAVE_DECL_STRERROR_R 1
-| #define HAVE_STRERROR_R 1
-| #define STRERROR_R_CHAR_P 1
-| #define HAVE_STRDUP 1
-| #define HAVE_SETVBUF 1
-| #define HAVE_SETEUID 1
-| #define HAVE_SETRESUID 1
-| #define HAVE_SETREUID 1
-| #define HAVE_SETEGID 1
-| #define HAVE_SETRESGID 1
-| #define HAVE_SETREGID 1
-| #define HAVE_SETSID 1
-| #define HAVE_FLOCK 1
-| #define HAVE_FCHMOD 1
-| #define HAVE_CHMOD 1
-| #define HAVE_STRFTIME 1
-| #define HAVE_STRPTIME 1
-| #define HAVE_GETEUID 1
-| #define HAVE_SETENV 1
-| #define HAVE_UNSETENV 1
-| #define HAVE_GETENV 1
-| #define HAVE_GMTIME_R 1
-| #define HAVE_LOCALTIME_R 1
-| #define HAVE_MKSTEMP 1
-| #define HAVE_GETUSERSHELL 1
-| #define HAVE_ACCESS 1
-| #define HAVE_GETCWD 1
-| #define HAVE_SRAND48 1
-| #define HAVE_SRAND 1
-| #define HAVE_SRANDOM 1
-| #define HAVE_STAT 1
-| #define HAVE_STRCHR 1
-| #define HAVE_STRERROR 1
-| #define HAVE_TIMEGM 1
-| #define HAVE_GETTIMEOFDAY 1
-| #define SYS_ERRLIST_DECLARED 1
-| #define HAVE_SYS_ERRLIST 1
-| #define HAVE_UNISTD_H 1
-| #define HAVE_PATHS_H 1
-| #define HAVE_REGEX_H 1
-| #define HAVE_FCNTL_H 1
-| #define HAVE_MEMORY_H 1
-| #define HAVE_IFADDRS_H 1
-| #define HAVE_BYTESWAP_H 1
-| #define HAVE_ENDIAN_H 1
-| #define HAVE_PWD_H 1
-| #define HAVE_ARPA_INET_H 1
-| #define HAVE_ALLOCA_H 1
-| #define HAVE_DLFCN_H 1
-| #define HAVE_LIMITS_H 1
-| #define HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC 1
-| #define HAVE_RE_COMP 1
-| #define HAVE_RE_EXEC 1
-| #define HAVE_REGEXEC 1
-| #define WAIT_USES_INT 1
-| #define USE_SIGPROCMASK 1
-| #define GETGROUPS_T gid_t
-| #define SETRPCENT_TYPE void
-| #define ENDRPCENT_TYPE void
-| #define HAVE_BSWAP_16 1
-| #define HAVE_BSWAP_64 1
-| #define GETHOSTBYNAME_R_RETURNS_INT 1
-| #define HAVE_GETHOSTBYNAME_R 1
-| #define GETPWNAM_R_RETURNS_INT 1
-| #define HAVE_GETPWNAM_R 1
-| #define HAVE_GETPWUID_R 1
-| #define GETSERVBYNAME_R_RETURNS_INT 1
-| #define HAVE_GETSERVBYNAME_R 1
-| #define USE_DIRENT_H 1
-| #define POSIX_TERMIOS 1
-| #define POSIX_SIGTYPE 1
-| #define krb5_sigtype void
-| #define HAVE_POLL_H 1
-| #define HAVE_STDLIB_H 1
-| #define HAVE_STRING_H 1
-| #define HAVE_STDDEF_H 1
-| #define HAVE_SYS_TYPES_H 1
-| #define HAVE_SYS_FILE_H 1
-| #define HAVE_SYS_PARAM_H 1
-| #define HAVE_SYS_STAT_H 1
-| #define HAVE_SYS_TIME_H 1
-| #define HAVE_NETINET_IN_H 1
-| #define HAVE_SYS_UIO_H 1
-| #define HAVE_SYS_SELECT_H 1
-| #define HAVE_TIME_H 1
-| #define HAVE_PATHS_H 1
-| #define HAVE_ERRNO_H 1
-| #define TIME_WITH_SYS_TIME 1
-| #define HAVE_SOCKLEN_T 1
-| #define HAVE_NETDB_H_H_ERRNO 1
-| #define HAVE_STRUCT_CMSGHDR 1
-| #define HAVE_STRUCT_IN_PKTINFO 1
-| #define HAVE_STRUCT_IN6_PKTINFO 1
-| #define HAVE_STRUCT_SOCKADDR_STORAGE 1
-| #define HAVE_SSIZE_T 1
-| #define HAVE_U_CHAR 1
-| #define HAVE_U_INT 1
-| #define HAVE_U_LONG 1
-| #define HAVE_U_INT8_T 1
-| #define HAVE_U_INT16_T 1
-| #define HAVE_U_INT32_T 1
-| #define HAVE_INT8_T 1
-| #define HAVE_INT16_T 1
-| #define HAVE_INT32_T 1
-| #define HAVE_SYS_SELECT_H 1
-| #define HAVE_SYS_TIME_H 1
-| #define HAVE_UNISTD_H 1
-| #define SETRPCENT_TYPE void
-| #define ENDRPCENT_TYPE void
-| #define HAVE_LIBCRYPTO 1
-| #define HAVE_DAEMON 1
-| #define HAVE_GETHOSTBYNAME_R 1
-| #define HAVE_GETSERVBYNAME_R 1
-| #define HAVE_GMTIME_R 1
-| #define HAVE_LOCALTIME_R 1
-| /* end confdefs.h.  */
-| 
-| /* Override any GCC internal prototype to avoid an error.
-|    Use char because int might match the return type of a GCC
-|    builtin and then its argument prototype would still apply.  */
-| #ifdef __cplusplus
-| extern "C"
-| #endif
-| char verto_set_flags ();
-| int
-| main ()
-| {
-| return verto_set_flags ();
-|   ;
-|   return 0;
-| }
-configure:12844: result: no
-configure:12860: result: Using built-in libverto
+configure:12835: $? = 0
+configure:12844: result: yes
+configure:12857: Using system libverto
 configure:12869: checking for groff
 configure:12887: found /usr/bin/groff
 configure:12899: result: /usr/bin/groff
@@ -13971,6 +13765,7 @@ config.status:1332: creating tests/gss-threads/Makefile
 config.status:1332: creating tests/misc/Makefile
 config.status:1332: creating po/Makefile
 config.status:1332: creating include/autoconf.h
+config.status:1512: include/autoconf.h is unchanged
 config.status:1526: executing CRYPTO_IMPL commands
 config.status:1526: executing PRNG_ALG commands
 config.status:1526: executing PKINIT_CRYPTO_IMPL commands
@@ -14152,7 +13947,7 @@ ac_cv_lib_lex=-lfl
 ac_cv_lib_resolv_main=yes
 ac_cv_lib_ssl_SSL_CTX_new=yes
 ac_cv_lib_util_main=yes
-ac_cv_lib_verto_verto_set_flags=no
+ac_cv_lib_verto_verto_set_flags=yes
 ac_cv_member_struct_sockaddr_sa_len=no
 ac_cv_member_struct_stat_st_mtim_tv_nsec=yes
 ac_cv_member_struct_stat_st_mtimensec=no
@@ -14440,7 +14235,7 @@ PTHREAD_CFLAGS='-pthread'
 PTHREAD_LIBS=''
 PYTHON='python'
 RANLIB='ranlib'
-RBUILD='/home/ivan/workspace/ccn-krb/src'
+RBUILD='/home/ivan/workspace/krb-ccn/krb-ccn/src'
 RL_CFLAGS=''
 RL_LIBS=''
 RPATH_FLAG='-Wl,--enable-new-dtags -Wl,-rpath -Wl,'
@@ -14464,7 +14259,7 @@ STRLCPY_OBJ='$(OUTPRE)strlcpy.$(OBJEXT)'
 STRLCPY_ST_OBJ='strlcpy.o'
 SUPPORTLIB_MAJOR='0'
 SYSCONFCONF=':${prefix}/etc/krb5.conf'
-S_TOP='/home/ivan/workspace/ccn-krb/src/.'
+S_TOP='/home/ivan/workspace/krb-ccn/krb-ccn/src/.'
 TCL_INCLUDES=''
 TCL_LIBPATH=''
 TCL_LIBS=''
@@ -14477,7 +14272,7 @@ TLS_IMPL_LIBS='-lssl -lcrypto'
 UNDEF_CHECK='-Wl,--no-undefined'
 VERTO_CFLAGS=''
 VERTO_LIBS='-lverto'
-VERTO_VERSION='k5'
+VERTO_VERSION='sys'
 WARN_CFLAGS=' -Wall -Wcast-align -Wshadow -Wmissing-prototypes -Wno-format-zero-length -Woverflow -Wstrict-overflow -Wmissing-format-attribute -Wmissing-prototypes -Wreturn-type -Wmissing-braces -Wparentheses -Wswitch -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wunknown-pragmas -Wsign-compare -Werror=uninitialized -Werror=pointer-arith -Werror=declaration-after-statement -Werror-implicit-function-declaration'
 WARN_CXXFLAGS=' -Wall -Wcast-align -Wshadow'
 YACC='bison -y'
@@ -14737,81 +14532,6 @@ libpriv_frag='././config/libpriv.in'
 #define DEFCKTNAME "FILE:/etc/krb5/user/%{euid}/client.keytab"
 
 configure: exit 0
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by Kerberos 5 config.status 1.15.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ config.status include/gssrpc/types.h
-
-on ares
-
-config.status:: creating include/gssrpc/types.h
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by Kerberos 5 config.status 1.15.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = kadmin/testing/scripts/env-setup.sh:kadmin/testing/scripts/env-setup.shin
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ config.status 
-
-on ares
-
-config.status:: creating kadmin/testing/scripts/env-setup.sh
-config.status:: creating include/autoconf.h
-config.status:: include/autoconf.h is unchanged
-config.status:: executing CRYPTO_IMPL commands
-config.status:: executing PRNG_ALG commands
-config.status:: executing PKINIT_CRYPTO_IMPL commands
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by Kerberos 5 config.status 1.15.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ config.status include/autoconf.h
-
-on ares
-
-config.status:: creating include/autoconf.h
-config.status:: include/autoconf.h is unchanged
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by Kerberos 5 config.status 1.15.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ config.status include/autoconf.h
-
-on ares
-
-config.status:: creating include/autoconf.h
-config.status:: include/autoconf.h is unchanged
 
 ## ---------------------- ##
 ## Running config.status. ##

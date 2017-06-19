@@ -8,12 +8,12 @@
 #  top_srcdir=..
 # but these are only set by autoconf 2.53, and thus not useful to us on
 # Mac OS X yet (as of 10.2):
-#  abs_srcdir=/home/ivan/workspace/ccn-krb/src/clients
-#  abs_top_srcdir=/home/ivan/workspace/ccn-krb/src
+#  abs_srcdir=/home/ivan/workspace/krb-ccn/krb-ccn/src/clients
+#  abs_top_srcdir=/home/ivan/workspace/krb-ccn/krb-ccn/src
 #  builddir=.
-#  abs_builddir=/home/ivan/workspace/ccn-krb/src/clients
+#  abs_builddir=/home/ivan/workspace/krb-ccn/krb-ccn/src/clients
 #  top_builddir=..
-#  abs_top_builddir=/home/ivan/workspace/ccn-krb/src
+#  abs_top_builddir=/home/ivan/workspace/krb-ccn/krb-ccn/src
 # The "top" variables refer to the directory with the configure (or
 # config.status) script.
 
@@ -360,8 +360,8 @@ SS_VERSION	= k5
 SS_DEPS		= $(SS_DEPS-k5)
 SS_DEPS-sys	=
 SS_DEPS-k5	= $(BUILDTOP)/include/ss/ss.h $(BUILDTOP)/include/ss/ss_err.h
-VERTO_VERSION	= k5
-VERTO_DEPS	= $(VERTO_DEPS-k5)
+VERTO_VERSION	= sys
+VERTO_DEPS	= $(VERTO_DEPS-sys)
 VERTO_DEPS-sys	=
 VERTO_DEPS-k5	= $(BUILDTOP)/include/verto.h
 
@@ -379,7 +379,7 @@ SS_LIB-sys	=
 SS_LIB-k5	= $(TOPLIBD)/libss.a $(RL_LIBS)
 KDB5_LIB	= -lkdb5 $(KDB5_PLUGIN_LIBS)
 
-VERTO_DEPLIB	= $(VERTO_DEPLIB-k5)
+VERTO_DEPLIB	= $(VERTO_DEPLIB-sys)
 VERTO_DEPLIB-sys = # empty
 VERTO_DEPLIB-k5	= $(TOPLIBD)/libverto$(DEPLIBEXT)
 VERTO_CFLAGS	= 

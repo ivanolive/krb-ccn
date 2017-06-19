@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/ivan/workspace/ccn-krb/src'
+ac_pwd='/home/ivan/workspace/krb-ccn/krb-ccn/src'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 AWK='gawk'
@@ -773,7 +773,7 @@ S["DEFKTNAME"]="FILE:/etc/krb5.keytab"
 S["DEFCCNAME"]="FILE:/tmp/krb5cc_%{uid}"
 S["OSX"]="no"
 S["GROFF"]="/usr/bin/groff"
-S["VERTO_VERSION"]="k5"
+S["VERTO_VERSION"]="sys"
 S["VERTO_LIBS"]="-lverto"
 S["VERTO_CFLAGS"]=""
 S["RL_LIBS"]=""
@@ -807,8 +807,8 @@ S["PRIOCNTL_HACK"]="0"
 S["DO_ALL"]=""
 S["EXPECT"]=""
 S["PERL_PATH"]="/usr/bin/perl"
-S["S_TOP"]="/home/ivan/workspace/ccn-krb/src/."
-S["RBUILD"]="/home/ivan/workspace/ccn-krb/src"
+S["S_TOP"]="/home/ivan/workspace/krb-ccn/krb-ccn/src/."
+S["RBUILD"]="/home/ivan/workspace/krb-ccn/krb-ccn/src"
 S["DO_TEST"]=""
 S["have_PERL"]="perl"
 S["have_RUNTEST"]=""

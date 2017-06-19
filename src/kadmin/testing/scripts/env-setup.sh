@@ -11,8 +11,8 @@
 # Usage: env-setup.sh <command line>
 #
 
-TOP=/home/ivan/workspace/ccn-krb/src/kadmin
-STOP=/home/ivan/workspace/ccn-krb/src/./kadmin
+TOP=/home/ivan/workspace/krb-ccn/krb-ccn/src/kadmin
+STOP=/home/ivan/workspace/krb-ccn/krb-ccn/src/./kadmin
 export TOP
 export STOP
 # These two may be needed in case $libdir references them.
@@ -21,11 +21,11 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib ; eval "libdir=$libdir"; export libdir
 
 # The shared library run time setup
-TOPLIBD=/home/ivan/workspace/ccn-krb/src/lib
-PROG_LIBPATH=-L/home/ivan/workspace/ccn-krb/src/lib
-BUILDTOP=/home/ivan/workspace/ccn-krb/src
+TOPLIBD=/home/ivan/workspace/krb-ccn/krb-ccn/src/lib
+PROG_LIBPATH=-L/home/ivan/workspace/krb-ccn/krb-ccn/src/lib
+BUILDTOP=/home/ivan/workspace/krb-ccn/krb-ccn/src
 # XXX kludge!
-PROG_RPATH=/home/ivan/workspace/ccn-krb/src/lib
+PROG_RPATH=/home/ivan/workspace/krb-ccn/krb-ccn/src/lib
 # This converts $(TOPLIBD) to $TOPLIBD
 cat > /tmp/env_setup$$ <<\EOF
 LD_LIBRARY_PATH=`echo $(PROG_LIBPATH) | sed -e "s/-L//g" -e "s/ /:/g"`
