@@ -1,0 +1,40 @@
+\section{Access Control Restrictions}
+CCN supports two types of content restrictions: {\tt KeyIdRestriction}
+and {\tt ContentObjectHashRestriction}, or KeyID and ContentID, respectively.
+The KeyID restricts content to that which is signed by a key whose hash matches
+the KeyID. The ContentID restricts content to that which hashes to the ContentID.
+Each of these restrictions can be used by any entity in the network, especially
+routers, to verify content.
+
+In this section, we advocate for a new restriction called an {\tt AccessRestriction},
+or AccessID. The AccessID is designed to restrict content to that which satisfies
+a given access control policy. An access control policy is one which binds a given
+content to a specific decryption key. As such, only the owner of the decryption
+can generate an AccessID. (This is necessary since, as we will show, AccessIDs serve
+as committments to a requests. It must not be possible for a malicious user to forge
+a committment to a request.) However, unlike the two prior restrictions, the AccessID
+need not be verifiable by any entity in in the network. Confidentiality is an
+end-to-end goal and not a feature provided by the network.
+
+Given the obvious asymmetry in roles, this implies the use of a digital signatures
+as the AccessID. For example, let $pk$ and $sk$ be public and private key pairs associated with
+some access control policy and owned by consumer $Cr$. One trivial construction for AccessID
+of $N$ with KeyID $k_ID$ is as follows:
+$$
+\mathsf{Sign}_{sk}(N || k_ID) || pk
+$$
+This would bind AccessID to $N$ and the producer's public key. Moreover, it would
+allow any network entity to verify this restriction. However, in many cases, this
+is overly revealing. Routers need not concern themselves with whether or not a
+content matches the requested AccessID. A better construction would therefore limit
+exposing this information to the network. Consider the following alternative:
+$$
+\mathsf{Sign}_{sk}(N || pk || k_ID) || H(N || pk || k_ID)
+$$
+This restricts verificaftion of the AccessID to those who know $pk$, which is not
+otherwise revealed to the network.
+
+An AccessID is inspired by the work of Ghali et al. \cite{ibac15} on
+\emph{interest-based access control}. The idea is to bind principals to
+interests and then make coupled authentication and authorization decisions
+based on this binding. 

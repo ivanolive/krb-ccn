@@ -1,0 +1,105 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{blindtext, graphicx, todonotes, verbatim, url, amsmath, amssymb, subfigure, balance}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+\usepackage{paralist}
+\usepackage{amsthm, framed, graphics}
+\usepackage{fancybox,fancyvrb}
+\usepackage{cite}
+\usepackage[
+    n,
+    advantage,
+    operators,
+    sets,
+    adversary,
+    landau,
+    probability,
+    notions,
+    logic,
+    ff,
+    mm,
+    primitives,
+    events,
+    complexity,
+    asymptotics,
+    keys]{cryptocode}
+
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+%
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newtheorem{definition}{\textbf{Definition}}[section]
+\newtheorem{theorem}{\textbf{Claim}}[section]
+\newtheorem{corollary}{\textbf{Corollary}}[theorem]
+\newtheorem{lemma}[theorem]{\textbf{Lemma}}
+
+\begin{document}
+
+\title{Hydra: Scalable and Lightweight Access Control for Content-Centric Networking}
+
+\author{
+\IEEEauthorblockN{Ivan O. Nunes, Gene Tsudik, Christopher A. Wood$^+$ \thanks{$^+$Supported by the NSF Graduate Research Fellowship DGE-1321846.}}
+\IEEEauthorblockA{University of California Irvine \\
+\{ivanoliv, gene.tsudik, woodc1\}@uci.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+XXX
+\end{abstract}
+
+\begin{IEEEkeywords}
+Content-Centric Networking
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\input{01-introduction}
+\input{03-restriction}
+\input{04-design}
+
+\section{Conclusions and Future Work}\label{sec:conclusion}
+Stuff here, crap there.
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\tiny
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{hydra}
+
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{picture}}]{John Doe}
+%\blindtext
+%\end{IEEEbiography}
+
+\end{document}
