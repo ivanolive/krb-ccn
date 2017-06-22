@@ -1,1 +1,0 @@
-cltest.so kdctest.so
