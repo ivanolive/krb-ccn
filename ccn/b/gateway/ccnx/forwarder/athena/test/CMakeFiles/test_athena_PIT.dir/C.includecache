@@ -1016,7 +1016,7 @@ parc/algol/parc_Object.h
 parc/algol/parc_HashCode.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 ccnx/forwarder/athena/athena_TransportLinkAdapter.h
@@ -1028,15 +1028,15 @@ ccnx/forwarder/athena/athena_PIT.h
 ccnx/forwarder/athena/athena_FIB.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c
 config.h
 -
 stdio.h
 -
 athena.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 athena_PIT.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
 ccnx/common/ccnx_NameSegmentNumber.h
 -
 ccnx/common/ccnx_WireFormatMessage.h
@@ -1062,7 +1062,7 @@ parc/algol/parc_Clock.h
 parc/security/parc_CryptoHash.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
 parc/algol/parc_BitVector.h
 -
 ccnx/common/ccnx_ContentObject.h
@@ -1072,9 +1072,9 @@ ccnx/common/ccnx_Interest.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
 ../athena_PIT.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c
 LongBow/unit-test.h
 -
 stdio.h

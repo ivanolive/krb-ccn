@@ -98,5 +98,5 @@ gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
- /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/command-line/athena/athena_private.c
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_private.c
  gateway/ccnx/forwarder/athena/config.h

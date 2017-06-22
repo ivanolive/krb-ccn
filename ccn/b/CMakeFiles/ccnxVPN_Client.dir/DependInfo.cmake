@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c" "/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o"
-  "/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Stats.c" "/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
-  "/home/ivan/Desktop/projects/ccvpn/ccvpn/consumer/ccnxVPN_Consumer.c" "/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o"
+  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o"
+  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Stats.c" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
+  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/consumer/ccnxVPN_Consumer.c" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

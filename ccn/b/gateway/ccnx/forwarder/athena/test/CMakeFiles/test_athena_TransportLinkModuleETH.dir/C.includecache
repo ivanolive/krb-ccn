@@ -994,7 +994,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
 config.h
 -
 LongBow/runtime.h
@@ -1042,11 +1042,11 @@ ccnx/common/codec/ccnxCodec_TlvPacket.h
 parc/algol/parc_URIAuthority.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleETH.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleETH.c
 config.h
 -
 ../athena_TransportLinkModuleETH.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
 LongBow/unit-test.h
 -
 stdio.h

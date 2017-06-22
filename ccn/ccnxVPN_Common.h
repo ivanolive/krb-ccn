@@ -67,23 +67,26 @@
 /**
  * The `CCNxName` prefix for the server.
  */
-#define ccnxVPN_DefaultPrefix "ccnx:/localhost"
+#define ccnx_DefaultPrefix "ccnx:/localhost"
+#define ccnx_TGT_DefaultPrefix "ccnx:/localhost/TGT"
+#define ccnx_TGS_DefaultPrefix "ccnx:/localhost/TGS"
+#define ccnx_KRB_Serv_DefaultPrefix "ccnx:/localhost/kbr_serv"
 
 /**
  * The default client receive timeout (in microseconds).
  */
-extern const size_t ccnxVPN_DefaultReceiveTimeoutInUs;
+extern const size_t ccnx_DefaultReceiveTimeoutInUs;
 
 /**
  * The default size of a content object payload.
  */
-extern const size_t ccnxVPN_DefaultPayloadSize;
+extern const size_t ccnx_DefaultPayloadSize;
 
 /**
  * The maximum size of a content object payload.
  * 64KB is the limit imposed by the packet structure
  */
-#define ccnxVPN_MaxPayloadSize 64000
+#define ccnx_MaxPayloadSize 64000
 
 /**
  * A default "medium" number of messages to send.

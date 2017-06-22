@@ -66,8 +66,8 @@
 #include <parc/security/parc_Pkcs12KeyStore.h>
 #include <parc/security/parc_IdentityFile.h>
 
-const size_t ccnxVPN_DefaultReceiveTimeoutInUs = 1000000; // 1 second
-const size_t ccnxVPN_DefaultPayloadSize = 4096;
+const size_t ccnx_DefaultReceiveTimeoutInUs = 1000000; // 1 second
+const size_t ccnx_DefaultPayloadSize = 4096;
 const size_t mediumNumberOfVPNs = 100;
 const size_t smallNumberOfVPNs = 10;
 

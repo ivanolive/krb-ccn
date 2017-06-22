@@ -994,7 +994,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 ccnx/forwarder/athena/athena.h
 -
 parc/algol/parc_DisplayIndented.h
@@ -1010,11 +1010,11 @@ ccnx/common/ccnx_NameSegmentNumber.h
 ccnx/forwarder/athena/athena_LRUContentStore.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c
 stdio.h
 -
 ../athena_LRUContentStore.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 LongBow/testing.h
 -
 parc/algol/parc_SafeMemory.h

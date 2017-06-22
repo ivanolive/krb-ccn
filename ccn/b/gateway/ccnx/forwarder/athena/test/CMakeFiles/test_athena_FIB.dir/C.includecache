@@ -944,7 +944,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_FIB.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c
 config.h
 -
 stdio.h
@@ -960,9 +960,9 @@ parc/algol/parc_TreeRedBlack.h
 ccnx/forwarder/athena/athena_FIB.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_FIB.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_FIB.c
 ../athena_FIB.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_FIB.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c
 parc/algol/parc_SafeMemory.h
 -
 LongBow/unit-test.h

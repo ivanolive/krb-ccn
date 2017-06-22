@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/depend.make
@@ -59,16 +59,16 @@ include gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gate
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/flags.make
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o: ../gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c > CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c > CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.i
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c -o CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c -o CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.s
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o.requires:
 
@@ -103,23 +103,53 @@ gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway: /home/ivan/Des
 gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_common.so
 gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libparc.so
 gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable athena_gateway"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/athena_gateway_bin.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable athena_gateway"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/athena_gateway_bin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build: gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway
 
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build
 
+# Object files for target athena_gateway_bin
+athena_gateway_bin_OBJECTS = \
+"CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o"
+
+# External object files for target athena_gateway_bin
+athena_gateway_bin_EXTERNAL_OBJECTS =
+
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: gateway/ccnx/forwarder/athena/libathena.a
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/liblongbow.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/liblongbow-textplain.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /usr/lib/x86_64-linux-gnu/libevent.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /usr/lib/x86_64-linux-gnu/libssl.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /usr/lib/x86_64-linux-gnu/libcrypto.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_api_portal.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_transport_rta.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_api_control.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_api_notify.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_common.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libparc.so
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CMakeFiles/CMakeRelink.dir/athena_gateway"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/athena_gateway_bin.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/CMakeRelink.dir/athena_gateway
+
+.PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/requires: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o.requires
 
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/requires
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/clean:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena_gateway_bin.dir/cmake_clean.cmake
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena_gateway_bin.dir/cmake_clean.cmake
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/clean
 
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/projects/ccvpn/ccvpn /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/command-line/athena /home/ivan/Desktop/projects/ccvpn/ccvpn/b /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb-ccn/krb-ccn/ccn /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/depend
 

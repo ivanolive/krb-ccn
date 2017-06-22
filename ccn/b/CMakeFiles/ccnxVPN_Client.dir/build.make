@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ccnxVPN_Client.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ccnxVPN_Client.dir/flags.make
 
 CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o: CMakeFiles/ccnxVPN_Client.dir/flags.make
 CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o: ../consumer/ccnxVPN_Consumer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/consumer/ccnxVPN_Consumer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/consumer/ccnxVPN_Consumer.c
 
 CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/consumer/ccnxVPN_Consumer.c > CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/consumer/ccnxVPN_Consumer.c > CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.i
 
 CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/consumer/ccnxVPN_Consumer.c -o CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/consumer/ccnxVPN_Consumer.c -o CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.s
 
 CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o.provides.build: CMak
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o: CMakeFiles/ccnxVPN_Client.dir/flags.make
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o: ../ccnxVPN_Common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c > CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c > CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.i
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.s
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o.provides.build: CMakeFiles/ccnx
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o: CMakeFiles/ccnxVPN_Client.dir/flags.make
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o: ../ccnxVPN_Stats.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Stats.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Stats.c
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Stats.c > CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Stats.c > CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.i
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Stats.c -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Stats.c -o CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.s
 
 CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o.requires:
 
@@ -143,13 +143,35 @@ ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o
 ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o
 ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/build.make
 ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ccnxVPN_Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ccnxVPN_Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ccnxVPN_Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CMakeFiles/ccnxVPN_Client.dir/build: ccnxVPN_Client
 
 .PHONY : CMakeFiles/ccnxVPN_Client.dir/build
+
+# Object files for target ccnxVPN_Client
+ccnxVPN_Client_OBJECTS = \
+"CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o" \
+"CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o" \
+"CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
+
+# External object files for target ccnxVPN_Client
+ccnxVPN_Client_EXTERNAL_OBJECTS =
+
+CMakeFiles/CMakeRelink.dir/ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o
+CMakeFiles/CMakeRelink.dir/ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o
+CMakeFiles/CMakeRelink.dir/ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o
+CMakeFiles/CMakeRelink.dir/ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/build.make
+CMakeFiles/CMakeRelink.dir/ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable CMakeFiles/CMakeRelink.dir/ccnxVPN_Client"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ccnxVPN_Client.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+CMakeFiles/ccnxVPN_Client.dir/preinstall: CMakeFiles/CMakeRelink.dir/ccnxVPN_Client
+
+.PHONY : CMakeFiles/ccnxVPN_Client.dir/preinstall
 
 CMakeFiles/ccnxVPN_Client.dir/requires: CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o.requires
 CMakeFiles/ccnxVPN_Client.dir/requires: CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o.requires
@@ -162,6 +184,6 @@ CMakeFiles/ccnxVPN_Client.dir/clean:
 .PHONY : CMakeFiles/ccnxVPN_Client.dir/clean
 
 CMakeFiles/ccnxVPN_Client.dir/depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/projects/ccvpn/ccvpn /home/ivan/Desktop/projects/ccvpn/ccvpn /home/ivan/Desktop/projects/ccvpn/ccvpn/b /home/ivan/Desktop/projects/ccvpn/ccvpn/b /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles/ccnxVPN_Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb-ccn/krb-ccn/ccn /home/ivan/workspace/krb-ccn/krb-ccn/ccn /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ccnxVPN_Client.dir/depend
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c" "/home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/test_athena_LRUContentStore.c.o"
+  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/test_athena_LRUContentStore.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -23,7 +23,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
+  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

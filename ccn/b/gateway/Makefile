@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -122,27 +122,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/CMakeFiles/progress.marks
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles 0
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/CMakeFiles/progress.marks
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/clean
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,17 +141,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/preinstall
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/preinstall
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -177,7 +166,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 .PHONY : help
 
 
@@ -189,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

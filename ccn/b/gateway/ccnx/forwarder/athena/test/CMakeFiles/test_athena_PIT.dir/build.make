@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/depend.make
@@ -59,16 +59,16 @@ include gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/flags.
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/flags.make
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c > CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c > CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.i
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c -o CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_PIT.c -o CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.s
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o.requires:
 
@@ -103,8 +103,8 @@ gateway/ccnx/forwarder/athena/test/test_athena_PIT: /home/ivan/Desktop/projects/
 gateway/ccnx/forwarder/athena/test/test_athena_PIT: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libccnx_common.so
 gateway/ccnx/forwarder/athena/test/test_athena_PIT: /home/ivan/Desktop/projects/CCNx_Distillery/usr/lib/libparc.so
 gateway/ccnx/forwarder/athena/test/test_athena_PIT: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test_athena_PIT"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_athena_PIT.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable test_athena_PIT"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_athena_PIT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/build: gateway/ccnx/forwarder/athena/test/test_athena_PIT
@@ -116,10 +116,10 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/requires: gate
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/requires
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/clean:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -P CMakeFiles/test_athena_PIT.dir/cmake_clean.cmake
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -P CMakeFiles/test_athena_PIT.dir/cmake_clean.cmake
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/clean
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/projects/ccvpn/ccvpn /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test /home/ivan/Desktop/projects/ccvpn/ccvpn/b /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb-ccn/krb-ccn/ccn /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/depend
 

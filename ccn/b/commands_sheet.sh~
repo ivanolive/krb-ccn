@@ -1,0 +1,10 @@
+#FORWARDER
+/home/ivan/Desktop/projects/CCNx_Distillery/build/Athena/ccnx/forwarder/athena/command-line/athena
+
+#CLIENT
+./ccnxVPN_Client -l ccnx:/producer/1 -c 1 -s 1024 -f 1000000 -i consumer_identity1 -p consumer_identity1 
+
+#SERVER
+./ccnxVPN_Server -l ccnx:/producer/1 -i producer_identity1 -p producer_identity1
+
+

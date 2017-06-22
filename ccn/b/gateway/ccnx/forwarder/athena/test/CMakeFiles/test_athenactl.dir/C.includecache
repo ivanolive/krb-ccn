@@ -1072,7 +1072,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_Key.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 ccnx/forwarder/athena/athena_TransportLinkAdapter.h
@@ -1084,15 +1084,15 @@ ccnx/forwarder/athena/athena_PIT.h
 ccnx/forwarder/athena/athena_FIB.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
 athena.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 ccnx/common/ccnx_Interest.h
 -
 parc/algol/parc_BitVector.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c
 config.h
 -
 sys/param.h
@@ -1100,15 +1100,15 @@ sys/param.h
 stdio.h
 -
 athenactl.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
 athena_InterestControl.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
 ccnx/common/validation/ccnxValidation_CRC32C.h
 -
 ccnx/common/codec/ccnxCodec_TlvPacket.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
 ccnx/forwarder/athena/athena.h
 -
 ccnx/api/ccnx_Portal/ccnx_Portal.h
@@ -1120,9 +1120,9 @@ parc/security/parc_IdentityFile.h
 ccnx/transport/transport_rta/config/config_Forwarder_Metis.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athenactl.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athenactl.c
 ../athenactl.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c
 LongBow/unit-test.h
 -
 pthread.h

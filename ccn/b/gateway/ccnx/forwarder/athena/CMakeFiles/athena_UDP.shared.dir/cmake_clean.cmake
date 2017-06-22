@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "libathena_UDP.so"
   "libathena_UDP.so.1.0"
   "libathena_UDP.so.1"
+  "libathena_UDP.pdb"
+  "CMakeFiles/CMakeRelink.dir/libathena_UDP.so"
+  "CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1.0"
+  "CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

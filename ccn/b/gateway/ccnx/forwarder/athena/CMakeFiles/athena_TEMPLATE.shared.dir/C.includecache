@@ -766,7 +766,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleTEMPLATE.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleTEMPLATE.c
 config.h
 -
 LongBow/runtime.h

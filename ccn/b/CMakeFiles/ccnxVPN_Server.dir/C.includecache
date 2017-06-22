@@ -754,11 +754,11 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c
 stdio.h
 -
 ccnxVPN_Common.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
 LongBow/runtime.h
 -
 parc/security/parc_Security.h
@@ -768,13 +768,13 @@ parc/security/parc_Pkcs12KeyStore.h
 parc/security/parc_IdentityFile.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
 stdint.h
 -
 ccnx/api/ccnx_Portal/ccnx_Portal.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/producer/ccnxVPN_Producer.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/producer/ccnxVPN_Producer.c
 stdio.h
 -
 getopt.h
@@ -794,5 +794,5 @@ ccnx/api/ccnx_Portal/ccnx_Portal.h
 ccnx/api/ccnx_Portal/ccnx_PortalRTA.h
 -
 ../ccnxVPN_Common.h
-/home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
 

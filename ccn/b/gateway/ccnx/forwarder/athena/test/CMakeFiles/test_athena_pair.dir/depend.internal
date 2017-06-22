@@ -117,6 +117,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/test_athena_p
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
- /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c
- /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_pair.c
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_pair.c
  gateway/ccnx/forwarder/athena/config.h

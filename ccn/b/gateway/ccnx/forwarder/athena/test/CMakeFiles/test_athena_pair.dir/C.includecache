@@ -994,7 +994,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_Key.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
 config.h
 -
 pthread.h
@@ -1030,9 +1030,9 @@ parc/logging/parc_LogReporterTextStdout.h
 parc/algol/parc_Clock.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_pair.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_pair.c
 ../athena.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
 LongBow/unit-test.h
 -
 parc/algol/parc_SafeMemory.h

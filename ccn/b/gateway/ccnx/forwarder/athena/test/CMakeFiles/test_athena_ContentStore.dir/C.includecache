@@ -1008,7 +1008,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_Key.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
 config.h
 -
 ccnx/forwarder/athena/athena.h
@@ -1024,9 +1024,9 @@ ccnx/forwarder/athena/athena_LRUContentStore.h
 parc/algol/parc_HashCodeTable.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/test/test_athena_ContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_ContentStore.c
 ../athena_ContentStore.c
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
 LongBow/testing.h
 -
 LongBow/debugging.h

@@ -778,7 +778,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
 config.h
 -
 LongBow/runtime.h
@@ -796,7 +796,7 @@ ccnx/forwarder/athena/athena_Fragmenter.h
 ctype.h
 -
 
-/home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleUDP.c
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModuleUDP.c
 config.h
 -
 LongBow/runtime.h

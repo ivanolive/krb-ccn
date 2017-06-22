@@ -4,6 +4,10 @@ file(REMOVE_RECURSE
   "libathena_TCP.so"
   "libathena_TCP.so.1.0"
   "libathena_TCP.so.1"
+  "libathena_TCP.pdb"
+  "CMakeFiles/CMakeRelink.dir/libathena_TCP.so"
+  "CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1.0"
+  "CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

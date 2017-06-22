@@ -92,8 +92,8 @@ CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.o
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
- /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.c
- /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.h
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.c
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
 CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.o
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/assertions.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/debugging.h
@@ -185,5 +185,5 @@ CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.o
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
- /home/ivan/Desktop/projects/ccvpn/ccvpn/ccnxVPN_Common.h
- /home/ivan/Desktop/projects/ccvpn/ccvpn/producer/ccnxVPN_Producer.c
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
+ /home/ivan/workspace/krb-ccn/krb-ccn/ccn/producer/ccnxVPN_Producer.c

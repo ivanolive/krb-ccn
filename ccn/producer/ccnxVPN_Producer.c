@@ -74,16 +74,25 @@
 
 #include "../ccnxVPN_Common.h"
 
+typedef enum {
+	REG_PROD = 0,  	// Non kerberized service
+    TGT_PROD,	   		// Produces TGTs
+    TGS_PROD,      		// Produces TGSs when given valid TGTs
+    KRB_SERVICE   		// Produces Content when given valid TGSs
+} CCNxProducerMode;
+
 typedef struct ccnx_ping_server {
     CCNxPortal *portal;
     CCNxName *prefix;
     size_t payloadSize;
+    CCNxProducerMode mode; // Could be TGT, TGS, KRB_SERVICE, REG_SERVICE
 
-    uint8_t generalPayload[ccnxVPN_MaxPayloadSize];
+
+    uint8_t generalPayload[ccnx_MaxPayloadSize];
 
     char *keystoreName;
     char *keystorePassword;
-} CCNxVPNServer;
+} CCNxServer;
 
 /**
  * Create a new CCNxPortalFactory instance using a randomly generated identity saved to
@@ -101,9 +110,9 @@ _setupServerPortalFactory(char *keystoreName, char *keystorePassword)
  * Release the references held by the `CCNxVPNClient`.
  */
 static bool
-_ccnxVPNServer_Destructor(CCNxVPNServer **serverPtr)
+_CCNxServer_Destructor(CCNxServer **serverPtr)
 {
-    CCNxVPNServer *server = *serverPtr;
+    CCNxServer *server = *serverPtr;
     if (server->portal != NULL) {
         ccnxPortal_Release(&(server->portal));
     }
@@ -113,22 +122,87 @@ _ccnxVPNServer_Destructor(CCNxVPNServer **serverPtr)
     return true;
 }
 
-parcObject_Override(CCNxVPNServer, PARCObject,
-                    .destructor = (PARCObjectDestructor *) _ccnxVPNServer_Destructor);
+parcObject_Override(CCNxServer, PARCObject,
+                    .destructor = (PARCObjectDestructor *) _CCNxServer_Destructor);
 
-parcObject_ImplementAcquire(ccnxVPNServer, CCNxVPNServer);
-parcObject_ImplementRelease(ccnxVPNServer, CCNxVPNServer);
+parcObject_ImplementAcquire(CCNxServer, CCNxServer);
+parcObject_ImplementRelease(CCNxServer, CCNxServer);
 
 /**
- * Create a new empty `CCNxVPNServer` instance.
+ * Create a new empty `CCNxServer` instance.
  */
-static CCNxVPNServer *
-ccnxVPNServer_Create(void)
+static CCNxServer *
+ccnxRegServer_Create()
 {
-    CCNxVPNServer *server = parcObject_CreateInstance(CCNxVPNServer);
+	printf("Creating Regular Producer.\n");
+    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
 
-    server->prefix = ccnxName_CreateFromCString(ccnxVPN_DefaultPrefix);
-    server->payloadSize = ccnxVPN_DefaultPayloadSize;
+    server->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
+    server->payloadSize = ccnx_DefaultPayloadSize;
+    server->mode = REG_PROD;
+
+    return server;
+}
+
+static CCNxServer *
+ccnxTGTServer_Create()
+{
+	printf("Creating Producer of type TGT.\n");
+    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
+
+    server->prefix = ccnxName_CreateFromCString(ccnx_TGT_DefaultPrefix);
+    server->payloadSize = ccnx_DefaultPayloadSize;
+    server->mode = TGT_PROD;
+
+    return server;
+}
+
+static CCNxServer *
+ccnxTGSServer_Create()
+{
+	printf("Creating Producer of type TGS.\n");
+
+	CCNxServer *server = parcObject_CreateInstance(CCNxServer);
+
+    server->prefix = ccnxName_CreateFromCString(ccnx_TGS_DefaultPrefix);
+    server->payloadSize = ccnx_DefaultPayloadSize;
+    server->mode = TGS_PROD;
+
+    return server;
+}
+
+static CCNxServer *
+ccnxKBRService_Create()
+{
+	printf("Creating Producer of type KBR Service.\n");
+    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
+
+    server->prefix = ccnxName_CreateFromCString(ccnx_KRB_Serv_DefaultPrefix);
+    server->payloadSize = ccnx_DefaultPayloadSize;
+    server->mode = KRB_SERVICE;
+
+    return server;
+}
+
+
+static CCNxServer *
+ccnxServer_Create(CCNxProducerMode type)
+{
+
+	CCNxServer *server;
+
+	if (type == REG_PROD) {
+		server = ccnxRegServer_Create();
+	}
+	if (type == TGT_PROD) {
+		server = ccnxTGTServer_Create();
+	}
+    if (type == TGS_PROD) {
+    	server = ccnxTGSServer_Create();
+    }
+    if (type == KRB_SERVICE) {
+        	server = ccnxKBRService_Create();
+    }
 
     return server;
 }
@@ -137,17 +211,18 @@ ccnxVPNServer_Create(void)
  * Create a `PARCBuffer` payload of the server-configured size.
  */
 PARCBuffer *
-_ccnxVPNServer_MakePayload(CCNxVPNServer *server, int size)
+_CCNxServer_MakePayload(CCNxServer *server, int size)
 {
+	printf("Creating a packet.\n");
     PARCBuffer *payload = parcBuffer_Wrap(server->generalPayload, size, 0, size);
     return payload;
 }
 
 /**
- * Run the `CCNxVPNServer` indefinitely.
+ * Run the `CCNxServer` indefinitely.
  */
 static void
-_ccnxVPNServer_Run(CCNxVPNServer *server)
+_CCNxServer_Run(CCNxServer *server)
 {
     CCNxPortalFactory *factory = _setupServerPortalFactory(server->keystoreName, server->keystorePassword);
     server->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
@@ -175,9 +250,9 @@ _ccnxVPNServer_Run(CCNxVPNServer *server)
                     CCNxNameSegment *sizeSegment = ccnxName_GetSegment(interestName, sizeIndex);
                     char *segmentString = ccnxNameSegment_ToString(sizeSegment);
                     int size = atoi(segmentString);
-                    size = size > ccnxVPN_MaxPayloadSize ? ccnxVPN_MaxPayloadSize : size;
+                    size = size > ccnx_MaxPayloadSize ? ccnx_MaxPayloadSize : size;
 
-                    PARCBuffer *payload = _ccnxVPNServer_MakePayload(server, size);
+                    PARCBuffer *payload = _CCNxServer_MakePayload(server, size);
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -217,19 +292,19 @@ _displayUsage(char *progName)
     printf("       %s -h\n", progName);
     printf("\n");
     printf("Example:\n");
-    printf("    ccnxVPN_Server -l ccnx:/some/prefix -s 4096\n");
+    printf("    ccnx_Server -l ccnx:/some/prefix -s 4096\n");
     printf("\n");
     printf("Options:\n");
     printf("     -h (--help) Show this help message\n");
     printf("     -l (--locator) Set the locator for this server. The default is 'ccnx:/locator'. \n");
-    printf("     -s (--size) Set the payload size (less than 64000 - see `ccnxVPN_MaxPayloadSize` in ccnxVPN_Common.h)\n");
+    printf("     -s (--size) Set the payload size (less than 64000 - see `ccnx_MaxPayloadSize` in ccnx_Common.h)\n");
 }
 
 /**
  * Parse the command lines to initialize the state of the
  */
 static bool
-_ccnxVPNServer_ParseCommandline(CCNxVPNServer *server, int argc, char *argv[argc])
+_CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
 {
     static struct option longopts[] = {
         { "locator", required_argument, NULL, 'l' },
@@ -241,7 +316,7 @@ _ccnxVPNServer_ParseCommandline(CCNxVPNServer *server, int argc, char *argv[argc
     };
 
     // Default value
-    server->payloadSize = ccnxVPN_MaxPayloadSize;
+    server->payloadSize = ccnx_MaxPayloadSize;
 
     int c;
     while ((c = getopt_long(argc, argv, "l:s:i:p:h", longopts, NULL)) != -1) {
@@ -251,7 +326,7 @@ _ccnxVPNServer_ParseCommandline(CCNxVPNServer *server, int argc, char *argv[argc
                 break;
             case 's':
                 sscanf(optarg, "%zu", &(server->payloadSize));
-                if (server->payloadSize > ccnxVPN_MaxPayloadSize) {
+                if (server->payloadSize > ccnx_MaxPayloadSize) {
                     _displayUsage(argv[0]);
                     return false;
                 }
@@ -275,19 +350,23 @@ _ccnxVPNServer_ParseCommandline(CCNxVPNServer *server, int argc, char *argv[argc
     return true;
 };
 
-int
-main(int argc, char *argv[argc])
+int main(int argc, char *argv[argc])
 {
+
+	printf("KBR-CCN: Initializing Producer...\n");
+
     parcSecurity_Init();
 
-    CCNxVPNServer *server = ccnxVPNServer_Create();
-    bool runServer = _ccnxVPNServer_ParseCommandline(server, argc, argv);
+    CCNxServer *server = ccnxServer_Create(KRB_SERVICE);
+    bool runServer = _CCNxServer_ParseCommandline(server, argc, argv);
+
+    printf("KBR-CCN: Preparing to Run Producer...\n");
 
     if (runServer) {
-        _ccnxVPNServer_Run(server);
+        _CCNxServer_Run(server);
     }
 
-    ccnxVPNServer_Release(&server);
+    CCNxServer_Release(&server);
 
     parcSecurity_Fini();
 

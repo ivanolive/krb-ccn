@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/depend.make
@@ -59,16 +59,16 @@ include gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c > CMakeFiles/athena.dir/athena.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c > CMakeFiles/athena.dir/athena.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena.c -o CMakeFiles/athena.dir/athena.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c -o CMakeFiles/athena.dir/athena.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o.requires:
 
@@ -83,16 +83,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o.provides.build: g
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o: ../gateway/ccnx/forwarder/athena/athena_About.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_About.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_About.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_About.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_About.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_About.c > CMakeFiles/athena.dir/athena_About.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.c > CMakeFiles/athena.dir/athena_About.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_About.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_About.c -o CMakeFiles/athena.dir/athena_About.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.c -o CMakeFiles/athena.dir/athena_About.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o.requires:
 
@@ -107,16 +107,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o.provides.bu
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athenactl.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athenactl.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athenactl.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.c > CMakeFiles/athena.dir/athenactl.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c > CMakeFiles/athena.dir/athenactl.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athenactl.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl.c -o CMakeFiles/athena.dir/athenactl.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c -o CMakeFiles/athena.dir/athenactl.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o.requires:
 
@@ -131,16 +131,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o.provides.build
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o: ../gateway/ccnx/forwarder/athena/athenactl_About.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athenactl_About.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl_About.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athenactl_About.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athenactl_About.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl_About.c > CMakeFiles/athena.dir/athenactl_About.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.c > CMakeFiles/athena.dir/athenactl_About.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athenactl_About.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athenactl_About.c -o CMakeFiles/athena.dir/athenactl_About.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.c -o CMakeFiles/athena.dir/athenactl_About.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o.requires:
 
@@ -155,16 +155,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o.provides
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_Control.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_Control.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_Control.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Control.c > CMakeFiles/athena.dir/athena_Control.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.c > CMakeFiles/athena.dir/athena_Control.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_Control.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Control.c -o CMakeFiles/athena.dir/athena_Control.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.c -o CMakeFiles/athena.dir/athena_Control.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o.requires:
 
@@ -179,16 +179,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o.provides.
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_InterestControl.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_InterestControl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_InterestControl.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_InterestControl.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_InterestControl.c > CMakeFiles/athena.dir/athena_InterestControl.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.c > CMakeFiles/athena.dir/athena_InterestControl.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_InterestControl.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_InterestControl.c -o CMakeFiles/athena.dir/athena_InterestControl.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.c -o CMakeFiles/athena.dir/athena_InterestControl.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o.requires:
 
@@ -203,16 +203,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o.p
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_Fragmenter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_Fragmenter.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_Fragmenter.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_Fragmenter.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c > CMakeFiles/athena.dir/athena_Fragmenter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c > CMakeFiles/athena.dir/athena_Fragmenter.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_Fragmenter.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c -o CMakeFiles/athena.dir/athena_Fragmenter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c -o CMakeFiles/athena.dir/athena_Fragmenter.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o.requires:
 
@@ -227,16 +227,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o.provid
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_FIB.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_FIB.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_FIB.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_FIB.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_FIB.c > CMakeFiles/athena.dir/athena_FIB.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c > CMakeFiles/athena.dir/athena_FIB.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_FIB.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_FIB.c -o CMakeFiles/athena.dir/athena_FIB.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c -o CMakeFiles/athena.dir/athena_FIB.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o.requires:
 
@@ -251,16 +251,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o.provides.buil
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_ContentStore.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_ContentStore.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_ContentStore.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_ContentStore.c > CMakeFiles/athena.dir/athena_ContentStore.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c > CMakeFiles/athena.dir/athena_ContentStore.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_ContentStore.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_ContentStore.c -o CMakeFiles/athena.dir/athena_ContentStore.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c -o CMakeFiles/athena.dir/athena_ContentStore.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o.requires:
 
@@ -275,16 +275,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o.prov
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_LRUContentStore.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_LRUContentStore.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_LRUContentStore.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c > CMakeFiles/athena.dir/athena_LRUContentStore.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c > CMakeFiles/athena.dir/athena_LRUContentStore.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_LRUContentStore.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c -o CMakeFiles/athena.dir/athena_LRUContentStore.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c -o CMakeFiles/athena.dir/athena_LRUContentStore.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o.requires:
 
@@ -299,16 +299,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o.p
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_PIT.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_PIT.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_PIT.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.c > CMakeFiles/athena.dir/athena_PIT.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c > CMakeFiles/athena.dir/athena_PIT.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_PIT.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_PIT.c -o CMakeFiles/athena.dir/athena_PIT.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c -o CMakeFiles/athena.dir/athena_PIT.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o.requires:
 
@@ -323,16 +323,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o.provides.buil
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c > CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c > CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c -o CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c -o CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o.requires:
 
@@ -347,16 +347,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLink.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLink.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLink.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLink.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_TransportLink.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLink.c > CMakeFiles/athena.dir/athena_TransportLink.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLink.c > CMakeFiles/athena.dir/athena_TransportLink.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_TransportLink.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLink.c -o CMakeFiles/athena.dir/athena_TransportLink.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLink.c -o CMakeFiles/athena.dir/athena_TransportLink.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o.requires:
 
@@ -371,16 +371,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o.pro
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLinkModule.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/athena_TransportLinkModule.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/athena_TransportLinkModule.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c > CMakeFiles/athena.dir/athena_TransportLinkModule.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c > CMakeFiles/athena.dir/athena_TransportLinkModule.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/athena_TransportLinkModule.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c -o CMakeFiles/athena.dir/athena_TransportLinkModule.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c -o CMakeFiles/athena.dir/athena_TransportLinkModule.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o.requires:
 
@@ -395,16 +395,16 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/flags.make
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: ../gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o   -c /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o   -c /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c > CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c > CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c -o CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c -o CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o.requires:
 
@@ -455,9 +455,9 @@ gateway/ccnx/forwarder/athena/libathena.a: gateway/ccnx/forwarder/athena/CMakeFi
 gateway/ccnx/forwarder/athena/libathena.a: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o
 gateway/ccnx/forwarder/athena/libathena.a: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make
 gateway/ccnx/forwarder/athena/libathena.a: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library libathena.a"
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena.dir/cmake_clean_target.cmake
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/athena.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C static library libathena.a"
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena.dir/cmake_clean_target.cmake
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/athena.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build: gateway/ccnx/forwarder/athena/libathena.a
@@ -483,10 +483,10 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/requires: gateway/ccnx/forwa
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/requires
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/clean:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena.dir/cmake_clean.cmake
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena && $(CMAKE_COMMAND) -P CMakeFiles/athena.dir/cmake_clean.cmake
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/clean
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/projects/ccvpn/ccvpn /home/ivan/Desktop/projects/ccvpn/ccvpn/gateway/ccnx/forwarder/athena /home/ivan/Desktop/projects/ccvpn/ccvpn/b /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb-ccn/krb-ccn/ccn /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/depend
 

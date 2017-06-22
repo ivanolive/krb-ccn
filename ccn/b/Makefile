@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,17 +100,6 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -135,9 +124,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -229,6 +218,11 @@ ccnxVPN_Client: cmake_check_build_system
 ccnxVPN_Client/fast:
 	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/build
 .PHONY : ccnxVPN_Client/fast
+
+# Manual pre-install relink rule for target.
+ccnxVPN_Client/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/preinstall
+.PHONY : ccnxVPN_Client/preinstall
 
 #=============================================================================
 # Target rules for targets named ContinuousMemCheck
@@ -477,6 +471,11 @@ keygen/fast:
 	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/build
 .PHONY : keygen/fast
 
+# Manual pre-install relink rule for target.
+keygen/preinstall:
+	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/preinstall
+.PHONY : keygen/preinstall
+
 #=============================================================================
 # Target rules for targets named ExperimentalMemCheck
 
@@ -555,6 +554,11 @@ ccnxVPN_Server/fast:
 	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/build
 .PHONY : ccnxVPN_Server/fast
 
+# Manual pre-install relink rule for target.
+ccnxVPN_Server/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/preinstall
+.PHONY : ccnxVPN_Server/preinstall
+
 #=============================================================================
 # Target rules for targets named ContinuousUpdate
 
@@ -594,6 +598,11 @@ athena_ETH.shared/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build
 .PHONY : athena_ETH.shared/fast
 
+# Manual pre-install relink rule for target.
+athena_ETH.shared/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+.PHONY : athena_ETH.shared/preinstall
+
 #=============================================================================
 # Target rules for targets named athena_TCP.shared
 
@@ -606,6 +615,11 @@ athena_TCP.shared: cmake_check_build_system
 athena_TCP.shared/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build
 .PHONY : athena_TCP.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_TCP.shared/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+.PHONY : athena_TCP.shared/preinstall
 
 #=============================================================================
 # Target rules for targets named athena_Fragmenter_BEFS.shared
@@ -620,18 +634,10 @@ athena_Fragmenter_BEFS.shared/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build
 .PHONY : athena_Fragmenter_BEFS.shared/fast
 
-#=============================================================================
-# Target rules for targets named athena_TEMPLATE.shared
-
-# Build rule for target.
-athena_TEMPLATE.shared: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 athena_TEMPLATE.shared
-.PHONY : athena_TEMPLATE.shared
-
-# fast build rule for target.
-athena_TEMPLATE.shared/fast:
-	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build
-.PHONY : athena_TEMPLATE.shared/fast
+# Manual pre-install relink rule for target.
+athena_Fragmenter_BEFS.shared/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+.PHONY : athena_Fragmenter_BEFS.shared/preinstall
 
 #=============================================================================
 # Target rules for targets named athena_UDP.shared
@@ -645,6 +651,29 @@ athena_UDP.shared: cmake_check_build_system
 athena_UDP.shared/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build
 .PHONY : athena_UDP.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_UDP.shared/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
+.PHONY : athena_UDP.shared/preinstall
+
+#=============================================================================
+# Target rules for targets named athena_TEMPLATE.shared
+
+# Build rule for target.
+athena_TEMPLATE.shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 athena_TEMPLATE.shared
+.PHONY : athena_TEMPLATE.shared
+
+# fast build rule for target.
+athena_TEMPLATE.shared/fast:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build
+.PHONY : athena_TEMPLATE.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_TEMPLATE.shared/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+.PHONY : athena_TEMPLATE.shared/preinstall
 
 #=============================================================================
 # Target rules for targets named test_athenactl
@@ -854,6 +883,11 @@ athena_gateway_bin/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build
 .PHONY : athena_gateway_bin/fast
 
+# Manual pre-install relink rule for target.
+athena_gateway_bin/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+.PHONY : athena_gateway_bin/preinstall
+
 #=============================================================================
 # Target rules for targets named athena_private_bin
 
@@ -866,6 +900,11 @@ athena_private_bin: cmake_check_build_system
 athena_private_bin/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build
 .PHONY : athena_private_bin/fast
+
+# Manual pre-install relink rule for target.
+athena_private_bin/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall
+.PHONY : athena_private_bin/preinstall
 
 #=============================================================================
 # Target rules for targets named athenabin
@@ -880,6 +919,11 @@ athenabin/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build
 .PHONY : athenabin/fast
 
+# Manual pre-install relink rule for target.
+athenabin/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall
+.PHONY : athenabin/preinstall
+
 #=============================================================================
 # Target rules for targets named athenactl
 
@@ -892,6 +936,11 @@ athenactl: cmake_check_build_system
 athenactl/fast:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build.make gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build
 .PHONY : athenactl/fast
+
+# Manual pre-install relink rule for target.
+athenactl/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build.make gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall
+.PHONY : athenactl/preinstall
 
 athena_keygen.o: athena_keygen.c.o
 
@@ -1041,7 +1090,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... install/strip"
 	@echo "... ContinuousSubmit"
 	@echo "... ContinuousCoverage"
 	@echo "... ContinuousTest"
@@ -1079,8 +1127,8 @@ help:
 	@echo "... athena_ETH.shared"
 	@echo "... athena_TCP.shared"
 	@echo "... athena_Fragmenter_BEFS.shared"
-	@echo "... athena_TEMPLATE.shared"
 	@echo "... athena_UDP.shared"
+	@echo "... athena_TEMPLATE.shared"
 	@echo "... test_athenactl"
 	@echo "... test_athena_InterestControl"
 	@echo "... test_athena_LRUContentStore"

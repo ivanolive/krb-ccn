@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,17 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,17 +101,6 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -133,16 +111,27 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles /home/ivan/Desktop/projects/ccvpn/ccvpn/b/gateway/ccnx/forwarder/athena/CMakeFiles/progress.marks
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/projects/ccvpn/ccvpn/b/CMakeFiles 0
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/progress.marks
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/clean
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/preinstall
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/preinstall
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule
 
 # Convenience name for target.
@@ -177,12 +166,12 @@ athena: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule
 
 # fast build rule for target.
 athena/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build
 .PHONY : athena/fast
 
 # Convenience name for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule
 
 # Convenience name for target.
@@ -192,12 +181,17 @@ athena_ETH.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.di
 
 # fast build rule for target.
 athena_ETH.shared/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build
 .PHONY : athena_ETH.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_ETH.shared/preinstall:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+.PHONY : athena_ETH.shared/preinstall
 
 # Convenience name for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule
 
 # Convenience name for target.
@@ -207,12 +201,17 @@ athena_TCP.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.di
 
 # fast build rule for target.
 athena_TCP.shared/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build
 .PHONY : athena_TCP.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_TCP.shared/preinstall:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+.PHONY : athena_TCP.shared/preinstall
 
 # Convenience name for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule
 
 # Convenience name for target.
@@ -222,27 +221,17 @@ athena_Fragmenter_BEFS.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_F
 
 # fast build rule for target.
 athena_Fragmenter_BEFS.shared/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build
 .PHONY : athena_Fragmenter_BEFS.shared/fast
 
-# Convenience name for target.
-gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
-.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
-
-# Convenience name for target.
-athena_TEMPLATE.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
-
-.PHONY : athena_TEMPLATE.shared
-
-# fast build rule for target.
-athena_TEMPLATE.shared/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build
-.PHONY : athena_TEMPLATE.shared/fast
+# Manual pre-install relink rule for target.
+athena_Fragmenter_BEFS.shared/preinstall:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+.PHONY : athena_Fragmenter_BEFS.shared/preinstall
 
 # Convenience name for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule
 
 # Convenience name for target.
@@ -252,8 +241,33 @@ athena_UDP.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.di
 
 # fast build rule for target.
 athena_UDP.shared/fast:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build
 .PHONY : athena_UDP.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_UDP.shared/preinstall:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
+.PHONY : athena_UDP.shared/preinstall
+
+# Convenience name for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
+
+# Convenience name for target.
+athena_TEMPLATE.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
+
+.PHONY : athena_TEMPLATE.shared
+
+# fast build rule for target.
+athena_TEMPLATE.shared/fast:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build
+.PHONY : athena_TEMPLATE.shared/fast
+
+# Manual pre-install relink rule for target.
+athena_TEMPLATE.shared/preinstall:
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+.PHONY : athena_TEMPLATE.shared/preinstall
 
 athena.o: athena.c.o
 
@@ -261,7 +275,7 @@ athena.o: athena.c.o
 
 # target to build an object file
 athena.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o
 .PHONY : athena.c.o
 
 athena.i: athena.c.i
@@ -270,7 +284,7 @@ athena.i: athena.c.i
 
 # target to preprocess a source file
 athena.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.i
 .PHONY : athena.c.i
 
 athena.s: athena.c.s
@@ -279,7 +293,7 @@ athena.s: athena.c.s
 
 # target to generate assembly for a file
 athena.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.s
 .PHONY : athena.c.s
 
 athena_About.o: athena_About.c.o
@@ -288,7 +302,7 @@ athena_About.o: athena_About.c.o
 
 # target to build an object file
 athena_About.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o
 .PHONY : athena_About.c.o
 
 athena_About.i: athena_About.c.i
@@ -297,7 +311,7 @@ athena_About.i: athena_About.c.i
 
 # target to preprocess a source file
 athena_About.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.i
 .PHONY : athena_About.c.i
 
 athena_About.s: athena_About.c.s
@@ -306,7 +320,7 @@ athena_About.s: athena_About.c.s
 
 # target to generate assembly for a file
 athena_About.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.s
 .PHONY : athena_About.c.s
 
 athena_ContentStore.o: athena_ContentStore.c.o
@@ -315,7 +329,7 @@ athena_ContentStore.o: athena_ContentStore.c.o
 
 # target to build an object file
 athena_ContentStore.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o
 .PHONY : athena_ContentStore.c.o
 
 athena_ContentStore.i: athena_ContentStore.c.i
@@ -324,7 +338,7 @@ athena_ContentStore.i: athena_ContentStore.c.i
 
 # target to preprocess a source file
 athena_ContentStore.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.i
 .PHONY : athena_ContentStore.c.i
 
 athena_ContentStore.s: athena_ContentStore.c.s
@@ -333,7 +347,7 @@ athena_ContentStore.s: athena_ContentStore.c.s
 
 # target to generate assembly for a file
 athena_ContentStore.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.s
 .PHONY : athena_ContentStore.c.s
 
 athena_Control.o: athena_Control.c.o
@@ -342,7 +356,7 @@ athena_Control.o: athena_Control.c.o
 
 # target to build an object file
 athena_Control.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o
 .PHONY : athena_Control.c.o
 
 athena_Control.i: athena_Control.c.i
@@ -351,7 +365,7 @@ athena_Control.i: athena_Control.c.i
 
 # target to preprocess a source file
 athena_Control.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.i
 .PHONY : athena_Control.c.i
 
 athena_Control.s: athena_Control.c.s
@@ -360,7 +374,7 @@ athena_Control.s: athena_Control.c.s
 
 # target to generate assembly for a file
 athena_Control.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.s
 .PHONY : athena_Control.c.s
 
 athena_FIB.o: athena_FIB.c.o
@@ -369,7 +383,7 @@ athena_FIB.o: athena_FIB.c.o
 
 # target to build an object file
 athena_FIB.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o
 .PHONY : athena_FIB.c.o
 
 athena_FIB.i: athena_FIB.c.i
@@ -378,7 +392,7 @@ athena_FIB.i: athena_FIB.c.i
 
 # target to preprocess a source file
 athena_FIB.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.i
 .PHONY : athena_FIB.c.i
 
 athena_FIB.s: athena_FIB.c.s
@@ -387,7 +401,7 @@ athena_FIB.s: athena_FIB.c.s
 
 # target to generate assembly for a file
 athena_FIB.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.s
 .PHONY : athena_FIB.c.s
 
 athena_Fragmenter.o: athena_Fragmenter.c.o
@@ -396,9 +410,9 @@ athena_Fragmenter.o: athena_Fragmenter.c.o
 
 # target to build an object file
 athena_Fragmenter.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.o
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.o
 .PHONY : athena_Fragmenter.c.o
 
 athena_Fragmenter.i: athena_Fragmenter.c.i
@@ -407,9 +421,9 @@ athena_Fragmenter.i: athena_Fragmenter.c.i
 
 # target to preprocess a source file
 athena_Fragmenter.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.i
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.i
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.i
 .PHONY : athena_Fragmenter.c.i
 
 athena_Fragmenter.s: athena_Fragmenter.c.s
@@ -418,9 +432,9 @@ athena_Fragmenter.s: athena_Fragmenter.c.s
 
 # target to generate assembly for a file
 athena_Fragmenter.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.s
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.s
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_Fragmenter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_Fragmenter.c.s
 .PHONY : athena_Fragmenter.c.s
 
 athena_InterestControl.o: athena_InterestControl.c.o
@@ -429,7 +443,7 @@ athena_InterestControl.o: athena_InterestControl.c.o
 
 # target to build an object file
 athena_InterestControl.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o
 .PHONY : athena_InterestControl.c.o
 
 athena_InterestControl.i: athena_InterestControl.c.i
@@ -438,7 +452,7 @@ athena_InterestControl.i: athena_InterestControl.c.i
 
 # target to preprocess a source file
 athena_InterestControl.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.i
 .PHONY : athena_InterestControl.c.i
 
 athena_InterestControl.s: athena_InterestControl.c.s
@@ -447,7 +461,7 @@ athena_InterestControl.s: athena_InterestControl.c.s
 
 # target to generate assembly for a file
 athena_InterestControl.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.s
 .PHONY : athena_InterestControl.c.s
 
 athena_LRUContentStore.o: athena_LRUContentStore.c.o
@@ -456,7 +470,7 @@ athena_LRUContentStore.o: athena_LRUContentStore.c.o
 
 # target to build an object file
 athena_LRUContentStore.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o
 .PHONY : athena_LRUContentStore.c.o
 
 athena_LRUContentStore.i: athena_LRUContentStore.c.i
@@ -465,7 +479,7 @@ athena_LRUContentStore.i: athena_LRUContentStore.c.i
 
 # target to preprocess a source file
 athena_LRUContentStore.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.i
 .PHONY : athena_LRUContentStore.c.i
 
 athena_LRUContentStore.s: athena_LRUContentStore.c.s
@@ -474,7 +488,7 @@ athena_LRUContentStore.s: athena_LRUContentStore.c.s
 
 # target to generate assembly for a file
 athena_LRUContentStore.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.s
 .PHONY : athena_LRUContentStore.c.s
 
 athena_PIT.o: athena_PIT.c.o
@@ -483,7 +497,7 @@ athena_PIT.o: athena_PIT.c.o
 
 # target to build an object file
 athena_PIT.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o
 .PHONY : athena_PIT.c.o
 
 athena_PIT.i: athena_PIT.c.i
@@ -492,7 +506,7 @@ athena_PIT.i: athena_PIT.c.i
 
 # target to preprocess a source file
 athena_PIT.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.i
 .PHONY : athena_PIT.c.i
 
 athena_PIT.s: athena_PIT.c.s
@@ -501,7 +515,7 @@ athena_PIT.s: athena_PIT.c.s
 
 # target to generate assembly for a file
 athena_PIT.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.s
 .PHONY : athena_PIT.c.s
 
 athena_TransportLink.o: athena_TransportLink.c.o
@@ -510,7 +524,7 @@ athena_TransportLink.o: athena_TransportLink.c.o
 
 # target to build an object file
 athena_TransportLink.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o
 .PHONY : athena_TransportLink.c.o
 
 athena_TransportLink.i: athena_TransportLink.c.i
@@ -519,7 +533,7 @@ athena_TransportLink.i: athena_TransportLink.c.i
 
 # target to preprocess a source file
 athena_TransportLink.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.i
 .PHONY : athena_TransportLink.c.i
 
 athena_TransportLink.s: athena_TransportLink.c.s
@@ -528,7 +542,7 @@ athena_TransportLink.s: athena_TransportLink.c.s
 
 # target to generate assembly for a file
 athena_TransportLink.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.s
 .PHONY : athena_TransportLink.c.s
 
 athena_TransportLinkAdapter.o: athena_TransportLinkAdapter.c.o
@@ -537,7 +551,7 @@ athena_TransportLinkAdapter.o: athena_TransportLinkAdapter.c.o
 
 # target to build an object file
 athena_TransportLinkAdapter.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o
 .PHONY : athena_TransportLinkAdapter.c.o
 
 athena_TransportLinkAdapter.i: athena_TransportLinkAdapter.c.i
@@ -546,7 +560,7 @@ athena_TransportLinkAdapter.i: athena_TransportLinkAdapter.c.i
 
 # target to preprocess a source file
 athena_TransportLinkAdapter.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.i
 .PHONY : athena_TransportLinkAdapter.c.i
 
 athena_TransportLinkAdapter.s: athena_TransportLinkAdapter.c.s
@@ -555,7 +569,7 @@ athena_TransportLinkAdapter.s: athena_TransportLinkAdapter.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkAdapter.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.s
 .PHONY : athena_TransportLinkAdapter.c.s
 
 athena_TransportLinkModule.o: athena_TransportLinkModule.c.o
@@ -564,7 +578,7 @@ athena_TransportLinkModule.o: athena_TransportLinkModule.c.o
 
 # target to build an object file
 athena_TransportLinkModule.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o
 .PHONY : athena_TransportLinkModule.c.o
 
 athena_TransportLinkModule.i: athena_TransportLinkModule.c.i
@@ -573,7 +587,7 @@ athena_TransportLinkModule.i: athena_TransportLinkModule.c.i
 
 # target to preprocess a source file
 athena_TransportLinkModule.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.i
 .PHONY : athena_TransportLinkModule.c.i
 
 athena_TransportLinkModule.s: athena_TransportLinkModule.c.s
@@ -582,7 +596,7 @@ athena_TransportLinkModule.s: athena_TransportLinkModule.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkModule.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.s
 .PHONY : athena_TransportLinkModule.c.s
 
 athena_TransportLinkModuleETH.o: athena_TransportLinkModuleETH.c.o
@@ -591,7 +605,7 @@ athena_TransportLinkModuleETH.o: athena_TransportLinkModuleETH.c.o
 
 # target to build an object file
 athena_TransportLinkModuleETH.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.o
 .PHONY : athena_TransportLinkModuleETH.c.o
 
 athena_TransportLinkModuleETH.i: athena_TransportLinkModuleETH.c.i
@@ -600,7 +614,7 @@ athena_TransportLinkModuleETH.i: athena_TransportLinkModuleETH.c.i
 
 # target to preprocess a source file
 athena_TransportLinkModuleETH.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.i
 .PHONY : athena_TransportLinkModuleETH.c.i
 
 athena_TransportLinkModuleETH.s: athena_TransportLinkModuleETH.c.s
@@ -609,7 +623,7 @@ athena_TransportLinkModuleETH.s: athena_TransportLinkModuleETH.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkModuleETH.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/athena_TransportLinkModuleETH.c.s
 .PHONY : athena_TransportLinkModuleETH.c.s
 
 athena_TransportLinkModuleFragmenter_BEFS.o: athena_TransportLinkModuleFragmenter_BEFS.c.o
@@ -618,7 +632,7 @@ athena_TransportLinkModuleFragmenter_BEFS.o: athena_TransportLinkModuleFragmente
 
 # target to build an object file
 athena_TransportLinkModuleFragmenter_BEFS.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.o
 .PHONY : athena_TransportLinkModuleFragmenter_BEFS.c.o
 
 athena_TransportLinkModuleFragmenter_BEFS.i: athena_TransportLinkModuleFragmenter_BEFS.c.i
@@ -627,7 +641,7 @@ athena_TransportLinkModuleFragmenter_BEFS.i: athena_TransportLinkModuleFragmente
 
 # target to preprocess a source file
 athena_TransportLinkModuleFragmenter_BEFS.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.i
 .PHONY : athena_TransportLinkModuleFragmenter_BEFS.c.i
 
 athena_TransportLinkModuleFragmenter_BEFS.s: athena_TransportLinkModuleFragmenter_BEFS.c.s
@@ -636,7 +650,7 @@ athena_TransportLinkModuleFragmenter_BEFS.s: athena_TransportLinkModuleFragmente
 
 # target to generate assembly for a file
 athena_TransportLinkModuleFragmenter_BEFS.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/athena_TransportLinkModuleFragmenter_BEFS.c.s
 .PHONY : athena_TransportLinkModuleFragmenter_BEFS.c.s
 
 athena_TransportLinkModuleTCP.o: athena_TransportLinkModuleTCP.c.o
@@ -645,7 +659,7 @@ athena_TransportLinkModuleTCP.o: athena_TransportLinkModuleTCP.c.o
 
 # target to build an object file
 athena_TransportLinkModuleTCP.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.o
 .PHONY : athena_TransportLinkModuleTCP.c.o
 
 athena_TransportLinkModuleTCP.i: athena_TransportLinkModuleTCP.c.i
@@ -654,7 +668,7 @@ athena_TransportLinkModuleTCP.i: athena_TransportLinkModuleTCP.c.i
 
 # target to preprocess a source file
 athena_TransportLinkModuleTCP.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.i
 .PHONY : athena_TransportLinkModuleTCP.c.i
 
 athena_TransportLinkModuleTCP.s: athena_TransportLinkModuleTCP.c.s
@@ -663,7 +677,7 @@ athena_TransportLinkModuleTCP.s: athena_TransportLinkModuleTCP.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkModuleTCP.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/athena_TransportLinkModuleTCP.c.s
 .PHONY : athena_TransportLinkModuleTCP.c.s
 
 athena_TransportLinkModuleTEMPLATE.o: athena_TransportLinkModuleTEMPLATE.c.o
@@ -672,7 +686,7 @@ athena_TransportLinkModuleTEMPLATE.o: athena_TransportLinkModuleTEMPLATE.c.o
 
 # target to build an object file
 athena_TransportLinkModuleTEMPLATE.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.o
 .PHONY : athena_TransportLinkModuleTEMPLATE.c.o
 
 athena_TransportLinkModuleTEMPLATE.i: athena_TransportLinkModuleTEMPLATE.c.i
@@ -681,7 +695,7 @@ athena_TransportLinkModuleTEMPLATE.i: athena_TransportLinkModuleTEMPLATE.c.i
 
 # target to preprocess a source file
 athena_TransportLinkModuleTEMPLATE.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.i
 .PHONY : athena_TransportLinkModuleTEMPLATE.c.i
 
 athena_TransportLinkModuleTEMPLATE.s: athena_TransportLinkModuleTEMPLATE.c.s
@@ -690,7 +704,7 @@ athena_TransportLinkModuleTEMPLATE.s: athena_TransportLinkModuleTEMPLATE.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkModuleTEMPLATE.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/athena_TransportLinkModuleTEMPLATE.c.s
 .PHONY : athena_TransportLinkModuleTEMPLATE.c.s
 
 athena_TransportLinkModuleUDP.o: athena_TransportLinkModuleUDP.c.o
@@ -699,7 +713,7 @@ athena_TransportLinkModuleUDP.o: athena_TransportLinkModuleUDP.c.o
 
 # target to build an object file
 athena_TransportLinkModuleUDP.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.o
 .PHONY : athena_TransportLinkModuleUDP.c.o
 
 athena_TransportLinkModuleUDP.i: athena_TransportLinkModuleUDP.c.i
@@ -708,7 +722,7 @@ athena_TransportLinkModuleUDP.i: athena_TransportLinkModuleUDP.c.i
 
 # target to preprocess a source file
 athena_TransportLinkModuleUDP.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.i
 .PHONY : athena_TransportLinkModuleUDP.c.i
 
 athena_TransportLinkModuleUDP.s: athena_TransportLinkModuleUDP.c.s
@@ -717,7 +731,7 @@ athena_TransportLinkModuleUDP.s: athena_TransportLinkModuleUDP.c.s
 
 # target to generate assembly for a file
 athena_TransportLinkModuleUDP.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/athena_TransportLinkModuleUDP.c.s
 .PHONY : athena_TransportLinkModuleUDP.c.s
 
 athenactl.o: athenactl.c.o
@@ -726,7 +740,7 @@ athenactl.o: athenactl.c.o
 
 # target to build an object file
 athenactl.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o
 .PHONY : athenactl.c.o
 
 athenactl.i: athenactl.c.i
@@ -735,7 +749,7 @@ athenactl.i: athenactl.c.i
 
 # target to preprocess a source file
 athenactl.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.i
 .PHONY : athenactl.c.i
 
 athenactl.s: athenactl.c.s
@@ -744,7 +758,7 @@ athenactl.s: athenactl.c.s
 
 # target to generate assembly for a file
 athenactl.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.s
 .PHONY : athenactl.c.s
 
 athenactl_About.o: athenactl_About.c.o
@@ -753,7 +767,7 @@ athenactl_About.o: athenactl_About.c.o
 
 # target to build an object file
 athenactl_About.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o
 .PHONY : athenactl_About.c.o
 
 athenactl_About.i: athenactl_About.c.i
@@ -762,7 +776,7 @@ athenactl_About.i: athenactl_About.c.i
 
 # target to preprocess a source file
 athenactl_About.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.i
 .PHONY : athenactl_About.c.i
 
 athenactl_About.s: athenactl_About.c.s
@@ -771,7 +785,7 @@ athenactl_About.s: athenactl_About.c.s
 
 # target to generate assembly for a file
 athenactl_About.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.s
 .PHONY : athenactl_About.c.s
 
 platform/linux/athena_Ethernet.o: platform/linux/athena_Ethernet.c.o
@@ -780,8 +794,8 @@ platform/linux/athena_Ethernet.o: platform/linux/athena_Ethernet.c.o
 
 # target to build an object file
 platform/linux/athena_Ethernet.c.o:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.o
 .PHONY : platform/linux/athena_Ethernet.c.o
 
 platform/linux/athena_Ethernet.i: platform/linux/athena_Ethernet.c.i
@@ -790,8 +804,8 @@ platform/linux/athena_Ethernet.i: platform/linux/athena_Ethernet.c.i
 
 # target to preprocess a source file
 platform/linux/athena_Ethernet.c.i:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.i
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.i
 .PHONY : platform/linux/athena_Ethernet.c.i
 
 platform/linux/athena_Ethernet.s: platform/linux/athena_Ethernet.c.s
@@ -800,8 +814,8 @@ platform/linux/athena_Ethernet.s: platform/linux/athena_Ethernet.c.s
 
 # target to generate assembly for a file
 platform/linux/athena_Ethernet.c.s:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.s
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/platform/linux/athena_Ethernet.c.s
 .PHONY : platform/linux/athena_Ethernet.c.s
 
 # Help Target
@@ -816,13 +830,12 @@ help:
 	@echo "... athena_ETH.shared"
 	@echo "... athena_TCP.shared"
 	@echo "... athena_Fragmenter_BEFS.shared"
-	@echo "... rebuild_cache"
-	@echo "... athena_TEMPLATE.shared"
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... athena_UDP.shared"
-	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... athena_TEMPLATE.shared"
+	@echo "... rebuild_cache"
 	@echo "... athena.o"
 	@echo "... athena.i"
 	@echo "... athena.s"
@@ -894,6 +907,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ivan/Desktop/projects/ccvpn/ccvpn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

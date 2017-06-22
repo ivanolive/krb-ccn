@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/ivan/Desktop/projects/ccvpn/ccvpn
-BuildDirectory: /home/ivan/Desktop/projects/ccvpn/ccvpn/b
+SourceDirectory: /home/ivan/workspace/krb-ccn/krb-ccn/ccn
+BuildDirectory: /home/ivan/workspace/krb-ccn/krb-ccn/ccn/b
 
 # Where to place the cost data store
 CostDataFile: 
@@ -33,8 +33,8 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/home/ivan/Desktop/projects/ccvpn/ccvpn"
-MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/local/bin/cmake" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn"
+MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -64,9 +64,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: /usr/bin/git
+UpdateCommand: 
 UpdateOptions: 
-UpdateType: git
+UpdateType: 
 
 # Compiler info
 Compiler: /usr/bin/c++
