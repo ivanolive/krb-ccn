@@ -132,10 +132,9 @@ parcObject_ImplementRelease(CCNxServer, CCNxServer);
  * Create a new empty `CCNxServer` instance.
  */
 static CCNxServer *
-ccnxRegServer_Create()
+ccnxRegServer_Create(CCNxServer *server)
 {
 	printf("Creating Regular Producer.\n");
-    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
 
     server->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
@@ -145,10 +144,9 @@ ccnxRegServer_Create()
 }
 
 static CCNxServer *
-ccnxTGTServer_Create()
+ccnxTGTServer_Create(CCNxServer *server)
 {
 	printf("Creating Producer of type TGT.\n");
-    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
 
     server->prefix = ccnxName_CreateFromCString(ccnx_TGT_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
@@ -158,11 +156,9 @@ ccnxTGTServer_Create()
 }
 
 static CCNxServer *
-ccnxTGSServer_Create()
+ccnxTGSServer_Create(CCNxServer *server)
 {
-	printf("Creating Producer of type TGS.\n");
-
-	CCNxServer *server = parcObject_CreateInstance(CCNxServer);
+	printf("Creating Producer of type KBR Service.\n");
 
     server->prefix = ccnxName_CreateFromCString(ccnx_TGS_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
@@ -172,10 +168,8 @@ ccnxTGSServer_Create()
 }
 
 static CCNxServer *
-ccnxKBRService_Create()
+ccnxKBRService_Create(CCNxServer *server)
 {
-	printf("Creating Producer of type KBR Service.\n");
-    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
 
     server->prefix = ccnxName_CreateFromCString(ccnx_KRB_Serv_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
@@ -186,23 +180,12 @@ ccnxKBRService_Create()
 
 
 static CCNxServer *
-ccnxServer_Create(CCNxProducerMode type)
+ccnxServer_Create(void)
 {
+    CCNxServer *server = parcObject_CreateInstance(CCNxServer);
 
-	CCNxServer *server;
-
-	if (type == REG_PROD) {
-		server = ccnxRegServer_Create();
-	}
-	if (type == TGT_PROD) {
-		server = ccnxTGTServer_Create();
-	}
-    if (type == TGS_PROD) {
-    	server = ccnxTGSServer_Create();
-    }
-    if (type == KRB_SERVICE) {
-        	server = ccnxKBRService_Create();
-    }
+    //server->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
+    server->payloadSize = ccnx_DefaultPayloadSize;
 
     return server;
 }
@@ -307,6 +290,10 @@ static bool
 _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
 {
     static struct option longopts[] = {
+    	{ "TGT prod", no_argument, NULL, 'a' },
+    	{ "TGS prod", no_argument, NULL, 't' },
+    	{ "KRB Serv prod", no_argument, NULL, 'k' },
+
         { "locator", required_argument, NULL, 'l' },
         { "size",    required_argument, NULL, 's' },
         { "help",    no_argument,       NULL, 'h' },
@@ -319,9 +306,29 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
     server->payloadSize = ccnx_MaxPayloadSize;
 
     int c;
-    while ((c = getopt_long(argc, argv, "l:s:i:p:h", longopts, NULL)) != -1) {
+    while ((c = getopt_long(argc, argv, "a:t:k:l:s:i:p:h", longopts, NULL)) != -1) {
         switch (c) {
-            case 'l':
+        	case 'a':
+        		printf("Starting TGT Producer.\n");
+        		ccnxTGTServer_Create(server);
+
+        		//TODO: temporary ////////////
+        		server->keystoreName = malloc(strlen("producer_identity1") + 1);
+        		strcpy(server->keystoreName, "producer_identity1");
+                server->keystorePassword = malloc(strlen("producer_identity1") + 1);
+                strcpy(server->keystorePassword, "producer_identity1");
+                //end TODO //////////////////
+
+        		break;
+        	case 't':
+        		printf("Starting TGS Producer.\n");
+        		ccnxTGSServer_Create(server);
+        		break;
+        	case 'k':
+        		printf("Starting Kerberized Service Producer.\n");
+        		ccnxKBRService_Create(server);
+        		break;
+        	case 'l':
                 server->prefix = ccnxName_CreateFromCString(optarg);
                 break;
             case 's':
@@ -357,7 +364,7 @@ int main(int argc, char *argv[argc])
 
     parcSecurity_Init();
 
-    CCNxServer *server = ccnxServer_Create(KRB_SERVICE);
+    CCNxServer *server = ccnxServer_Create();
     bool runServer = _CCNxServer_ParseCommandline(server, argc, argv);
 
     printf("KBR-CCN: Preparing to Run Producer...\n");

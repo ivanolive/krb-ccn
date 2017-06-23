@@ -79,6 +79,9 @@ typedef enum {
     CCNxConsumerMode_None = 0,
     CCNxConsumerMode_Flood,
     CCNxConsumerMode_VPNPong,
+    CCNxConsumerMode_TGTReq,
+    CCNxConsumerMode_TGSReq,
+    CCNxConsumerMode_KRBServReq,
     CCNxConsumerMode_All
 } CCNxConsumerMode;
 
@@ -99,6 +102,7 @@ typedef struct ccnx_client {
 
     char *keystoreName;
     char *keystorePassword;
+    char *username;
 } CCNxConsumer;
 
 /**
@@ -126,6 +130,17 @@ _ccnx_Destructor(CCNxConsumer **clientPtr)
     if (client->prefix != NULL) {
         ccnxName_Release(&(client->prefix));
     }
+
+    if (client->username != NULL) {
+            free(client->username);
+    }
+    if (client->keystoreName != NULL) {
+            free(client->keystoreName);
+    }
+    if (client->keystorePassword != NULL) {
+            free(client->keystorePassword);
+    }
+
     return true;
 }
 
@@ -152,6 +167,10 @@ ccnx_Create(void)
     client->intervalInMs = 1000;
     client->nonce = rand();
     client->numberOfOutstanding = 0;
+
+    client->keystoreName = NULL;
+    client->keystorePassword = NULL;
+    client->username = NULL;
 
     return client;
 }
@@ -246,10 +265,10 @@ _ccnx_RunVPN(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 size_t delta = ccnxVPNStats_RecordResponse(client->stats, responseName, currentTimeInUs, response);
 
                 // Only display output if we're in ping mode
-                if (client->mode == CCNxConsumerMode_VPNPong) {
+                if (client->mode == CCNxConsumerMode_VPNPong || client->mode == CCNxConsumerMode_TGTReq) {
                     size_t contentSize = parcBuffer_Remaining(ccnxContentObject_GetPayload(contentObject));
                     char *nameString = ccnxName_ToString(responseName);
-                    //printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
+                    printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
                     parcMemory_Deallocate(&nameString);
                 }
             }
@@ -301,80 +320,6 @@ _displayUsage(char *progName)
         ///////////////////////
 }
 
-/**
- * Parse the command lines to initialize the state of the
- */
-static bool
-_ccnx_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
-{
-    static struct option longopts[] = {
-        { "flood",       no_argument,       NULL, 'f' },
-        { "count",       required_argument, NULL, 'c' },
-        { "size",        required_argument, NULL, 's' },
-        // { "interval",    required_argument, NULL, 'i' },
-        { "locator",     required_argument, NULL, 'l' },
-        { "outstanding", required_argument, NULL, 'o' },
-        { "identity file", required_argument, NULL, 'i' },
-        { "password",    required_argument, NULL, 'p' },
-        { "help",        no_argument,       NULL, 'h' },
-        { NULL,          0,                 NULL, 0   }
-    };
-
-    client->payloadSize = ccnx_DefaultPayloadSize;
-
-    int c;
-    while ((c = getopt_long(argc, argv, "p:i:hfc:s:l:o:", longopts, NULL)) != -1) {
-        switch (c) {
-            case 'f':
-                if (client->mode != CCNxConsumerMode_None) {
-                    return false;
-                }
-                //sscanf(optarg, "%u", &(client->intervalInMs));
-                //TODO: check this
-                client->intervalInMs = 1000000/atoi(argv[8]);
-                printf("%d us period between two interests.\n",client->intervalInMs);
-                
-                client->mode = CCNxConsumerMode_VPNPong;
-                break;
-            case 'i':
-                client->keystoreName = malloc(strlen(optarg) + 1);
-                strcpy(client->keystoreName, optarg);
-                break;
-            case 'p':
-                client->keystorePassword = malloc(strlen(optarg) + 1);
-                strcpy(client->keystorePassword, optarg);
-                break;
-            case 'c':
-                sscanf(optarg, "%u", &(client->count));
-                break;
-            // case 'i':
-            //     sscanf(optarg, "%llu", &(client->intervalInMs));
-            //     break;
-            case 's':
-                sscanf(optarg, "%u", &(client->payloadSize));
-                break;
-            case 'o':
-                sscanf(optarg, "%zu", &(client->numberOfOutstanding));
-                break;
-            case 'l':
-                client->prefix = ccnxName_CreateFromCString(optarg);
-                break;
-            case 'h':
-                _displayUsage(argv[0]);
-                return false;
-            default:
-                break;
-        }
-    }
-
-    if (client->mode == CCNxConsumerMode_None) {
-        _displayUsage(argv[0]);
-        return false;
-    }
-
-    return true;
-};
-
 static bool
 _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
 {
@@ -397,11 +342,29 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
     client->payloadSize = ccnx_DefaultPayloadSize;
 
     int c;
-    while ((c = getopt_long(argc, argv, "a:t:k:p:i:hfc:s:l:o:", longopts, NULL)) != -1) {
+    while ((c = getopt_long(argc, argv, "a:t:k:p:i:h:f:c:s:l:o:", longopts, NULL)) != -1) {
         switch (c) {
         	case 'a':
         		printf("TGT User Authentication.\n");
-        		printf("%s\n",optarg);
+
+        		//XXX: TGT Req network options
+        		client->count = 1;
+        		client->intervalInMs = 1;
+        		client->payloadSize = 1024;
+        		client->mode = CCNxConsumerMode_TGTReq;
+        		//XXX: End of TGT Req network options
+
+        		//Reading username
+        		client->username = malloc(strlen(optarg) + 1);
+                strcpy(client->username, optarg);
+
+        		//TODO: temporary ////////////
+        		client->keystoreName = malloc(strlen("consumer_identity1") + 1);
+        		strcpy(client->keystoreName, "consumer_identity1");
+                client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
+                strcpy(client->keystorePassword, "consumer_identity1");
+                //end TODO //////////////////
+
         		break;
         	case 't':
         	    printf("TGS Service Access Control Verification.\n");
@@ -451,6 +414,7 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
         }
     }
 
+    //end:
     if (client->mode == CCNxConsumerMode_None) {
         _displayUsage(argv[0]);
         return false;
@@ -493,6 +457,13 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
             _ccnx_RunVPN(client, client->count, client->intervalInMs);
             _ccnx_DisplayStatistics(client);
             break;
+        case CCNxConsumerMode_TGTReq:
+            //TODO: check this
+            _ccnx_RunVPN(client, client->count, client->intervalInMs);
+            _ccnx_DisplayStatistics(client);
+            break;
+
+
         case CCNxConsumerMode_None:
         default:
             fprintf(stderr, "Error, unknown mode");

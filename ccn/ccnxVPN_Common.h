@@ -65,7 +65,7 @@
 #include <ccnx/api/ccnx_Portal/ccnx_Portal.h>
 
 /**
- * The `CCNxName` prefix for the server.
+ * The `CCNxName` prefix for the servers.
  */
 #define ccnx_DefaultPrefix "ccnx:/localhost"
 #define ccnx_TGT_DefaultPrefix "ccnx:/localhost/TGT"
