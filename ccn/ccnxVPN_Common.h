@@ -64,14 +64,51 @@
 
 #include <ccnx/api/ccnx_Portal/ccnx_Portal.h>
 
+
+
 /**
- * The `CCNxName` prefix for the servers.
+ * The `CCNxName` default prefixes for the servers.
  */
 #define ccnx_DefaultPrefix "ccnx:/localhost"
 #define ccnx_TGT_DefaultPrefix "ccnx:/localhost/TGT"
 #define ccnx_TGS_DefaultPrefix "ccnx:/localhost/TGS"
 #define ccnx_KRB_Serv_DefaultPrefix "ccnx:/localhost/kbr_serv"
 
+
+
+
+
+
+
+////////////////KRB-CCN default directories//////////////////////
+/**
+ * The default user local database directories.
+ * Must be in the client host
+ */
+#define userPrvDir "/tmp/krbccn-user/prv"	//Stores users secret keys locally
+#define userTGTDir "/tmp/krbccn-user/tgt"	//Stores user tgts locally
+#define userTGSDir "/tmp/krbccn-user/tgs"	//Stores user tgss locally
+/**
+ * The default KDC database directories.
+ * Must be in the KDC host
+ */
+#define userKDCDir 		"/tmp/krbccn-kdc/users"			//Stores users public key (or hashed passwd) on KDC
+#define controlKDCDir 	"/tmp/krbccn-kdc/authorization"	//Stores users authorized namespaces
+#define serverKDCDir 	"/tmp/krbccn-kdc/servers"		//Stores shared keys with servers
+/**
+ * The default Server database directories.
+ * Must be in the server host
+ */
+#define serverPrvDir "/tmp/krbccn-server/prv"			//Stores Service symm key that are shared with KDC
+
+
+
+
+
+
+
+
+//////////////NETWORKING CONSTANTS////////////////////////////
 /**
  * The default client receive timeout (in microseconds).
  */
