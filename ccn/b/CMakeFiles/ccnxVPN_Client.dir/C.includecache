@@ -839,4 +839,6 @@ parc/algol/parc_DisplayIndented.h
 /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
 ../ccnxVPN_Stats.h
 /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Stats.h
+sodium.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/consumer/sodium.h
 
