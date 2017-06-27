@@ -43,6 +43,7 @@ typedef struct ccnx_client {
     int count;
     uint64_t intervalInMs;
     int payloadSize;
+    uint8_t generalPayload[ccnx_MaxPayloadSize];
     int nonce;
 
     char *keystoreName;
@@ -120,6 +121,14 @@ ccnx_Create(void)
     return client;
 }
 
+PARCBuffer *
+_CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client, int size)
+{
+	printf("Creating Interest Payload.\n");
+    PARCBuffer *payload = parcBuffer_Wrap(client->generalPayload, size, 0, size);
+    return payload;
+}
+
 /**
  * Get the next `CCNxName` to issue. Increment the interest counter
  * for the client.
@@ -172,13 +181,18 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
     size_t outstanding = 0;
     bool checkOustanding = client->numberOfOutstanding > 0;
 
-    for (int pings = 0; pings <= totalVPNs; pings++) {
-        uint64_t nextPacketSendTime = 0;
-        uint64_t currentTimeInUs = 0;
+    uint64_t nextPacketSendTime = 0;
+    uint64_t currentTimeInUs = 0;
+    int pings = 0;
 
-        // Continue to send ping messages until we've reached the capacity
-        if (pings < totalVPNs && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
-            CCNxName *name = _ccnx_CreateNextName(client);
+        if (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding)) {
+
+
+        	PARCBuffer *payload = _CCNxClient_MakeTGTInterestPayload(client, client->payloadSize);
+            //CHANGE INTEREST PAYLOAD HERE!
+        	parcBuffer_Release(&payload);
+
+        	CCNxName *name = _ccnx_CreateNextName(client);
             CCNxInterest *interest = ccnxInterest_CreateSimple(name);
             CCNxMetaMessage *message = ccnxMetaMessage_CreateFromInterest(interest);
 
@@ -191,14 +205,11 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
             outstanding++;
             ccnxName_Release(&name);
-        } else {
-            // We're done with pings, so let's wait to see if we have any stragglers
-            currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
-            nextPacketSendTime = currentTimeInUs + client->receiveTimeoutInUs;
+            printf("Sent TGT\n");
         }
 
-        // Now wait for the responses and record their times
-        uint64_t receiveDelay = nextPacketSendTime - currentTimeInUs;
+        // Now wait for the response and record it`s time
+        uint64_t receiveDelay = client->receiveTimeoutInUs;
         CCNxMetaMessage *response = ccnxPortal_Receive(client->portal, &receiveDelay);
         while (response != NULL && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
             uint64_t currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
@@ -218,16 +229,9 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
             }
             ccnxMetaMessage_Release(&response);
 
-            if (pings < totalVPNs) {
-                receiveDelay = nextPacketSendTime - currentTimeInUs;
-            } else {
-                receiveDelay = client->receiveTimeoutInUs;
-            }
-
             response = ccnxPortal_Receive(client->portal, &receiveDelay);
             outstanding--;
         }
-    }
 }
 
 
