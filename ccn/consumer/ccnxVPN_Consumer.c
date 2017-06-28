@@ -108,7 +108,7 @@ ccnx_Create(void)
     client->interestCounter = 100;
     client->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
     //TODO: check this
-    client->receiveTimeoutInUs = 1000000;//*60; //ccnx_DefaultReceiveTimeoutInUs;
+    client->receiveTimeoutInUs = 1000000;// 1 sec
     client->count = 10;
     client->intervalInMs = 1000;
     client->nonce = rand();
@@ -122,11 +122,58 @@ ccnx_Create(void)
 }
 
 PARCBuffer *
-_CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client, int size)
+_CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
 {
-	printf("Creating Interest Payload.\n");
-    PARCBuffer *payload = parcBuffer_Wrap(client->generalPayload, size, 0, size);
-    return payload;
+	int size = ccnx_DefaultPayloadSize;
+
+	uint8_t username[MAX_USERNAME_LEN];
+	memset(username, 0, MAX_USERNAME_LEN * sizeof(username[0]));
+
+	if (strlen(client->username) < MAX_USERNAME_LEN) {
+		strcpy(username, client->username);
+	}else{
+		// This should never happen.
+		printf("ERROR: username must have at most 16 characters\n");
+	    return NULL;
+	}
+
+	unsigned char sk[crypto_sign_SECRETKEYBYTES];
+	char filename[strlen(client->username) + strlen(userPrvDir) + 5]; // +5 to concat -prv\0
+	strcpy(filename, userPrvDir);
+	strcat(filename,client->username);
+
+	if (1) {
+		strcat(filename,"-prv");
+	} else {
+		// ADD symmetric key based TGT support here later
+		printf("never happens\n");
+	}
+
+	FILE* fp = fopen(filename, "r");
+	if (!fp) {
+		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", username);
+		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n", username);
+		printf("Then add user credentials to KDC server.\n\n");
+		return NULL;
+	} else {
+		fread(sk, 1, crypto_sign_SECRETKEYBYTES, fp);
+		fclose(fp);
+	}
+
+	unsigned char sig[crypto_sign_BYTES];
+
+	crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, sk);
+
+
+	size = MAX_USERNAME_LEN + crypto_sign_BYTES;
+	uint8_t payload[size];
+	memcpy(payload, username, MAX_USERNAME_LEN);
+	memcpy(payload + MAX_USERNAME_LEN, sig, crypto_sign_BYTES);
+
+	PARCBuffer *ccnx_payload = parcBuffer_Allocate(size);
+	parcBuffer_PutArray(ccnx_payload, size, payload);
+	parcBuffer_Flip(ccnx_payload);
+    return ccnx_payload;
 }
 
 /**
@@ -187,13 +234,16 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
         if (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding)) {
 
-
-        	PARCBuffer *payload = _CCNxClient_MakeTGTInterestPayload(client, client->payloadSize);
-            //CHANGE INTEREST PAYLOAD HERE!
-        	parcBuffer_Release(&payload);
-
+        	// Creates a TGT interest///
+        	PARCBuffer *payload = _CCNxClient_MakeTGTInterestPayload(client);
+        	if (payload == NULL) {
+        		printf("Closing client\n");
+        		return;
+        	}
+        	////////////////////////////
         	CCNxName *name = _ccnx_CreateNextName(client);
             CCNxInterest *interest = ccnxInterest_CreateSimple(name);
+            ccnxInterest_SetPayloadAndId(interest, payload);
             CCNxMetaMessage *message = ccnxMetaMessage_CreateFromInterest(interest);
 
             if (ccnxPortal_Send(client->portal, message, CCNxStackTimeout_Never)) {
@@ -205,6 +255,7 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
             outstanding++;
             ccnxName_Release(&name);
+        	parcBuffer_Release(&payload);
             printf("Sent TGT\n");
         }
 
@@ -215,20 +266,32 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
             uint64_t currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
             if (ccnxMetaMessage_IsContentObject(response)) {
                 CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
-
                 CCNxName *responseName = ccnxContentObject_GetName(contentObject);
+
+                // TODO: Create a real TGT at the producer and store it at the client.
+                PARCBuffer *contentPayload = ccnxContentObject_GetPayload(contentObject);
+                uint8_t reply;
+                parcBuffer_GetBytes(contentPayload, 1, &reply);
+
+                if (reply == TGT_SUCCESS) {
+                	printf("<%s> authentication successful.\n", client->username);
+                	//TODO add funtion to store TGT here
+                	printf("Storing authentication ticket for <%s> \n", client->username);
+                } else {
+                	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
+                }
+
                 size_t delta = ccnxVPNStats_RecordResponse(client->stats, responseName, currentTimeInUs, response);
 
                 // Only display output if we're in ping mode
                 if (client->mode == CCNxConsumerMode_VPNPong || client->mode == CCNxConsumerMode_TGTReq) {
                     size_t contentSize = parcBuffer_Remaining(ccnxContentObject_GetPayload(contentObject));
                     char *nameString = ccnxName_ToString(responseName);
-                    printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
+                   // printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
                     parcMemory_Deallocate(&nameString);
                 }
             }
             ccnxMetaMessage_Release(&response);
-
             response = ccnxPortal_Receive(client->portal, &receiveDelay);
             outstanding--;
         }
@@ -349,8 +412,13 @@ _displayUsage(char *progName)
 static bool
 ccnx_KRB_addUser(char* userName)
 {
-	unsigned char user_pk[crypto_box_PUBLICKEYBYTES];
-	unsigned char user_sk[crypto_box_SECRETKEYBYTES];
+	if (strlen(userName) > MAX_USERNAME_LEN) {
+		printf("Username must have at most %d characters\n", MAX_USERNAME_LEN);
+		return false;
+	}
+
+	unsigned char user_pk[crypto_sign_PUBLICKEYBYTES];
+	unsigned char user_sk[crypto_sign_SECRETKEYBYTES];
 	crypto_sign_keypair(user_pk, user_sk);
 
     unsigned char sym_key[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
@@ -365,7 +433,7 @@ ccnx_KRB_addUser(char* userName)
 
 		// Writing secret key to default location////////
 		FILE* user_keys = fopen(fileName,"w");
-		fwrite(user_sk, sizeof(char), crypto_box_SECRETKEYBYTES, user_keys);
+		fwrite(user_sk, sizeof(char), crypto_sign_SECRETKEYBYTES, user_keys);
 		fclose(user_keys);
 		////////////////////////////////////////////////
 
@@ -374,7 +442,7 @@ ccnx_KRB_addUser(char* userName)
 		strcat(fileName, userName);
 		strcat(fileName, "-pub");
 		user_keys = fopen(fileName,"w");
-		fwrite(user_pk, sizeof(char), crypto_box_PUBLICKEYBYTES, user_keys);
+		fwrite(user_pk, sizeof(char), crypto_sign_PUBLICKEYBYTES, user_keys);
 		fclose(user_keys);
 		/////////////////////////////////////////////////
 
@@ -431,8 +499,8 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
         		client->mode = CCNxConsumerMode_TGTReq;
         		//XXX: End of TGT Req network options
 
-        		printf("adding user\n");
-        		ccnx_KRB_addUser(optarg);
+        		//printf("adding user\n");
+        		//ccnx_KRB_addUser(optarg);
         		//Reading username
         		client->username = malloc(strlen(optarg) + 1);
                 strcpy(client->username, optarg);
@@ -514,7 +582,7 @@ _ccnx_DisplayStatistics(CCNxConsumer *client)
 {
     bool ableToCompute = ccnxVPNStats_Display(client->stats);
     if (!ableToCompute) {
-        parcDisplayIndented_PrintLine(0, "No packets were received. Check to make sure the client and server are configured correctly and that the forwarder is running.\n");
+        //parcDisplayIndented_PrintLine(0, "No packets were received. Check to make sure the client and server are configured correctly and that the forwarder is running.\n");
     }else {
         storeThroughput(client->stats,client->payloadSize);
     }
@@ -559,8 +627,6 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
 int
 main(int argc, char *argv[argc])
 {
-	printf("KBR-CCN: Initializing Consumer...\n");
-
 	parcSecurity_Init();
 
 	int check = sodium_init();
@@ -569,8 +635,6 @@ main(int argc, char *argv[argc])
 	}
 
     CCNxConsumer *client = ccnx_Create();
-
-    printf("KBR-CCN: Preparing to Run Consumer...\n");
 
     bool runKRB = _ccnx_KRB_ParseCommandline(client, argc, argv);
 

@@ -74,6 +74,8 @@
 
 #include "../ccnxVPN_Common.h"
 
+#include "sodium.h"
+
 typedef enum {
 	REG_PROD = 0,  	// Non kerberized service
     TGT_PROD,	   		// Produces TGTs
@@ -87,8 +89,10 @@ typedef struct ccnx_ping_server {
     size_t payloadSize;
     CCNxProducerMode mode; // Could be TGT, TGS, KRB_SERVICE, REG_SERVICE
 
-
     uint8_t generalPayload[ccnx_MaxPayloadSize];
+
+    uint8_t username[MAX_USERNAME_LEN];
+    uint8_t user_pk[crypto_sign_PUBLICKEYBYTES];
 
     char *keystoreName;
     char *keystorePassword;
@@ -135,8 +139,6 @@ parcObject_ImplementRelease(CCNxServer, CCNxServer);
 static CCNxServer *
 ccnxRegServer_Create(CCNxServer *server)
 {
-	printf("Creating Regular Producer.\n");
-
     server->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = REG_PROD;
@@ -147,8 +149,6 @@ ccnxRegServer_Create(CCNxServer *server)
 static CCNxServer *
 ccnxTGTServer_Create(CCNxServer *server)
 {
-	printf("Creating Producer of type TGT.\n");
-
     server->prefix = ccnxName_CreateFromCString(ccnx_TGT_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = TGT_PROD;
@@ -159,9 +159,7 @@ ccnxTGTServer_Create(CCNxServer *server)
 static CCNxServer *
 ccnxTGSServer_Create(CCNxServer *server)
 {
-	printf("Creating Producer of type KBR Service.\n");
-
-    server->prefix = ccnxName_CreateFromCString(ccnx_TGS_DefaultPrefix);
+   server->prefix = ccnxName_CreateFromCString(ccnx_TGS_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = TGS_PROD;
 
@@ -171,7 +169,6 @@ ccnxTGSServer_Create(CCNxServer *server)
 static CCNxServer *
 ccnxKBRService_Create(CCNxServer *server)
 {
-
     server->prefix = ccnxName_CreateFromCString(ccnx_KRB_Serv_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = KRB_SERVICE;
@@ -202,9 +199,75 @@ _CCNxServer_MakePayload(CCNxServer *server, int size)
     return payload;
 }
 
+PARCBuffer *
+_CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
+{
+	uint8_t code;
+
+	if (result) {
+		code = TGT_SUCCESS;
+	} else {
+		code = TGT_AUTH_FAIL;
+	}
+
+	int size = sizeof(uint8_t);
+	PARCBuffer *payload = parcBuffer_Allocate(size);
+    parcBuffer_PutUint8(payload, code);
+	parcBuffer_Flip(payload);
+
+	printf("Sending response content.\n");
+    return payload;
+}
+
+
 /**
  * Run the `CCNxServer` indefinitely.
  */
+
+bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
+	uint8_t username[MAX_USERNAME_LEN];
+	uint8_t sig[crypto_sign_BYTES];
+
+	int payloadSize = parcBuffer_Remaining(recvPayload);
+
+	parcBuffer_GetBytes(recvPayload, MAX_USERNAME_LEN, username);
+
+	parcBuffer_GetBytes(recvPayload, crypto_sign_BYTES, sig);
+
+	printf("Received authentication request from <%s>.\n",username);
+
+	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
+	char filename_pk[strlen(username) + strlen(userPrvDir) + 5]; // +5 to concat -prv\0
+	strcpy(filename_pk, userPrvDir);
+	strcat(filename_pk,username);
+
+	if (1) {
+		strcat(filename_pk,"-pub");
+	} else {
+		// ADD symmetric key based TGT support here later
+		printf("never happens\n");
+	}
+
+	FILE* fp = fopen(filename_pk, "r");
+	if (!fp) {
+		printf("ERROR: Could not find public key file\n");
+	} else {
+		fread(pk, 1, crypto_sign_PUBLICKEYBYTES, fp);
+		fclose(fp);
+	}
+
+	if (crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
+	    /* Incorrect signature! */
+		return false;
+	} else {
+		memcpy(server->username, username, MAX_USERNAME_LEN);
+		memcpy(server->user_pk, pk, crypto_sign_PUBLICKEYBYTES);
+		return true;
+	}
+
+}
+
+
 static void
 _CCNxServer_Run(CCNxServer *server)
 {
@@ -229,14 +292,24 @@ _CCNxServer_Run(CCNxServer *server)
             if (ccnxMetaMessage_IsInterest(request)) {
                 if (interest != NULL) {
                     CCNxName *interestName = ccnxInterest_GetName(interest);
+                    PARCBuffer *interestPayload = ccnxInterest_GetPayload(interest);
 
-                    // Extract the size of the payload response from the client
-                    CCNxNameSegment *sizeSegment = ccnxName_GetSegment(interestName, sizeIndex);
-                    char *segmentString = ccnxNameSegment_ToString(sizeSegment);
-                    int size = atoi(segmentString);
-                    size = size > ccnx_MaxPayloadSize ? ccnx_MaxPayloadSize : size;
+                    uint8_t result = 0;
+                    if(interestPayload){
+                    	result = ccnx_krb_VerifyUser(server, interestPayload);
+                    } else {
+                    	printf("Payload is null.\n");
+                    }
 
-                    PARCBuffer *payload = _CCNxServer_MakePayload(server, size);
+                    if (result) {
+                    	printf("User authentication successful\n");
+                    	printf("Issuing TGT \n");
+                    } else {
+                    	printf("User authentication failed\n");
+                    	printf("Issuing error msg content \n");
+                    }
+
+                    PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -260,6 +333,10 @@ _CCNxServer_Run(CCNxServer *server)
                 exit(1);
             }
             ccnxMetaMessage_Release(&request);
+
+            // Why releasing this fucks up the whole shit?
+            //parcBuffer_Release(&interestPayload);
+
         }
     }
 }
@@ -361,14 +438,15 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
 int main(int argc, char *argv[argc])
 {
 
-	printf("KBR-CCN: Initializing Producer...\n");
-
     parcSecurity_Init();
+
+	int check = sodium_init();
+	if (check) {
+		printf("Crypto lib Sodium not available.\n");
+	}
 
     CCNxServer *server = ccnxServer_Create();
     bool runServer = _CCNxServer_ParseCommandline(server, argc, argv);
-
-    printf("KBR-CCN: Preparing to Run Producer...\n");
 
     if (runServer) {
         _CCNxServer_Run(server);

@@ -17,11 +17,10 @@
 #define ccnx_TGS_DefaultPrefix "ccnx:/localhost/TGS"
 #define ccnx_KRB_Serv_DefaultPrefix "ccnx:/localhost/kbr_serv"
 
-
-
-
-
-
+typedef enum {
+	TGT_AUTH_FAIL = 0,
+    TGT_SUCCESS
+} KDCCodes;
 
 ////////////////KRB-CCN default directories//////////////////////
 /**
@@ -44,7 +43,7 @@
  */
 #define serverPrvDir "/tmp/krbccn-server/prv/"			//Stores Service symm key that are shared with KDC
 
-
+#define MAX_USERNAME_LEN 16 //max username lenght in bytes
 
 
 

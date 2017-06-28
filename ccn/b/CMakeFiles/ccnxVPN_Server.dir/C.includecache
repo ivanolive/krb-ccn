@@ -795,4 +795,6 @@ ccnx/api/ccnx_Portal/ccnx_PortalRTA.h
 -
 ../ccnxVPN_Common.h
 /home/ivan/workspace/krb-ccn/krb-ccn/ccn/ccnxVPN_Common.h
+sodium.h
+/home/ivan/workspace/krb-ccn/krb-ccn/ccn/producer/sodium.h
 
