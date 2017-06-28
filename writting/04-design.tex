@@ -106,10 +106,10 @@ $Verif_{pk}(\sigma,m) $		&  Signature verification using public key $pk$     			
 \procedure{}{%
 \textbf{Consumer} \> \> \textbf{Authenticator} \\
 \mathsf{I.name = TGT\_Name} \> \> \\
-\sigma = \mathsf{Sign}_{sk_C}(\mathsf{I.name}) \> \> \\
-\> \xrightarrow{payload = \sigma, pk_C} \> \\
-\> \> \text{Verify Claimed $pk_C$ UID on users DB} \\
-\> \> \mathsf{Verify}_{pk_C}(\sigma,\mathsf{I.name}) \\
+\sigma = \mathsf{Sign}_{sk_C}(\mathsf{userName}) \> \> \\
+\> \xrightarrow{payload = \sigma, userName} \> \\
+\> \> \text{Fetch $pk_C$ on users DB} \\
+\> \> \mathsf{Verify}_{pk_C}(\sigma,\mathsf{userName}) \\
 \> \> s \sample \{0,1\}^{\lambda} \\
 \> \> t = \mathsf{setExpirationTime}() \\
 \> \> k_{TGS} \sample \{0,1\}^{\lambda} \\

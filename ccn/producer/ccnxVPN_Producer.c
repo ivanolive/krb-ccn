@@ -64,6 +64,8 @@
 
 #include <parc/algol/parc_Object.h>
 
+#include <parc/algol/parc_Clock.h>
+
 #include <parc/security/parc_Security.h>
 #include <parc/security/parc_IdentityFile.h>
 
@@ -189,6 +191,18 @@ ccnxServer_Create(void)
 }
 
 /**
+ * Convert a timeval struct to a single microsecond count.
+ */
+static uint64_t
+_ccnx_CurrentTimeInUs(PARCClock *clock)
+{
+    struct timeval currentTimeVal;
+    parcClock_GetTimeval(clock, &currentTimeVal);
+    uint64_t microseconds = currentTimeVal.tv_sec * 1000000 + currentTimeVal.tv_usec;
+    return microseconds;
+}
+
+/**
  * Create a `PARCBuffer` payload of the server-configured size.
  */
 PARCBuffer *
@@ -203,17 +217,133 @@ PARCBuffer *
 _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 {
 	uint8_t code;
+	PARCBuffer *payload = NULL;
+
 
 	if (result) {
 		code = TGT_SUCCESS;
+		PARCClock *clock = parcClock_Wallclock();
+		// K_TGS: the key used by the client to decrypt TGSs
+	    unsigned char k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+		randombytes_buf(k_tgs, sizeof k_tgs);
+
+		// random nonce s
+		uint8_t s_nonce[sizeof k_tgs];
+		randombytes_buf(s_nonce, sizeof s_nonce);
+
+		// expiration time of TGT
+		uint64_t expiration = _ccnx_CurrentTimeInUs(clock) + TGT_EXPIRATION;
+
+		uint8_t C_TGS_token[sizeof k_tgs + sizeof(uint8_t)];
+		memset(C_TGS_token, 0, sizeof k_tgs + sizeof(uint8_t)); //set buffer to zero
+
+		memcpy(C_TGS_token,k_tgs, sizeof k_tgs);
+		memcpy(C_TGS_token + sizeof k_tgs, &expiration, sizeof (uint64_t));
+
+		// TODO: encrypt C_TGS_token reading the appropriate keys from file
+		/* Recipient creates a long-term key pair */
+		unsigned char recipient_pk[crypto_box_PUBLICKEYBYTES];
+		unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
+		crypto_box_keypair(recipient_pk, recipient_sk);
+
+	    printf("Public key size %zu, private key size %zu\n", sizeof(recipient_pk), sizeof(recipient_sk));
+
+		/* Anonymous sender encrypts a message using an ephemeral key pair
+		 * and the recipient's public key */
+	    // TODO: change this to authenticated encryption
+	    int ct_len = crypto_box_SEALBYTES + sizeof k_tgs + sizeof(uint8_t);
+		unsigned char enc_C_TGS_token[ct_len];
+		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint8_t), recipient_pk);
+
+		//TODO: move this part to client
+		/* Recipient decrypts the ciphertext */
+		unsigned char decrypted_token[sizeof k_tgs + sizeof(uint8_t)];
+		if (crypto_box_seal_open(decrypted_token, enc_C_TGS_token, ct_len,
+			                     recipient_pk, recipient_sk) != 0) {
+			/* message corrupted or not intended for this recipient */
+			printf("Not decyphered\n");
+		}else{
+			printf("Message: %s\n",decrypted_token);
+		}
+
+		//TODO: create TGT
+		// TGT plaintext buffer
+		int tgt_size = MAX_USERNAME_LEN + 2 * sizeof k_tgs + sizeof (uint64_t);
+		uint8_t TGT[tgt_size]; //plaintext TGT
+		memset(TGT, 0, tgt_size * sizeof(TGT[0])); //set buffer to zero
+
+		uint8_t *position = TGT;
+
+		memcpy(position, server->username, MAX_USERNAME_LEN); //copy username to buffer
+		//printf("%s\n",position);
+		position += MAX_USERNAME_LEN;
+
+		memcpy(position, s_nonce, sizeof s_nonce); //copy random nonce to buffer
+		//printf("\n%s\n%s\n",position, s_nonce);
+		position += sizeof s_nonce;
+
+		memcpy(position, &expiration, sizeof (uint64_t)); //copy expiration date to buffer
+		//testing
+		//uint64_t test = 0;
+		//memcpy(&test,position,sizeof (uint64_t));
+		//printf("\n%llu\n%llu\n%d\n", test,expiration, sizeof (uint64_t));
+		//end testing
+		position += sizeof (uint64_t);
+
+		memcpy(position, k_tgs, sizeof k_tgs); //copy TGS key to buffer
+		//printf("\n%s\n%s\n", position, k_tgs);
+		position += sizeof k_tgs;
+
+		// At this point the TGT is ready to be encrypted
+
+		//TODO: Read these guys from file.////////////////////
+		unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
+		unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
+		unsigned long long ciphertext_len;
+		randombytes_buf(KDC_key, sizeof KDC_key);
+		randombytes_buf(nonce, sizeof nonce);
+		// end TODO//////////////////////////////////////////
+
+		unsigned char enc_TGT[tgt_size + crypto_aead_aes256gcm_ABYTES];
+
+		printf("Key size: %zu, Nonce size: %zu\n", sizeof(KDC_key), sizeof(nonce));
+
+		crypto_aead_aes256gcm_encrypt(enc_TGT, &ciphertext_len,
+			                          TGT, tgt_size,
+			                          NULL, 0,
+			                          NULL, nonce, KDC_key);
+
+		// TODO: move this part to TGS producer
+		unsigned char decrypted[tgt_size];
+		unsigned long long decrypted_len;
+		if (ciphertext_len < crypto_aead_aes256gcm_ABYTES ||
+			crypto_aead_aes256gcm_decrypt(decrypted, &decrypted_len,
+			                              NULL,
+			                              enc_TGT, ciphertext_len,
+			                              NULL,
+			                              0,
+			                              nonce, KDC_key) != 0) {
+				printf("message forged");
+		}else{
+			printf("Message ok!\n");
+			printf("Content: %s\n",decrypted);
+		}
+
+		int size = sizeof(uint8_t) + sizeof enc_TGT + sizeof enc_C_TGS_token;
+		payload = parcBuffer_Allocate(size);
+	    parcBuffer_PutUint8(payload, code);
+	    parcBuffer_PutArray(payload, sizeof enc_TGT, enc_TGT);
+	    parcBuffer_PutArray(payload, sizeof enc_C_TGS_token, enc_C_TGS_token);
+		parcBuffer_Flip(payload);
+
+
 	} else {
 		code = TGT_AUTH_FAIL;
+		int size = sizeof(uint8_t);
+		payload = parcBuffer_Allocate(size);
+		parcBuffer_PutUint8(payload, code);
+		parcBuffer_Flip(payload);
 	}
-
-	int size = sizeof(uint8_t);
-	PARCBuffer *payload = parcBuffer_Allocate(size);
-    parcBuffer_PutUint8(payload, code);
-	parcBuffer_Flip(payload);
 
 	printf("Sending response content.\n");
     return payload;

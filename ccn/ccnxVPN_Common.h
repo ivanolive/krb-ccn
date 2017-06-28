@@ -45,9 +45,9 @@ typedef enum {
 
 #define MAX_USERNAME_LEN 16 //max username lenght in bytes
 
+#define NONCE_LEN 16 // random nonce size in bytes
 
-
-
+#define TGT_EXPIRATION 60*60*24*1000*1000 // TGT expiration time in usec (default 1 day)
 
 
 //////////////NETWORKING CONSTANTS////////////////////////////
