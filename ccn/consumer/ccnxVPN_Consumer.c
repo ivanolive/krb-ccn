@@ -256,7 +256,7 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
             outstanding++;
             ccnxName_Release(&name);
         	parcBuffer_Release(&payload);
-            printf("Sent TGT\n");
+            printf("Sent TGT request\n");
         }
 
         // Now wait for the response and record it`s time
@@ -276,6 +276,7 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 if (reply == TGT_SUCCESS) {
                 	printf("<%s> authentication successful.\n", client->username);
                 	//TODO add funtion to store TGT here
+                	printf("Received %d bytes. TGT and token are probably there.\n",parcBuffer_Remaining(contentPayload));
                 	printf("Storing authentication ticket for <%s> \n", client->username);
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);

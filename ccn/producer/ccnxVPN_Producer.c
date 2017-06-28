@@ -440,6 +440,7 @@ _CCNxServer_Run(CCNxServer *server)
                     }
 
                     PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
+                    printf("Sending %d bytes. TGT and token are probably there.\n",parcBuffer_Remaining(payload));
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
