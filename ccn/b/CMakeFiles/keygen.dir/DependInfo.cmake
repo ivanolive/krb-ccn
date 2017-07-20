@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/Desktop/krb-ccn/ccn/athena_keygen.c" "/home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles/keygen.dir/athena_keygen.c.o"
+  "/home/ivan/workspace/krb/krb-ccn/ccn/athena_keygen.c" "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/keygen.dir/athena_keygen.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

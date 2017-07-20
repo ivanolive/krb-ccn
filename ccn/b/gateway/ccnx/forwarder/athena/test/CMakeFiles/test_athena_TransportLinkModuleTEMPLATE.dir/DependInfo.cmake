@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c" "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o"
+  "/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c" "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
+  "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

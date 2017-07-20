@@ -9,11 +9,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.c
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/test/test_athenactl.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -132,5 +127,10 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.c
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: ../gateway/ccnx/forwarder/athena/test/test_athenactl.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/test_athenactl.c.o: gateway/ccnx/forwarder/athena/config.h
 

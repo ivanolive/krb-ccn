@@ -8,10 +8,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PI
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.c
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -123,5 +119,9 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PI
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/testing/parc_MemoryTesting.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/testing/parc_ObjectTesting.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.c
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_PIT.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/test_athena_PIT.c.o: gateway/ccnx/forwarder/athena/config.h
 

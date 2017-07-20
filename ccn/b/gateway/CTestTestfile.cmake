@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/ivan/Desktop/krb-ccn/ccn/gateway
-# Build directory: /home/ivan/Desktop/krb-ccn/ccn/b/gateway
+# Source directory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway
+# Build directory: /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

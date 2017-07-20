@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/krb-ccn/ccn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/krb-ccn/ccn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include CMakeFiles/keygen.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/keygen.dir/flags.make
 
 CMakeFiles/keygen.dir/athena_keygen.c.o: CMakeFiles/keygen.dir/flags.make
 CMakeFiles/keygen.dir/athena_keygen.c.o: ../athena_keygen.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/keygen.dir/athena_keygen.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/keygen.dir/athena_keygen.c.o   -c /home/ivan/Desktop/krb-ccn/ccn/athena_keygen.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/keygen.dir/athena_keygen.c.o   -c /home/ivan/workspace/krb/krb-ccn/ccn/athena_keygen.c
 
 CMakeFiles/keygen.dir/athena_keygen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/keygen.dir/athena_keygen.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ivan/Desktop/krb-ccn/ccn/athena_keygen.c > CMakeFiles/keygen.dir/athena_keygen.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ivan/workspace/krb/krb-ccn/ccn/athena_keygen.c > CMakeFiles/keygen.dir/athena_keygen.c.i
 
 CMakeFiles/keygen.dir/athena_keygen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/keygen.dir/athena_keygen.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ivan/Desktop/krb-ccn/ccn/athena_keygen.c -o CMakeFiles/keygen.dir/athena_keygen.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ivan/workspace/krb/krb-ccn/ccn/athena_keygen.c -o CMakeFiles/keygen.dir/athena_keygen.c.s
 
 CMakeFiles/keygen.dir/athena_keygen.c.o.requires:
 .PHONY : CMakeFiles/keygen.dir/athena_keygen.c.o.requires
@@ -89,6 +89,23 @@ keygen: CMakeFiles/keygen.dir/link.txt
 CMakeFiles/keygen.dir/build: keygen
 .PHONY : CMakeFiles/keygen.dir/build
 
+# Object files for target keygen
+keygen_OBJECTS = \
+"CMakeFiles/keygen.dir/athena_keygen.c.o"
+
+# External object files for target keygen
+keygen_EXTERNAL_OBJECTS =
+
+CMakeFiles/CMakeRelink.dir/keygen: CMakeFiles/keygen.dir/athena_keygen.c.o
+CMakeFiles/CMakeRelink.dir/keygen: CMakeFiles/keygen.dir/build.make
+CMakeFiles/CMakeRelink.dir/keygen: CMakeFiles/keygen.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable CMakeFiles/CMakeRelink.dir/keygen"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/keygen.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+CMakeFiles/keygen.dir/preinstall: CMakeFiles/CMakeRelink.dir/keygen
+.PHONY : CMakeFiles/keygen.dir/preinstall
+
 CMakeFiles/keygen.dir/requires: CMakeFiles/keygen.dir/athena_keygen.c.o.requires
 .PHONY : CMakeFiles/keygen.dir/requires
 
@@ -97,6 +114,6 @@ CMakeFiles/keygen.dir/clean:
 .PHONY : CMakeFiles/keygen.dir/clean
 
 CMakeFiles/keygen.dir/depend:
-	cd /home/ivan/Desktop/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/krb-ccn/ccn /home/ivan/Desktop/krb-ccn/ccn /home/ivan/Desktop/krb-ccn/ccn/b /home/ivan/Desktop/krb-ccn/ccn/b /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles/keygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb/krb-ccn/ccn /home/ivan/workspace/krb/krb-ccn/ccn /home/ivan/workspace/krb/krb-ccn/ccn/b /home/ivan/workspace/krb/krb-ccn/ccn/b /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/keygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/keygen.dir/depend
 

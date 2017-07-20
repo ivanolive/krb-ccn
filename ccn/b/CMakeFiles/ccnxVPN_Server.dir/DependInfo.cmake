@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/Desktop/krb-ccn/ccn/ccnxVPN_Common.c" "/home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.o"
-  "/home/ivan/Desktop/krb-ccn/ccn/producer/ccnxVPN_Producer.c" "/home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.o"
+  "/home/ivan/workspace/krb/krb-ccn/ccn/ccnxVPN_Common.c" "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.o"
+  "/home/ivan/workspace/krb/krb-ccn/ccn/producer/ccnxVPN_Producer.c" "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o"
   "ccnxVPN_Client.pdb"
   "ccnxVPN_Client"
+  "ccnxVPN_Client.pdb"
+  "CMakeFiles/CMakeRelink.dir/ccnxVPN_Client"
 )
 
 # Per-language clean rules from dependency scanning.

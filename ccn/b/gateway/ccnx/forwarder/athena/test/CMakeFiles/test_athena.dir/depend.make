@@ -12,8 +12,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: .
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/athena.c
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -120,5 +118,7 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/athena.c
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/test_athena.c.o: gateway/ccnx/forwarder/athena/config.h
 

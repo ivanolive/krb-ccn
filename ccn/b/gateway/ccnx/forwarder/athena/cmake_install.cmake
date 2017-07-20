@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena
+# Install script for directory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,193 +33,53 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TCP.so.1.0"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TCP.so.1"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TCP.so"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1.0"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TCP.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib:"
-           NEW_RPATH "/usr/local/lib")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_UDP.so.1.0"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_UDP.so.1"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_UDP.so"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1.0"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_UDP.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib:"
-           NEW_RPATH "/usr/local/lib")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_ETH.so.1.0"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_ETH.so.1"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_ETH.so"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1.0"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_ETH.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib:"
-           NEW_RPATH "/usr/local/lib")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_Fragmenter_BEFS.so.1.0"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_Fragmenter_BEFS.so.1"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_Fragmenter_BEFS.so"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1.0"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_Fragmenter_BEFS.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib:"
-           NEW_RPATH "/usr/local/lib")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "/usr/local/lib")
-    endif()
-  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TEMPLATE.so.1.0"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TEMPLATE.so.1"
-    "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena_TEMPLATE.so"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1.0"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1"
+    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so.1.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so.1"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libathena_TEMPLATE.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHANGE
-           FILE "${file}"
-           OLD_RPATH "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib:"
-           NEW_RPATH "/usr/local/lib")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/cmake_install.cmake")
-  include("/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/cmake_install.cmake")
+  include("/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/cmake_install.cmake")
+  include("/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/cmake_install.cmake")
 
 endif()
 

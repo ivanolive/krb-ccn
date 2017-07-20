@@ -9,16 +9,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/te
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_About.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.c
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_InterestControl.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -129,5 +119,15 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/te
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_About.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.c
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_InterestControl.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/test_athena_InterestControl.c.o: gateway/ccnx/forwarder/athena/config.h
 

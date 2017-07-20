@@ -47,10 +47,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/krb-ccn/ccn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/krb-ccn/ccn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb/krb-ccn/ccn/b
 
 #=============================================================================
 # Target rules for target CMakeFiles/Continuous.dir
@@ -59,15 +59,15 @@ CMAKE_BINARY_DIR = /home/ivan/Desktop/krb-ccn/ccn/b
 CMakeFiles/Continuous.dir/all:
 	$(MAKE) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/depend
 	$(MAKE) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target Continuous"
 .PHONY : CMakeFiles/Continuous.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Continuous.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Continuous.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/Continuous.dir/rule
 
 # Convenience name for target.
@@ -90,15 +90,15 @@ clean: CMakeFiles/Continuous.dir/clean
 CMakeFiles/ContinuousBuild.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousBuild"
 .PHONY : CMakeFiles/ContinuousBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousBuild.dir/rule
 
 # Convenience name for target.
@@ -121,15 +121,15 @@ clean: CMakeFiles/ContinuousBuild.dir/clean
 CMakeFiles/ContinuousConfigure.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousConfigure"
 .PHONY : CMakeFiles/ContinuousConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousConfigure.dir/rule
 
 # Convenience name for target.
@@ -152,15 +152,15 @@ clean: CMakeFiles/ContinuousConfigure.dir/clean
 CMakeFiles/ContinuousCoverage.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousCoverage"
 .PHONY : CMakeFiles/ContinuousCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousCoverage.dir/rule
 
 # Convenience name for target.
@@ -183,15 +183,15 @@ clean: CMakeFiles/ContinuousCoverage.dir/clean
 CMakeFiles/ContinuousMemCheck.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousMemCheck"
 .PHONY : CMakeFiles/ContinuousMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousMemCheck.dir/rule
 
 # Convenience name for target.
@@ -214,15 +214,15 @@ clean: CMakeFiles/ContinuousMemCheck.dir/clean
 CMakeFiles/ContinuousStart.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousStart"
 .PHONY : CMakeFiles/ContinuousStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousStart.dir/rule
 
 # Convenience name for target.
@@ -245,15 +245,15 @@ clean: CMakeFiles/ContinuousStart.dir/clean
 CMakeFiles/ContinuousSubmit.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousSubmit"
 .PHONY : CMakeFiles/ContinuousSubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousSubmit.dir/rule
 
 # Convenience name for target.
@@ -276,15 +276,15 @@ clean: CMakeFiles/ContinuousSubmit.dir/clean
 CMakeFiles/ContinuousTest.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousTest"
 .PHONY : CMakeFiles/ContinuousTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousTest.dir/rule
 
 # Convenience name for target.
@@ -307,15 +307,15 @@ clean: CMakeFiles/ContinuousTest.dir/clean
 CMakeFiles/ContinuousUpdate.dir/all:
 	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/depend
 	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ContinuousUpdate"
 .PHONY : CMakeFiles/ContinuousUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousUpdate.dir/rule
 
 # Convenience name for target.
@@ -338,15 +338,15 @@ clean: CMakeFiles/ContinuousUpdate.dir/clean
 CMakeFiles/Experimental.dir/all:
 	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/depend
 	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target Experimental"
 .PHONY : CMakeFiles/Experimental.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Experimental.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Experimental.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/Experimental.dir/rule
 
 # Convenience name for target.
@@ -369,15 +369,15 @@ clean: CMakeFiles/Experimental.dir/clean
 CMakeFiles/ExperimentalBuild.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalBuild"
 .PHONY : CMakeFiles/ExperimentalBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalBuild.dir/rule
 
 # Convenience name for target.
@@ -400,15 +400,15 @@ clean: CMakeFiles/ExperimentalBuild.dir/clean
 CMakeFiles/ExperimentalConfigure.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalConfigure"
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/rule
 
 # Convenience name for target.
@@ -431,15 +431,15 @@ clean: CMakeFiles/ExperimentalConfigure.dir/clean
 CMakeFiles/ExperimentalCoverage.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalCoverage"
 .PHONY : CMakeFiles/ExperimentalCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalCoverage.dir/rule
 
 # Convenience name for target.
@@ -462,15 +462,15 @@ clean: CMakeFiles/ExperimentalCoverage.dir/clean
 CMakeFiles/ExperimentalMemCheck.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalMemCheck"
 .PHONY : CMakeFiles/ExperimentalMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalMemCheck.dir/rule
 
 # Convenience name for target.
@@ -493,15 +493,15 @@ clean: CMakeFiles/ExperimentalMemCheck.dir/clean
 CMakeFiles/ExperimentalStart.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalStart"
 .PHONY : CMakeFiles/ExperimentalStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalStart.dir/rule
 
 # Convenience name for target.
@@ -524,15 +524,15 @@ clean: CMakeFiles/ExperimentalStart.dir/clean
 CMakeFiles/ExperimentalSubmit.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalSubmit"
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/rule
 
 # Convenience name for target.
@@ -555,15 +555,15 @@ clean: CMakeFiles/ExperimentalSubmit.dir/clean
 CMakeFiles/ExperimentalTest.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalTest"
 .PHONY : CMakeFiles/ExperimentalTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalTest.dir/rule
 
 # Convenience name for target.
@@ -586,15 +586,15 @@ clean: CMakeFiles/ExperimentalTest.dir/clean
 CMakeFiles/ExperimentalUpdate.dir/all:
 	$(MAKE) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/depend
 	$(MAKE) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target ExperimentalUpdate"
 .PHONY : CMakeFiles/ExperimentalUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalUpdate.dir/rule
 
 # Convenience name for target.
@@ -617,15 +617,15 @@ clean: CMakeFiles/ExperimentalUpdate.dir/clean
 CMakeFiles/Nightly.dir/all:
 	$(MAKE) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/depend
 	$(MAKE) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target Nightly"
 .PHONY : CMakeFiles/Nightly.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Nightly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Nightly.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/Nightly.dir/rule
 
 # Convenience name for target.
@@ -648,15 +648,15 @@ clean: CMakeFiles/Nightly.dir/clean
 CMakeFiles/NightlyBuild.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyBuild"
 .PHONY : CMakeFiles/NightlyBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyBuild.dir/rule
 
 # Convenience name for target.
@@ -679,15 +679,15 @@ clean: CMakeFiles/NightlyBuild.dir/clean
 CMakeFiles/NightlyConfigure.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyConfigure"
 .PHONY : CMakeFiles/NightlyConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyConfigure.dir/rule
 
 # Convenience name for target.
@@ -710,15 +710,15 @@ clean: CMakeFiles/NightlyConfigure.dir/clean
 CMakeFiles/NightlyCoverage.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyCoverage"
 .PHONY : CMakeFiles/NightlyCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyCoverage.dir/rule
 
 # Convenience name for target.
@@ -741,15 +741,15 @@ clean: CMakeFiles/NightlyCoverage.dir/clean
 CMakeFiles/NightlyMemCheck.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyMemCheck"
 .PHONY : CMakeFiles/NightlyMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyMemCheck.dir/rule
 
 # Convenience name for target.
@@ -772,15 +772,15 @@ clean: CMakeFiles/NightlyMemCheck.dir/clean
 CMakeFiles/NightlyMemoryCheck.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyMemoryCheck"
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemoryCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/rule
 
 # Convenience name for target.
@@ -803,15 +803,15 @@ clean: CMakeFiles/NightlyMemoryCheck.dir/clean
 CMakeFiles/NightlyStart.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyStart"
 .PHONY : CMakeFiles/NightlyStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyStart.dir/rule
 
 # Convenience name for target.
@@ -834,15 +834,15 @@ clean: CMakeFiles/NightlyStart.dir/clean
 CMakeFiles/NightlySubmit.dir/all:
 	$(MAKE) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/depend
 	$(MAKE) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlySubmit"
 .PHONY : CMakeFiles/NightlySubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlySubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlySubmit.dir/rule
 
 # Convenience name for target.
@@ -865,15 +865,15 @@ clean: CMakeFiles/NightlySubmit.dir/clean
 CMakeFiles/NightlyTest.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyTest"
 .PHONY : CMakeFiles/NightlyTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyTest.dir/rule
 
 # Convenience name for target.
@@ -896,15 +896,15 @@ clean: CMakeFiles/NightlyTest.dir/clean
 CMakeFiles/NightlyUpdate.dir/all:
 	$(MAKE) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/depend
 	$(MAKE) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 
 	@echo "Built target NightlyUpdate"
 .PHONY : CMakeFiles/NightlyUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyUpdate.dir/rule
 
 # Convenience name for target.
@@ -927,7 +927,7 @@ clean: CMakeFiles/NightlyUpdate.dir/clean
 CMakeFiles/ccnxVPN_Client.dir/all:
 	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/depend
 	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  28 29 30
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  28 29 30
 	@echo "Built target ccnxVPN_Client"
 .PHONY : CMakeFiles/ccnxVPN_Client.dir/all
 
@@ -937,14 +937,23 @@ all: CMakeFiles/ccnxVPN_Client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ccnxVPN_Client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ccnxVPN_Client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ccnxVPN_Client.dir/rule
 
 # Convenience name for target.
 ccnxVPN_Client: CMakeFiles/ccnxVPN_Client.dir/rule
 .PHONY : ccnxVPN_Client
+
+# Pre-install relink rule for target.
+CMakeFiles/ccnxVPN_Client.dir/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/preinstall
+.PHONY : CMakeFiles/ccnxVPN_Client.dir/preinstall
+
+# Prepare target for install.
+preinstall: CMakeFiles/ccnxVPN_Client.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 CMakeFiles/ccnxVPN_Client.dir/clean:
@@ -962,7 +971,7 @@ clean: CMakeFiles/ccnxVPN_Client.dir/clean
 CMakeFiles/ccnxVPN_Server.dir/all:
 	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/depend
 	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  31 32
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  31 32
 	@echo "Built target ccnxVPN_Server"
 .PHONY : CMakeFiles/ccnxVPN_Server.dir/all
 
@@ -972,14 +981,23 @@ all: CMakeFiles/ccnxVPN_Server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ccnxVPN_Server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ccnxVPN_Server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/ccnxVPN_Server.dir/rule
 
 # Convenience name for target.
 ccnxVPN_Server: CMakeFiles/ccnxVPN_Server.dir/rule
 .PHONY : ccnxVPN_Server
+
+# Pre-install relink rule for target.
+CMakeFiles/ccnxVPN_Server.dir/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/preinstall
+.PHONY : CMakeFiles/ccnxVPN_Server.dir/preinstall
+
+# Prepare target for install.
+preinstall: CMakeFiles/ccnxVPN_Server.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 CMakeFiles/ccnxVPN_Server.dir/clean:
@@ -997,7 +1015,7 @@ clean: CMakeFiles/ccnxVPN_Server.dir/clean
 CMakeFiles/keygen.dir/all:
 	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/depend
 	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  33
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  33
 	@echo "Built target keygen"
 .PHONY : CMakeFiles/keygen.dir/all
 
@@ -1007,14 +1025,23 @@ all: CMakeFiles/keygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/keygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/keygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : CMakeFiles/keygen.dir/rule
 
 # Convenience name for target.
 keygen: CMakeFiles/keygen.dir/rule
 .PHONY : keygen
+
+# Pre-install relink rule for target.
+CMakeFiles/keygen.dir/preinstall:
+	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/preinstall
+.PHONY : CMakeFiles/keygen.dir/preinstall
+
+# Prepare target for install.
+preinstall: CMakeFiles/keygen.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 CMakeFiles/keygen.dir/clean:
@@ -1066,6 +1093,11 @@ gateway/ccnx/forwarder/athena/clean: gateway/ccnx/forwarder/athena/command-line/
 .PHONY : gateway/ccnx/forwarder/athena/clean
 
 # Convenience name for "preinstall" pass in the directory.
+gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
 gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/test/preinstall
 gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/command-line/preinstall
 .PHONY : gateway/ccnx/forwarder/athena/preinstall
@@ -1077,7 +1109,7 @@ gateway/ccnx/forwarder/athena/preinstall: gateway/ccnx/forwarder/athena/command-
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 	@echo "Built target athena"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 
@@ -1087,9 +1119,9 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/rule
 
 # Convenience name for target.
@@ -1112,7 +1144,7 @@ clean: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/clean
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  16 17 18
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  16 17 18
 	@echo "Built target athena_ETH.shared"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/all
 
@@ -1122,14 +1154,23 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule
 
 # Convenience name for target.
 athena_ETH.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/rule
 .PHONY : athena_ETH.shared
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/clean:
@@ -1147,7 +1188,7 @@ clean: gateway/ccnx/forwarder/athena/CMakeFiles/athena_ETH.shared.dir/clean
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  19
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  19
 	@echo "Built target athena_Fragmenter_BEFS.shared"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/all
 
@@ -1157,14 +1198,23 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule
 
 # Convenience name for target.
 athena_Fragmenter_BEFS.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/rule
 .PHONY : athena_Fragmenter_BEFS.shared
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.dir/clean:
@@ -1182,7 +1232,7 @@ clean: gateway/ccnx/forwarder/athena/CMakeFiles/athena_Fragmenter_BEFS.shared.di
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  20
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  20
 	@echo "Built target athena_TCP.shared"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/all
 
@@ -1192,14 +1242,23 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule
 
 # Convenience name for target.
 athena_TCP.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/rule
 .PHONY : athena_TCP.shared
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/clean:
@@ -1217,7 +1276,7 @@ clean: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TCP.shared.dir/clean
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  21
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  21
 	@echo "Built target athena_TEMPLATE.shared"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/all
 
@@ -1227,14 +1286,23 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
 
 # Convenience name for target.
 athena_TEMPLATE.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/rule
 .PHONY : athena_TEMPLATE.shared
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/clean:
@@ -1252,7 +1320,7 @@ clean: gateway/ccnx/forwarder/athena/CMakeFiles/athena_TEMPLATE.shared.dir/clean
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/all:
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  22 23
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  22 23
 	@echo "Built target athena_UDP.shared"
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/all
 
@@ -1262,14 +1330,23 @@ all: gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule
 
 # Convenience name for target.
 athena_UDP.shared: gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/rule
 .PHONY : athena_UDP.shared
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/build.make gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena_UDP.shared.dir/clean:
@@ -1330,7 +1407,7 @@ gateway/ccnx/forwarder/athena/test/preinstall:
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  34
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  34
 	@echo "Built target test_athena"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/all
 
@@ -1340,9 +1417,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/rule
 
 # Convenience name for target.
@@ -1365,7 +1442,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena.dir/clean
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  35
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  35
 	@echo "Built target test_athena_ContentStore"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/all
 
@@ -1375,9 +1452,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.dir/rule
 
 # Convenience name for target.
@@ -1400,7 +1477,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_ContentStore.di
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  36
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  36
 	@echo "Built target test_athena_FIB"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/all
 
@@ -1410,9 +1487,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/rule
 
 # Convenience name for target.
@@ -1435,7 +1512,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_FIB.dir/clean
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  37
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  37
 	@echo "Built target test_athena_InterestControl"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/all
 
@@ -1445,9 +1522,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.d
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl.dir/rule
 
 # Convenience name for target.
@@ -1470,7 +1547,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_InterestControl
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  38
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  38
 	@echo "Built target test_athena_LRUContentStore"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/all
 
@@ -1480,9 +1557,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.d
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/rule
 
 # Convenience name for target.
@@ -1505,7 +1582,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  39
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  39
 	@echo "Built target test_athena_PIT"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/all
 
@@ -1515,9 +1592,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/rule
 
 # Convenience name for target.
@@ -1540,7 +1617,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_PIT.dir/clean
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  40
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  40
 	@echo "Built target test_athena_TransportLink"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/all
 
@@ -1550,9 +1627,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.dir/rule
 
 # Convenience name for target.
@@ -1575,7 +1652,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLink.d
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  41
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  41
 	@echo "Built target test_athena_TransportLinkAdapter"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/all
 
@@ -1585,9 +1662,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdap
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAdapter.dir/rule
 
 # Convenience name for target.
@@ -1610,7 +1687,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkAd
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  42
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  42
 	@echo "Built target test_athena_TransportLinkModule"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/all
 
@@ -1620,9 +1697,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModu
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModule.dir/rule
 
 # Convenience name for target.
@@ -1645,7 +1722,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkMo
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  43
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  43
 	@echo "Built target test_athena_TransportLinkModuleETH"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/all
 
@@ -1655,9 +1732,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModu
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/rule
 
 # Convenience name for target.
@@ -1680,7 +1757,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkMo
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  44
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  44
 	@echo "Built target test_athena_TransportLinkModuleTCP"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/all
 
@@ -1690,9 +1767,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModu
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTCP.dir/rule
 
 # Convenience name for target.
@@ -1715,7 +1792,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkMo
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  45
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  45
 	@echo "Built target test_athena_TransportLinkModuleTEMPLATE"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/all
 
@@ -1725,9 +1802,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModu
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/rule
 
 # Convenience name for target.
@@ -1750,7 +1827,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkMo
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  46
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  46
 	@echo "Built target test_athena_TransportLinkModuleUDP"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/all
 
@@ -1760,9 +1837,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModu
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleUDP.dir/rule
 
 # Convenience name for target.
@@ -1785,7 +1862,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkMo
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  47
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  47
 	@echo "Built target test_athena_pair"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/all
 
@@ -1795,9 +1872,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/rule
 
 # Convenience name for target.
@@ -1820,7 +1897,7 @@ clean: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_pair.dir/clean
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/build.make gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  48
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  48
 	@echo "Built target test_athenactl"
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/all
 
@@ -1830,9 +1907,9 @@ all: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/all
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athenactl.dir/rule
 
 # Convenience name for target.
@@ -1882,7 +1959,9 @@ gateway/ccnx/forwarder/athena/command-line/athena/clean: gateway/ccnx/forwarder/
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/clean
 
 # Convenience name for "preinstall" pass in the directory.
-gateway/ccnx/forwarder/athena/command-line/athena/preinstall:
+gateway/ccnx/forwarder/athena/command-line/athena/preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+gateway/ccnx/forwarder/athena/command-line/athena/preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall
+gateway/ccnx/forwarder/athena/command-line/athena/preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/preinstall
 
 #=============================================================================
@@ -1892,7 +1971,7 @@ gateway/ccnx/forwarder/athena/command-line/athena/preinstall:
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  24
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  24
 	@echo "Built target athena_gateway_bin"
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/all
 
@@ -1902,14 +1981,23 @@ all: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/rule
 
 # Convenience name for target.
 athena_gateway_bin: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/rule
 .PHONY : athena_gateway_bin
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/clean:
@@ -1927,7 +2015,7 @@ clean: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gatew
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  25
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  25
 	@echo "Built target athena_private_bin"
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/all
 
@@ -1937,14 +2025,23 @@ all: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/rule
 
 # Convenience name for target.
 athena_private_bin: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/rule
 .PHONY : athena_private_bin
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_private_bin.dir/clean:
@@ -1962,7 +2059,7 @@ clean: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_priva
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  26
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  26
 	@echo "Built target athenabin"
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/all
 
@@ -1972,14 +2069,23 @@ all: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/rule
 
 # Convenience name for target.
 athenabin: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/rule
 .PHONY : athenabin
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/build.make gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athenabin.dir/clean:
@@ -2002,7 +2108,7 @@ gateway/ccnx/forwarder/athena/command-line/athenactl/clean: gateway/ccnx/forward
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athenactl/clean
 
 # Convenience name for "preinstall" pass in the directory.
-gateway/ccnx/forwarder/athena/command-line/athenactl/preinstall:
+gateway/ccnx/forwarder/athena/command-line/athenactl/preinstall: gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athenactl/preinstall
 
 #=============================================================================
@@ -2012,7 +2118,7 @@ gateway/ccnx/forwarder/athena/command-line/athenactl/preinstall:
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/all: gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/all
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build.make gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/depend
 	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build.make gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles  27
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles  27
 	@echo "Built target athenactl"
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/all
 
@@ -2022,14 +2128,23 @@ all: gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.d
 
 # Build rule for subdir invocation for target.
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles 0
 .PHONY : gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/rule
 
 # Convenience name for target.
 athenactl: gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/rule
 .PHONY : athenactl
+
+# Pre-install relink rule for target.
+gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall:
+	$(MAKE) -f gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/build.make gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall
+.PHONY : gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall
+
+# Prepare target for install.
+preinstall: gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/preinstall
+.PHONY : preinstall
 
 # clean rule for target.
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/clean:

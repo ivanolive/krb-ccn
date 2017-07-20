@@ -514,6 +514,11 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
     // Default value
     server->payloadSize = ccnx_MaxPayloadSize;
 
+    if (argc == 1) {
+    	_displayUsage(argv[0]);
+    	exit(0);
+    }
+
     int c;
     while ((c = getopt_long(argc, argv, "a:t:k:l:s:i:p:h", longopts, NULL)) != -1) {
         switch (c) {

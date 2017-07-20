@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/krb-ccn/ccn
+CMAKE_SOURCE_DIR = /home/ivan/workspace/krb/krb-ccn/ccn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/krb-ccn/ccn/b
+CMAKE_BINARY_DIR = /home/ivan/workspace/krb/krb-ccn/ccn/b
 
 # Include any dependencies generated for this target.
 include gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/depend.make
@@ -51,17 +51,17 @@ include gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkM
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/flags.make
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/Desktop/krb-ccn/ccn/b/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o"
-	cd /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o   -c /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o   -c /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.i"
-	cd /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c > CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.i
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c > CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.i
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.s"
-	cd /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c -o CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.s
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE.c -o CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.s
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o.requires:
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/test_athena_TransportLinkModuleTEMPLATE.c.o.requires
@@ -95,7 +95,7 @@ gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE: /hom
 gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/lib/libparc.so
 gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE: gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable test_athena_TransportLinkModuleTEMPLATE"
-	cd /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/build: gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleTEMPLATE
@@ -105,10 +105,10 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEM
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/requires
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/clean:
-	cd /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -P CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/cmake_clean.cmake
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test && $(CMAKE_COMMAND) -P CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/cmake_clean.cmake
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/clean
 
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/depend:
-	cd /home/ivan/Desktop/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Desktop/krb-ccn/ccn /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test /home/ivan/Desktop/krb-ccn/ccn/b /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test /home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/workspace/krb/krb-ccn/ccn/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/workspace/krb/krb-ccn/ccn /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test /home/ivan/workspace/krb/krb-ccn/ccn/b /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleTEMPLATE.dir/depend
 

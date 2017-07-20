@@ -11,8 +11,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/te
  ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
  ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
  ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
- /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
- /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -119,3 +117,5 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_LRUContentStore.dir/te
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+ /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
+ /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test/test_athena_LRUContentStore.c

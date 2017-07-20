@@ -12,7 +12,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -102,6 +101,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Deskt
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: ../gateway/ccnx/forwarder/athena/athena.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_About.c.o: ../gateway/ccnx/forwarder/athena/athena_About.c
@@ -116,7 +116,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -202,6 +201,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /ho
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_ContentStore.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -213,7 +213,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gatew
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -309,6 +308,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/iv
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Control.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -319,7 +319,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -406,12 +405,12 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/D
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_FIB.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_Fragmenter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_Fragmenter.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -497,6 +496,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: ../gateway/ccnx/forwarder/athena/athena_Fragmenter.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_Fragmenter.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -507,15 +507,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_About.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.c
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -611,6 +602,15 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_About.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_Control.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_FIB.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.c
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_InterestControl.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -622,7 +622,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -712,6 +711,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_LRUContentStore.c.o: ../gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStore.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_ContentStoreInterface.h
@@ -720,9 +720,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.c
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -813,10 +810,12 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/D
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.c
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: ../gateway/ccnx/forwarder/athena/athena_PIT.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_PIT.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -901,6 +900,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLink.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -911,7 +911,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -997,6 +996,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkAdapter.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -1007,7 +1007,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -1093,6 +1092,7 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athena_TransportLinkModule.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
@@ -1103,10 +1103,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/cc
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.c
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -1208,6 +1204,10 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/De
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athena_InterestControl.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.c
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: ../gateway/ccnx/forwarder/athena/athenactl.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl.c.o: gateway/ccnx/forwarder/athena/config.h
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o: ../gateway/ccnx/forwarder/athena/athenactl_About.c
@@ -1215,7 +1215,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/athenactl_About.c.o: ../gate
 
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: ../gateway/ccnx/forwarder/athena/athena_Ethernet.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
-gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: ../gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -1299,5 +1298,6 @@ gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethern
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: ../gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
 gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/platform/linux/athena_Ethernet.c.o: gateway/ccnx/forwarder/athena/config.h
 

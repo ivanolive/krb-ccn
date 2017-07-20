@@ -12,8 +12,6 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.h
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
-gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleETH.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Runtime.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/Reporting/longBowReport_Testing.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
@@ -120,5 +118,7 @@ gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModuleETH.c
+gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: ../gateway/ccnx/forwarder/athena/test/test_athena_TransportLinkModuleETH.c
 gateway/ccnx/forwarder/athena/test/CMakeFiles/test_athena_TransportLinkModuleETH.dir/test_athena_TransportLinkModuleETH.c.o: gateway/ccnx/forwarder/athena/config.h
 

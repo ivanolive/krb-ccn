@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/ivan/Desktop/krb-ccn/ccn/gateway
-BuildDirectory: /home/ivan/Desktop/krb-ccn/ccn/b/gateway
+SourceDirectory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway
+BuildDirectory: /home/ivan/workspace/krb/krb-ccn/ccn/b/gateway
 
 # Where to place the cost data store
 CostDataFile: 
@@ -33,7 +33,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/home/ivan/Desktop/krb-ccn/ccn/gateway"
+ConfigureCommand: "/usr/local/bin/cmake" "/home/ivan/workspace/krb/krb-ccn/ccn/gateway"
 MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 

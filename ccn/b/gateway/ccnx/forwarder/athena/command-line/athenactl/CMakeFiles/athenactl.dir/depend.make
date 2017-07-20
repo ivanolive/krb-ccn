@@ -11,7 +11,6 @@ gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/at
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: ../gateway/ccnx/forwarder/athena/athenactl.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: ../gateway/ccnx/forwarder/athena/athenactl_About.h
-gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: ../gateway/ccnx/forwarder/athena/command-line/athenactl/athenactl_main.c
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -112,5 +111,6 @@ gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/at
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: ../gateway/ccnx/forwarder/athena/command-line/athenactl/athenactl_main.c
 gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/athenactl.dir/athenactl_main.c.o: gateway/ccnx/forwarder/athena/config.h
 

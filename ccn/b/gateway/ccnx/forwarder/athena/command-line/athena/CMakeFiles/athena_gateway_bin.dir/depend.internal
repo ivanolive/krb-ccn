@@ -12,7 +12,6 @@ gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.
  ../gateway/ccnx/forwarder/athena/athena_TransportLink.h
  ../gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
  ../gateway/ccnx/forwarder/athena/athena_TransportLinkModule.h
- /home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
@@ -99,4 +98,5 @@ gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
  /home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+ /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c
  gateway/ccnx/forwarder/athena/config.h
