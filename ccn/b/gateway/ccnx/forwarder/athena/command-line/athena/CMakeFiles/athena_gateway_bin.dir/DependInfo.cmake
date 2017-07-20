@@ -4,27 +4,27 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c" "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o"
+  "/home/ivan/Desktop/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athena/athena_gateway.c" "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athena/CMakeFiles/athena_gateway_bin.dir/athena_gateway.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_C
+set(CMAKE_TARGET_DEFINITIONS
   "RELEASE_VERSION=\"\""
-  )
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/ivan/Desktop/projects/CCNx_Distillery/usr/include"
-  "../gateway"
-  "gateway/ccnx/forwarder/athena"
-  "/usr/local/ccnx/dependencies/build/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
+  "/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/athena.dir/DependInfo.cmake"
   )
 
-# Fortran module output directory.
-set(CMAKE_Fortran_TARGET_MODULE_DIR "")
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include"
+  "../gateway"
+  "gateway/ccnx/forwarder/athena"
+  "/usr/local/ccnx/dependencies/build/include"
+  )
+set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+set(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/workspace/krb-ccn/krb-ccn/ccn/gateway
+# Install script for directory: /home/ivan/Desktop/krb-ccn/ccn/gateway
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/workspace/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/cmake_install.cmake")
+  include("/home/ivan/Desktop/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/cmake_install.cmake")
 
 endif()
 

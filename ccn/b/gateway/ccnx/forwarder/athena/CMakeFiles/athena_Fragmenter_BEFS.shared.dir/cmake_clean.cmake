@@ -4,10 +4,6 @@ file(REMOVE_RECURSE
   "libathena_Fragmenter_BEFS.so"
   "libathena_Fragmenter_BEFS.so.1.0"
   "libathena_Fragmenter_BEFS.so.1"
-  "libathena_Fragmenter_BEFS.pdb"
-  "CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so"
-  "CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1.0"
-  "CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

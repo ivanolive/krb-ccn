@@ -6,10 +6,6 @@ file(REMOVE_RECURSE
   "libathena_ETH.so"
   "libathena_ETH.so.1.0"
   "libathena_ETH.so.1"
-  "libathena_ETH.pdb"
-  "CMakeFiles/CMakeRelink.dir/libathena_ETH.so"
-  "CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1.0"
-  "CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/keygen.dir/athena_keygen.c.o"
   "keygen.pdb"
   "keygen"
-  "keygen.pdb"
-  "CMakeFiles/CMakeRelink.dir/keygen"
 )
 
 # Per-language clean rules from dependency scanning.
