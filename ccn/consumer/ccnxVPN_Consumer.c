@@ -399,7 +399,7 @@ _displayUsage(char *progName)
     printf("     -l (--locator) Set the locator for this server. The default is 'ccnx:/locator'. \n");
 
     // Kerberos services///
-        printf("\nKerberos services (prototype) \n");
+        printf("\nKerberos services\n");
         printf("     -n <username> creates a new user on the client host \n");
         printf("     -a <username> User authentication and TGT issuance \n");
         printf("     -t <namespace> Access control and TGS issuance \n");
