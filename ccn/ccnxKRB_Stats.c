@@ -65,7 +65,7 @@
 #include <parc/algol/parc_Object.h>
 #include <parc/algol/parc_DisplayIndented.h>
 
-#include "ccnxVPN_Stats.h"
+#include "ccnxKRB_Stats.h"
 
 typedef struct vpn_stats_entry {
     uint64_t sendTimeInUs;

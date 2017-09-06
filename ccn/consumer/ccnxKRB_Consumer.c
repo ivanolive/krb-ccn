@@ -14,8 +14,8 @@
 #include <parc/security/parc_IdentityFile.h>
 #include <parc/algol/parc_DisplayIndented.h>
 
-#include "../ccnxVPN_Common.h"
-#include "../ccnxVPN_Stats.h"
+#include "../ccnxKRB_Common.h"
+#include "../ccnxKRB_Stats.h"
 #include "sodium.h"
 
 

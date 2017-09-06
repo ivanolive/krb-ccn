@@ -1,7 +1,7 @@
 
 
-#ifndef ccnxVPNCommon_h
-#define ccnxVPNCommon_h
+#ifndef ccnxKRBCommon_h
+#define ccnxKRBCommon_h
 
 #include <stdint.h>
 

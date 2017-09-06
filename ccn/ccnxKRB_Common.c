@@ -56,106 +56,51 @@
  * @author Nacho Solis, Christopher A. Wood, Palo Alto Research Center (Xerox PARC)
  * @copyright (c) 2016, Xerox Corporation (Xerox) and Palo Alto Research Center, Inc (PARC).  All rights reserved.
  */
-#ifndef ccnxVPN_Stats_h
-#define ccnxVPN_Stats_h
+#include <stdio.h>
 
-/**
- * Structure to collect and display the performance statistics.
- */
-struct vpn_stats;
-typedef struct vpn_stats CCNxVPNStats;
+#include "ccnxKRB_Common.h"
 
-/**
- * Create an empty `CCNxVPNStats` instance.
- *
- * The returned result must be freed via {@link ccnxVPNStats_Release}
- *
- * @return A newly allocated `CCNxVPNStats`.
- *
- * Example
- * @code
- * {
- *     CCNxVPNStats *stats = ccnxVPNStats_Create();
- * }
- * @endcode
- */
-CCNxVPNStats *ccnxVPNStats_Create(void);
+#include <LongBow/runtime.h>
 
-/**
- * Increase the number of references to a `CCNxVPNStats`.
- *
- * Note that new `CCNxVPNStats` is not created,
- * only that the given `CCNxVPNStats` reference count is incremented.
- * Discard the reference by invoking `ccnxVPNStats_Release`.
- *
- * @param [in] clock A pointer to a `CCNxVPNStats` instance.
- *
- * @return The input `CCNxVPNStats` pointer.
- *
- * Example:
- * @code
- * {
- *     CCNxVPNStats *stats = ccnxVPNStats_Create();
- *     CCNxVPNStats *copy = ccnxVPNStats_Acquire(stats);
- *     ccnxVPNStats_Release(&stats);
- *     ccnxVPNStats_Release(&copy);
- * }
- * @endcode
- */
-CCNxVPNStats *ccnxVPNStats_Acquire(const CCNxVPNStats *stats);
+#include <parc/security/parc_Security.h>
+#include <parc/security/parc_Pkcs12KeyStore.h>
+#include <parc/security/parc_IdentityFile.h>
 
-/**
- * Release a previously acquired reference to the specified instance,
- * decrementing the reference count for the instance.
- *
- * The pointer to the instance is set to NULL as a side-effect of this function.
- *
- * If the invocation causes the last reference to the instance to be released,
- * the instance is deallocated and the instance's implementation will perform
- * additional cleanup and release other privately held references.
- *
- * @param [in,out] clockPtr A pointer to a pointer to the instance to release.
- *
- * Example:
- * @code
- * {
- *     CCNxVPNStats *stats = ccnxVPNStats_Create();
- *     CCNxVPNStats *copy = ccnxVPNStats_Acquire(stats);
- *     ccnxVPNStats_Release(&stats);
- *     ccnxVPNStats_Release(&copy);
- * }
- * @endcode
- */
-void ccnxVPNStats_Release(CCNxVPNStats **statsPtr);
+const size_t ccnx_DefaultReceiveTimeoutInUs = 1000000; // 1 second
+const size_t ccnx_DefaultPayloadSize = 4096;
+const size_t mediumNumberOfVPNs = 100;
+const size_t smallNumberOfVPNs = 10;
 
-/**
- * Record the name and time for a request (e.g., interest).
- *
- * @param [in] stats The `CCNxVPNStats` instance.
- * @param [in] name The `CCNxName` name structure.
- * @param [in] timeInUs The send time (in microseconds).
- */
-void ccnxVPNStats_RecordRequest(CCNxVPNStats *stats, CCNxName *name, uint64_t timeInUs);
+static PARCIdentity *
+_ccnxVPNCommon_CreateIdentityFromFile(const char *keystoreName,
+                                      const char *keystorePassword)
+{
+    parcSecurity_Init();
 
-/**
- * Record the name and time for a response (e.g., content object).
- *
- * @param [in] stats The `CCNxVPNStats` instance.
- * @param [in] name The `CCNxName` name structure.
- * @param [in] timeInUs The send time (in microseconds).
- * @param [in] message The response `CCNxMetaMessage`.
- *
- * @return The delta between the request and response (in microseconds).
- */
-size_t ccnxVPNStats_RecordResponse(CCNxVPNStats *stats, CCNxName *name, uint64_t timeInUs, CCNxMetaMessage *message);
+    unsigned int keyLength = 1024;
+    unsigned int validityDays = 30;
+    char *subjectName = "anonymous";
 
-/**
- * Display the average statistics stored in this `CCNxVPNStats` instance.
- *
- * @param [in] stats The `CCNxVPNStats` instance from which to draw the average data.
- *
- * @retval true If the stats were displayed correctly
- * @retval false Otherwise
- */
-bool ccnxVPNStats_Display(CCNxVPNStats *stats);
-#endif // ccnxVPN_Stats_h
+    bool success = parcPkcs12KeyStore_CreateFile(keystoreName, keystorePassword, subjectName, keyLength, validityDays);
+    assertTrue(success,
+               "parcPkcs12KeyStore_CreateFile('%s', '%s', '%s', %d, %d) failed.",
+               keystoreName, keystorePassword, subjectName, keyLength, validityDays);
+
+    PARCIdentityFile *identityFile = parcIdentityFile_Create(keystoreName, keystorePassword);
+    PARCIdentity *result = parcIdentity_Create(identityFile, PARCIdentityFileAsPARCIdentity);
+    parcIdentityFile_Release(&identityFile);
+
+    parcSecurity_Fini();
+
+    return result;
+}
+
+CCNxPortalFactory *
+ccnxVPNCommon_SetupPortalFactory(const char *keystoreName, const char *keystorePassword)
+{
+    PARCIdentity *identity = _ccnxVPNCommon_CreateIdentityFromFile(keystoreName, keystorePassword);
+    CCNxPortalFactory *result = ccnxPortalFactory_Create(identity);
+    parcIdentity_Release(&identity);
+
+    return result;
+}

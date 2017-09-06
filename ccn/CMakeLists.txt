@@ -14,13 +14,13 @@ set(CCNX_LIBRARIES longbow longbow-ansiterm parc ccnx_common ccnx_api_portal ccn
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 
 set(CONSUMER_SOURCES
-        consumer/ccnxVPN_Consumer.c
-        ccnxVPN_Common.c
-        ccnxVPN_Stats.c)
+        consumer/ccnxKRB_Consumer.c
+        ccnxKRB_Common.c
+        ccnxKRB_Stats.c)
 
 set(PRODUCER_SOURCES
-        producer/ccnxVPN_Producer.c
-        ccnxVPN_Common.c)
+        producer/ccnxKRB_Producer.c
+        ccnxKRB_Common.c)
 
 set(KEYGEN_SOURCES
     athena_keygen.c)
@@ -29,13 +29,13 @@ include_directories(${CCNX_HOME}/include)
 
 link_directories(${CCNX_HOME}/lib)
 
-add_executable(ccnxVPN_Client ${CONSUMER_SOURCES})
-target_link_libraries(ccnxVPN_Client ${CCNX_LIBRARIES})
-install(TARGETS ccnxVPN_Client RUNTIME DESTINATION bin)
+add_executable(ccnxKRB_Client ${CONSUMER_SOURCES})
+target_link_libraries(ccnxKRB_Client ${CCNX_LIBRARIES})
+install(TARGETS ccnxKRB_Client RUNTIME DESTINATION bin)
 
-add_executable(ccnxVPN_Server ${PRODUCER_SOURCES})
-target_link_libraries(ccnxVPN_Server ${CCNX_LIBRARIES})
-install(TARGETS ccnxVPN_Server RUNTIME DESTINATION bin)
+add_executable(ccnxKRB_Server ${PRODUCER_SOURCES})
+target_link_libraries(ccnxKRB_Server ${CCNX_LIBRARIES})
+install(TARGETS ccnxKRB_Server RUNTIME DESTINATION bin)
 
 add_executable(keygen ${KEYGEN_SOURCES})
 target_link_libraries(keygen ${CCNX_LIBRARIES} sodium)

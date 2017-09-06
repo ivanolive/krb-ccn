@@ -155,6 +155,42 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ccnxKRB_Server
+
+# Build rule for target.
+ccnxKRB_Server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ccnxKRB_Server
+.PHONY : ccnxKRB_Server
+
+# fast build rule for target.
+ccnxKRB_Server/fast:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/build
+.PHONY : ccnxKRB_Server/fast
+
+# Manual pre-install relink rule for target.
+ccnxKRB_Server/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/preinstall
+.PHONY : ccnxKRB_Server/preinstall
+
+#=============================================================================
+# Target rules for targets named ccnxKRB_Client
+
+# Build rule for target.
+ccnxKRB_Client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ccnxKRB_Client
+.PHONY : ccnxKRB_Client
+
+# fast build rule for target.
+ccnxKRB_Client/fast:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/build
+.PHONY : ccnxKRB_Client/fast
+
+# Manual pre-install relink rule for target.
+ccnxKRB_Client/preinstall:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/preinstall
+.PHONY : ccnxKRB_Client/preinstall
+
+#=============================================================================
 # Target rules for targets named ContinuousSubmit
 
 # Build rule for target.
@@ -205,24 +241,6 @@ ContinuousBuild: cmake_check_build_system
 ContinuousBuild/fast:
 	$(MAKE) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
 .PHONY : ContinuousBuild/fast
-
-#=============================================================================
-# Target rules for targets named ccnxVPN_Client
-
-# Build rule for target.
-ccnxVPN_Client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ccnxVPN_Client
-.PHONY : ccnxVPN_Client
-
-# fast build rule for target.
-ccnxVPN_Client/fast:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/build
-.PHONY : ccnxVPN_Client/fast
-
-# Manual pre-install relink rule for target.
-ccnxVPN_Client/preinstall:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/preinstall
-.PHONY : ccnxVPN_Client/preinstall
 
 #=============================================================================
 # Target rules for targets named ContinuousMemCheck
@@ -540,24 +558,6 @@ ContinuousStart: cmake_check_build_system
 ContinuousStart/fast:
 	$(MAKE) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
 .PHONY : ContinuousStart/fast
-
-#=============================================================================
-# Target rules for targets named ccnxVPN_Server
-
-# Build rule for target.
-ccnxVPN_Server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ccnxVPN_Server
-.PHONY : ccnxVPN_Server
-
-# fast build rule for target.
-ccnxVPN_Server/fast:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/build
-.PHONY : ccnxVPN_Server/fast
-
-# Manual pre-install relink rule for target.
-ccnxVPN_Server/preinstall:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/preinstall
-.PHONY : ccnxVPN_Server/preinstall
 
 #=============================================================================
 # Target rules for targets named ContinuousUpdate
@@ -969,116 +969,116 @@ athena_keygen.c.s:
 	$(MAKE) -f CMakeFiles/keygen.dir/build.make CMakeFiles/keygen.dir/athena_keygen.c.s
 .PHONY : athena_keygen.c.s
 
-ccnxVPN_Common.o: ccnxVPN_Common.c.o
+ccnxKRB_Common.o: ccnxKRB_Common.c.o
 
-.PHONY : ccnxVPN_Common.o
-
-# target to build an object file
-ccnxVPN_Common.c.o:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.o
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.o
-.PHONY : ccnxVPN_Common.c.o
-
-ccnxVPN_Common.i: ccnxVPN_Common.c.i
-
-.PHONY : ccnxVPN_Common.i
-
-# target to preprocess a source file
-ccnxVPN_Common.c.i:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.i
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.i
-.PHONY : ccnxVPN_Common.c.i
-
-ccnxVPN_Common.s: ccnxVPN_Common.c.s
-
-.PHONY : ccnxVPN_Common.s
-
-# target to generate assembly for a file
-ccnxVPN_Common.c.s:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Common.c.s
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/ccnxVPN_Common.c.s
-.PHONY : ccnxVPN_Common.c.s
-
-ccnxVPN_Stats.o: ccnxVPN_Stats.c.o
-
-.PHONY : ccnxVPN_Stats.o
+.PHONY : ccnxKRB_Common.o
 
 # target to build an object file
-ccnxVPN_Stats.c.o:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.o
-.PHONY : ccnxVPN_Stats.c.o
+ccnxKRB_Common.c.o:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/ccnxKRB_Common.c.o
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Common.c.o
+.PHONY : ccnxKRB_Common.c.o
 
-ccnxVPN_Stats.i: ccnxVPN_Stats.c.i
+ccnxKRB_Common.i: ccnxKRB_Common.c.i
 
-.PHONY : ccnxVPN_Stats.i
+.PHONY : ccnxKRB_Common.i
 
 # target to preprocess a source file
-ccnxVPN_Stats.c.i:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.i
-.PHONY : ccnxVPN_Stats.c.i
+ccnxKRB_Common.c.i:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/ccnxKRB_Common.c.i
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Common.c.i
+.PHONY : ccnxKRB_Common.c.i
 
-ccnxVPN_Stats.s: ccnxVPN_Stats.c.s
+ccnxKRB_Common.s: ccnxKRB_Common.c.s
 
-.PHONY : ccnxVPN_Stats.s
+.PHONY : ccnxKRB_Common.s
 
 # target to generate assembly for a file
-ccnxVPN_Stats.c.s:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/ccnxVPN_Stats.c.s
-.PHONY : ccnxVPN_Stats.c.s
+ccnxKRB_Common.c.s:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/ccnxKRB_Common.c.s
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Common.c.s
+.PHONY : ccnxKRB_Common.c.s
 
-consumer/ccnxVPN_Consumer.o: consumer/ccnxVPN_Consumer.c.o
+ccnxKRB_Stats.o: ccnxKRB_Stats.c.o
 
-.PHONY : consumer/ccnxVPN_Consumer.o
+.PHONY : ccnxKRB_Stats.o
 
 # target to build an object file
-consumer/ccnxVPN_Consumer.c.o:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.o
-.PHONY : consumer/ccnxVPN_Consumer.c.o
+ccnxKRB_Stats.c.o:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Stats.c.o
+.PHONY : ccnxKRB_Stats.c.o
 
-consumer/ccnxVPN_Consumer.i: consumer/ccnxVPN_Consumer.c.i
+ccnxKRB_Stats.i: ccnxKRB_Stats.c.i
 
-.PHONY : consumer/ccnxVPN_Consumer.i
+.PHONY : ccnxKRB_Stats.i
 
 # target to preprocess a source file
-consumer/ccnxVPN_Consumer.c.i:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.i
-.PHONY : consumer/ccnxVPN_Consumer.c.i
+ccnxKRB_Stats.c.i:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Stats.c.i
+.PHONY : ccnxKRB_Stats.c.i
 
-consumer/ccnxVPN_Consumer.s: consumer/ccnxVPN_Consumer.c.s
+ccnxKRB_Stats.s: ccnxKRB_Stats.c.s
 
-.PHONY : consumer/ccnxVPN_Consumer.s
+.PHONY : ccnxKRB_Stats.s
 
 # target to generate assembly for a file
-consumer/ccnxVPN_Consumer.c.s:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Client.dir/build.make CMakeFiles/ccnxVPN_Client.dir/consumer/ccnxVPN_Consumer.c.s
-.PHONY : consumer/ccnxVPN_Consumer.c.s
+ccnxKRB_Stats.c.s:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/ccnxKRB_Stats.c.s
+.PHONY : ccnxKRB_Stats.c.s
 
-producer/ccnxVPN_Producer.o: producer/ccnxVPN_Producer.c.o
+consumer/ccnxKRB_Consumer.o: consumer/ccnxKRB_Consumer.c.o
 
-.PHONY : producer/ccnxVPN_Producer.o
+.PHONY : consumer/ccnxKRB_Consumer.o
 
 # target to build an object file
-producer/ccnxVPN_Producer.c.o:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.o
-.PHONY : producer/ccnxVPN_Producer.c.o
+consumer/ccnxKRB_Consumer.c.o:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/consumer/ccnxKRB_Consumer.c.o
+.PHONY : consumer/ccnxKRB_Consumer.c.o
 
-producer/ccnxVPN_Producer.i: producer/ccnxVPN_Producer.c.i
+consumer/ccnxKRB_Consumer.i: consumer/ccnxKRB_Consumer.c.i
 
-.PHONY : producer/ccnxVPN_Producer.i
+.PHONY : consumer/ccnxKRB_Consumer.i
 
 # target to preprocess a source file
-producer/ccnxVPN_Producer.c.i:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.i
-.PHONY : producer/ccnxVPN_Producer.c.i
+consumer/ccnxKRB_Consumer.c.i:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/consumer/ccnxKRB_Consumer.c.i
+.PHONY : consumer/ccnxKRB_Consumer.c.i
 
-producer/ccnxVPN_Producer.s: producer/ccnxVPN_Producer.c.s
+consumer/ccnxKRB_Consumer.s: consumer/ccnxKRB_Consumer.c.s
 
-.PHONY : producer/ccnxVPN_Producer.s
+.PHONY : consumer/ccnxKRB_Consumer.s
 
 # target to generate assembly for a file
-producer/ccnxVPN_Producer.c.s:
-	$(MAKE) -f CMakeFiles/ccnxVPN_Server.dir/build.make CMakeFiles/ccnxVPN_Server.dir/producer/ccnxVPN_Producer.c.s
-.PHONY : producer/ccnxVPN_Producer.c.s
+consumer/ccnxKRB_Consumer.c.s:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Client.dir/build.make CMakeFiles/ccnxKRB_Client.dir/consumer/ccnxKRB_Consumer.c.s
+.PHONY : consumer/ccnxKRB_Consumer.c.s
+
+producer/ccnxKRB_Producer.o: producer/ccnxKRB_Producer.c.o
+
+.PHONY : producer/ccnxKRB_Producer.o
+
+# target to build an object file
+producer/ccnxKRB_Producer.c.o:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/producer/ccnxKRB_Producer.c.o
+.PHONY : producer/ccnxKRB_Producer.c.o
+
+producer/ccnxKRB_Producer.i: producer/ccnxKRB_Producer.c.i
+
+.PHONY : producer/ccnxKRB_Producer.i
+
+# target to preprocess a source file
+producer/ccnxKRB_Producer.c.i:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/producer/ccnxKRB_Producer.c.i
+.PHONY : producer/ccnxKRB_Producer.c.i
+
+producer/ccnxKRB_Producer.s: producer/ccnxKRB_Producer.c.s
+
+.PHONY : producer/ccnxKRB_Producer.s
+
+# target to generate assembly for a file
+producer/ccnxKRB_Producer.c.s:
+	$(MAKE) -f CMakeFiles/ccnxKRB_Server.dir/build.make CMakeFiles/ccnxKRB_Server.dir/producer/ccnxKRB_Producer.c.s
+.PHONY : producer/ccnxKRB_Producer.c.s
 
 # Help Target
 help:
@@ -1090,11 +1090,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... ccnxKRB_Server"
+	@echo "... ccnxKRB_Client"
 	@echo "... ContinuousSubmit"
 	@echo "... ContinuousCoverage"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousBuild"
-	@echo "... ccnxVPN_Client"
 	@echo "... ContinuousMemCheck"
 	@echo "... Nightly"
 	@echo "... NightlyTest"
@@ -1121,7 +1122,6 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... ExperimentalSubmit"
 	@echo "... ContinuousStart"
-	@echo "... ccnxVPN_Server"
 	@echo "... ContinuousUpdate"
 	@echo "... athena"
 	@echo "... athena_ETH.shared"
@@ -1151,18 +1151,18 @@ help:
 	@echo "... athena_keygen.o"
 	@echo "... athena_keygen.i"
 	@echo "... athena_keygen.s"
-	@echo "... ccnxVPN_Common.o"
-	@echo "... ccnxVPN_Common.i"
-	@echo "... ccnxVPN_Common.s"
-	@echo "... ccnxVPN_Stats.o"
-	@echo "... ccnxVPN_Stats.i"
-	@echo "... ccnxVPN_Stats.s"
-	@echo "... consumer/ccnxVPN_Consumer.o"
-	@echo "... consumer/ccnxVPN_Consumer.i"
-	@echo "... consumer/ccnxVPN_Consumer.s"
-	@echo "... producer/ccnxVPN_Producer.o"
-	@echo "... producer/ccnxVPN_Producer.i"
-	@echo "... producer/ccnxVPN_Producer.s"
+	@echo "... ccnxKRB_Common.o"
+	@echo "... ccnxKRB_Common.i"
+	@echo "... ccnxKRB_Common.s"
+	@echo "... ccnxKRB_Stats.o"
+	@echo "... ccnxKRB_Stats.i"
+	@echo "... ccnxKRB_Stats.s"
+	@echo "... consumer/ccnxKRB_Consumer.o"
+	@echo "... consumer/ccnxKRB_Consumer.i"
+	@echo "... consumer/ccnxKRB_Consumer.s"
+	@echo "... producer/ccnxKRB_Producer.o"
+	@echo "... producer/ccnxKRB_Producer.i"
+	@echo "... producer/ccnxKRB_Producer.s"
 .PHONY : help
 
 

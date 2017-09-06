@@ -74,7 +74,7 @@
 #include <ccnx/api/ccnx_Portal/ccnx_Portal.h>
 #include <ccnx/api/ccnx_Portal/ccnx_PortalRTA.h>
 
-#include "../ccnxVPN_Common.h"
+#include "../ccnxKRB_Common.h"
 
 #include "sodium.h"
 

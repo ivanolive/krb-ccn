@@ -2,11 +2,12 @@
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/rebuild_cache.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/list_install_components.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/install.dir
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxKRB_Server.dir
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxKRB_Client.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousSubmit.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousCoverage.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousTest.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousBuild.dir
-/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Client.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousMemCheck.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/Nightly.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/NightlyTest.dir
@@ -33,7 +34,6 @@
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/NightlySubmit.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ExperimentalSubmit.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousStart.dir
-/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ccnxVPN_Server.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/ContinuousUpdate.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/CMakeFiles/test.dir
 /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/CMakeFiles/edit_cache.dir
