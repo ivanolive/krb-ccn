@@ -134,7 +134,7 @@ parc/logging/parc_Log.h
 ccnx/forwarder/athena/athena_TransportLink.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/assertions.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/assertions.h
 stdbool.h
 -
 stdint.h
@@ -150,25 +150,25 @@ LongBow/longBow_Location.h
 LongBow/longBow_Event.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/debugging.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/debugging.h
 LongBow/longBow_Debug.h
 -
 LongBow/longBow_MeasureTime.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Backtrace.h
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Compiler.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Compiler.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Config.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Config.h
 stdbool.h
 -
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Debug.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Debug.h
 stdint.h
 -
 string.h
@@ -178,7 +178,7 @@ sys/types.h
 LongBow/longBow_Location.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Event.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Event.h
 stdlib.h
 -
 stdbool.h
@@ -190,21 +190,21 @@ LongBow/longBow_Location.h
 LongBow/longBow_Backtrace.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_EventType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_EventType.h
 LongBow/longBow_Status.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Location.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Location.h
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_MeasureTime.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_MeasureTime.h
 stdint.h
 -
 stdbool.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Runtime.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Runtime.h
 LongBow/longBow_Event.h
 -
 LongBow/longBow_RuntimeResult.h
@@ -212,7 +212,7 @@ LongBow/longBow_RuntimeResult.h
 LongBow/longBow_Config.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_RuntimeResult.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_RuntimeResult.h
 stdlib.h
 -
 stdint.h
@@ -224,13 +224,13 @@ LongBow/longBow_Status.h
 LongBow/longBow_Event.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/longBow_Status.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/longBow_Status.h
 stdbool.h
 -
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/runtime.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/runtime.h
 signal.h
 -
 LongBow/longBow_Runtime.h
@@ -242,15 +242,15 @@ LongBow/debugging.h
 LongBow/traps.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/tests.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/tests.h
 stdbool.h
 -
 stdlib.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/LongBow/traps.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/LongBow/traps.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_Portal.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_Portal.h
 parc/security/parc_Identity.h
 -
 parc/security/parc_KeyId.h
@@ -266,11 +266,11 @@ ccnx/common/ccnx_Interest.h
 ccnx/common/ccnx_ContentObject.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalAttributes.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalAttributes.h
 stdbool.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalFactory.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalFactory.h
 parc/algol/parc_Properties.h
 -
 parc/security/parc_Identity.h
@@ -284,19 +284,19 @@ ccnx/transport/common/transport_MetaMessage.h
 ccnx/api/ccnx_Portal/ccnx_Portal.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalRTA.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalRTA.h
 ccnx/api/ccnx_Portal/ccnx_PortalAttributes.h
 -
 ccnx/api/ccnx_Portal/ccnx_Portal.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalStack.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/ccnx_Portal/ccnx_PortalStack.h
 parc/algol/parc_Properties.h
 -
 ccnx/api/ccnx_Portal/ccnx_PortalFactory.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/controlPlaneInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/controlPlaneInterface.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 sys/socket.h
@@ -310,7 +310,7 @@ ccnx/api/control/cpi_ManageLinks.h
 ccnx/api/control/cpi_CancelFlow.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Address.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Address.h
 netinet/in.h
 -
 sys/un.h
@@ -324,27 +324,27 @@ parc/algol/parc_Buffer.h
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_AddressList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_AddressList.h
 ccnx/api/control/cpi_Address.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_CancelFlow.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_CancelFlow.h
 ccnx/api/control/cpi_ControlMessage.h
 -
 ccnx/common/ccnx_Name.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Connection.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Connection.h
 ccnx/api/control/cpi_InterfaceType.h
 -
 ccnx/api/control/cpi_Address.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ConnectionList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ConnectionList.h
 ccnx/api/control/cpi_Connection.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ControlMessage.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ControlMessage.h
 stdint.h
 -
 ccnx/common/internal/ccnx_TlvDictionary.h
@@ -356,7 +356,7 @@ ccnx/api/control/cpi_RouteEntry.h
 ccnx/api/control/cpi_InterfaceIPTunnel.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Forwarding.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Forwarding.h
 ccnx/common/ccnx_Name.h
 -
 ccnx/api/control/cpi_ControlMessage.h
@@ -370,13 +370,13 @@ ccnx/api/control/cpi_RouteEntry.h
 ccnx/api/control/cpi_RouteEntryList.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Interface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_Interface.h
 ccnx/api/control/cpi_Address.h
 -
 ccnx/api/control/cpi_AddressList.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceIPTunnel.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceIPTunnel.h
 ccnx/api/control/cpi_InterfaceType.h
 -
 ccnx/api/control/cpi_Address.h
@@ -384,17 +384,17 @@ ccnx/api/control/cpi_Address.h
 parc/algol/parc_JSON.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceIPTunnelList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceIPTunnelList.h
 ccnx/api/control/cpi_InterfaceIPTunnel.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceSet.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceSet.h
 ccnx/api/control/cpi_Interface.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_InterfaceType.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ManageLinks.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_ManageLinks.h
 ccnx/api/control/cpi_ConnectionList.h
 -
 ccnx/api/control/cpi_ControlMessage.h
@@ -408,11 +408,11 @@ ccnx/api/control/cpi_InterfaceIPTunnelList.h
 ccnx/api/control/cpi_InterfaceSet.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_NameRouteProtocolType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_NameRouteProtocolType.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_NameRouteType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_NameRouteType.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_RouteEntry.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_RouteEntry.h
 ccnx/common/ccnx_Name.h
 -
 ccnx/api/control/cpi_Address.h
@@ -424,17 +424,17 @@ ccnx/api/control/cpi_NameRouteType.h
 parc/algol/parc_JSON.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/control/cpi_RouteEntryList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/control/cpi_RouteEntryList.h
 ccnx/api/control/cpi_RouteEntry.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/api/notify/notify_Status.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/api/notify/notify_Status.h
 parc/algol/parc_JSON.h
 -
 ccnx/common/ccnx_Name.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_ContentObject.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_ContentObject.h
 stdbool.h
 -
 ccnx/common/ccnx_Name.h
@@ -452,13 +452,13 @@ parc/security/parc_Signature.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_Interest.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_Interest.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 ccnx/common/internal/ccnx_InterestInterface.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_InterestPayloadId.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_InterestPayloadId.h
 parc/algol/parc_Buffer.h
 -
 ccnx/common/ccnx_NameSegment.h
@@ -466,13 +466,13 @@ ccnx/common/ccnx_NameSegment.h
 ccnx/common/ccnx_Name.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_InterestReturn.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_InterestReturn.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 ccnx/common/ccnx_Interest.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_KeyLocator.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_KeyLocator.h
 stdbool.h
 -
 ccnx/common/ccnx_Link.h
@@ -480,7 +480,7 @@ ccnx/common/ccnx_Link.h
 parc/security/parc_Key.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_Link.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_Link.h
 ccnx/common/ccnx_Name.h
 -
 parc/security/parc_Signature.h
@@ -490,7 +490,7 @@ parc/algol/parc_Memory.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_Manifest.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_Manifest.h
 ccnx/common/ccnx_Name.h
 -
 ccnx/common/ccnx_ManifestHashGroup.h
@@ -508,7 +508,7 @@ parc/algol/parc_LinkedList.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_ManifestHashGroup.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_ManifestHashGroup.h
 ccnx/common/ccnx_Name.h
 -
 ccnx/common/ccnx_ContentObject.h
@@ -528,13 +528,13 @@ parc/algol/parc_LinkedList.h
 parc/security/parc_Signature.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_Name.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_Name.h
 parc/algol/parc_HashCode.h
 -
 ccnx/common/ccnx_NameSegment.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameLabel.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameLabel.h
 stdint.h
 -
 stdbool.h
@@ -544,7 +544,7 @@ parc/algol/parc_Buffer.h
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameSegment.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameSegment.h
 stdbool.h
 -
 stdint.h
@@ -558,7 +558,7 @@ ccnx/common/ccnx_NameLabel.h
 parc/algol/parc_URI.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameSegmentNumber.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_NameSegmentNumber.h
 stdbool.h
 -
 ccnx/common/ccnx_NameSegment.h
@@ -566,9 +566,9 @@ ccnx/common/ccnx_NameSegment.h
 ccnx/common/ccnx_NameLabel.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_PayloadType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_PayloadType.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/ccnx_WireFormatMessage.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/ccnx_WireFormatMessage.h
 ccnx/common/internal/ccnx_WireFormatMessageInterface.h
 -
 ccnx/common/internal/ccnx_TlvDictionary.h
@@ -576,13 +576,13 @@ ccnx/common/internal/ccnx_TlvDictionary.h
 parc/security/parc_CryptoHash.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_EncodingBuffer.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_EncodingBuffer.h
 sys/uio.h
 -
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_NetworkBuffer.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_NetworkBuffer.h
 stdint.h
 -
 sys/uio.h
@@ -592,7 +592,7 @@ parc/algol/parc_Buffer.h
 parc/security/parc_Signer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_TlvPacket.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/codec/ccnxCodec_TlvPacket.h
 parc/algol/parc_Buffer.h
 -
 parc/security/parc_Signer.h
@@ -602,7 +602,7 @@ ccnx/common/codec/ccnxCodec_NetworkBuffer.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_ContentObjectInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_ContentObjectInterface.h
 parc/algol/parc_Buffer.h
 -
 ccnx/common/internal/ccnx_TlvDictionary.h
@@ -614,7 +614,7 @@ ccnx/common/ccnx_KeyLocator.h
 ccnx/common/ccnx_PayloadType.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_InterestInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_InterestInterface.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 ccnx/common/internal/ccnx_InterestPayloadIdMethod.h
@@ -622,9 +622,9 @@ ccnx/common/internal/ccnx_InterestPayloadIdMethod.h
 ccnx/common/ccnx_InterestPayloadId.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_InterestPayloadIdMethod.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_InterestPayloadIdMethod.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_ManifestInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_ManifestInterface.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 ccnx/common/ccnx_ManifestHashGroup.h
@@ -634,11 +634,11 @@ ccnx/common/ccnx_Name.h
 ccnx/common/ccnx_KeyLocator.h
 -
 ccnx_TlvDictionary.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_TlvDictionary.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_TlvDictionary.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_MessageInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_MessageInterface.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_TlvDictionary.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_TlvDictionary.h
 stdbool.h
 -
 sys/time.h
@@ -654,11 +654,11 @@ ccnx/common/ccnx_Name.h
 ccnx/common/codec/ccnxCodec_NetworkBuffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_WireFormatMessageInterface.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/internal/ccnx_WireFormatMessageInterface.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/common/validation/ccnxValidation_CRC32C.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/common/validation/ccnxValidation_CRC32C.h
 parc/security/parc_Signer.h
 -
 parc/security/parc_Verifier.h
@@ -666,9 +666,9 @@ parc/security/parc_Verifier.h
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_ConnectionConfig.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_ConnectionConfig.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_StackConfig.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_StackConfig.h
 stdbool.h
 -
 parc/algol/parc_JSON.h
@@ -676,7 +676,7 @@ parc/algol/parc_JSON.h
 parc/algol/parc_HashCode.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_TransportConfig.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/ccnx_TransportConfig.h
 stdarg.h
 -
 ccnx/transport/common/ccnx_StackConfig.h
@@ -684,7 +684,7 @@ ccnx/transport/common/ccnx_StackConfig.h
 ccnx/transport/common/ccnx_ConnectionConfig.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/transport.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/transport.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 ccnx/common/internal/ccnx_TlvDictionary.h
@@ -694,13 +694,13 @@ ccnx/transport/common/transport_Message.h
 ccnx/transport/common/ccnx_TransportConfig.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/transport_Message.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/transport_Message.h
 ccnx/common/codec/ccnxCodec_NetworkBuffer.h
 -
 ccnx/common/internal/ccnx_TlvDictionary.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/common/transport_MetaMessage.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/common/transport_MetaMessage.h
 ccnx/common/ccnx_Interest.h
 -
 ccnx/common/ccnx_InterestReturn.h
@@ -716,11 +716,11 @@ ccnx/common/internal/ccnx_TlvDictionary.h
 ccnx/api/control/cpi_ControlMessage.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/ccnx/transport/transport_rta/config/config_Forwarder_Metis.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/ccnx/transport/transport_rta/config/config_Forwarder_Metis.h
 ccnx/transport/common/ccnx_TransportConfig.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_ArrayList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_ArrayList.h
 stdint.h
 -
 stdbool.h
@@ -730,21 +730,21 @@ parc/algol/parc_List.h
 parc/algol/parc_Iterator.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_BitVector.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_BitVector.h
 stdbool.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Buffer.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Buffer.h
 parc/algol/parc_Object.h
 -
 parc/algol/parc_ByteArray.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_BufferComposer.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_BufferComposer.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_ByteArray.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_ByteArray.h
 stdlib.h
 -
 stdbool.h
@@ -754,29 +754,29 @@ stdint.h
 parc/algol/parc_HashCode.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_CMacro.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_CMacro.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Clock.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Clock.h
 inttypes.h
 -
 sys/time.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Collection.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Collection.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_DisplayIndented.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_DisplayIndented.h
 stdarg.h
 -
 stdlib.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_FileOutputStream.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_FileOutputStream.h
 parc/algol/parc_Buffer.h
 -
 parc/algol/parc_OutputStream.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_HashCode.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_HashCode.h
 stdint.h
 -
 inttypes.h
@@ -784,7 +784,7 @@ inttypes.h
 stdlib.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_HashCodeTable.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_HashCodeTable.h
 stdint.h
 -
 stdlib.h
@@ -794,7 +794,7 @@ stdbool.h
 parc/algol/parc_HashCode.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_HashMap.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_HashMap.h
 stdbool.h
 -
 parc/algol/parc_JSON.h
@@ -804,13 +804,13 @@ parc/algol/parc_HashCode.h
 parc/algol/parc_Iterator.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Iterator.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Iterator.h
 stdbool.h
 -
 parc/algol/parc_Object.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_JSON.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_JSON.h
 stdbool.h
 -
 parc/algol/parc_Buffer.h
@@ -828,11 +828,11 @@ parc/algol/parc_JSONPair.h
 parc/algol/parc_JSONValue.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_JSONArray.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_JSONArray.h
 parc/algol/parc_JSONValue.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_JSONPair.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_JSONPair.h
 stdbool.h
 -
 parc/algol/parc_Buffer.h
@@ -848,11 +848,11 @@ parc/algol/parc_JSONValue.h
 parc/algol/parc_JSONParser.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_JSONParser.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_JSONParser.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_JSONValue.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_JSONValue.h
 stdbool.h
 -
 stdint.h
@@ -874,11 +874,11 @@ parc/algol/parc_BufferComposer.h
 parc/algol/parc_List.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_KeyValue.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_KeyValue.h
 parc_Object.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_LinkedList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_LinkedList.h
 stdbool.h
 -
 stdint.h
@@ -892,7 +892,7 @@ parc/algol/parc_Object.h
 parc/algol/parc_Iterator.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_List.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_List.h
 stdbool.h
 -
 parc/algol/parc_HashCode.h
@@ -902,13 +902,13 @@ parc/algol/parc_Collection.h
 parc/algol/parc_Object.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Memory.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Memory.h
 stdlib.h
 -
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
 stdint.h
 -
 time.h
@@ -928,15 +928,15 @@ parc/algol/parc_HashCode.h
 parc/algol/parc_JSON.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_OutputStream.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_OutputStream.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_PathName.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_PathName.h
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Properties.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Properties.h
 stdbool.h
 -
 parc/algol/parc_JSON.h
@@ -946,7 +946,7 @@ parc/algol/parc_HashCode.h
 parc/algol/parc_Iterator.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_SortedList.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_SortedList.h
 stdbool.h
 -
 parc/algol/parc_JSON.h
@@ -956,37 +956,37 @@ parc/algol/parc_HashCode.h
 parc/algol/parc_Iterator.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Time.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Time.h
 sys/time.h
 -
 stdint.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_TreeMap.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_TreeMap.h
 stdlib.h
 -
 parc_Object.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Object.h
 parc_KeyValue.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_KeyValue.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_KeyValue.h
 parc_List.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_List.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_List.h
 parc_Iterator.h
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_Iterator.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_Iterator.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_TreeRedBlack.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_TreeRedBlack.h
 stdlib.h
 -
 parc/algol/parc_ArrayList.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_URI.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_URI.h
 parc/algol/parc_URIPath.h
 -
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_URIPath.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_URIPath.h
 stdlib.h
 -
 stdarg.h
@@ -994,11 +994,11 @@ stdarg.h
 parc/algol/parc_URISegment.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/algol/parc_URISegment.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/algol/parc_URISegment.h
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/logging/parc_Log.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/logging/parc_Log.h
 stdarg.h
 -
 parc/logging/parc_LogReporter.h
@@ -1008,7 +1008,7 @@ parc/logging/parc_LogEntry.h
 parc/logging/parc_LogLevel.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/logging/parc_LogEntry.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/logging/parc_LogEntry.h
 stdlib.h
 -
 parc/algol/parc_Buffer.h
@@ -1018,45 +1018,45 @@ sys/time.h
 parc/logging/parc_LogLevel.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/logging/parc_LogLevel.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/logging/parc_LogLevel.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/logging/parc_LogReporter.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/logging/parc_LogReporter.h
 parc/logging/parc_LogEntry.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/logging/parc_LogReporterTextStdout.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/logging/parc_LogReporterTextStdout.h
 parc/logging/parc_LogReporter.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_CryptoHash.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_CryptoHash.h
 parc/algol/parc_Buffer.h
 -
 parc/security/parc_CryptoHashType.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_CryptoHashType.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_CryptoHashType.h
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_CryptoHasher.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_CryptoHasher.h
 parc/algol/parc_Buffer.h
 -
 parc/security/parc_CryptoHash.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_CryptoSuite.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_CryptoSuite.h
 parc/security/parc_CryptoHashType.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Identity.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Identity.h
 parc/algol/parc_Object.h
 -
 parc/security/parc_Signer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_IdentityFile.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_IdentityFile.h
 parc/security/parc_Identity.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Key.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Key.h
 parc/security/parc_KeyId.h
 -
 parc/security/parc_CryptoHashType.h
@@ -1066,13 +1066,13 @@ parc/security/parc_SigningAlgorithm.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_KeyId.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_KeyId.h
 parc/algol/parc_Buffer.h
 -
 parc/algol/parc_BufferComposer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_KeyStore.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_KeyStore.h
 parc/algol/parc_Object.h
 -
 parc/algol/parc_Buffer.h
@@ -1080,7 +1080,7 @@ parc/algol/parc_Buffer.h
 parc/security/parc_CryptoHash.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signature.h
 parc/security/parc_CryptoHash.h
 -
 parc/security/parc_CryptoHashType.h
@@ -1090,7 +1090,7 @@ parc/security/parc_SigningAlgorithm.h
 parc/algol/parc_Buffer.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Signer.h
 parc/algol/parc_Object.h
 -
 parc/algol/parc_Buffer.h
@@ -1106,13 +1106,13 @@ parc/security/parc_Key.h
 parc/security/parc_KeyStore.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_SigningAlgorithm.h
 parc/security/parc_CryptoHashType.h
 -
 parc/security/parc_CryptoSuite.h
 -
 
-/home/ivan/Desktop/projects/ccnx/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
+/home/ivan/Desktop/projects/CCNx_Distillery/usr/include/parc/security/parc_Verifier.h
 parc/algol/parc_Object.h
 -
 parc/security/parc_CryptoHasher.h
@@ -1124,7 +1124,7 @@ parc/security/parc_CryptoHashType.h
 parc/security/parc_Key.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.c
 config.h
 -
 pthread.h
@@ -1160,7 +1160,7 @@ parc/logging/parc_LogReporterTextStdout.h
 parc/algol/parc_Clock.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 ccnx/forwarder/athena/athena_TransportLinkAdapter.h
@@ -1172,13 +1172,13 @@ ccnx/forwarder/athena/athena_PIT.h
 ccnx/forwarder/athena/athena_FIB.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.c
 athena_About.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.c
 config.h
 -
 ccnx/forwarder/athena/athena.h
@@ -1194,7 +1194,7 @@ ccnx/forwarder/athena/athena_LRUContentStore.h
 parc/algol/parc_HashCodeTable.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.h
 sys/types.h
 -
 stdbool.h
@@ -1212,7 +1212,7 @@ ccnx/transport/common/transport_MetaMessage.h
 ccnx/forwarder/athena/athena_ContentStoreInterface.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.c
 config.h
 -
 ccnx/forwarder/athena/athena_Control.h
@@ -1226,7 +1226,7 @@ ccnx/common/ccnx_ContentObject.h
 ccnx/api/control/controlPlaneInterface.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.h
 ccnx/forwarder/athena/athena.h
 -
 ccnx/common/ccnx_Interest.h
@@ -1234,7 +1234,7 @@ ccnx/common/ccnx_Interest.h
 parc/algol/parc_BitVector.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.c
 config.h
 -
 stdio.h
@@ -1250,13 +1250,13 @@ parc/algol/parc_TreeRedBlack.h
 ccnx/forwarder/athena/athena_FIB.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.h
 parc/algol/parc_BitVector.h
 -
 ccnx/transport/common/transport_MetaMessage.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Fragmenter.c
 config.h
 -
 LongBow/runtime.h
@@ -1274,7 +1274,7 @@ ccnx/forwarder/athena/athena_Fragmenter.h
 ctype.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.c
 config.h
 -
 errno.h
@@ -1286,17 +1286,17 @@ sys/param.h
 stdio.h
 -
 athena_InterestControl.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
 athena_Control.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_Control.h
 athena_PIT.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
 athena_FIB.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_FIB.h
 athena_ContentStore.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_ContentStore.h
 athena_TransportLinkAdapter.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 parc/algol/parc_Memory.h
 -
 parc/algol/parc_JSON.h
@@ -1310,17 +1310,17 @@ ccnx/api/control/controlPlaneInterface.h
 parc/algol/parc_JSON.h
 -
 athena_About.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_About.h
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
 athena.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 ccnx/common/ccnx_Interest.h
 -
 parc/algol/parc_BitVector.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_LRUContentStore.c
 ccnx/forwarder/athena/athena.h
 -
 parc/algol/parc_DisplayIndented.h
@@ -1336,15 +1336,15 @@ ccnx/common/ccnx_NameSegmentNumber.h
 ccnx/forwarder/athena/athena_LRUContentStore.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.c
 config.h
 -
 stdio.h
 -
 athena.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena.h
 athena_PIT.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
 ccnx/common/ccnx_NameSegmentNumber.h
 -
 ccnx/common/ccnx_WireFormatMessage.h
@@ -1370,7 +1370,7 @@ parc/algol/parc_Clock.h
 parc/security/parc_CryptoHash.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_PIT.h
 parc/algol/parc_BitVector.h
 -
 ccnx/common/ccnx_ContentObject.h
@@ -1380,7 +1380,7 @@ ccnx/common/ccnx_Interest.h
 ccnx/transport/common/transport_MetaMessage.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLink.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLink.c
 config.h
 -
 LongBow/runtime.h
@@ -1394,7 +1394,7 @@ ccnx/forwarder/athena/athena_TransportLink.h
 parc/logging/parc_LogReporterTextStdout.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.c
 config.h
 -
 LongBow/runtime.h
@@ -1416,7 +1416,7 @@ ctype.h
 dlfcn.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkAdapter.h
 parc/algol/parc_BitVector.h
 -
 parc/algol/parc_ArrayList.h
@@ -1434,7 +1434,7 @@ ccnx/forwarder/athena/athena_TransportLinkModule.h
 ccnx/forwarder/athena/athena_TransportLink.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_TransportLinkModule.c
 config.h
 -
 LongBow/runtime.h
@@ -1452,7 +1452,7 @@ ccnx/forwarder/athena/athena_TransportLinkModule.h
 parc/logging/parc_LogReporterTextStdout.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.c
 config.h
 -
 sys/param.h
@@ -1460,15 +1460,15 @@ sys/param.h
 stdio.h
 -
 athenactl.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
 athena_InterestControl.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athena_InterestControl.h
 ccnx/common/validation/ccnxValidation_CRC32C.h
 -
 ccnx/common/codec/ccnxCodec_TlvPacket.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl.h
 ccnx/forwarder/athena/athena.h
 -
 ccnx/api/ccnx_Portal/ccnx_Portal.h
@@ -1480,13 +1480,13 @@ parc/security/parc_IdentityFile.h
 ccnx/transport/transport_rta/config/config_Forwarder_Metis.h
 -
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.c
 athenactl_About.h
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.h
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.h
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/athenactl_About.h
 
-/home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
+/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/platform/linux/athena_Ethernet.c
 config.h
 -
 stdio.h

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena
+# Install script for directory: /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,54 +32,54 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena.a")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/libathena.a")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1.0"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1.0"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so.1"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TCP.so"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1.0"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1.0"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so.1"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_UDP.so"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1.0"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1.0"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so.1"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_ETH.so"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1.0"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1.0"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so.1"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_Fragmenter_BEFS.so"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1.0"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1"
-    "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1.0"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so.1"
+    "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/CMakeFiles/CMakeRelink.dir/libathena_TEMPLATE.so"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/cmake_install.cmake")
-  include("/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/cmake_install.cmake")
+  include("/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/test/cmake_install.cmake")
+  include("/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/cmake_install.cmake")
 
 endif()
 

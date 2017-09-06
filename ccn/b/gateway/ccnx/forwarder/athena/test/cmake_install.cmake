@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test
+# Install script for directory: /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

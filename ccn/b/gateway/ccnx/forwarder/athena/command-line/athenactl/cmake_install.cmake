@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/workspace/krb/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athenactl
+# Install script for directory: /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/gateway/ccnx/forwarder/athena/command-line/athenactl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,7 +32,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/CMakeRelink.dir/athenactl")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/ccnx/forwarder/athena/command-line/athenactl/CMakeFiles/CMakeRelink.dir/athenactl")
 endif()
 

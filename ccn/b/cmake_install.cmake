@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/workspace/krb/krb-ccn/ccn
+# Install script for directory: /home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,21 +32,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/ccnxVPN_Client")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/ccnxVPN_Client")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/ccnxVPN_Server")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/ccnxVPN_Server")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/keygen")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/CMakeFiles/CMakeRelink.dir/keygen")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/workspace/krb/krb-ccn/ccn/b/gateway/cmake_install.cmake")
+  include("/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/gateway/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ivan/workspace/krb/krb-ccn/ccn/b/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ivan/workspace/krb-ccn/krb-ccn/krb-ccn/ccn/b/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
