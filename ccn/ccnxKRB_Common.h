@@ -37,6 +37,7 @@ typedef enum {
 #define userKDCDir 		"/tmp/krbccn-kdc/users/"			//Stores users public key (or hashed passwd) on KDC
 #define controlKDCDir 	"/tmp/krbccn-kdc/authorization/"	//Stores users authorized namespaces
 #define serverKDCDir 	"/tmp/krbccn-kdc/servers/"		//Stores shared keys with servers
+#define keyFileKDC 	"/tmp/krbccn-kdc/keyA"		//Stores shared keys with servers
 /**
  * The default Server database directories.
  * Must be in the server host

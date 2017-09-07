@@ -1,61 +1,4 @@
-/*
- * Copyright (c) 2016, Xerox Corporation (Xerox) and Palo Alto Research Center, Inc (PARC)
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * * Redistributions of source code must retain the above copyright
- *   notice, this list of conditions and the following disclaimer.
- * * Redistributions in binary form must reproduce the above copyright
- *   notice, this list of conditions and the following disclaimer in the
- *   documentation and/or other materials provided with the distribution.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL XEROX OR PARC BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * ################################################################################
- * #
- * # PATENT NOTICE
- * #
- * # This software is distributed under the BSD 2-clause License (see LICENSE
- * # file).  This BSD License does not make any patent claims and as such, does
- * # not act as a patent grant.  The purpose of this section is for each contributor
- * # to define their intentions with respect to intellectual property.
- * #
- * # Each contributor to this source code is encouraged to state their patent
- * # claims and licensing mechanisms for any contributions made. At the end of
- * # this section contributors may each make their own statements.  Contributor's
- * # claims and grants only apply to the pieces (source code, programs, text,
- * # media, etc) that they have contributed directly to this software.
- * #
- * # There is no guarantee that this section is complete, up to date or accurate. It
- * # is up to the contributors to maintain their portion of this section and up to
- * # the user of the software to verify any claims herein.
- * #
- * # Do not remove this header notification.  The contents of this section must be
- * # present in all distributions of the software.  You may only modify your own
- * # intellectual property statements.  Please provide contact information.
- *
- * - Palo Alto Research Center, Inc
- * This software distribution does not grant any rights to patents owned by Palo
- * Alto Research Center, Inc (PARC). Rights to these patents are available via
- * various mechanisms. As of January 2016 PARC has committed to FRAND licensing any
- * intellectual property used by its contributions to this software. You may
- * contact PARC at cipo@parc.com for more information or visit http://www.ccnx.org
- */
-/**
- * @author Nacho Solis, Christopher A. Wood, Palo Alto Research Center (Xerox PARC)
- * @copyright (c) 2016, Xerox Corporation (Xerox) and Palo Alto Research Center, Inc (PARC).  All rights reserved.
- */
+
 #include <stdio.h>
 
 #include <getopt.h>
@@ -94,7 +37,8 @@ typedef struct ccnx_ping_server {
     uint8_t generalPayload[ccnx_MaxPayloadSize];
 
     uint8_t username[MAX_USERNAME_LEN];
-    uint8_t user_pk[crypto_sign_PUBLICKEYBYTES];
+    uint8_t user_pk_sig[crypto_sign_PUBLICKEYBYTES];
+    uint8_t user_pk_enc[crypto_box_PUBLICKEYBYTES];
 
     char *keystoreName;
     char *keystorePassword;
@@ -234,37 +178,26 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		// expiration time of TGT
 		uint64_t expiration = _ccnx_CurrentTimeInUs(clock) + TGT_EXPIRATION;
 
-		uint8_t C_TGS_token[sizeof k_tgs + sizeof(uint8_t)];
-		memset(C_TGS_token, 0, sizeof k_tgs + sizeof(uint8_t)); //set buffer to zero
+		uint8_t C_TGS_token[sizeof k_tgs + sizeof(uint64_t)];
+		memset(C_TGS_token, 0, sizeof k_tgs + sizeof(uint64_t)); //set buffer to zero
 
 		memcpy(C_TGS_token,k_tgs, sizeof k_tgs);
 		memcpy(C_TGS_token + sizeof k_tgs, &expiration, sizeof (uint64_t));
 
 		// TODO: encrypt C_TGS_token reading the appropriate keys from file
 		/* Recipient creates a long-term key pair */
-		unsigned char recipient_pk[crypto_box_PUBLICKEYBYTES];
-		unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
-		crypto_box_keypair(recipient_pk, recipient_sk);
+		//unsigned char recipient_pk[crypto_box_PUBLICKEYBYTES];
+		//unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
+		//crypto_box_keypair(recipient_pk, recipient_sk);
 
-	    printf("Public key size %zu, private key size %zu\n", sizeof(recipient_pk), sizeof(recipient_sk));
+	    printf("encrypting token with client key\n");
 
 		/* Anonymous sender encrypts a message using an ephemeral key pair
 		 * and the recipient's public key */
 	    // TODO: change this to authenticated encryption
-	    int ct_len = crypto_box_SEALBYTES + sizeof k_tgs + sizeof(uint8_t);
+	    int ct_len = crypto_box_SEALBYTES + sizeof k_tgs + sizeof(uint64_t);
 		unsigned char enc_C_TGS_token[ct_len];
-		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint8_t), recipient_pk);
-
-		//TODO: move this part to client
-		/* Recipient decrypts the ciphertext */
-		unsigned char decrypted_token[sizeof k_tgs + sizeof(uint8_t)];
-		if (crypto_box_seal_open(decrypted_token, enc_C_TGS_token, ct_len,
-			                     recipient_pk, recipient_sk) != 0) {
-			/* message corrupted or not intended for this recipient */
-			printf("Not decyphered\n");
-		}else{
-			printf("Message: %s\n",decrypted_token);
-		}
+		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint64_t), server->user_pk_enc);
 
 		//TODO: create TGT
 		// TGT plaintext buffer
@@ -300,13 +233,16 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
 		unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
 		unsigned long long ciphertext_len;
-		randombytes_buf(KDC_key, sizeof KDC_key);
-		randombytes_buf(nonce, sizeof nonce);
-		// end TODO//////////////////////////////////////////
+
+		FILE* kdcKeyFile = fopen(keyFileKDC,"r");
+		fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
+		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
+		fclose(kdcKeyFile);
+
+		//randombytes_buf(KDC_key, sizeof KDC_key);
+		//randombytes_buf(nonce, sizeof nonce);
 
 		unsigned char enc_TGT[tgt_size + crypto_aead_aes256gcm_ABYTES];
-
-		printf("Key size: %zu, Nonce size: %zu\n", sizeof(KDC_key), sizeof(nonce));
 
 		crypto_aead_aes256gcm_encrypt(enc_TGT, &ciphertext_len,
 			                          TGT, tgt_size,
@@ -367,12 +303,12 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 	printf("Received authentication request from <%s>.\n",username);
 
 	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
-	char filename_pk[strlen(username) + strlen(userPrvDir) + 5]; // +5 to concat -prv\0
+	char filename_pk[strlen(username) + strlen(userPrvDir) + strlen("-pub-sig")+1]; // +5 to concat -prv\0
 	strcpy(filename_pk, userPrvDir);
 	strcat(filename_pk,username);
 
 	if (1) {
-		strcat(filename_pk,"-pub");
+		strcat(filename_pk,"-pub-sig");
 	} else {
 		// ADD symmetric key based TGT support here later
 		printf("never happens\n");
@@ -380,7 +316,8 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 
 	FILE* fp = fopen(filename_pk, "r");
 	if (!fp) {
-		printf("ERROR: Could not find public key file\n");
+		printf("ERROR: Could not find public key file:\n");
+		printf("%s\n",filename_pk);
 	} else {
 		fread(pk, 1, crypto_sign_PUBLICKEYBYTES, fp);
 		fclose(fp);
@@ -391,9 +328,45 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 		return false;
 	} else {
 		memcpy(server->username, username, MAX_USERNAME_LEN);
-		memcpy(server->user_pk, pk, crypto_sign_PUBLICKEYBYTES);
+		memcpy(server->user_pk_sig, pk, crypto_sign_PUBLICKEYBYTES);
 		return true;
 	}
+
+
+
+
+
+	unsigned char enc_pk[crypto_box_PUBLICKEYBYTES];
+	strcpy(filename_pk, userPrvDir);
+	strcat(filename_pk,username);
+
+	if (1) {
+		strcat(filename_pk,"-pub-enc");
+	} else {
+		// ADD symmetric key based TGT support here later
+		printf("never happens\n");
+	}
+
+	fp = fopen(filename_pk, "r");
+	if (!fp) {
+		printf("ERROR: Could not find public key file:\n");
+		printf("%s\n",filename_pk);
+	} else {
+		fread(enc_pk, 1, crypto_box_PUBLICKEYBYTES, fp);
+		fclose(fp);
+	}
+
+	if (crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
+	    /* Incorrect signature! */
+		return false;
+	} else {
+		//sets the server structure with appropriate keys to allow generation of TGT and auth TOKEN
+		memcpy(server->username, username, MAX_USERNAME_LEN);
+		memcpy(server->user_pk_sig, pk, crypto_sign_PUBLICKEYBYTES);
+		memcpy(server->user_pk_enc, enc_pk, crypto_box_PUBLICKEYBYTES);
+		return true;
+	}
+
 
 }
 

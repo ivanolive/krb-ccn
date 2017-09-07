@@ -138,12 +138,12 @@ _CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
 	}
 
 	unsigned char sk[crypto_sign_SECRETKEYBYTES];
-	char filename[strlen(client->username) + strlen(userPrvDir) + 5]; // +5 to concat -prv\0
+	char filename[strlen(client->username) + strlen(userPrvDir) + strlen("-prv-sig") +1]; // +5 to concat -prv\0
 	strcpy(filename, userPrvDir);
 	strcat(filename,client->username);
 
 	if (1) {
-		strcat(filename,"-prv");
+		strcat(filename,"-prv-sig");
 	} else {
 		// ADD symmetric key based TGT support here later
 		printf("never happens\n");
@@ -152,7 +152,7 @@ _CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
 	FILE* fp = fopen(filename, "r");
 	if (!fp) {
 		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", username);
-		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n", username);
+		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n");
 		printf("Then add user credentials to KDC server.\n\n");
 		return NULL;
 	} else {
@@ -214,7 +214,22 @@ _ccnx_CurrentTimeInUs(PARCClock *clock)
     return microseconds;
 }
 
+void
+storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
+	printf("Received %d bytes. TGT and token are probably there.\n",(int)parcBuffer_Remaining(TGTPayload));
+	printf("Storing authentication ticket for <%s> \n", client->username);
+/*
+ * XXX:Receive the buffer in this format (code was already caught):
+	payload = parcBuffer_Allocate(size);
+    parcBuffer_PutUint8(payload, code);
+    parcBuffer_PutArray(payload, sizeof enc_TGT, enc_TGT);
+    parcBuffer_PutArray(payload, sizeof enc_C_TGS_token, enc_C_TGS_token);
+	parcBuffer_Flip(payload);
 
+*/
+}
+
+void
 _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 {
     PARCClock *clock = parcClock_Wallclock();
@@ -275,9 +290,9 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
                 if (reply == TGT_SUCCESS) {
                 	printf("<%s> authentication successful.\n", client->username);
-                	//TODO add funtion to store TGT here
-                	printf("Received %d bytes. TGT and token are probably there.\n",parcBuffer_Remaining(contentPayload));
-                	printf("Storing authentication ticket for <%s> \n", client->username);
+                	//TODO: Impplement this function properly.
+                	storeTGT(client, contentPayload);
+
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
                 }
@@ -418,34 +433,84 @@ ccnx_KRB_addUser(char* userName)
 		return false;
 	}
 
+	//USER KEY PAIR FOR SIGNATURES
 	unsigned char user_pk[crypto_sign_PUBLICKEYBYTES];
 	unsigned char user_sk[crypto_sign_SECRETKEYBYTES];
 	crypto_sign_keypair(user_pk, user_sk);
 
+	//USER KEY PAIR FOR ENCRYPTION
+	unsigned char enc_user_pk[crypto_box_PUBLICKEYBYTES];
+	unsigned char enc_user_sk[crypto_box_SECRETKEYBYTES];
+	crypto_box_keypair(enc_user_pk, enc_user_sk);
+
+	//USER KEY FOR SYMMETRIC ENCRYPTION
     unsigned char sym_key[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
 	randombytes_buf(sym_key, sizeof sym_key);
 
-	char* fileName = (char*) malloc(strlen(userName) + strlen(userPrvDir) + strlen("-prv") + 1);
+
+	/*
+	 * Writting keys to files.
+	 */
+
+	char* fileName = (char*) malloc(strlen(userName) + strlen(userPrvDir) + strlen("-prv-sig") + 1);
 	strcpy(fileName, userPrvDir);
 	strcat(fileName, userName);
-	strcat(fileName, "-prv");
+	strcat(fileName, "-prv-sig");
 
 	if (!fopen(fileName,"r")) {
 
-		// Writing secret key to default location////////
+/*
+ *
+ */
+		// Writing secret signature key to default location////////
 		FILE* user_keys = fopen(fileName,"w");
 		fwrite(user_sk, sizeof(char), crypto_sign_SECRETKEYBYTES, user_keys);
 		fclose(user_keys);
 		////////////////////////////////////////////////
 
-		// Writing public key to default location////////
+		// Writing public signature key to default location////////
 		strcpy(fileName, userPrvDir);
 		strcat(fileName, userName);
-		strcat(fileName, "-pub");
+		strcat(fileName, "-pub-sig");
 		user_keys = fopen(fileName,"w");
 		fwrite(user_pk, sizeof(char), crypto_sign_PUBLICKEYBYTES, user_keys);
 		fclose(user_keys);
 		/////////////////////////////////////////////////
+/*
+ *
+ */
+
+
+/*
+ *
+ */
+		// Writing secret encryption key to default location////////
+		strcpy(fileName, userPrvDir);
+		strcat(fileName, userName);
+		strcat(fileName, "-prv-enc");
+
+		user_keys = fopen(fileName,"w");
+		fwrite(enc_user_sk, sizeof(char), crypto_box_SECRETKEYBYTES, user_keys);
+		fclose(user_keys);
+		////////////////////////////////////////////////
+
+		// Writing public encryption key to default location////////
+		strcpy(fileName, userPrvDir);
+		strcat(fileName, userName);
+		strcat(fileName, "-pub-enc");
+
+		user_keys = fopen(fileName,"w");
+		fwrite(enc_user_pk, sizeof(char), crypto_box_PUBLICKEYBYTES, user_keys);
+		fclose(user_keys);
+		/////////////////////////////////////////////////
+/*
+ *
+ */
+
+
+
+
+
 
 		// Writing symmetric to default location//////////
 		strcpy(fileName, userPrvDir);

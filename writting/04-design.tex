@@ -63,7 +63,7 @@ Hydra is a system designed to address these problems. It has the following featu
 \end{compactitem}
 %
 
-\begin{table*}
+\begin{table}
 \centering
 \caption{Notation summary}
 \label{notation}
@@ -87,15 +87,15 @@ $\sigma = Sign_{sk}(m) $	&  Signature on message $m$ using secret key $sk$ 			\\
 $Verif_{pk}(\sigma,m) $		&  Signature verification using public key $pk$     			\\&\\
 \hline
 \end{tabular}
-\end{table*}
+\end{table}
 
-\begin{figure*}
+\begin{figure}
 \begin{center}
-\includegraphics[scale=0.5]{Figures/hydra.pdf}
+\includegraphics[width=\columnwidth]{Figures/hydra.pdf}
 \caption{Hydra system design}
 \label{fig:spectr-basic}
 \end{center}
-\end{figure*}
+\end{figure}
 
 
 
@@ -178,7 +178,7 @@ D = \mathsf{Dec}_{K_N}(\mathsf{D'}) \> \> \\
 
 \subsection{Ivan: Comments}
 \begin{enumerate}
- \item IMHO, the authentication algorithm (Fig.2) should be unrelated to the namespace you want to get access to. Only related to Consumer's claimed Identity. Otherwise the consumer has to go back to the Authenticator every time she wants a different content (3 RTT).
+ \item IMO, the authentication algorithm (Fig.2) should be unrelated to the namespace you want to get access to. Only related to Consumer's claimed Identity. Otherwise the consumer has to go back to the Authenticator every time she wants a different content (3 RTT).
  \item Unless we are assuming that there is some magical non-deterministic router that will route the same name through different paths, I.name must specify the content produced by the Authenticator, i.e., the TGT. The same applies for TGS.
  \item The TGT as a MAC never expires. My suggestion is to encrypt a timestamp, as in Kerberos, and as we are doing in the authorizer. MAC with an epoch is also an option, but not a good one.
  \item PKE of $K_N$ in the authorization algorithm (Fig 3) could (and maybe should) be symmetric AEAD.
