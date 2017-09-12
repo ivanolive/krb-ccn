@@ -19,7 +19,7 @@
 
 #include "../ccnxKRB_Common.h"
 
-#include "sodium.h"
+//#include "sodium.h"
 
 typedef enum {
 	REG_PROD = 0,  	// Non kerberized service
@@ -199,6 +199,8 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		unsigned char enc_C_TGS_token[ct_len];
 		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint64_t), server->user_pk_enc);
 
+		printf("Message: %s\n", C_TGS_token);
+
 		//TODO: create TGT
 		// TGT plaintext buffer
 		int tgt_size = MAX_USERNAME_LEN + 2 * sizeof k_tgs + sizeof (uint64_t);
@@ -300,7 +302,7 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 
 	parcBuffer_GetBytes(recvPayload, crypto_sign_BYTES, sig);
 
-	printf("Received authentication request from <%s>.\n",username);
+	printf("Receiving authentication request from <%s>.\n",username);
 
 	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
 	char filename_pk[strlen(username) + strlen(userPrvDir) + strlen("-pub-sig")+1]; // +5 to concat -prv\0
@@ -322,19 +324,6 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 		fread(pk, 1, crypto_sign_PUBLICKEYBYTES, fp);
 		fclose(fp);
 	}
-
-	if (crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
-	    /* Incorrect signature! */
-		return false;
-	} else {
-		memcpy(server->username, username, MAX_USERNAME_LEN);
-		memcpy(server->user_pk_sig, pk, crypto_sign_PUBLICKEYBYTES);
-		return true;
-	}
-
-
-
-
 
 	unsigned char enc_pk[crypto_box_PUBLICKEYBYTES];
 	strcpy(filename_pk, userPrvDir);
@@ -358,15 +347,14 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 
 	if (crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
 	    /* Incorrect signature! */
+		printf("Invalid client signature\n");
 		return false;
 	} else {
-		//sets the server structure with appropriate keys to allow generation of TGT and auth TOKEN
 		memcpy(server->username, username, MAX_USERNAME_LEN);
 		memcpy(server->user_pk_sig, pk, crypto_sign_PUBLICKEYBYTES);
 		memcpy(server->user_pk_enc, enc_pk, crypto_box_PUBLICKEYBYTES);
 		return true;
 	}
-
 
 }
 
@@ -438,7 +426,7 @@ _CCNxServer_Run(CCNxServer *server)
             }
             ccnxMetaMessage_Release(&request);
 
-            // Why releasing this fucks up the whole shit?
+            // Why releasing this fucks up the whole shit? Dammit!!
             //parcBuffer_Release(&interestPayload);
 
         }

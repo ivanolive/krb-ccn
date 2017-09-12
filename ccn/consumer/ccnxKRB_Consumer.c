@@ -16,7 +16,7 @@
 
 #include "../ccnxKRB_Common.h"
 #include "../ccnxKRB_Stats.h"
-#include "sodium.h"
+//#include "sodium.h"
 
 
 typedef enum {
@@ -45,6 +45,13 @@ typedef struct ccnx_client {
     int payloadSize;
     uint8_t generalPayload[ccnx_MaxPayloadSize];
     int nonce;
+
+    //client secret keys
+    char user_sk_sig[crypto_sign_SECRETKEYBYTES];
+    char user_sk_enc[crypto_box_SECRETKEYBYTES];
+
+    //client encryption PK
+    char user_pk_enc[crypto_box_PUBLICKEYBYTES];
 
     char *keystoreName;
     char *keystorePassword;
@@ -137,33 +144,10 @@ _CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
 	    return NULL;
 	}
 
-	unsigned char sk[crypto_sign_SECRETKEYBYTES];
-	char filename[strlen(client->username) + strlen(userPrvDir) + strlen("-prv-sig") +1]; // +5 to concat -prv\0
-	strcpy(filename, userPrvDir);
-	strcat(filename,client->username);
-
-	if (1) {
-		strcat(filename,"-prv-sig");
-	} else {
-		// ADD symmetric key based TGT support here later
-		printf("never happens\n");
-	}
-
-	FILE* fp = fopen(filename, "r");
-	if (!fp) {
-		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", username);
-		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n");
-		printf("Then add user credentials to KDC server.\n\n");
-		return NULL;
-	} else {
-		fread(sk, 1, crypto_sign_SECRETKEYBYTES, fp);
-		fclose(fp);
-	}
-
 	unsigned char sig[crypto_sign_BYTES];
 
-	crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, sk);
-
+	//crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, sk);
+	crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, client->user_sk_sig);
 
 	size = MAX_USERNAME_LEN + crypto_sign_BYTES;
 	uint8_t payload[size];
@@ -219,7 +203,7 @@ storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	printf("Received %d bytes. TGT and token are probably there.\n",(int)parcBuffer_Remaining(TGTPayload));
 	printf("Storing authentication ticket for <%s> \n", client->username);
 /*
- * XXX:Receive the buffer in this format (code was already caught):
+ * XXX:Receive the buffer in this format (code was already received at this point):
 	payload = parcBuffer_Allocate(size);
     parcBuffer_PutUint8(payload, code);
     parcBuffer_PutArray(payload, sizeof enc_TGT, enc_TGT);
@@ -227,6 +211,29 @@ storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	parcBuffer_Flip(payload);
 
 */
+
+
+
+	uint8_t TGTBuffer[RECEIVE_TGT_SIZE];
+	uint8_t TGTTokenBuffer[TGT_token_size];
+
+	parcBuffer_GetBytes(TGTPayload, RECEIVE_TGT_SIZE, TGTBuffer);
+	parcBuffer_GetBytes(TGTPayload, TGT_token_size, TGTTokenBuffer);
+
+	int message_len = TGT_token_size - crypto_box_SEALBYTES;
+
+	uint8_t tokenData[message_len];
+
+	//Token decryption:
+
+	if (crypto_box_seal_open(tokenData, TGTTokenBuffer, TGT_token_size, client->user_pk_enc, client->user_sk_enc) != 0) {
+		/* message corrupted or not intended for this recipient */
+		printf("TGT Reply was not authentic and, therefore, not stored\n");
+
+	} else{
+		printf("Message: %s\n",tokenData);
+	}
+
 }
 
 void
@@ -529,6 +536,65 @@ ccnx_KRB_addUser(char* userName)
 	return false;	//close software after adding the user
 }
 
+void
+loadUserKeys(CCNxConsumer *client) {
+	char* filename_sig[100];
+	char* filename_enc[100];
+	char* filename_enc_pk[100];
+
+	memset(filename_sig,0,100);
+	memset(filename_enc,0,100);
+	memset(filename_enc_pk,0,100);
+
+	memcpy (filename_sig, userPrvDir, sizeof(userPrvDir));
+	strcat(filename_sig, (char*)client->username);
+	strcat(filename_sig, (char*)"-prv-sig");
+
+	memcpy (filename_enc, userPrvDir, sizeof(userPrvDir));
+	strcat(filename_enc, (char*)client->username);
+	strcat(filename_enc, (char*)"-prv-enc");
+
+	memcpy (filename_enc_pk, userPrvDir, sizeof(userPrvDir));
+		strcat(filename_enc_pk, (char*)client->username);
+		strcat(filename_enc_pk, (char*)"-pub-enc");
+
+	//Load the signature key
+	FILE* fp = fopen(filename_sig, "r");
+	if (!fp) {
+		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", client->username);
+		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n");
+		printf("Then add user credentials to KDC server.\n\n");
+		exit(0);
+	} else {
+		fread(client->user_sk_sig, 1, crypto_sign_SECRETKEYBYTES, fp);
+		fclose(fp);
+	}
+
+	//Load the encryption key
+	fp = fopen(filename_enc, "r");
+	if (!fp) {
+		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", client->username);
+		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n");
+		printf("Then add user credentials to KDC server.\n\n");
+		exit(0);
+	} else {
+		fread(client->user_sk_enc, 1, crypto_box_SECRETKEYBYTES, fp);
+		fclose(fp);
+	}
+
+	//Load the encryption keya
+	fp = fopen(filename_enc_pk, "r");
+	if (!fp) {
+		printf("\nERROR: Could not find secret key file in default dir for user <%s>\nThis user probably does not exist yet.", client->username);
+		printf("Try running with | -n <username> | to\ngenerate user's cryptographic material.\n");
+		printf("Then add user credentials to KDC server.\n\n");
+		exit(0);
+	} else {
+		fread(client->user_pk_enc, 1, crypto_box_PUBLICKEYBYTES, fp);
+		fclose(fp);
+	}
+
+}
 
 static bool
 _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
@@ -570,6 +636,7 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
         		//Reading username
         		client->username = malloc(strlen(optarg) + 1);
                 strcpy(client->username, optarg);
+                loadUserKeys(client);
 
         		//TODO: temporary ////////////
         		client->keystoreName = malloc(strlen("consumer_identity1") + 1);

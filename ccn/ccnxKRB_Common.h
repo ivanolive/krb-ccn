@@ -7,7 +7,7 @@
 
 #include <ccnx/api/ccnx_Portal/ccnx_Portal.h>
 
-
+#include "sodium.h"
 
 /**
  * The `CCNxName` default prefixes for the servers.
@@ -50,6 +50,8 @@ typedef enum {
 
 #define TGT_EXPIRATION 60*60*24*1000*1000 // TGT expiration time in usec (default 1 day)
 
+#define RECEIVE_TGT_SIZE	MAX_USERNAME_LEN + 2 * (crypto_aead_aes256gcm_KEYBYTES + crypto_aead_aes256gcm_NPUBBYTES) + sizeof (uint64_t) + crypto_aead_aes256gcm_ABYTES
+#define TGT_token_size		crypto_box_SEALBYTES + (crypto_aead_aes256gcm_KEYBYTES + crypto_aead_aes256gcm_NPUBBYTES) + sizeof (uint64_t)
 
 //////////////NETWORKING CONSTANTS////////////////////////////
 /**
