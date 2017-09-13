@@ -178,6 +178,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		// expiration time of TGT
 		uint64_t expiration = _ccnx_CurrentTimeInUs(clock) + TGT_EXPIRATION;
 
+
 		uint8_t C_TGS_token[sizeof k_tgs + sizeof(uint64_t)];
 		memset(C_TGS_token, 0, sizeof k_tgs + sizeof(uint64_t)); //set buffer to zero
 
@@ -190,7 +191,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		//unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
 		//crypto_box_keypair(recipient_pk, recipient_sk);
 
-	    printf("encrypting token with client key\n");
+
 
 		/* Anonymous sender encrypts a message using an ephemeral key pair
 		 * and the recipient's public key */
@@ -199,7 +200,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		unsigned char enc_C_TGS_token[ct_len];
 		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint64_t), server->user_pk_enc);
 
-		printf("Message: %s\n", C_TGS_token);
+		//printf("Message: %s\n", C_TGS_token);
 
 		//TODO: create TGT
 		// TGT plaintext buffer
@@ -218,15 +219,12 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		position += sizeof s_nonce;
 
 		memcpy(position, &expiration, sizeof (uint64_t)); //copy expiration date to buffer
-		//testing
-		//uint64_t test = 0;
-		//memcpy(&test,position,sizeof (uint64_t));
-		//printf("\n%llu\n%llu\n%d\n", test,expiration, sizeof (uint64_t));
-		//end testing
+		printf("Expiration: %llu\n", expiration);
+
 		position += sizeof (uint64_t);
 
 		memcpy(position, k_tgs, sizeof k_tgs); //copy TGS key to buffer
-		//printf("\n%s\n%s\n", position, k_tgs);
+
 		position += sizeof k_tgs;
 
 		// At this point the TGT is ready to be encrypted
@@ -241,9 +239,6 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
 		fclose(kdcKeyFile);
 
-		//randombytes_buf(KDC_key, sizeof KDC_key);
-		//randombytes_buf(nonce, sizeof nonce);
-
 		unsigned char enc_TGT[tgt_size + crypto_aead_aes256gcm_ABYTES];
 
 		crypto_aead_aes256gcm_encrypt(enc_TGT, &ciphertext_len,
@@ -251,6 +246,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 			                          NULL, 0,
 			                          NULL, nonce, KDC_key);
 
+/*
 		// TODO: move this part to TGS producer
 		unsigned char decrypted[tgt_size];
 		unsigned long long decrypted_len;
@@ -266,7 +262,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 			printf("Message ok!\n");
 			printf("Content: %s\n",decrypted);
 		}
-
+*/
 		int size = sizeof(uint8_t) + sizeof enc_TGT + sizeof enc_C_TGS_token;
 		payload = parcBuffer_Allocate(size);
 	    parcBuffer_PutUint8(payload, code);
@@ -283,7 +279,6 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		parcBuffer_Flip(payload);
 	}
 
-	printf("Sending response content.\n");
     return payload;
 }
 
@@ -360,7 +355,7 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 
 
 static void
-_CCNxServer_Run(CCNxServer *server)
+_CCNxTGTServer_Run(CCNxServer *server)
 {
     CCNxPortalFactory *factory = _setupServerPortalFactory(server->keystoreName, server->keystorePassword);
     server->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
@@ -401,7 +396,81 @@ _CCNxServer_Run(CCNxServer *server)
                     }
 
                     PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
-                    printf("Sending %d bytes. TGT and token are probably there.\n",parcBuffer_Remaining(payload));
+                    printf("Sending %d bytes. TGT and token.\n\n",parcBuffer_Remaining(payload));
+                    CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
+
+                    // debug
+                    char *responseName = ccnxName_ToString(interestName);
+                    //printf("Replying to: %s\n", responseName);
+                    parcMemory_Deallocate(&responseName);
+
+                    CCNxMetaMessage *message = ccnxMetaMessage_CreateFromContentObject(contentObject);
+
+                    if (ccnxPortal_Send(server->portal, message, CCNxStackTimeout_Never) == false) {
+                        fprintf(stderr, "ccnxPortal_Send failed: %d\n", ccnxPortal_GetError(server->portal));
+                    }
+
+                    ccnxMetaMessage_Release(&message);
+                    parcBuffer_Release(&payload);
+
+                }
+            } else {
+                printf("Received a control message\n");
+                ccnxMetaMessage_Display(request, 0);
+                exit(1);
+            }
+            ccnxMetaMessage_Release(&request);
+
+            // Why releasing this fucks up the whole shit? Dammit!!
+            //parcBuffer_Release(&interestPayload);
+
+        }
+    }
+}
+
+static void
+_CCNxTGSServer_Run(CCNxServer *server)
+{
+    CCNxPortalFactory *factory = _setupServerPortalFactory(server->keystoreName, server->keystorePassword);
+    server->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
+    size_t yearInSeconds = 60 * 60 * 24 * 365;
+
+    size_t sizeIndex = ccnxName_GetSegmentCount(server->prefix) + 1;
+
+    if (ccnxPortal_Listen(server->portal, server->prefix, yearInSeconds, CCNxStackTimeout_Never)) {
+        while (true) {
+            CCNxMetaMessage *request = ccnxPortal_Receive(server->portal, CCNxStackTimeout_Never);
+
+            // This should never happen.
+            if (request == NULL) {
+                break;
+            }
+
+            CCNxInterest *interest = ccnxMetaMessage_GetInterest(request);
+            if (ccnxMetaMessage_IsInterest(request)) {
+                if (interest != NULL) {
+                    CCNxName *interestName = ccnxInterest_GetName(interest);
+                    PARCBuffer *interestPayload = ccnxInterest_GetPayload(interest);
+
+                    uint8_t result = 0;
+                    if(interestPayload){
+                    	result = ccnx_krb_VerifyUser(server, interestPayload);
+                    } else {
+                    	printf("Payload is null.\n");
+                    }
+
+                    if (result) {
+                    	printf("User authentication successful\n");
+                    	printf("Issuing TGT \n");
+                    } else {
+                    	printf("User authentication failed\n");
+                    	printf("Issuing error msg content \n");
+                    }
+
+                    PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
+                    printf("Sending %d bytes. TGT and token.\n\n",parcBuffer_Remaining(payload));
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -486,18 +555,22 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
         	case 'a':
         		printf("Starting TGT Producer.\n");
         		ccnxTGTServer_Create(server);
-
         		//TODO: temporary ////////////
         		server->keystoreName = malloc(strlen("producer_identity1") + 1);
         		strcpy(server->keystoreName, "producer_identity1");
                 server->keystorePassword = malloc(strlen("producer_identity1") + 1);
                 strcpy(server->keystorePassword, "producer_identity1");
                 //end TODO //////////////////
-
         		break;
         	case 't':
         		printf("Starting TGS Producer.\n");
         		ccnxTGSServer_Create(server);
+        		//TODO: temporary ////////////
+        		server->keystoreName = malloc(strlen("producer_identity1") + 1);
+        		strcpy(server->keystoreName, "producer_identity1");
+                server->keystorePassword = malloc(strlen("producer_identity1") + 1);
+                strcpy(server->keystorePassword, "producer_identity1");
+                //end TODO //////////////////
         		break;
         	case 'k':
         		printf("Starting Kerberized Service Producer.\n");
@@ -546,7 +619,17 @@ int main(int argc, char *argv[argc])
     bool runServer = _CCNxServer_ParseCommandline(server, argc, argv);
 
     if (runServer) {
-        _CCNxServer_Run(server);
+    	if (server->mode == TGT_PROD) {
+    		_CCNxTGTServer_Run(server);
+    	}
+
+    	if (server->mode == TGS_PROD) {
+    		printf("TGS is alive\n");
+    		_CCNxTGSServer_Run(server);
+    	}
+
+
+
     }
 
     CCNxServer_Release(&server);

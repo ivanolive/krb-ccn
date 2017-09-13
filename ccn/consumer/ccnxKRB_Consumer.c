@@ -229,11 +229,40 @@ storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	if (crypto_box_seal_open(tokenData, TGTTokenBuffer, TGT_token_size, client->user_pk_enc, client->user_sk_enc) != 0) {
 		/* message corrupted or not intended for this recipient */
 		printf("TGT Reply was not authentic and, therefore, not stored\n");
-
+		exit(0);
 	} else{
-		printf("Message: %s\n",tokenData);
+		//printf("TGT Reply authentic: %s\n",tokenData);
 	}
 
+	uint8_t k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+	uint64_t expiration;
+
+	memcpy(k_tgs, tokenData, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
+	memcpy(&expiration, &(tokenData[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES]), sizeof(uint64_t));
+
+	char domainName[20];
+	memset(domainName,0,20);
+	strcat(domainName,"uci.edu");
+
+	char filename[100];
+	memset(filename,0,100);
+	memcpy(filename, userTGTDir, sizeof userTGTDir);
+	strcat(filename, client->username);
+	strcat(filename, "@");
+	strcat(filename, domainName);
+
+	//Writting TGT to disk:
+	FILE* fp = fopen(filename,"w");
+	fwrite(&expiration, sizeof(uint64_t), 1, fp);
+	fprintf(fp,"\n");
+	fwrite(TGTBuffer, 1, RECEIVE_TGT_SIZE, fp);
+	fprintf(fp,"\n");
+	fwrite(k_tgs, 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
+	fprintf(fp,"\n");
+	fclose(fp);
+
+	printf("TGT stored.\n");
+	printf("Expiration: %llu\n", expiration);
 }
 
 void
@@ -290,7 +319,89 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
                 CCNxName *responseName = ccnxContentObject_GetName(contentObject);
 
-                // TODO: Create a real TGT at the producer and store it at the client.
+                PARCBuffer *contentPayload = ccnxContentObject_GetPayload(contentObject);
+                uint8_t reply;
+                parcBuffer_GetBytes(contentPayload, 1, &reply);
+
+                if (reply == TGT_SUCCESS) {
+                	printf("<%s> authentication successful.\n", client->username);
+                	//TODO: Impplement this function properly.
+                	storeTGT(client, contentPayload);
+
+                } else {
+                	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
+                }
+
+                size_t delta = ccnxVPNStats_RecordResponse(client->stats, responseName, currentTimeInUs, response);
+
+                // Only display output if we're in ping mode
+                if (client->mode == CCNxConsumerMode_VPNPong || client->mode == CCNxConsumerMode_TGTReq) {
+                    size_t contentSize = parcBuffer_Remaining(ccnxContentObject_GetPayload(contentObject));
+                    char *nameString = ccnxName_ToString(responseName);
+                   // printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
+                    parcMemory_Deallocate(&nameString);
+                }
+            }
+            ccnxMetaMessage_Release(&response);
+            response = ccnxPortal_Receive(client->portal, &receiveDelay);
+            outstanding--;
+        }
+}
+
+void
+_ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
+{
+    PARCClock *clock = parcClock_Wallclock();
+
+    printf("Starting TGT request for user <%s>.\n", client->username);
+
+    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
+    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
+    size_t outstanding = 0;
+    bool checkOustanding = client->numberOfOutstanding > 0;
+
+    uint64_t nextPacketSendTime = 0;
+    uint64_t currentTimeInUs = 0;
+    int pings = 0;
+
+        if (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding)) {
+
+        	// Creates a TGT interest///
+        	PARCBuffer *payload = _CCNxClient_MakeTGTInterestPayload(client);
+        	if (payload == NULL) {
+        		printf("Closing client\n");
+        		return;
+        	}
+        	////////////////////////////
+        	CCNxName *name = _ccnx_CreateNextName(client);
+            CCNxInterest *interest = ccnxInterest_CreateSimple(name);
+            ccnxInterest_SetPayloadAndId(interest, payload);
+            CCNxMetaMessage *message = ccnxMetaMessage_CreateFromInterest(interest);
+
+            if (ccnxPortal_Send(client->portal, message, CCNxStackTimeout_Never)) {
+                currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
+                nextPacketSendTime = currentTimeInUs + delayInUs;
+
+                ccnxVPNStats_RecordRequest(client->stats, name, currentTimeInUs);
+            }
+
+            outstanding++;
+            ccnxName_Release(&name);
+        	parcBuffer_Release(&payload);
+            printf("Sent TGT request\n");
+        }
+
+        // Now wait for the response and record it`s time
+        uint64_t receiveDelay = client->receiveTimeoutInUs;
+        CCNxMetaMessage *response = ccnxPortal_Receive(client->portal, &receiveDelay);
+        while (response != NULL && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
+            uint64_t currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
+            if (ccnxMetaMessage_IsContentObject(response)) {
+                CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
+                CCNxName *responseName = ccnxContentObject_GetName(contentObject);
+
                 PARCBuffer *contentPayload = ccnxContentObject_GetPayload(contentObject);
                 uint8_t reply;
                 parcBuffer_GetBytes(contentPayload, 1, &reply);
@@ -324,6 +435,7 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 /**
  * Run a single ping test.
  */
+/*
 static void
 _ccnx_RunVPN(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 {
@@ -393,7 +505,7 @@ _ccnx_RunVPN(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
         }
     }
 }
-
+*/
 /**
  * Display the usage message.
  */
@@ -644,11 +756,33 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
                 client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
                 strcpy(client->keystorePassword, "consumer_identity1");
                 //end TODO //////////////////
-
         		break;
+
         	case 't':
         	    printf("TGS Service Access Control Verification.\n");
-        	    break;
+        		//XXX: TGS Req network options
+        		client->count = 1;
+        		client->intervalInMs = 1;
+        		client->payloadSize = 1024;
+        		client->mode = CCNxConsumerMode_TGSReq;
+        		//XXX: End of TGS Req network options
+
+
+        		//TODO: CHANGE THIS to call TGSReq
+
+
+
+        		client->username = malloc(strlen(optarg) + 1);
+                strcpy(client->username, optarg);
+                loadUserKeys(client);
+
+        		//TODO: temporary ////////////
+        		client->keystoreName = malloc(strlen("consumer_identity1") + 1);
+        		strcpy(client->keystoreName, "consumer_identity1");
+                client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
+                strcpy(client->keystorePassword, "consumer_identity1");
+                //end TODO //////////////////
+                break;
         	case 'n':
         		ccnx_KRB_addUser(optarg);
         		client->mode = CCNxConsumerMode_KRBConfig;
@@ -725,7 +859,8 @@ static void
 _ccnx_RunKerberizedClient(CCNxConsumer *client)
 {
     switch (client->mode) {
-        case CCNxConsumerMode_All:
+/*
+    	case CCNxConsumerMode_All:
             _ccnx_RunVPN(client, mediumNumberOfVPNs, 0);
             _ccnx_DisplayStatistics(client);
 
@@ -735,19 +870,28 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
             _ccnx_RunVPN(client, smallNumberOfVPNs, ccnx_DefaultReceiveTimeoutInUs);
             _ccnx_DisplayStatistics(client);
             break;
+
         case CCNxConsumerMode_Flood:
             _ccnx_RunVPN(client, client->count, 0);
             _ccnx_DisplayStatistics(client);
             break;
+
         case CCNxConsumerMode_VPNPong:
             //TODO: check this
             _ccnx_RunVPN(client, client->count, client->intervalInMs);
             _ccnx_DisplayStatistics(client);
             break;
+*/
         case CCNxConsumerMode_TGTReq:
             _ccnx_RunTGTReq(client, client->count, client->intervalInMs);
             _ccnx_DisplayStatistics(client);
             break;
+
+        case CCNxConsumerMode_TGSReq:
+            _ccnx_RunTGSReq(client, client->count, client->intervalInMs);
+            _ccnx_DisplayStatistics(client);
+            break;
+
 
 
         case CCNxConsumerMode_None:
@@ -778,6 +922,8 @@ main(int argc, char *argv[argc])
     ccnxVPN_Release(&client);
 
     parcSecurity_Fini();
+
+    printf("\n");
 
     return EXIT_SUCCESS;
 }
