@@ -56,6 +56,8 @@ typedef struct ccnx_client {
     char *keystoreName;
     char *keystorePassword;
     char *username;
+    char *domainname;
+    char *namespace;
 } CCNxConsumer;
 
 /**
@@ -160,6 +162,52 @@ _CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
     return ccnx_payload;
 }
 
+bool
+fetchTGT(CCNxConsumer *client) {
+	char * TGTFile = (char*)malloc(strlen(userTGTDir) + strlen(client->username) + strlen(client->domainname) + 2);
+	memset(TGTFile, 0, strlen(userTGTDir) + strlen(client->username) + strlen(client->domainname) + 2);
+	strcat(TGTFile, userTGTDir);
+	strcat(TGTFile,client->username);
+	strcat(TGTFile,"@");
+	strcat(TGTFile,client->domainname);
+
+	printf("%s\n",TGTFile);
+
+}
+
+PARCBuffer *
+_CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client)
+{
+	int size = ccnx_DefaultPayloadSize;
+
+	uint8_t username[MAX_USERNAME_LEN];
+	memset(username, 0, MAX_USERNAME_LEN * sizeof(username[0]));
+
+	if (strlen(client->username) < MAX_USERNAME_LEN) {
+		strcpy(username, client->username);
+	}else{
+		// This should never happen.
+		printf("ERROR: username must have at most 16 characters\n");
+	    return NULL;
+	}
+
+	unsigned char sig[crypto_sign_BYTES];
+
+	//crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, sk);
+	crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, client->user_sk_sig);
+
+	size = MAX_USERNAME_LEN + crypto_sign_BYTES;
+	uint8_t payload[size];
+	memcpy(payload, username, MAX_USERNAME_LEN);
+	memcpy(payload + MAX_USERNAME_LEN, sig, crypto_sign_BYTES);
+
+	PARCBuffer *ccnx_payload = parcBuffer_Allocate(size);
+	parcBuffer_PutArray(ccnx_payload, size, payload);
+	parcBuffer_Flip(ccnx_payload);
+    return ccnx_payload;
+}
+
+
 /**
  * Get the next `CCNxName` to issue. Increment the interest counter
  * for the client.
@@ -240,26 +288,28 @@ storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	memcpy(k_tgs, tokenData, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
 	memcpy(&expiration, &(tokenData[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES]), sizeof(uint64_t));
 
-	char domainName[20];
-	memset(domainName,0,20);
-	strcat(domainName,"uci.edu");
-
-	char filename[100];
-	memset(filename,0,100);
+	char filename[strlen(userTGTDir) + strlen(client->username) + strlen("@") + strlen(client->domainname) +10];
+	memset(filename,0,sizeof(filename));
 	memcpy(filename, userTGTDir, sizeof userTGTDir);
 	strcat(filename, client->username);
 	strcat(filename, "@");
-	strcat(filename, domainName);
+	strcat(filename, client->domainname);
+
+	printf("PATH: %s\n",filename);
 
 	//Writting TGT to disk:
 	FILE* fp = fopen(filename,"w");
-	fwrite(&expiration, sizeof(uint64_t), 1, fp);
-	fprintf(fp,"\n");
-	fwrite(TGTBuffer, 1, RECEIVE_TGT_SIZE, fp);
-	fprintf(fp,"\n");
-	fwrite(k_tgs, 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
-	fprintf(fp,"\n");
-	fclose(fp);
+	if (fp) {
+		fwrite(&expiration, sizeof(uint64_t), 1, fp);
+		fprintf(fp,"\n");
+		fwrite(TGTBuffer, 1, RECEIVE_TGT_SIZE, fp);
+		fprintf(fp,"\n");
+		fwrite(k_tgs, 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
+		fprintf(fp,"\n");
+		fclose(fp);
+	} else{
+		printf("can't open file\n");
+	}
 
 	printf("TGT stored.\n");
 	printf("Expiration: %llu\n", expiration);
@@ -353,7 +403,7 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 {
     PARCClock *clock = parcClock_Wallclock();
 
-    printf("Starting TGT request for user <%s>.\n", client->username);
+    printf("Starting TGS request for user <%s>.\n", client->username);
 
     CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
     client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
@@ -433,80 +483,6 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
 
 /**
- * Run a single ping test.
- */
-/*
-static void
-_ccnx_RunVPN(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
-{
-    PARCClock *clock = parcClock_Wallclock();
-
-    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
-    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
-    ccnxPortalFactory_Release(&factory);
-
-    size_t outstanding = 0;
-    bool checkOustanding = client->numberOfOutstanding > 0;
-
-    for (int pings = 0; pings <= totalVPNs; pings++) {
-        uint64_t nextPacketSendTime = 0;
-        uint64_t currentTimeInUs = 0;
-
-        // Continue to send ping messages until we've reached the capacity
-        if (pings < totalVPNs && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
-            CCNxName *name = _ccnx_CreateNextName(client);
-            CCNxInterest *interest = ccnxInterest_CreateSimple(name);
-            CCNxMetaMessage *message = ccnxMetaMessage_CreateFromInterest(interest);
-
-            if (ccnxPortal_Send(client->portal, message, CCNxStackTimeout_Never)) {
-                currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
-                nextPacketSendTime = currentTimeInUs + delayInUs;
-
-                ccnxVPNStats_RecordRequest(client->stats, name, currentTimeInUs);
-            }
-
-            outstanding++;
-            ccnxName_Release(&name);
-        } else {
-            // We're done with pings, so let's wait to see if we have any stragglers
-            currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
-            nextPacketSendTime = currentTimeInUs + client->receiveTimeoutInUs;
-        }
-
-        // Now wait for the responses and record their times
-        uint64_t receiveDelay = nextPacketSendTime - currentTimeInUs;
-        CCNxMetaMessage *response = ccnxPortal_Receive(client->portal, &receiveDelay);
-        while (response != NULL && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
-            uint64_t currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
-            if (ccnxMetaMessage_IsContentObject(response)) {
-                CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
-
-                CCNxName *responseName = ccnxContentObject_GetName(contentObject);
-                size_t delta = ccnxVPNStats_RecordResponse(client->stats, responseName, currentTimeInUs, response);
-
-                // Only display output if we're in ping mode
-                if (client->mode == CCNxConsumerMode_VPNPong || client->mode == CCNxConsumerMode_TGTReq) {
-                    size_t contentSize = parcBuffer_Remaining(ccnxContentObject_GetPayload(contentObject));
-                    char *nameString = ccnxName_ToString(responseName);
-                    printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
-                    parcMemory_Deallocate(&nameString);
-                }
-            }
-            ccnxMetaMessage_Release(&response);
-
-            if (pings < totalVPNs) {
-                receiveDelay = nextPacketSendTime - currentTimeInUs;
-            } else {
-                receiveDelay = client->receiveTimeoutInUs;
-            }
-
-            response = ccnxPortal_Receive(client->portal, &receiveDelay);
-            outstanding--;
-        }
-    }
-}
-*/
-/**
  * Display the usage message.
  */
 static void
@@ -515,29 +491,30 @@ _displayUsage(char *progName)
     printf("CCNx Kerberos Implementation\n");
     printf("   (you must have ccnx_Server running)\n");
     printf("\n");
-    printf("Usage: %s -p [ -c count ] [ -s size ] [ -i interval ]\n", progName);
-    printf("       %s -f [ -c count ] [ -s size ]\n", progName);
-    printf("       %s -h\n", progName);
-    printf("\n");
-    printf("Example:\n");
-    printf("    ccnx_Consumer -l ccnx:/some/prefix -c 100 -f\n");
-    printf("\n");
-    printf("Options:\n");
+    printf("Usage:\n", progName);
+    printf("       Add a new user:\n", progName);
+    printf("       %s n <userName>\n", progName);
+    printf("       Request a TGT:\n", progName);
+    printf("       %s a <username> <domainName>\n", progName);
+    printf("       Request a TGS:\n", progName);
+    printf("       %s t <username> <domainName> <contentName>\n", progName);
+    printf("       Fetch a content:\n", progName);
+    printf("       %s k <username> <domainName> <contentName>\n", progName);
 
-    printf("     -h (--help) Show this help message\n");
-    printf("     -p (--ping) ping mode - \n");
-    printf("     -f (--flood) flood mode - send as fast as possible\n");
-    printf("     -c (--count) Number of count to run\n");
-    printf("     -i (--interval) Interval in milliseconds between interests in ping mode\n");
-    printf("     -s (--size) Size of the interests\n");
-    printf("     -l (--locator) Set the locator for this server. The default is 'ccnx:/locator'. \n");
+    printf("\n");
+    printf("Examples:\n");
+    printf("    0.      ./ccnxKRB_Client n ivan\n");
+    printf("    1.      ./ccnxKRB_Client a ivan ccnx:/localhost\n");
+    printf("    2.      ./ccnxKRB_Client t ivan ccnx:/localhost ccnx:/localhost/filesystem \n");
+    printf("    3.      ./ccnxKRB_Client k ivan ccnx:/localhost ccnx:/localhost/filesystem/image.png \n");
+    printf("\n");
 
     // Kerberos services///
-        printf("\nKerberos services\n");
-        printf("     -n <username> creates a new user on the client host \n");
-        printf("     -a <username> User authentication and TGT issuance \n");
-        printf("     -t <namespace> Access control and TGS issuance \n");
-        printf("     -k <interest name> Access to kerberized service using existent TGS \n\n");
+        printf("\nKerberos services description\n");
+        printf("     n <username> creates a new user on the client host \n");
+        printf("     a <username> User authentication and TGT issuance \n");
+        printf("     t <namespace> Access control and TGS issuance \n");
+        printf("     k <interest name> Access to kerberized service using existent TGS \n\n");
         ///////////////////////
 }
 
@@ -707,7 +684,7 @@ loadUserKeys(CCNxConsumer *client) {
 	}
 
 }
-
+/*
 static bool
 _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
 {
@@ -717,6 +694,7 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
     	{ "TGT",		required_argument,       NULL, 'a' },
     	{ "TGS",		required_argument,       NULL, 't' },
     	{ "KRB_SERV",   required_argument,       NULL, 'k' },
+    	{ "Authorization request",   required_argument,       NULL, 'r' },
     	{ "flood",      no_argument,       NULL, 'f' },
         { "count",      required_argument, NULL, 'c' },
         { "size",       required_argument, NULL, 's' },
@@ -731,7 +709,7 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
     client->payloadSize = ccnx_DefaultPayloadSize;
 
     int c;
-    while ((c = getopt_long(argc, argv, "n:a:t:k:p:i:h:f:c:s:l:o:", longopts, NULL)) != -1) {
+    while ((c = getopt_long(argc, argv, "n:a:t:k:p:i:h:f:c:s:l:o:r", longopts, NULL)) != -1) {
         switch (c) {
         	case 'a':
         		printf("TGT User Authentication.\n");
@@ -758,6 +736,16 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
                 //end TODO //////////////////
         		break;
 
+        	case 'r':
+        		printf("TGS Authorization.\n");
+        		printf("optarg <%s>.\n",optarg);
+
+        		client->namespace = malloc(strlen(optarg) + 1);
+                strcpy(client->namespace, optarg);
+                printf("Authorization Req for namespace <%s>\n", client->namespace);
+        		break;
+
+
         	case 't':
         	    printf("TGS Service Access Control Verification.\n");
         		//XXX: TGS Req network options
@@ -766,11 +754,6 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
         		client->payloadSize = 1024;
         		client->mode = CCNxConsumerMode_TGSReq;
         		//XXX: End of TGS Req network options
-
-
-        		//TODO: CHANGE THIS to call TGSReq
-
-
 
         		client->username = malloc(strlen(optarg) + 1);
                 strcpy(client->username, optarg);
@@ -843,6 +826,8 @@ _ccnx_KRB_ParseCommandline(CCNxConsumer *client, int argc, char *argv[argc])
 
     return true;
 };
+*/
+
 
 static void
 _ccnx_DisplayStatistics(CCNxConsumer *client)
@@ -859,29 +844,7 @@ static void
 _ccnx_RunKerberizedClient(CCNxConsumer *client)
 {
     switch (client->mode) {
-/*
-    	case CCNxConsumerMode_All:
-            _ccnx_RunVPN(client, mediumNumberOfVPNs, 0);
-            _ccnx_DisplayStatistics(client);
 
-            ccnxVPNStats_Release(&client->stats);
-            client->stats = ccnxVPNStats_Create();
-
-            _ccnx_RunVPN(client, smallNumberOfVPNs, ccnx_DefaultReceiveTimeoutInUs);
-            _ccnx_DisplayStatistics(client);
-            break;
-
-        case CCNxConsumerMode_Flood:
-            _ccnx_RunVPN(client, client->count, 0);
-            _ccnx_DisplayStatistics(client);
-            break;
-
-        case CCNxConsumerMode_VPNPong:
-            //TODO: check this
-            _ccnx_RunVPN(client, client->count, client->intervalInMs);
-            _ccnx_DisplayStatistics(client);
-            break;
-*/
         case CCNxConsumerMode_TGTReq:
             _ccnx_RunTGTReq(client, client->count, client->intervalInMs);
             _ccnx_DisplayStatistics(client);
@@ -901,6 +864,105 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
     }
 }
 
+static bool
+_ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
+	if (argc < 3) {
+		_displayUsage(argv[0]);
+		return false;
+	}
+
+	switch (argv[1][0]) {
+		case 'n':
+			if (argc == 3) {
+				ccnx_KRB_addUser(argv[2]);
+				client->mode = CCNxConsumerMode_KRBConfig;
+			} else {
+				_displayUsage(argv[0]);
+			}
+    	    return false;
+
+		case 'a':
+			if (argc == 4) {
+        		printf("TGT User Authentication Request.\n");
+
+        		//XXX: TGT Req network options
+        		client->count = 1;
+        		client->intervalInMs = 1;
+        		client->payloadSize = 1024;
+        		client->mode = CCNxConsumerMode_TGTReq;
+        		//XXX: End of TGT Req network options
+
+        		client->username = malloc(strlen(argv[2]) + 1);
+                strcpy(client->username, argv[2]);
+                loadUserKeys(client);
+
+        		client->keystoreName = malloc(strlen("consumer_identity1") + 1);
+        		strcpy(client->keystoreName, "consumer_identity1");
+                client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
+                strcpy(client->keystorePassword, "consumer_identity1");
+
+        		client->domainname = malloc(strlen(argv[3]) + 1);
+                strcpy(client->username, argv[3]);
+
+                char TGT_name[strlen(argv[3])+10];
+                memset(TGT_name,0,strlen(argv[3])+10);
+                strcat(TGT_name,argv[3]);
+                strcat(TGT_name,"/TGT");
+                client->prefix = ccnxName_CreateFromCString(TGT_name);
+                return true;
+			} else {
+				_displayUsage(argv[0]);
+				return false;
+			}
+
+		case 't':
+			if (argc == 5) {
+        		printf("TGS Access Control Request.\n");
+
+        	    printf("TGS Service Access Control Verification.\n");
+        		//XXX: TGS Req network options
+        		client->count = 1;
+        		client->intervalInMs = 1;
+        		client->payloadSize = 1024;
+        		client->mode = CCNxConsumerMode_TGSReq;
+        		//XXX: End of TGS Req network options
+
+        		client->username = malloc(strlen(argv[2]) + 1);
+                strcpy(client->username, argv[2]);
+                loadUserKeys(client);
+
+        		client->keystoreName = malloc(strlen("consumer_identity1") + 1);
+        		strcpy(client->keystoreName, "consumer_identity1");
+                client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
+                strcpy(client->keystorePassword, "consumer_identity1");
+
+        		client->domainname = malloc(strlen(argv[3]) + 1);
+                strcpy(client->domainname, argv[3]);
+
+                char TGS_name[strlen(argv[3])+10];
+                memset(TGS_name,0,strlen(argv[3])+10);
+                strcat(TGS_name,argv[3]);
+                strcat(TGS_name,"/TGS");
+                client->prefix = ccnxName_CreateFromCString(TGS_name);
+
+           		client->namespace = malloc(strlen(argv[4]) + 1);
+           		strcpy(client->namespace, argv[4]);
+
+           		//test
+           		fetchTGT(client);
+
+                return true;
+			} else {
+				_displayUsage(argv[0]);
+				return false;
+			}
+
+    	default:
+    		_displayUsage(argv[0]);
+    		return false;
+	}
+}
+
 int
 main(int argc, char *argv[argc])
 {
@@ -913,7 +975,7 @@ main(int argc, char *argv[argc])
 
     CCNxConsumer *client = ccnx_Create();
 
-    bool runKRB = _ccnx_KRB_ParseCommandline(client, argc, argv);
+    bool runKRB = _ccnx_KRB_Commandline(client, argc, argv);
 
     if (runKRB) {
         _ccnx_RunKerberizedClient(client);
