@@ -48,7 +48,7 @@ typedef enum {
 
 #define NONCE_LEN 16 // random nonce size in bytes
 
-#define TGT_EXPIRATION 60*60*24*1000*1000 // TGT expiration time in usec (default 1 day)
+#define TGT_EXPIRATION 60*60*1000*1000 // TGT expiration time in usec (default 1 hour)
 
 #define RECEIVE_TGT_SIZE	MAX_USERNAME_LEN + 2 * (crypto_aead_aes256gcm_KEYBYTES + crypto_aead_aes256gcm_NPUBBYTES) + sizeof (uint64_t) + crypto_aead_aes256gcm_ABYTES
 #define TGT_token_size		crypto_box_SEALBYTES + (crypto_aead_aes256gcm_KEYBYTES + crypto_aead_aes256gcm_NPUBBYTES) + sizeof (uint64_t)

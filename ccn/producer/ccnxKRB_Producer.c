@@ -40,6 +40,10 @@ typedef struct ccnx_ping_server {
     uint8_t user_pk_sig[crypto_sign_PUBLICKEYBYTES];
     uint8_t user_pk_enc[crypto_box_PUBLICKEYBYTES];
 
+    unsigned char k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+    unsigned char k_service[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+    char *namespace;
+
     char *keystoreName;
     char *keystorePassword;
 } CCNxServer;
@@ -191,8 +195,6 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 		//unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
 		//crypto_box_keypair(recipient_pk, recipient_sk);
 
-
-
 		/* Anonymous sender encrypts a message using an ephemeral key pair
 		 * and the recipient's public key */
 	    // TODO: change this to authenticated encryption
@@ -229,7 +231,7 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 
 		// At this point the TGT is ready to be encrypted
 
-		//TODO: Read these guys from file.////////////////////
+		//TODO: Read these guys from file at parse of command line.////////////////////
 		unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
 		unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
 		unsigned long long ciphertext_len;
@@ -282,10 +284,115 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
     return payload;
 }
 
+PARCBuffer *
+_CCNxServer_MakeTGSPayload(CCNxServer *server, bool result)
+{
+	uint8_t code;
+	PARCBuffer *payload = NULL;
 
-/**
- * Run the `CCNxServer` indefinitely.
- */
+
+	if (result) {
+		code = TGT_SUCCESS;
+		PARCClock *clock = parcClock_Wallclock();
+		// K_TGS: the key used by the client to decrypt TGSs
+	    unsigned char k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+		randombytes_buf(k_tgs, sizeof k_tgs);
+
+		// random nonce s
+		uint8_t s_nonce[sizeof k_tgs];
+		randombytes_buf(s_nonce, sizeof s_nonce);
+
+		// expiration time of TGT
+		uint64_t expiration = _ccnx_CurrentTimeInUs(clock) + TGT_EXPIRATION;
+
+
+		uint8_t C_TGS_token[sizeof k_tgs + sizeof(uint64_t)];
+		memset(C_TGS_token, 0, sizeof k_tgs + sizeof(uint64_t)); //set buffer to zero
+
+		memcpy(C_TGS_token,k_tgs, sizeof k_tgs);
+		memcpy(C_TGS_token + sizeof k_tgs, &expiration, sizeof (uint64_t));
+
+		// TODO: encrypt C_TGS_token reading the appropriate keys from file
+		/* Recipient creates a long-term key pair */
+		//unsigned char recipient_pk[crypto_box_PUBLICKEYBYTES];
+		//unsigned char recipient_sk[crypto_box_SECRETKEYBYTES];
+		//crypto_box_keypair(recipient_pk, recipient_sk);
+
+
+
+		/* Anonymous sender encrypts a message using an ephemeral key pair
+		 * and the recipient's public key */
+	    // TODO: change this to authenticated encryption
+	    int ct_len = crypto_box_SEALBYTES + sizeof k_tgs + sizeof(uint64_t);
+		unsigned char enc_C_TGS_token[ct_len];
+		crypto_box_seal(enc_C_TGS_token, C_TGS_token, sizeof k_tgs + sizeof(uint64_t), server->user_pk_enc);
+
+		//printf("Message: %s\n", C_TGS_token);
+
+		//TODO: create TGT
+		// TGT plaintext buffer
+		int tgt_size = MAX_USERNAME_LEN + 2 * sizeof k_tgs + sizeof (uint64_t);
+		uint8_t TGT[tgt_size]; //plaintext TGT
+		memset(TGT, 0, tgt_size * sizeof(TGT[0])); //set buffer to zero
+
+		uint8_t *position = TGT;
+
+		memcpy(position, server->username, MAX_USERNAME_LEN); //copy username to buffer
+		//printf("%s\n",position);
+		position += MAX_USERNAME_LEN;
+
+		memcpy(position, s_nonce, sizeof s_nonce); //copy random nonce to buffer
+		//printf("\n%s\n%s\n",position, s_nonce);
+		position += sizeof s_nonce;
+
+		memcpy(position, &expiration, sizeof (uint64_t)); //copy expiration date to buffer
+		printf("Expiration: %llu\n", expiration);
+
+		position += sizeof (uint64_t);
+
+		memcpy(position, k_tgs, sizeof k_tgs); //copy TGS key to buffer
+
+		position += sizeof k_tgs;
+
+		// At this point the TGT is ready to be encrypted
+
+		//TODO: Read these guys from file at parse of command line.////////////////////
+		unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
+		unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
+		unsigned long long ciphertext_len;
+
+		FILE* kdcKeyFile = fopen(keyFileKDC,"r");
+		fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
+		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
+		fclose(kdcKeyFile);
+
+		unsigned char enc_TGT[tgt_size + crypto_aead_aes256gcm_ABYTES];
+
+		crypto_aead_aes256gcm_encrypt(enc_TGT, &ciphertext_len,
+			                          TGT, tgt_size,
+			                          NULL, 0,
+			                          NULL, nonce, KDC_key);
+
+
+		int size = sizeof(uint8_t) + sizeof enc_TGT + sizeof enc_C_TGS_token;
+		payload = parcBuffer_Allocate(size);
+	    parcBuffer_PutUint8(payload, code);
+	    parcBuffer_PutArray(payload, sizeof enc_TGT, enc_TGT);
+	    parcBuffer_PutArray(payload, sizeof enc_C_TGS_token, enc_C_TGS_token);
+		parcBuffer_Flip(payload);
+
+
+	} else {
+		code = TGT_AUTH_FAIL;
+		int size = sizeof(uint8_t);
+		payload = parcBuffer_Allocate(size);
+		parcBuffer_PutUint8(payload, code);
+		parcBuffer_Flip(payload);
+	}
+
+    return payload;
+}
+
 
 bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 	uint8_t username[MAX_USERNAME_LEN];
@@ -352,6 +459,117 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 	}
 
 }
+
+bool verifyPolicyAndFetchKey(CCNxServer *server) {
+	printf("Access Control Verification\n");
+	printf("User: <%s>; Namespace: <%s>.\n", server->username, server->namespace);
+	printf("Authorization successfull!\n");
+	memcpy(server->k_service, server->k_tgs, sizeof server->k_tgs);
+
+	// XXX: Implement real AC policy checker. For this prototype this was not implemented.
+	// verifyPolicyAndFetchKey(server); always return true
+
+	return true;
+}
+
+bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
+
+	PARCClock *clock = parcClock_Wallclock();
+
+	printf("Received TGS Request.\n");
+	printf("Starting TGT verification ...\n");
+
+	int payloadSize = parcBuffer_Remaining(recvPayload);
+
+	int namespace_len;
+
+	parcBuffer_GetBytes(recvPayload, sizeof(namespace_len), (uint8_t *)&namespace_len);
+
+	server->namespace = malloc(namespace_len+1);
+	memset(server->namespace, 0, namespace_len+1);
+	parcBuffer_GetBytes(recvPayload, namespace_len, server->namespace);
+
+	uint8_t tgt[RECEIVE_TGT_SIZE];
+	memset(tgt, 0, RECEIVE_TGT_SIZE);
+	parcBuffer_GetBytes(recvPayload, RECEIVE_TGT_SIZE, tgt);
+
+
+	printf("namespace: %s\n", server->namespace);
+	printf("TGT:\n %s\n", tgt);
+
+	//TODO: Read these guys from file at parse of command line.////////////////////
+	unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
+	unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
+	unsigned long long ciphertext_len;
+
+	FILE* kdcKeyFile = fopen(keyFileKDC,"r");
+	fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
+	fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
+	fclose(kdcKeyFile);
+
+	unsigned char TGTData[RECEIVE_TGT_SIZE - crypto_aead_aes256gcm_ABYTES];
+	unsigned long long decrypted_len;
+	//Now we are ready to decrypt the TGT:
+
+	if (RECEIVE_TGT_SIZE < crypto_aead_aes256gcm_ABYTES ||
+		crypto_aead_aes256gcm_decrypt(TGTData, &decrypted_len,
+		                              NULL,
+		                              tgt, RECEIVE_TGT_SIZE,
+		                              "",
+		                              0,
+		                              nonce, KDC_key) != 0) {
+
+		printf("TGT Forged!\n");
+		return false;
+	}else{
+		printf("Message ok!\n");
+		printf("Content: %s\n",TGTData);
+	}
+
+	uint8_t s_nonce[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+
+	uint8_t *position = TGTData;
+	memcpy(server->username, position, MAX_USERNAME_LEN);
+	printf("%s\n", server->username);
+	position += MAX_USERNAME_LEN;
+
+
+	memcpy(s_nonce, position, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES); //copy random nonce to buffer
+	position += crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES;
+
+	uint64_t expiration;
+
+	memcpy(&expiration, position, sizeof (uint64_t)); //copy expiration date to buffer
+	printf("Expiration: %llu\n", expiration);
+	position += sizeof (uint64_t);
+
+	memcpy(server->k_tgs, position, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
+	position += crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES;
+
+	// Done splitting TGT data;
+	// Now we verify expiration date;
+
+	printf("expiration   %llu\n", expiration);
+	uint64_t current_time = _ccnx_CurrentTimeInUs(clock);
+	printf("current time %llu\n", current_time);
+
+	if (current_time > expiration) {
+		printf("TGT expired.\n Run TGT request for user client <%s> under domain again.",server->username);
+		return false;
+	} else {
+		printf("TGT authentication completed successfully.\n");
+	}
+
+	//Now we know that the TGT is authentic and not expired.
+	//It's time for access control !!
+	return verifyPolicyAndFetchKey(server);
+	// If AC policy doesn't allow access returns false
+	// otherwise set appropriate service key on server structure.
+
+	// XXX: Implement real AC policy checker. For this prototype this was not implemented.
+	// verifyPolicyAndFetchKey(server); always return true
+}
+
 
 
 static void
@@ -456,21 +674,21 @@ _CCNxTGSServer_Run(CCNxServer *server)
 
                     uint8_t result = 0;
                     if(interestPayload){
-                    	result = ccnx_krb_VerifyUser(server, interestPayload);
+                    	result = ccnx_krb_VerifyTGT(server, interestPayload);
                     } else {
                     	printf("Payload is null.\n");
                     }
 
                     if (result) {
-                    	printf("User authentication successful\n");
-                    	printf("Issuing TGT \n");
+                    	printf("User TGT verification successful\n");
+                    	printf("Issuing TGS \n");
                     } else {
-                    	printf("User authentication failed\n");
+                    	printf("User TGT verification failed\n");
                     	printf("Issuing error msg content \n");
                     }
 
-                    PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
-                    printf("Sending %d bytes. TGT and token.\n\n",parcBuffer_Remaining(payload));
+                    PARCBuffer *payload = _CCNxServer_MakeTGSPayload(server, result);
+                    printf("Sending %d bytes. TGS and token.\n\n",parcBuffer_Remaining(payload));
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -555,22 +773,19 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
         	case 'a':
         		printf("Starting TGT Producer.\n");
         		ccnxTGTServer_Create(server);
-        		//TODO: temporary ////////////
         		server->keystoreName = malloc(strlen("producer_identity1") + 1);
         		strcpy(server->keystoreName, "producer_identity1");
                 server->keystorePassword = malloc(strlen("producer_identity1") + 1);
                 strcpy(server->keystorePassword, "producer_identity1");
-                //end TODO //////////////////
         		break;
         	case 't':
         		printf("Starting TGS Producer.\n");
         		ccnxTGSServer_Create(server);
-        		//TODO: temporary ////////////
         		server->keystoreName = malloc(strlen("producer_identity1") + 1);
         		strcpy(server->keystoreName, "producer_identity1");
                 server->keystorePassword = malloc(strlen("producer_identity1") + 1);
                 strcpy(server->keystorePassword, "producer_identity1");
-                //end TODO //////////////////
+
         		break;
         	case 'k':
         		printf("Starting Kerberized Service Producer.\n");
