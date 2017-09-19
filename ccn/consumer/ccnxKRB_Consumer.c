@@ -285,17 +285,6 @@ void
 storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	printf("Received %d bytes. TGT and token are probably there.\n",(int)parcBuffer_Remaining(TGTPayload));
 	printf("Storing authentication ticket for <%s> \n", client->username);
-/*
- * XXX:Receive the buffer in this format (code was already received at this point):
-	payload = parcBuffer_Allocate(size);
-    parcBuffer_PutUint8(payload, code);
-    parcBuffer_PutArray(payload, sizeof enc_TGT, enc_TGT);
-    parcBuffer_PutArray(payload, sizeof enc_C_TGS_token, enc_C_TGS_token);
-	parcBuffer_Flip(payload);
-
-*/
-
-
 
 	uint8_t TGTBuffer[RECEIVE_TGT_SIZE];
 	uint8_t TGTTokenBuffer[TGT_token_size];
@@ -350,6 +339,90 @@ storeTGT(CCNxConsumer *client, PARCBuffer *TGTPayload) {
 	printf("TGT stored.\n");
 	printf("Expiration: %llu\n", expiration);
 }
+
+void
+storeTGS(CCNxConsumer *client, PARCBuffer *TGSPayload) {
+	int total_size = (int)parcBuffer_Remaining(TGSPayload);
+	int token_size = TGS_token_size;
+
+	printf("Received %d bytes. TGS and token are probably there.\n", total_size);
+	printf("Storing authorization ticket for <%s> \n", client->username);
+
+	int receive_tgs_size = total_size - token_size;
+
+	uint8_t TGSTokenBuffer[token_size];
+	uint8_t TGSBuffer[receive_tgs_size];
+
+
+	parcBuffer_GetBytes(TGSPayload, receive_tgs_size, TGSBuffer);
+	parcBuffer_GetBytes(TGSPayload, token_size, TGSTokenBuffer);
+
+	int message_len = token_size - crypto_aead_aes256gcm_ABYTES;
+
+	uint8_t tokenData[message_len];
+
+	//Token decryption:
+
+	int decrypted_len;
+
+	if (TGS_token_size < crypto_aead_aes256gcm_ABYTES ||
+		crypto_aead_aes256gcm_decrypt(tokenData, &decrypted_len,
+		                              NULL,
+		                              TGSTokenBuffer, token_size,
+		                              "",
+		                              0,
+		                              (client->tgt.k_tgs) + crypto_aead_aes256gcm_KEYBYTES, client->tgt.k_tgs) != 0) {
+
+		printf("TGS Forged!\n");
+		return false;
+	}
+
+	uint8_t k_N[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+	uint64_t expiration;
+
+	memcpy(k_N,tokenData, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
+	memcpy(&expiration, tokenData +crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, sizeof(uint64_t));
+
+	printf("TGS expiration: %llu\n", expiration);
+
+
+	char filename[strlen(userTGSDir) + strlen(client->username) + strlen("@") + strlen(client->domainname) + strlen(client->namespace) +10];
+	memset(filename,0,sizeof(filename));
+	memcpy(filename, userTGSDir, sizeof userTGSDir);
+	strcat(filename, client->username);
+	strcat(filename, "@");
+	strcat(filename, client->domainname);
+	char buffer[strlen(client->namespace)+1];
+	memset(buffer,0,strlen(client->namespace)+1);
+	memcpy(buffer,client->namespace,strlen(client->namespace)+1);
+	for(int i = 0; i<strlen(client->namespace)+1; i++){
+		if (buffer[i]=='/') {
+			buffer[i] = '.';
+		}
+	}
+	strcat(filename, buffer);
+	printf("PATH: %s\n",filename);
+
+	//Writting TGS to disk:
+
+	FILE* fp = fopen(filename,"w");
+	if (fp) {
+
+		fwrite(&expiration, sizeof(uint64_t), 1, fp);
+		fprintf(fp,"\n");
+		fwrite(TGSBuffer, 1, receive_tgs_size, fp);
+		fprintf(fp,"\n");
+		fwrite(k_N, 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
+		fprintf(fp,"\n");
+		fclose(fp);
+	} else{
+		printf("can't open file\n");
+	}
+
+	printf("TGS stored.\n");
+	printf("Expiration: %llu\n", expiration);
+}
+
 
 void
 _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
@@ -492,10 +565,9 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 uint8_t reply;
                 parcBuffer_GetBytes(contentPayload, 1, &reply);
 
-                if (reply == TGT_SUCCESS) {
-                	printf("<%s> authentication successful.\n", client->username);
-                	//TODO: Impplement this function properly.
-                	storeTGT(client, contentPayload);
+                if (reply == TGS_SUCCESS) {
+                	printf("<%s> authorization successful.\n", client->username);
+                	storeTGS(client, contentPayload);
 
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
