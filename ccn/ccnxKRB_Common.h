@@ -21,7 +21,9 @@ typedef enum {
 	TGT_AUTH_FAIL = 0,
     TGT_SUCCESS,
     TGS_AC_FAIL,
-    TGS_SUCCESS
+    TGS_SUCCESS,
+    KRB_SUCCESS,
+    KRB_FAIL
 } KDCCodes;
 
 ////////////////KRB-CCN default directories//////////////////////

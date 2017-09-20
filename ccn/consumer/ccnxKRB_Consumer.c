@@ -36,6 +36,13 @@ typedef struct tgt {
 	uint8_t k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
 } TGT;
 
+typedef struct tgs {
+	uint64_t expiration;
+	uint8_t *tgsData;
+	int size;
+	uint8_t k_N[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+} TGS;
+
 typedef struct ccnx_client {
     CCNxPortal *portal;
     CCNxVPNStats *stats;
@@ -66,6 +73,7 @@ typedef struct ccnx_client {
     char *namespace;
 
     TGT tgt;
+    TGS tgs;
 } CCNxConsumer;
 
 /**
@@ -194,7 +202,7 @@ _CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client) {
 	strcat(TGTFile,"@");
 	strcat(TGTFile,client->domainname);
 
-	printf("TGT file name:\n %s\n",TGTFile);
+	//printf("TGT file name:\n %s\n",TGTFile);
 
 	char trash;
 	uint64_t exp;
@@ -213,12 +221,12 @@ _CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client) {
 
 
 
-	printf("expiration   %llu\n",client->tgt.expiration);
+	//printf("expiration   %llu\n",client->tgt.expiration);
 	uint64_t current_time = _ccnx_CurrentTimeInUs(clock);
-	printf("current time %llu\n", current_time);
+	//printf("current time %llu\n", current_time);
 
 	if (current_time > client->tgt.expiration) {
-		printf("TGT expired.\nRun TGT request for user client <%s> under domain <%s> again.\n",client->username, client->domainname);
+		printf("TGT expired.\nRun TGT request for user <%s> under domain <%s> again.\n",client->username, client->domainname);
 		exit(0);
 	} else {
 		printf("Valid TGT found! Issuing Interest.\n");
@@ -232,7 +240,7 @@ _CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client) {
 
 		int len = strlen(client->namespace);
 
-		printf("Requested namespace: <%s>.\n", client->namespace);
+		//printf("Requested namespace: <%s>.\n", client->namespace);
 
 		memcpy(p, &len, sizeof(len));
 		p += sizeof(len);
@@ -245,7 +253,68 @@ _CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client) {
 
 		int usefulDataSize = p-payload;
 
-		printf("TGS interest size %d.\n", usefulDataSize);
+		//printf("TGS interest size %d.\n", usefulDataSize);
+
+		PARCBuffer *ccnx_payload = parcBuffer_Allocate(size);
+		parcBuffer_PutArray(ccnx_payload, size, payload);
+		parcBuffer_Flip(ccnx_payload);
+	    return ccnx_payload;
+	}
+	return NULL;
+}
+
+PARCBuffer *
+_CCNxClient_MakeKRBInterestPayload(CCNxConsumer *client) {
+	PARCClock *clock = parcClock_Wallclock();
+
+	char * TGSFile = (char*)malloc(strlen(userTGSDir) + strlen(client->username) + strlen(client->domainname) + strlen(client->namespace) +2);
+	memset(TGSFile, 0, strlen(userTGTDir) + strlen(client->username) + strlen(client->domainname) + strlen(client->namespace) + 2);
+	strcat(TGSFile, userTGSDir);
+	strcat(TGSFile,client->username);
+	strcat(TGSFile,"@");
+	strcat(TGSFile,client->domainname);
+	char nameSpace_buffer[strlen(client->namespace)+1];
+	memset(nameSpace_buffer,0,strlen(client->namespace)+1);
+	strcpy(nameSpace_buffer, client->namespace);
+	for (int i=0; i<strlen(client->namespace)+1; i++) {
+		if (nameSpace_buffer[i] == '/') {
+			nameSpace_buffer[i] = '.';
+		}
+	}
+	strcat(TGSFile, nameSpace_buffer);
+
+	printf("TGS file name:\n %s\n",TGSFile);
+
+	uint64_t exp;
+	FILE* fp = fopen(TGSFile,"r");
+	if (fp == NULL) {
+		printf("file not found\n");
+	}
+
+	fread(&(client->tgs.expiration), sizeof(uint64_t), 1, fp);
+	fscanf(fp,"\n");
+	fread(&(client->tgs.size), sizeof(int), 1, fp);
+	fscanf(fp,"\n");
+	client->tgs.tgsData = (uint8_t*)malloc(client->tgs.size * sizeof(uint8_t));
+	fread(client->tgs.tgsData, 1, client->tgs.size, fp);
+	fscanf(fp,"\n");
+	fread(&(client->tgs.k_N), 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
+	fscanf(fp,"\n");
+	fclose(fp);
+
+	//printf("expiration   %llu\n",client->tgt.expiration);
+	uint64_t current_time = _ccnx_CurrentTimeInUs(clock);
+	//printf("current time %llu\n", current_time);
+
+	if (current_time > client->tgs.expiration) {
+		printf("TGS expired.\nRun TGS request for user <%s> under domain <%s> with namespace <%s> again.\n",client->username, client->domainname, client->namespace);
+		exit(0);
+	} else {
+		printf("Valid TGS found! Issuing Interest for authorized content.\n");
+
+		int size = client->tgs.size;
+		uint8_t payload[size];
+		memcpy(payload, client->tgs.tgsData, client->tgs.size);
 
 		PARCBuffer *ccnx_payload = parcBuffer_Allocate(size);
 		parcBuffer_PutArray(ccnx_payload, size, payload);
@@ -383,9 +452,6 @@ storeTGS(CCNxConsumer *client, PARCBuffer *TGSPayload) {
 	memcpy(k_N,tokenData, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
 	memcpy(&expiration, tokenData +crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, sizeof(uint64_t));
 
-	printf("TGS expiration: %llu\n", expiration);
-
-
 	char filename[strlen(userTGSDir) + strlen(client->username) + strlen("@") + strlen(client->domainname) + strlen(client->namespace) +10];
 	memset(filename,0,sizeof(filename));
 	memcpy(filename, userTGSDir, sizeof userTGSDir);
@@ -401,7 +467,7 @@ storeTGS(CCNxConsumer *client, PARCBuffer *TGSPayload) {
 		}
 	}
 	strcat(filename, buffer);
-	printf("PATH: %s\n",filename);
+	//printf("PATH: %s\n",filename);
 
 	//Writting TGS to disk:
 
@@ -409,6 +475,8 @@ storeTGS(CCNxConsumer *client, PARCBuffer *TGSPayload) {
 	if (fp) {
 
 		fwrite(&expiration, sizeof(uint64_t), 1, fp);
+		fprintf(fp,"\n");
+		fwrite(&receive_tgs_size, 1, sizeof(receive_tgs_size), fp);
 		fprintf(fp,"\n");
 		fwrite(TGSBuffer, 1, receive_tgs_size, fp);
 		fprintf(fp,"\n");
@@ -423,6 +491,39 @@ storeTGS(CCNxConsumer *client, PARCBuffer *TGSPayload) {
 	printf("Expiration: %llu\n", expiration);
 }
 
+void
+decryptContent(CCNxConsumer *client, PARCBuffer *payload) {
+	int total_size = (int)parcBuffer_Remaining(payload);
+
+	printf("Received %d bytes. Content is probably there.\n", total_size);
+
+	uint8_t enc_content[total_size];
+
+	parcBuffer_GetBytes(payload, total_size, enc_content);
+
+	int message_len = total_size - crypto_aead_aes256gcm_ABYTES;
+
+	uint8_t data[message_len];
+
+	//Token decryption:
+
+	long long unsigned decrypted_len;
+
+	if (total_size < crypto_aead_aes256gcm_ABYTES ||
+		crypto_aead_aes256gcm_decrypt(data, &decrypted_len,
+		                              NULL,
+		                              enc_content, total_size,
+		                              "",
+		                              0,
+		                              (client->tgs.k_N) + crypto_aead_aes256gcm_KEYBYTES, client->tgs.k_N) != 0) {
+
+		printf("Content Forged!\n");
+		exit(0);
+	} else {
+		printf("Content received successfully\n");
+		printf("%s\n", data);
+	}
+}
 
 void
 _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
@@ -568,6 +669,88 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 if (reply == TGS_SUCCESS) {
                 	printf("<%s> authorization successful.\n", client->username);
                 	storeTGS(client, contentPayload);
+
+                } else {
+                	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
+                }
+
+                size_t delta = ccnxVPNStats_RecordResponse(client->stats, responseName, currentTimeInUs, response);
+
+                // Only display output if we're in ping mode
+                if (client->mode == CCNxConsumerMode_VPNPong || client->mode == CCNxConsumerMode_TGTReq) {
+                    size_t contentSize = parcBuffer_Remaining(ccnxContentObject_GetPayload(contentObject));
+                    char *nameString = ccnxName_ToString(responseName);
+                   // printf("%zu bytes from %s: time=%zu us\n", contentSize, nameString, delta);
+                    parcMemory_Deallocate(&nameString);
+                }
+            }
+            ccnxMetaMessage_Release(&response);
+            response = ccnxPortal_Receive(client->portal, &receiveDelay);
+            outstanding--;
+        }
+}
+
+void
+_ccnx_RunKRBServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
+{
+    PARCClock *clock = parcClock_Wallclock();
+
+    printf("Starting content request for user <%s>.\n", client->username);
+
+    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
+    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
+    size_t outstanding = 0;
+    bool checkOustanding = client->numberOfOutstanding > 0;
+
+    uint64_t nextPacketSendTime = 0;
+    uint64_t currentTimeInUs = 0;
+    int pings = 0;
+
+        if (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding)) {
+
+        	// Creates a KRB content interest///
+        	PARCBuffer *payload = _CCNxClient_MakeKRBInterestPayload(client);
+        	if (payload == NULL) {
+        		printf("Closing client\n");
+        		return;
+        	}
+        	////////////////////////////
+        	CCNxName *name = _ccnx_CreateNextName(client);
+            CCNxInterest *interest = ccnxInterest_CreateSimple(name);
+            ccnxInterest_SetPayloadAndId(interest, payload);
+            CCNxMetaMessage *message = ccnxMetaMessage_CreateFromInterest(interest);
+
+            if (ccnxPortal_Send(client->portal, message, CCNxStackTimeout_Never)) {
+                currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
+                nextPacketSendTime = currentTimeInUs + delayInUs;
+
+                ccnxVPNStats_RecordRequest(client->stats, name, currentTimeInUs);
+            }
+
+            outstanding++;
+            ccnxName_Release(&name);
+        	parcBuffer_Release(&payload);
+            printf("Sent content request\n");
+        }
+
+        // Now wait for the response and record it`s time
+        uint64_t receiveDelay = client->receiveTimeoutInUs;
+        CCNxMetaMessage *response = ccnxPortal_Receive(client->portal, &receiveDelay);
+        while (response != NULL && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
+            uint64_t currentTimeInUs = _ccnx_CurrentTimeInUs(clock);
+            if (ccnxMetaMessage_IsContentObject(response)) {
+                CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
+                CCNxName *responseName = ccnxContentObject_GetName(contentObject);
+
+                PARCBuffer *contentPayload = ccnxContentObject_GetPayload(contentObject);
+                uint8_t reply;
+                parcBuffer_GetBytes(contentPayload, 1, &reply);
+
+                if (reply == KRB_SUCCESS) {
+                	printf("Content received successfully.\n");
+                	decryptContent(client, contentPayload);
 
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
@@ -819,6 +1002,12 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
             _ccnx_DisplayStatistics(client);
             break;
 
+        case CCNxConsumerMode_KRBServReq:
+            _ccnx_RunKRBServiceReq(client, client->count, client->intervalInMs);
+            _ccnx_DisplayStatistics(client);
+            break;
+
+
         case CCNxConsumerMode_None:
         default:
             fprintf(stderr, "Error, unknown mode");
@@ -873,7 +1062,7 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
                 		client->domainname[i] = '.';
                 	}
                 }
-                printf("writable domain name: %s\n", client->domainname);
+                //printf("writable domain name: %s\n", client->domainname);
 
                 char TGT_name[strlen(argv[3])+10];
                 memset(TGT_name,0,strlen(argv[3])+10);
@@ -888,9 +1077,8 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
 
 		case 't':
 			if (argc == 5) {
-        		printf("TGS Access Control Request.\n");
+        		printf("TGS Authorization Request.\n");
 
-        	    printf("TGS Service Access Control Verification.\n");
         		//XXX: TGS Req network options
         		client->count = 1;
         		client->intervalInMs = 1;
@@ -916,7 +1104,6 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
                 		client->domainname[i] = '.';
                 	}
                 }
-                printf("writable domain name: %s\n", client->domainname);
 
                 char TGS_name[strlen(argv[3])+10];
                 memset(TGS_name,0,strlen(argv[3])+10);
@@ -931,6 +1118,53 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
 				_displayUsage(argv[0]);
 				return false;
 			}
+
+		case 's':
+			if (argc == 5) {
+        		printf("Issuing authorized interest for content <%s>.\n", argv[4]);
+
+        		//XXX: Content Req network options
+        		client->count = 1;
+        		client->intervalInMs = 1;
+        		client->payloadSize = 1024;
+        		client->mode = CCNxConsumerMode_KRBServReq;
+        		//XXX: End of TGS Req network options
+
+        		client->username = malloc(strlen(argv[2]) + 1);
+                strcpy(client->username, argv[2]);
+                loadUserKeys(client);
+
+        		client->keystoreName = malloc(strlen("consumer_identity1") + 1);
+        		strcpy(client->keystoreName, "consumer_identity1");
+                client->keystorePassword = malloc(strlen("consumer_identity1") + 1);
+                strcpy(client->keystorePassword, "consumer_identity1");
+
+        		client->domainname = malloc(strlen(argv[3]) + 1);
+                strcpy(client->domainname, argv[3]);
+
+                int i;
+                for (i=0; i<strlen(client->domainname);i++) {
+                	if (client->domainname[i] == '/') {
+                		client->domainname[i] = '.';
+                	}
+                }
+                printf("writable domain name: %s\n", client->domainname);
+
+                char interest_name[strlen(argv[3]) + strlen(argv[4]) + 10];
+                memset(interest_name, 0, strlen(argv[3]) + strlen(argv[4]) + 10);
+                strcat(interest_name, argv[3]);
+                strcat(interest_name, argv[4]);
+                printf("content_name: <%s>\n", interest_name);
+                client->prefix = ccnxName_CreateFromCString(interest_name);
+
+           		client->namespace = malloc(strlen(argv[4]) + 1);
+           		strcpy(client->namespace, argv[4]);
+                return true;
+			} else {
+				_displayUsage(argv[0]);
+				return false;
+			}
+
 
     	default:
     		_displayUsage(argv[0]);
