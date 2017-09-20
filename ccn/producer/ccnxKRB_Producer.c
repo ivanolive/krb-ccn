@@ -372,6 +372,7 @@ _CCNxServer_MakeKRBPayload(CCNxServer *server, bool result)
 		// K_N: the key used by the client to actual content
 
 		uint8_t content[server->payloadSize];
+		memset(content, 0, server->payloadSize);
 		memcpy(content, "blablabla", strlen("blablabla"));
 
 		unsigned char enc_content[server->payloadSize + crypto_aead_aes256gcm_ABYTES];
@@ -638,10 +639,23 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 		return false;
 	}
 
+	//Verify if the authorized namespace from TGS is prefix of this producer.
+
+	char *server_prefix = ccnxName_ToString(server->prefix);
+	printf("\nPREFIXES\n");
+	printf("%s\n",server_prefix);
+	printf("%s\n",server->namespace);
+	char prefix_buffer[strlen(server->namespace)+1];
+	memset(prefix_buffer, 0, strlen(server->namespace)+1);
+	memcpy(prefix_buffer,server_prefix,strlen(server->namespace));
+
+	bool isMyPrefix = !strcmp(prefix_buffer,server->namespace);
 	//TODO: verify is the namespace prefix in TGS matched the service name.
 
-	if (1) {
+	if (isMyPrefix) {
 		return true;
+	} else {
+		return false;
 	}
 
 }

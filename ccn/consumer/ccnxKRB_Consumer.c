@@ -208,7 +208,8 @@ _CCNxClient_MakeTGSInterestPayload(CCNxConsumer *client) {
 	uint64_t exp;
 	FILE* fp = fopen(TGTFile,"r");
 	if (fp == NULL) {
-		printf("file not found\n");
+		printf("TGT not found\n");
+		exit(0);
 	}
 
 	fread(&(client->tgt.expiration), sizeof(uint64_t), 1, fp);
@@ -288,7 +289,8 @@ _CCNxClient_MakeKRBInterestPayload(CCNxConsumer *client) {
 	uint64_t exp;
 	FILE* fp = fopen(TGSFile,"r");
 	if (fp == NULL) {
-		printf("file not found\n");
+		printf("TGS not found\n");
+		exit(0);
 	}
 
 	fread(&(client->tgs.expiration), sizeof(uint64_t), 1, fp);
@@ -1149,11 +1151,16 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
                 	}
                 }
                 printf("writable domain name: %s\n", client->domainname);
-
+/*
                 char interest_name[strlen(argv[3]) + strlen(argv[4]) + 10];
                 memset(interest_name, 0, strlen(argv[3]) + strlen(argv[4]) + 10);
                 strcat(interest_name, argv[3]);
                 strcat(interest_name, argv[4]);
+*/
+                char interest_name[strlen(argv[4]) + 1];
+                memset(interest_name, 0, strlen(argv[4])+ 1);
+                strcat(interest_name, argv[4]);
+
                 printf("content_name: <%s>\n", interest_name);
                 client->prefix = ccnxName_CreateFromCString(interest_name);
 
