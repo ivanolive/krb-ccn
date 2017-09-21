@@ -106,18 +106,18 @@ $Verif_{pk}(\sigma,m) $		&  Signature verification using public key $pk$     			
 \procedure{}{%
 \textbf{Consumer} \> \> \textbf{Authenticator} \\
 \mathsf{I.name = TGT\_Name} \> \> \\
-\sigma = \mathsf{Sign}_{sk_C}(\mathsf{userName}) \> \> \\
+\sigma \gets \mathsf{Sign}_{sk_C}(\mathsf{userName}) \> \> \\
 \> \xrightarrow{payload = \sigma, userName} \> \\
-\> \> \text{Fetch $pk_C$ on users DB} \\
+\> \> \text{Fetch $pk_C$ according to userName} \\
 \> \> \mathsf{Verify}_{pk_C}(\sigma,\mathsf{userName}) \\
-\> \> s \sample \{0,1\}^{\lambda} \\
-\> \> t = \mathsf{setExpirationTime}() \\
+%\> \> s \sample \{0,1\}^{\lambda} \\
+\> \> t_1 \gets \mathsf{setTGTExpiration}() \\
 \> \> k_{TGS} \sample \{0,1\}^{\lambda} \\
-\> \> \mathsf{token}_{TGS}^{C} \gets \mathsf{Enc}_{pk_C}(k_{TGS}||t) \\
-\> \> \mathsf{TGT} = \mathsf{Enc}_{k_{A}}(pk_C || s || t || k_{TGS}) \\
-\> \xleftarrow{payload = s, \mathsf{TGT}, \mathsf{token}_{TGS}^{C}} \> \\
-k_{TGS},t = \mathsf{Dec}_{sk_C}(\mathsf{token}_{TGS}^{C}) \> \> \\
-\mathsf{store(TGT,s,t,k_{TGS})} \> \> \\
+\> \> \mathsf{token}_{TGS}^{C} \gets \mathsf{Enc}_{pk_C}(k_{TGS}||t_1) \\
+\> \> \mathsf{TGT} \gets \mathsf{Enc}_{k_{A}}(\mathsf{userName} || t_1 || k_{TGS}) \\
+\> \xleftarrow{payload = \mathsf{TGT}, \mathsf{token}_{TGS}^{C}} \> \\
+k_{TGS}||t_1 \gets \mathsf{Dec}_{sk_C}(\mathsf{token}_{TGS}^{C}) \> \> \\
+\mathsf{store(TGT,t_1,k_{TGS})} \> \> \\
 }
 }
 \caption{Consumer authentication protocol}
@@ -134,19 +134,19 @@ k_{TGS},t = \mathsf{Dec}_{sk_C}(\mathsf{token}_{TGS}^{C}) \> \> \\
 \procedure{}{%
 \textbf{Consumer} \> \> \textbf{Authorizer} \\
 \mathsf{I.name = TGS\_Name} \> \> \\
-\> \xrightarrow{payload=N, s, \mathsf{TGT}} \> \\
-\> \> pk_C || s' || t || k_{TGS} = \mathsf{Dec}_{k_{A}}(TGT) \\
-\> \> \text{Verify: $s = s'$} \\
-\> \> \text{Verify: $t$ not expired} \\
-\> \> {k_P} = \mathsf{verifyPolicyAndFetchKey}(N, pk_C) \\ %Kp can be different things (shared key between all boxes that implement that producer, broadcast encryption key, etc)
+\> \xrightarrow{payload=N, \mathsf{TGT}} \> \\
+\> \> \mathsf{userName} || t_1 || k_{TGS} \gets \mathsf{Dec}_{k_{A}}(TGT) \\
+%\> \> \text{Verify: $s = s'$} \\
+\> \> \text{Verify: $t_1$ not expired} \\
+\> \> {k_P} \gets \mathsf{verifyPolicyAndFetchKey}(N, \mathsf{userName}) \\ %Kp can be different things (shared key between all boxes that implement that producer, broadcast encryption key, etc)
 \> \> k_{N} \sample \{0,1\}^{\lambda} \\
 %\> \> r \sample \{0,1\}^{\lambda} \\ why?
-\> \> t = \mathsf{setExpirationTime}() \\ %% timestamp
-\> \> \mathsf{TGS} \gets \mathsf{Enc}_{k_P}( N || k_N || t) \\ %% encrypt the key in the ticket
-\> \> \mathsf{token}_N^{C} \gets \mathsf{Enc}_{k_{TGS}}(k_N||t) \\
-\> \xleftarrow{payload=\mathsf{token}_N^{C}, \mathsf{TGS}} \> \\
-k_N,t = \mathsf{Dec}_{k_{TGS}}(\mathsf{token}_N^{C}) \> \\
-\mathsf{store(N,TGS,t,k_N)} \>
+\> \> t_2 \gets \mathsf{setTGSExpiration}() \\ %% timestamp
+\> \> \mathsf{TGS} \gets \mathsf{Enc}_{k_P}( N || k_N || t_2) \\ %% encrypt the key in the ticket
+\> \> \mathsf{token}_N^{C} \gets \mathsf{Enc}_{k_{TGS}}(k_N||t_2) \\
+\> \xleftarrow{payload= \mathsf{TGS}, \mathsf{token}_N^{C}} \> \\
+k_N || t_2 \gets \mathsf{Dec}_{k_{TGS}}(\mathsf{token}_N^{C}) \> \\
+\mathsf{store(N,TGS,t_2,k_N)} \>
 }
 }
 \caption{Consumer-data authorization protocol}
@@ -161,14 +161,14 @@ k_N,t = \mathsf{Dec}_{k_{TGS}}(\mathsf{token}_N^{C}) \> \\
 \textbf{Consumer} \> \> \textbf{Producer} \\
 \mathsf{I.name = N||suffix} \> \> \\
 \> \xrightarrow{payload= TGS} \> \\
-\> \>  N' || k_N || t = \mathsf{Dec}_{k_P}(TGS) \\
+\> \>  N' || k_N || t_2 \gets \mathsf{Dec}_{k_P}(TGS) \\
 \> \> \text{Verify: $N'$ is prefix of I.name} \\
 %%\> \> \text{Verify: $pk_C'$ = $pk_C$} \\ Not sure this is necessary
-\> \> \text{Verify $t$ expiration} \\
-\> \> D = \mathsf{ProduceData}(\mathsf{I.name}) \\
-\> \> D' = \mathsf{Enc}_{k_N}(D) \\
+\> \> \text{Verify $t_2$ expiration} \\
+\> \> D \gets \mathsf{ProduceData}(\mathsf{I.name}) \\
+\> \> D' \gets \mathsf{Enc}_{k_N}(D) \\
 \> \xleftarrow{payload=D'} \> \\
-D = \mathsf{Dec}_{K_N}(\mathsf{D'}) \> \> \\
+D \gets \mathsf{Dec}_{K_N}(\mathsf{D'}) \> \> \\
 }
 }
 \caption{Consumer-data authorization protocol}

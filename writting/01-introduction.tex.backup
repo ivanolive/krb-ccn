@@ -15,11 +15,9 @@ Ideas:
 	In IP Kerberos such AC policies are bounded to principals, with are basically names to services within an organization.
 	Since in CCN all content is named by design, \emph{krb-ccn} eliminates the need for principals, leading to a cleaner and
 	straightforward authentication and authorization system.
-  \item \emph{krb-ccn} is also designed with efficiency in mind. As in IP Kerberos, the majority of cryptografic operations in the
-	system consist on symmetric-key authenticated encryption. By avoiding computatially expensive operations (sucha as ABC, PKC, and Pairing Based Cryptography),
-	\emph{krb-ccn} becomes suitable for scenarios where content producers are resource constrained devices, such as in an evetual CCN-IoT.
-  \item The consumer application does not have to be aware of \emph{krb-ccn}. Based on the interest hierarchical name structure,
-	the \emph{krb-ccn} local client is capable of fetching the apropriate TGS/TGT, or issue TGS and TGT requests as needed.
+  \item 
+  
+
 \end{enumerate}
 
 

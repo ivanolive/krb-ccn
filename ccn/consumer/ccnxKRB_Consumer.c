@@ -1026,6 +1026,7 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
 
 	switch (argv[1][0]) {
 		case 'n':
+
 			if (argc == 3) {
 				ccnx_KRB_addUser(argv[2]);
 				client->mode = CCNxConsumerMode_KRBConfig;

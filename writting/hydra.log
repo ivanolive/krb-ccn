@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  6 SEP 2017 09:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  20 SEP 2017 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1093,7 +1093,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 ** WARNING: \thanks is locked out when in conference mode (line 73).
 (./01-introduction.tex
-Underfull \hbox (badness 7379) in paragraph at lines 2--12
+Underfull \hbox (badness 7379) in paragraph at lines 26--36
 []\OT1/ptm/m/n/10 Content-Centric Net-work-ing (CCN) is an emerg-ing
  []
 
@@ -1109,7 +1109,10 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-) (./03-restriction.tex
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]) (./03-restriction.tex
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -1130,10 +1133,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--8
 \OT1/pcr/m/n/10 ContentObjectHashRestriction\OT1/ptm/m/n/10 , or KeyID and
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
 
 LaTeX Warning: Citation `ibac15' on page 2 undefined on input line 37.
 
@@ -1153,7 +1152,7 @@ LaTeX Warning: Citation `xx' on page 2 undefined on input line 31.
 
 LaTeX Warning: Citation `xx' on page 2 undefined on input line 32.
 
-
+[2]
 Underfull \hbox (badness 2790) in paragraph at lines 76--76
 []|\OT1/ptm/m/n/8 Ticket-granting-service name (e.g., /uci/ics/TGS)
  []
@@ -1163,13 +1162,12 @@ Overfull \hbox (0.62169pt too wide) in paragraph at lines 70--90
  [][] 
  []
 
-<Figures/hydra.pdf, id=19, 450.68375pt x 456.70625pt>
+<Figures/hydra.pdf, id=24, 450.68375pt x 456.70625pt>
 File: Figures/hydra.pdf Graphic file (type pdf)
  <use Figures/hydra.pdf>
 Package pdftex.def Info: Figures/hydra.pdf used on input line 94.
 (pdftex.def)             Requested size: 252.0pt x 255.37047pt.
 
-[2] [3]
 Underfull \hbox (badness 2846) in paragraph at lines 186--187
 \OT1/ptm/m/n/10 This way Con-sumer can get back to Au-then-ti-ca-
  []
@@ -1186,7 +1184,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./Figures/hydra.pdf>] (./hydra.aux)
+[3 <./Figures/hydra.pdf>] [4] (./hydra.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1197,7 +1195,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  21864 strings out of 493304
  411139 string characters out of 6139870
- 495892 words of memory out of 5000000
+ 488892 words of memory out of 5000000
  24854 multiletter control sequences out of 15000+600000
  49447 words of font info for 114 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
@@ -1226,7 +1224,7 @@ xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on hydra.pdf (4 pages, 262991 bytes).
+Output written on hydra.pdf (4 pages, 266167 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
