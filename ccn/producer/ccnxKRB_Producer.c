@@ -41,6 +41,7 @@ typedef struct ccnx_ping_server {
     uint8_t user_pk_enc[crypto_box_PUBLICKEYBYTES];
 
     unsigned char k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
+    unsigned char k_producer[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
     unsigned char k_service[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
     char *namespace;
 
@@ -123,6 +124,26 @@ ccnxKBRService_Create(CCNxServer *server, char* name)
     server->prefix = ccnxName_CreateFromCString(name);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = KRB_SERVICE;
+
+    randombytes_buf(server->k_producer, sizeof server->k_producer);
+
+    char nameBuffer[strlen(name)+1];
+    strcpy(nameBuffer,name);
+    for (int i=0; i<strlen(name)+1; i++){
+    	if (nameBuffer[i] == '/') {
+    		nameBuffer[i] = '.';
+    	}
+    }
+
+    char fname[strlen(nameBuffer) + strlen(serverKDCDir) +1];
+    memset(fname,0,strlen(nameBuffer) + strlen(serverKDCDir) +1);
+
+    strcat(fname,serverKDCDir);
+    strcat(fname,nameBuffer);
+    printf("file name: %s\n",fname);
+    FILE* fp = fopen(fname,"w");
+    fwrite(server->k_producer, sizeof server->k_producer, 1, fp);
+    fclose(fp);
 
     return server;
 }
@@ -310,11 +331,36 @@ _CCNxServer_MakeTGSPayload(CCNxServer *server, bool result)
 		unsigned char service_key[crypto_aead_aes256gcm_KEYBYTES];
 		unsigned long long ciphertext_len;
 
-		// In a real setting each service would have it's unique key k_N. That must be registered at KDC
-		FILE* kdcKeyFile = fopen(keyFileKDC,"r");
-		fread(service_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
-		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
-		fclose(kdcKeyFile);
+
+	    char nameBuffer[strlen(server->namespace)+1];
+	    strcpy(nameBuffer,server->namespace);
+	    for (int i=0; i<strlen(server->namespace)+1; i++){
+	    	if (nameBuffer[i] == '/') {
+	    		nameBuffer[i] = '.';
+	    	}
+	    }
+
+	    char fname[strlen(nameBuffer) + strlen(serverKDCDir) +1];
+	    memset(fname,0,strlen(nameBuffer) + strlen(serverKDCDir) +1);
+	    strcat(fname,serverKDCDir);
+	    strcat(fname,nameBuffer);
+
+	    printf("service file:%s\n", fname);
+
+		FILE* serviceKeyFile = fopen(fname,"r");
+		if (!serviceKeyFile) {
+			printf("Requested service was not registered to this KDC\n");
+			code = TGS_AC_FAIL;
+			int size = sizeof(uint8_t);
+			payload = parcBuffer_Allocate(size);
+			parcBuffer_PutUint8(payload, code);
+			parcBuffer_Flip(payload);
+		    return payload;
+		}
+
+		fread(service_key, 1, crypto_aead_aes256gcm_KEYBYTES, serviceKeyFile);
+		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, serviceKeyFile);
+		fclose(serviceKeyFile);
 
 
 		unsigned char enc_TGS[tgs_size + crypto_aead_aes256gcm_ABYTES];
@@ -581,7 +627,7 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 
 	memset(tgs, 0, tgsSize);
 	parcBuffer_GetBytes(recvPayload, tgsSize, tgs);
-
+/*
 	//TODO: Read these guys from file at parse of command line.////////////////////
 	unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
 	unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
@@ -591,7 +637,7 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 	fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
 	fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
 	fclose(kdcKeyFile);
-
+*/
 	unsigned char TGSData[tgsSize - crypto_aead_aes256gcm_ABYTES];
 	unsigned long long decrypted_len;
 	//Now we are ready to decrypt the TGT:
@@ -602,7 +648,7 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 		                              tgs, tgsSize,
 		                              "",
 		                              0,
-		                              nonce, KDC_key) != 0) {
+		                              server->k_producer + crypto_aead_aes256gcm_KEYBYTES, server->k_producer) != 0) {
 
 		printf("TGS Forged!\n");
 		return false;
