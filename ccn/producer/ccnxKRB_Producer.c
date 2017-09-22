@@ -655,6 +655,8 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 
 	server->namespace = (char*)malloc(namespace_len + 1);
 
+	memset(server->namespace, 0, namespace_len + 1);
+
 	memcpy(server->namespace, position, namespace_len);
 	printf("%s\n", server->namespace);
 	position += namespace_len;
