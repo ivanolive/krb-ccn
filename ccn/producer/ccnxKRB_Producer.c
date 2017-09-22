@@ -419,7 +419,8 @@ _CCNxServer_MakeKRBPayload(CCNxServer *server, bool result)
 
 		uint8_t content[server->payloadSize];
 		memset(content, 0, server->payloadSize);
-		memcpy(content, "blablabla", strlen("blablabla"));
+		memcpy(content, "This is content: ", strlen("This is content: "));
+		memcpy(content+strlen("This is content: "), server->namespace, strlen(server->namespace));
 
 		unsigned char enc_content[server->payloadSize + crypto_aead_aes256gcm_ABYTES];
 		unsigned long long ct_len;
@@ -627,17 +628,7 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 
 	memset(tgs, 0, tgsSize);
 	parcBuffer_GetBytes(recvPayload, tgsSize, tgs);
-/*
-	//TODO: Read these guys from file at parse of command line.////////////////////
-	unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
-	unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
-	unsigned long long ciphertext_len;
 
-	FILE* kdcKeyFile = fopen(keyFileKDC,"r");
-	fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
-	fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
-	fclose(kdcKeyFile);
-*/
 	unsigned char TGSData[tgsSize - crypto_aead_aes256gcm_ABYTES];
 	unsigned long long decrypted_len;
 	//Now we are ready to decrypt the TGT:
@@ -775,9 +766,6 @@ _CCNxTGTServer_Run(CCNxServer *server)
             }
             ccnxMetaMessage_Release(&request);
 
-            // Why releasing this fucks up the whole shit? Dammit!!
-            //parcBuffer_Release(&interestPayload);
-
         }
     }
 }
@@ -848,9 +836,6 @@ _CCNxTGSServer_Run(CCNxServer *server)
                 exit(1);
             }
             ccnxMetaMessage_Release(&request);
-
-            // Why releasing this fucks up the whole shit? Dammit!!
-            //parcBuffer_Release(&interestPayload);
 
         }
     }
@@ -923,9 +908,6 @@ _CCNxKRBService_Run(CCNxServer *server)
             }
             ccnxMetaMessage_Release(&request);
 
-            // Why releasing this fucks up the whole shit? Dammit!!
-            //parcBuffer_Release(&interestPayload);
-
         }
     }
 }
@@ -957,15 +939,10 @@ static bool
 _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
 {
     static struct option longopts[] = {
-    	{ "TGT prod", no_argument, NULL, 'a' },
-    	{ "TGS prod", no_argument, NULL, 't' },
-    	{ "KRB Serv prod", no_argument, NULL, 'k' },
-
-        { "locator", required_argument, NULL, 'l' },
-        { "size",    required_argument, NULL, 's' },
+    	{ "TGT prod", required_argument, NULL, 'a' },
+    	{ "TGS prod", required_argument, 't' },
+    	{ "KRB Serv prod", required_argument, NULL, 'k' },
         { "help",    no_argument,       NULL, 'h' },
-        { "identity file", required_argument, NULL, 'i'},
-        { "password", required_argument, NULL, 'p'},
         { NULL,      0,                 NULL, 0   }
     };
 
@@ -1005,24 +982,6 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
                 server->keystorePassword = malloc(strlen("producer_identity1") + 1);
                 strcpy(server->keystorePassword, "producer_identity1");
         		break;
-        	case 'l':
-                server->prefix = ccnxName_CreateFromCString(optarg);
-                break;
-            case 's':
-                sscanf(optarg, "%zu", &(server->payloadSize));
-                if (server->payloadSize > ccnx_MaxPayloadSize) {
-                    _displayUsage(argv[0]);
-                    return false;
-                }
-                break;
-            case 'i':
-                server->keystoreName = malloc(strlen(optarg) + 1);
-                strcpy(server->keystoreName, optarg);
-                break;
-            case 'p':
-                server->keystorePassword = malloc(strlen(optarg) + 1);
-                strcpy(server->keystorePassword, optarg);
-                break;
             case 'h':
                 _displayUsage(argv[0]);
                 return false;
