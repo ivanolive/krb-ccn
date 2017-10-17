@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  20 SEP 2017 16:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  13 OCT 2017 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -997,6 +997,9 @@ LaTeX Warning: Label `fig:spectr-basic' multiply defined.
 
 LaTeX Warning: Label `fig:spectr-basic' multiply defined.
 
+
+LaTeX Warning: Label `fig:spectr-basic' multiply defined.
+
 )
 \openout1 = `hydra.aux'.
 
@@ -1072,17 +1075,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 73.
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -1091,9 +1083,12 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
 
-** WARNING: \thanks is locked out when in conference mode (line 73).
 (./01-introduction.tex
-Underfull \hbox (badness 7379) in paragraph at lines 26--36
+
+LaTeX Warning: Citation `adams1995hitchhiker' undefined on input line 3.
+
+
+Underfull \hbox (badness 7379) in paragraph at lines 28--38
 []\OT1/ptm/m/n/10 Content-Centric Net-work-ing (CCN) is an emerg-ing
  []
 
@@ -1103,13 +1098,22 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]) (./03-restriction.tex
@@ -1138,19 +1142,16 @@ LaTeX Warning: Citation `ibac15' on page 2 undefined on input line 37.
 
 ) (./04-design.tex
 
-LaTeX Warning: Citation `adams1995hitchhiker' undefined on input line 3.
+LaTeX Warning: Citation `pre' on page 2 undefined on input line 27.
 
 
-LaTeX Warning: Citation `pre' on page 2 undefined on input line 29.
+LaTeX Warning: Citation `be' on page 2 undefined on input line 27.
 
 
-LaTeX Warning: Citation `be' on page 2 undefined on input line 29.
+LaTeX Warning: Citation `xx' on page 2 undefined on input line 29.
 
 
-LaTeX Warning: Citation `xx' on page 2 undefined on input line 31.
-
-
-LaTeX Warning: Citation `xx' on page 2 undefined on input line 32.
+LaTeX Warning: Citation `xx' on page 2 undefined on input line 30.
 
 [2]
 Underfull \hbox (badness 2790) in paragraph at lines 76--76
@@ -1162,13 +1163,23 @@ Overfull \hbox (0.62169pt too wide) in paragraph at lines 70--90
  [][] 
  []
 
-<Figures/hydra.pdf, id=24, 450.68375pt x 456.70625pt>
+<Figures/hydra.pdf, id=23, 450.68375pt x 456.70625pt>
 File: Figures/hydra.pdf Graphic file (type pdf)
  <use Figures/hydra.pdf>
 Package pdftex.def Info: Figures/hydra.pdf used on input line 94.
 (pdftex.def)             Requested size: 252.0pt x 255.37047pt.
 
-Underfull \hbox (badness 2846) in paragraph at lines 186--187
+Overfull \hbox (1.71904pt too wide) in paragraph at lines 173--174
+ [] 
+ []
+
+
+Overfull \hbox (1.71904pt too wide) in paragraph at lines 195--196
+ [] 
+ []
+
+[3 <./Figures/hydra.pdf>]
+Underfull \hbox (badness 2846) in paragraph at lines 209--210
 \OT1/ptm/m/n/10 This way Con-sumer can get back to Au-then-ti-ca-
  []
 
@@ -1184,7 +1195,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3 <./Figures/hydra.pdf>] [4] (./hydra.aux)
+[4] (./hydra.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1193,13 +1204,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 21864 strings out of 493304
- 411139 string characters out of 6139870
- 488892 words of memory out of 5000000
- 24854 multiletter control sequences out of 15000+600000
- 49447 words of font info for 114 fonts, out of 8000000 for 9000
+ 21842 strings out of 493304
+ 410797 string characters out of 6139870
+ 495892 words of memory out of 5000000
+ 24832 multiletter control sequences out of 15000+600000
+ 46612 words of font info for 102 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 63i,23n,57p,10406b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,23n,57p,10406b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/
@@ -1224,7 +1235,7 @@ xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on hydra.pdf (4 pages, 266167 bytes).
+Output written on hydra.pdf (4 pages, 268000 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

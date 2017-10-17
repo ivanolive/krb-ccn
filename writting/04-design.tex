@@ -1,8 +1,6 @@
-\section{Hydra}
+\section{Hydra Design}
 
-\nocite{adams1995hitchhiker}
-
-%% XXX: show the hydra protocol here..
+\subsection{Namespace Based Authorization}
 
 There are at least two fundamental problems one must address in any access control
 system: (1) how access control policies are represented and (2) how they are enforced.
@@ -45,6 +43,8 @@ particular, it becomes easy to launch a Denial of Service (DoS) attack on the
 data owner by forcing it to perform expensive cryptographic operations, e.g.,
 signature verifications.
 %% @Ivan, the reasons above are ridiculous -- please add others!
+
+\subsection{Protocol}
 
 Hydra is a system designed to address these problems. It has the following features:
 %
@@ -154,7 +154,7 @@ k_N || t_2 \gets \mathsf{Dec}_{k_{TGS}}(\mathsf{token}_N^{C}) \> \\
 \end{center}
 \end{figure*}
 
-\begin{figure*}
+\begin{figure}
 \begin{center}
 \fbox{
 \procedure{}{%
@@ -171,10 +171,33 @@ k_N || t_2 \gets \mathsf{Dec}_{k_{TGS}}(\mathsf{token}_N^{C}) \> \\
 D \gets \mathsf{Dec}_{K_N}(\mathsf{D'}) \> \> \\
 }
 }
-\caption{Consumer-data authorization protocol}
+\caption{Authorization verification protocol}
 \label{fig:spectr-basic}
 \end{center}
-\end{figure*}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\fbox{
+\procedure{}{%
+\textbf{Consumer} \> \> \textbf{Producer} \\
+\mathsf{I.name = N||suffix} \> \> \\
+\> \xrightarrow{payload= TGS} \> \\
+\> \>  N' || k_N || t_2 \gets \mathsf{Dec}_{k_P}(TGS) \\
+\> \> \text{Verify: $N'$ is prefix of I.name} \\
+%%\> \> \text{Verify: $pk_C'$ = $pk_C$} \\ Not sure this is necessary
+\> \> \text{Verify $t_2$ expiration} \\
+\> \> D \gets \mathsf{ProduceData}(\mathsf{I.name}) \\
+\> \> D' \gets \mathsf{Enc}_{k_N}(D) \\
+\> \xleftarrow{payload=D'} \> \\
+D \gets \mathsf{Dec}_{K_N}(\mathsf{D'}) \> \> \\
+}
+}
+\caption{Authorization verification protocol including challenge-based consumer authentication}
+\label{fig:spectr-basic}
+\end{center}
+\end{figure}
+
 
 \subsection{Ivan: Comments}
 \begin{enumerate}
