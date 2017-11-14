@@ -19,7 +19,9 @@
 
 #include "../ccnxKRB_Common.h"
 
-//#include "sodium.h"
+int verbose = 0;
+int time_tests = 0;
+int rtt_test = 0;
 
 typedef enum {
 	REG_PROD = 0,  	// Non kerberized service
@@ -39,6 +41,13 @@ typedef struct ccnx_ping_server {
     uint8_t username[MAX_USERNAME_LEN];
     uint8_t user_pk_sig[crypto_sign_PUBLICKEYBYTES];
     uint8_t user_pk_enc[crypto_box_PUBLICKEYBYTES];
+
+    unsigned char KDC_nonce[crypto_aead_aes256gcm_NPUBBYTES];
+    unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
+
+    char* last_service;
+    unsigned char last_service_key[crypto_aead_aes256gcm_KEYBYTES];
+    unsigned char last_service_nonce[crypto_aead_aes256gcm_NPUBBYTES];
 
     unsigned char k_tgs[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
     unsigned char k_producer[crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES];
@@ -104,6 +113,11 @@ ccnxTGTServer_Create(CCNxServer *server)
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = TGT_PROD;
 
+	FILE* kdcKeyFile = fopen(keyFileKDC,"r");
+	fread(server->KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
+	fread(server->KDC_nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
+	fclose(kdcKeyFile);
+
     return server;
 }
 
@@ -113,6 +127,12 @@ ccnxTGSServer_Create(CCNxServer *server)
    server->prefix = ccnxName_CreateFromCString(ccnx_TGS_DefaultPrefix);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = TGS_PROD;
+    server->last_service = NULL;
+
+	FILE* kdcKeyFile = fopen(keyFileKDC,"r");
+	fread(server->KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
+	fread(server->KDC_nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
+	fclose(kdcKeyFile);
 
     return server;
 }
@@ -120,7 +140,9 @@ ccnxTGSServer_Create(CCNxServer *server)
 static CCNxServer *
 ccnxKBRService_Create(CCNxServer *server, char* name)
 {
-	printf("service name: %s\n",name);
+	if (verbose) {
+		printf("service name: %s\n",name);
+	}
     server->prefix = ccnxName_CreateFromCString(name);
     server->payloadSize = ccnx_DefaultPayloadSize;
     server->mode = KRB_SERVICE;
@@ -140,7 +162,9 @@ ccnxKBRService_Create(CCNxServer *server, char* name)
 
     strcat(fname,serverKDCDir);
     strcat(fname,nameBuffer);
-    printf("file name: %s\n",fname);
+    if (verbose) {
+    	printf("file name: %s\n",fname);
+    }
     FILE* fp = fopen(fname,"w");
     fwrite(server->k_producer, sizeof server->k_producer, 1, fp);
     fclose(fp);
@@ -178,7 +202,9 @@ _ccnx_CurrentTimeInUs(PARCClock *clock)
 PARCBuffer *
 _CCNxServer_MakePayload(CCNxServer *server, int size)
 {
-	printf("Creating a packet.\n");
+	if (verbose) {
+		printf("Creating a packet.\n");
+	}
     PARCBuffer *payload = parcBuffer_Wrap(server->generalPayload, size, 0, size);
     return payload;
 }
@@ -252,22 +278,14 @@ _CCNxServer_MakeTGTPayload(CCNxServer *server, bool result)
 
 		// At this point the TGT is ready to be encrypted
 
-		//TODO: Read these guys from file at parse of command line.////////////////////
-		unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
-		unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
 		unsigned long long ciphertext_len;
-
-		FILE* kdcKeyFile = fopen(keyFileKDC,"r");
-		fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
-		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
-		fclose(kdcKeyFile);
 
 		unsigned char enc_TGT[tgt_size + crypto_aead_aes256gcm_ABYTES];
 
 		crypto_aead_aes256gcm_encrypt(enc_TGT, &ciphertext_len,
 			                          TGT, tgt_size,
 			                          NULL, 0,
-			                          NULL, nonce, KDC_key);
+			                          NULL, server->KDC_nonce, server->KDC_key);
 
 
 		int size = sizeof(uint8_t) + sizeof enc_TGT + sizeof enc_C_TGS_token;
@@ -331,36 +349,53 @@ _CCNxServer_MakeTGSPayload(CCNxServer *server, bool result)
 		unsigned char service_key[crypto_aead_aes256gcm_KEYBYTES];
 		unsigned long long ciphertext_len;
 
-
-	    char nameBuffer[strlen(server->namespace)+1];
-	    strcpy(nameBuffer,server->namespace);
-	    for (int i=0; i<strlen(server->namespace)+1; i++){
-	    	if (nameBuffer[i] == '/') {
-	    		nameBuffer[i] = '.';
-	    	}
-	    }
-
-	    char fname[strlen(nameBuffer) + strlen(serverKDCDir) +1];
-	    memset(fname,0,strlen(nameBuffer) + strlen(serverKDCDir) +1);
-	    strcat(fname,serverKDCDir);
-	    strcat(fname,nameBuffer);
-
-	    printf("service file:%s\n", fname);
-
-		FILE* serviceKeyFile = fopen(fname,"r");
-		if (!serviceKeyFile) {
-			printf("Requested service was not registered to this KDC\n");
-			code = TGS_AC_FAIL;
-			int size = sizeof(uint8_t);
-			payload = parcBuffer_Allocate(size);
-			parcBuffer_PutUint8(payload, code);
-			parcBuffer_Flip(payload);
-		    return payload;
+		char nameBuffer[strlen(server->namespace)+1];
+		strcpy(nameBuffer,server->namespace);
+		for (int i=0; i<strlen(server->namespace)+1; i++){
+			if (nameBuffer[i] == '/') {
+				nameBuffer[i] = '.';
+			}
 		}
 
-		fread(service_key, 1, crypto_aead_aes256gcm_KEYBYTES, serviceKeyFile);
-		fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, serviceKeyFile);
-		fclose(serviceKeyFile);
+		char fname[strlen(nameBuffer) + strlen(serverKDCDir) +1];
+		memset(fname,0,strlen(nameBuffer) + strlen(serverKDCDir) +1);
+		strcat(fname,serverKDCDir);
+		strcat(fname,nameBuffer);
+		if (verbose) {
+			printf("service file:%s\n", fname);
+		}
+
+
+		if (server->last_service == NULL || strcmp(server->last_service,fname)) {
+
+			if (server->last_service != NULL) {
+				free(server->last_service);
+			}
+
+			server->last_service = (char*)malloc(strlen(nameBuffer) + strlen(serverKDCDir) +1);
+			memcpy(server->last_service, fname, strlen(nameBuffer) + strlen(serverKDCDir) +1);
+
+			FILE* serviceKeyFile = fopen(fname,"r");
+			if (!serviceKeyFile) {
+				if (verbose) {
+					printf("Requested service was not registered to this KDC\n");
+				}
+				code = TGS_AC_FAIL;
+				int size = sizeof(uint8_t);
+				payload = parcBuffer_Allocate(size);
+				parcBuffer_PutUint8(payload, code);
+				parcBuffer_Flip(payload);
+				return payload;
+			}
+
+			fread(server->last_service_key, 1, crypto_aead_aes256gcm_KEYBYTES, serviceKeyFile);
+			fread(server->last_service_nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, serviceKeyFile);
+			fclose(serviceKeyFile);
+
+		}
+		memcpy(nonce, server->last_service_nonce,crypto_aead_aes256gcm_NPUBBYTES);
+		memcpy(service_key, server->last_service_key, crypto_aead_aes256gcm_KEYBYTES);
+
 
 
 		unsigned char enc_TGS[tgs_size + crypto_aead_aes256gcm_ABYTES];
@@ -409,8 +444,9 @@ _CCNxServer_MakeKRBPayload(CCNxServer *server, bool result)
 {
 	uint8_t code;
 	PARCBuffer *payload = NULL;
-
-	printf("Sending KRB payload\n");
+	if (verbose) {
+		printf("Sending KRB payload\n");
+	}
 
 	if (result) {
 		code = KRB_SUCCESS;
@@ -456,8 +492,9 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 
 	parcBuffer_GetBytes(recvPayload, crypto_sign_BYTES, sig);
 
-	printf("Receiving authentication request from <%s>.\n",username);
-
+	if (verbose) {
+		printf("Receiving authentication request from <%s>.\n",username);
+	}
 	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
 	char filename_pk[strlen(username) + strlen(userPrvDir) + strlen("-pub-sig")+1]; // +5 to concat -prv\0
 	strcpy(filename_pk, userPrvDir);
@@ -513,9 +550,11 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 }
 
 bool verifyPolicyAndFetchKey(CCNxServer *server) {
-	printf("Authorization Verification\n");
-	printf("User: <%s>; Namespace: <%s>.\n", server->username, server->namespace);
-	printf("Authorization successfull!\n");
+	if (verbose) {
+		printf("Authorization Verification\n");
+		printf("User: <%s>; Namespace: <%s>.\n", server->username, server->namespace);
+		printf("Authorization successfull!\n");
+	}
 	memcpy(server->k_service, server->k_tgs, sizeof server->k_tgs);
 
 	// XXX: Implement real AC policy checker. For this prototype this was not implemented.
@@ -527,10 +566,10 @@ bool verifyPolicyAndFetchKey(CCNxServer *server) {
 bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 
 	PARCClock *clock = parcClock_Wallclock();
-
-	printf("Received TGS Request.\n");
-	printf("Starting TGT verification ...\n");
-
+	if (verbose) {
+		printf("Received TGS Request.\n");
+		printf("Starting TGT verification ...\n");
+	}
 	int payloadSize = parcBuffer_Remaining(recvPayload);
 
 	int namespace_len;
@@ -548,8 +587,7 @@ bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 
 	//printf("namespace: %s\n", server->namespace);
 	//printf("TGT:\n %s\n", tgt);
-
-	//TODO: Read these guys from file at parse of command line.////////////////////
+/*
 	unsigned char nonce[crypto_aead_aes256gcm_NPUBBYTES];
 	unsigned char KDC_key[crypto_aead_aes256gcm_KEYBYTES];
 	unsigned long long ciphertext_len;
@@ -558,7 +596,7 @@ bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 	fread(KDC_key, 1, crypto_aead_aes256gcm_KEYBYTES, kdcKeyFile);
 	fread(nonce, 1, crypto_aead_aes256gcm_NPUBBYTES, kdcKeyFile);
 	fclose(kdcKeyFile);
-
+*/
 	unsigned char TGTData[RECEIVE_TGT_SIZE - crypto_aead_aes256gcm_ABYTES];
 	unsigned long long decrypted_len;
 	//Now we are ready to decrypt the TGT:
@@ -569,7 +607,7 @@ bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 		                              tgt, RECEIVE_TGT_SIZE,
 		                              "",
 		                              0,
-		                              nonce, KDC_key) != 0) {
+		                              server->KDC_nonce, server->KDC_key) != 0) {
 
 		printf("TGT Forged!\n");
 		return false;
@@ -603,7 +641,9 @@ bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 		printf("TGT expired.\n Run TGT request for user client <%s> under domain again.",server->username);
 		return false;
 	} else {
-		printf("TGT integrity check OK.\n");
+		if (verbose) {
+			printf("TGT integrity check OK.\n");
+		}
 	}
 
 	//Now we know that the TGT is authentic and not expired.
@@ -619,10 +659,10 @@ bool ccnx_krb_VerifyTGT(CCNxServer *server, PARCBuffer *recvPayload){
 bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 
 	PARCClock *clock = parcClock_Wallclock();
-
-	printf("Received content request.\n");
-	printf("Starting TGS verification ...\n");
-
+	if (verbose) {
+		printf("Received content request.\n");
+		printf("Starting TGS verification ...\n");
+	}
 	int tgsSize = parcBuffer_Remaining(recvPayload);
 	uint8_t tgs[tgsSize];
 
@@ -644,8 +684,9 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 		printf("TGS Forged!\n");
 		return false;
 	}
-
-	printf("TGS authentic!\n");
+	if (verbose) {
+		printf("TGS authentic!\n");
+	}
 
 	uint8_t *position = TGSData;
 
@@ -658,7 +699,9 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 	memset(server->namespace, 0, namespace_len + 1);
 
 	memcpy(server->namespace, position, namespace_len);
-	printf("%s\n", server->namespace);
+	if (verbose) {
+		printf("%s\n", server->namespace);
+	}
 	position += namespace_len;
 
 	memcpy(server->k_service, position, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES);
@@ -681,9 +724,11 @@ bool ccnx_krb_VerifyTGS(CCNxServer *server, PARCBuffer *recvPayload){
 	//Verify if the authorized namespace from TGS is prefix of this producer.
 
 	char *server_prefix = ccnxName_ToString(server->prefix);
-	printf("\nPREFIXES\n");
-	printf("%s\n",server_prefix);
-	printf("%s\n",server->namespace);
+	if (verbose) {
+		printf("\nPREFIXES\n");
+		printf("%s\n",server_prefix);
+		printf("%s\n",server->namespace);
+	}
 	char prefix_buffer[strlen(server->namespace)+1];
 	memset(prefix_buffer, 0, strlen(server->namespace)+1);
 	memcpy(prefix_buffer,server_prefix,strlen(server->namespace));
@@ -708,6 +753,8 @@ _CCNxTGTServer_Run(CCNxServer *server)
     server->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
     ccnxPortalFactory_Release(&factory);
 
+    PARCClock *clock = parcClock_Wallclock();
+
     size_t yearInSeconds = 60 * 60 * 24 * 365;
 
     size_t sizeIndex = ccnxName_GetSegmentCount(server->prefix) + 1;
@@ -719,6 +766,13 @@ _CCNxTGTServer_Run(CCNxServer *server)
             // This should never happen.
             if (request == NULL) {
                 break;
+            }
+
+            uint64_t start;
+            FILE *fp;
+            if (time_tests) {
+            	fp = fopen("TGT_time.csv", "a");
+            	start = current_time();
             }
 
             CCNxInterest *interest = ccnxMetaMessage_GetInterest(request);
@@ -735,15 +789,19 @@ _CCNxTGTServer_Run(CCNxServer *server)
                     }
 
                     if (result) {
-                    	printf("User authentication successful\n");
-                    	printf("Issuing TGT \n");
+                    	if (verbose) {
+							printf("User authentication successful\n");
+							printf("Issuing TGT \n");
+                    	}
                     } else {
                     	printf("User authentication failed\n");
                     	printf("Issuing error msg content \n");
                     }
 
                     PARCBuffer *payload = _CCNxServer_MakeTGTPayload(server, result);
-                    printf("Sending %d bytes. TGT and token.\n\n",(int)parcBuffer_Remaining(payload));
+                    if (verbose) {
+                    	printf("Sending %d bytes. TGT and token.\n\n",(int)parcBuffer_Remaining(payload));
+                    }
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -768,6 +826,11 @@ _CCNxTGTServer_Run(CCNxServer *server)
             }
             ccnxMetaMessage_Release(&request);
 
+            if (time_tests) {
+				uint64_t end = current_time();
+				fprintf(fp, "%llu\n", end - start);
+				fclose(fp);
+            }
         }
     }
 }
@@ -792,6 +855,13 @@ _CCNxTGSServer_Run(CCNxServer *server)
                 break;
             }
 
+            uint64_t start;
+            FILE *fp;
+            if (time_tests) {
+            	fp = fopen("CGT_time.csv", "a");
+            	start = current_time();
+            }
+
             CCNxInterest *interest = ccnxMetaMessage_GetInterest(request);
             if (ccnxMetaMessage_IsInterest(request)) {
                 if (interest != NULL) {
@@ -806,15 +876,19 @@ _CCNxTGSServer_Run(CCNxServer *server)
                     }
 
                     if (result) {
-                    	printf("User TGT verification successful\n");
-                    	printf("Issuing TGS \n");
+                    	if (verbose) {
+							printf("User TGT verification successful\n");
+							printf("Issuing TGS \n");
+                    	}
                     } else {
                     	printf("User TGT verification failed\n");
                     	printf("Issuing error msg content \n");
                     }
 
                     PARCBuffer *payload = _CCNxServer_MakeTGSPayload(server, result);
-                    printf("Sending %d bytes. TGS and token.\n\n",(int)parcBuffer_Remaining(payload));
+                    if (verbose) {
+                    	printf("Sending %d bytes. TGS and token.\n\n",(int)parcBuffer_Remaining(payload));
+                    }
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -838,6 +912,12 @@ _CCNxTGSServer_Run(CCNxServer *server)
                 exit(1);
             }
             ccnxMetaMessage_Release(&request);
+
+            if (time_tests) {
+				uint64_t end = current_time();
+				fprintf(fp, "%llu\n", end - start);
+				fclose(fp);
+            }
 
         }
     }
@@ -863,6 +943,13 @@ _CCNxKRBService_Run(CCNxServer *server)
                 break;
             }
 
+            uint64_t start;
+            FILE *fp;
+            if (time_tests) {
+            	fp = fopen("PROD_time.csv", "a");
+            	start = current_time();
+            }
+
             CCNxInterest *interest = ccnxMetaMessage_GetInterest(request);
             if (ccnxMetaMessage_IsInterest(request)) {
                 if (interest != NULL) {
@@ -877,15 +964,19 @@ _CCNxKRBService_Run(CCNxServer *server)
                     }
 
                     if (result) {
-                    	printf("User TGS verification successful\n");
-                    	printf("Issuing requested content \n");
+                    	if (verbose) {
+                    		printf("User TGS verification successful\n");
+                    		printf("Issuing requested content \n");
+                    	}
                     } else {
                     	printf("User TGS verification failed\n");
                     	printf("Issuing error msg content \n");
                     }
 
                     PARCBuffer *payload = _CCNxServer_MakeKRBPayload(server, result);
-                    printf("Sending %d bytes. Encrypted content.\n\n",(int)parcBuffer_Remaining(payload));
+                    if (verbose) {
+                    	printf("Sending %d bytes. Encrypted content.\n\n",(int)parcBuffer_Remaining(payload));
+                    }
                     CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
 
                     // debug
@@ -910,6 +1001,83 @@ _CCNxKRBService_Run(CCNxServer *server)
             }
             ccnxMetaMessage_Release(&request);
 
+            if (time_tests) {
+				uint64_t end = current_time();
+				fprintf(fp, "%llu\n", end - start);
+				fclose(fp);
+            }
+
+        }
+    }
+}
+
+static void
+_CCNxRegService_Run(CCNxServer *server)
+{
+    CCNxPortalFactory *factory = _setupServerPortalFactory(server->keystoreName, server->keystorePassword);
+    server->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
+    size_t yearInSeconds = 60 * 60 * 24 * 365;
+
+    size_t sizeIndex = ccnxName_GetSegmentCount(server->prefix) + 1;
+
+    if (ccnxPortal_Listen(server->portal, server->prefix, yearInSeconds, CCNxStackTimeout_Never)) {
+        while (true) {
+            CCNxMetaMessage *request = ccnxPortal_Receive(server->portal, CCNxStackTimeout_Never);
+
+            // This should never happen.
+            if (request == NULL) {
+                break;
+            }
+
+            uint64_t start;
+            FILE *fp;
+            if (time_tests) {
+            	fp = fopen("PROD_time.csv", "a");
+            	start = current_time();
+            }
+
+            CCNxInterest *interest = ccnxMetaMessage_GetInterest(request);
+            if (ccnxMetaMessage_IsInterest(request)) {
+                if (interest != NULL) {
+                    CCNxName *interestName = ccnxInterest_GetName(interest);
+                    PARCBuffer *interestPayload = ccnxInterest_GetPayload(interest);
+                    PARCBuffer *payload = _CCNxServer_MakePayload(server, server->payloadSize);
+
+                    if (verbose) {
+                    	printf("Sending %d bytes. Encrypted content.\n\n",(int)parcBuffer_Remaining(payload));
+                    }
+                    CCNxContentObject *contentObject = ccnxContentObject_CreateWithNameAndPayload(interestName, payload);
+
+                    // debug
+                    char *responseName = ccnxName_ToString(interestName);
+                    //printf("Replying to: %s\n", responseName);
+                    parcMemory_Deallocate(&responseName);
+
+                    CCNxMetaMessage *message = ccnxMetaMessage_CreateFromContentObject(contentObject);
+
+                    if (ccnxPortal_Send(server->portal, message, CCNxStackTimeout_Never) == false) {
+                        fprintf(stderr, "ccnxPortal_Send failed: %d\n", ccnxPortal_GetError(server->portal));
+                    }
+
+                    ccnxMetaMessage_Release(&message);
+                    parcBuffer_Release(&payload);
+
+                }
+            } else {
+                printf("Received a control message\n");
+                ccnxMetaMessage_Display(request, 0);
+                exit(1);
+            }
+            ccnxMetaMessage_Release(&request);
+
+            if (time_tests) {
+				uint64_t end = current_time();
+				fprintf(fp, "%llu\n", end - start);
+				fclose(fp);
+            }
+
         }
     }
 }
@@ -920,18 +1088,12 @@ _CCNxKRBService_Run(CCNxServer *server)
 static void
 _displayUsage(char *progName)
 {
-    printf("CCNx Simple VPN Performance Test\n");
+    printf("KRB-CCN Test\n");
     printf("\n");
-    printf("Usage: %s [-l locator] [-s size] \n", progName);
-    printf("       %s -h\n", progName);
-    printf("\n");
-    printf("Example:\n");
-    printf("    ccnx_Server -l ccnx:/some/prefix -s 4096\n");
-    printf("\n");
-    printf("Options:\n");
-    printf("     -h (--help) Show this help message\n");
-    printf("     -l (--locator) Set the locator for this server. The default is 'ccnx:/locator'. \n");
-    printf("     -s (--size) Set the payload size (less than 64000 - see `ccnx_MaxPayloadSize` in ccnx_Common.h)\n");
+    printf("Usage: %s -a TGT \n", progName);
+    printf("       %s -t TGS \n", progName);
+    printf("       %s -k ccnx:/localhost/uci/edu/fileB \n", progName);
+
 }
 
 /**
@@ -945,6 +1107,7 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
     	{ "TGS prod", required_argument, 't' },
     	{ "KRB Serv prod", required_argument, NULL, 'k' },
         { "help",    no_argument,       NULL, 'h' },
+        { "content",    no_argument,       NULL, 'p' },
         { NULL,      0,                 NULL, 0   }
     };
 
@@ -987,7 +1150,15 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
             case 'h':
                 _displayUsage(argv[0]);
                 return false;
+            case 'p':
+            	printf("Starting Regular Service Producer.\n");
+            	ccnxRegServer_Create(server);
+        		server->keystoreName = malloc(strlen("producer_identity1") + 1);
+        		strcpy(server->keystoreName, "producer_identity1");
+                server->keystorePassword = malloc(strlen("producer_identity1") + 1);
+                strcpy(server->keystorePassword, "producer_identity1");
             default:
+
                 break;
         }
     }
@@ -997,6 +1168,8 @@ _CCNxServer_ParseCommandline(CCNxServer *server, int argc, char *argv[argc])
 
 int main(int argc, char *argv[argc])
 {
+//	time_tests = 1;
+//	verbose = 1;
 
     parcSecurity_Init();
 
@@ -1020,6 +1193,11 @@ int main(int argc, char *argv[argc])
     	if (server->mode == KRB_SERVICE) {
     		printf("calling run service");
     	    _CCNxKRBService_Run(server);
+    	}
+
+    	if (server->mode == REG_PROD) {
+    		printf("calling run service\n");
+    	    _CCNxRegService_Run(server);
     	}
 
     }

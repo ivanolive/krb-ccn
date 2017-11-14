@@ -10,9 +10,19 @@
 #include <parc/security/parc_IdentityFile.h>
 
 const size_t ccnx_DefaultReceiveTimeoutInUs = 1000000; // 1 second
-const size_t ccnx_DefaultPayloadSize = 4096;
+const size_t ccnx_DefaultPayloadSize = 10240;
 const size_t mediumNumberOfVPNs = 100;
 const size_t smallNumberOfVPNs = 10;
+
+
+uint64_t
+current_time()
+{
+    struct timeval currentTimeVal;
+    gettimeofday(&currentTimeVal, NULL);
+    uint64_t microseconds = currentTimeVal.tv_sec * 1000000 + currentTimeVal.tv_usec;
+    return microseconds;
+}
 
 static PARCIdentity *
 _ccnxVPNCommon_CreateIdentityFromFile(const char *keystoreName,

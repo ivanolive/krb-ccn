@@ -12,7 +12,7 @@
 /**
  * The `CCNxName` default prefixes for the servers.
  */
-#define ccnx_DefaultPrefix "ccnx:/localhost"
+#define ccnx_DefaultPrefix "ccnx:/localhost/content"
 #define ccnx_TGT_DefaultPrefix "ccnx:/localhost/TGT"
 #define ccnx_TGS_DefaultPrefix "ccnx:/localhost/TGS"
 #define ccnx_KRB_Serv_DefaultPrefix "ccnx:/localhost/kbr_serv"
@@ -99,4 +99,7 @@ extern const size_t smallNumberOfVPNs;
  */
 CCNxPortalFactory *ccnxVPNCommon_SetupPortalFactory(const char *keystoreName,
                                                     const char *keystorePassword);
+
+uint64_t current_time();
+
 #endif // ccnxVPNCommon_h.h
