@@ -489,14 +489,16 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 	int payloadSize = parcBuffer_Remaining(recvPayload);
 
 	parcBuffer_GetBytes(recvPayload, MAX_USERNAME_LEN, username);
-
+	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
+	char filename_pk[strlen(username) + strlen(userPrvDir) + strlen("-pub-sig")+1]; // +5 to concat -prv\0
+	FILE* fp;
+/*
 	parcBuffer_GetBytes(recvPayload, crypto_sign_BYTES, sig);
 
 	if (verbose) {
 		printf("Receiving authentication request from <%s>.\n",username);
 	}
-	unsigned char pk[crypto_sign_PUBLICKEYBYTES];
-	char filename_pk[strlen(username) + strlen(userPrvDir) + strlen("-pub-sig")+1]; // +5 to concat -prv\0
+
 	strcpy(filename_pk, userPrvDir);
 	strcat(filename_pk,username);
 
@@ -515,7 +517,7 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 		fread(pk, 1, crypto_sign_PUBLICKEYBYTES, fp);
 		fclose(fp);
 	}
-
+*/
 	unsigned char enc_pk[crypto_box_PUBLICKEYBYTES];
 	strcpy(filename_pk, userPrvDir);
 	strcat(filename_pk,username);
@@ -536,7 +538,7 @@ bool ccnx_krb_VerifyUser(CCNxServer *server, PARCBuffer *recvPayload){
 		fclose(fp);
 	}
 
-	if (crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
+	if (0) {//crypto_sign_verify_detached(sig, username, MAX_USERNAME_LEN, pk) != 0) {
 	    /* Incorrect signature! */
 		printf("Invalid client signature\n");
 		return false;

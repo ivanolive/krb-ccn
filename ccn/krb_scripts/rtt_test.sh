@@ -1,16 +1,16 @@
 #!/usr/bin/bash
 
-rm tgt_rtt.csv
-rm cgt_rtt.csv
-rm krb_rtt.csv
-rm reg_rtt.csv
+#rm tgt_rtt.csv
+#rm cgt_rtt.csv
+#rm krb_rtt.csv
+#rm reg_rtt.csv
 
-for j in `seq 1 10`;
+for j in `seq 10 10`;
 do
     N=$((300 * $j))
     echo $N > pings.csv
     echo $N
-    for i in `seq 0 3`;
+    for i in `seq 0 10`;
     do
         ## TGT Req
         nice -10 ../b/ccnxKRB_Client a ivan ccnx:/localhost >> tgt_rtt.csv

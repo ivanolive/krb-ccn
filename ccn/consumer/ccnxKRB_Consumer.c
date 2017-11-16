@@ -20,7 +20,9 @@
 
 int verbose = 0;
 int rtt_test = 0;
-int pings = 1;
+int pings = 0;
+int b_pings = 0;
+int thput_test = 0;
 
 typedef enum {
     CCNxConsumerMode_None = 0,
@@ -183,10 +185,10 @@ _CCNxClient_MakeTGTInterestPayload(CCNxConsumer *client)
 	//crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, sk);
 	crypto_sign_detached(sig, NULL, username, MAX_USERNAME_LEN, client->user_sk_sig);
 
-	size = MAX_USERNAME_LEN + crypto_sign_BYTES;
+	size = MAX_USERNAME_LEN;// + crypto_sign_BYTES;
 	uint8_t payload[size];
 	memcpy(payload, username, MAX_USERNAME_LEN);
-	memcpy(payload + MAX_USERNAME_LEN, sig, crypto_sign_BYTES);
+	//memcpy(payload + MAX_USERNAME_LEN, sig, crypto_sign_BYTES);
 
 	PARCBuffer *ccnx_payload = parcBuffer_Allocate(size);
 	parcBuffer_PutArray(ccnx_payload, size, payload);
@@ -513,17 +515,15 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
     if (verbose) printf("Starting TGT request for user <%s>.\n", client->username);
 
-    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
-    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
-    ccnxPortalFactory_Release(&factory);
-
     size_t outstanding = 0;
     bool checkOustanding = client->numberOfOutstanding > 0;
 
     uint64_t nextPacketSendTime = 0;
     uint64_t currentTimeInUs = 0;
 
-    if (!rtt_test){
+    int flag = 1;
+
+    if (!rtt_test && !thput_test){
     	pings = 1;
     }
     int count = 0;
@@ -580,7 +580,10 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 if (reply == TGT_SUCCESS) {
                 	if (verbose) printf("<%s> authentication successful.\n", client->username);
                 	//TODO: Impplement this function properly.
-                	storeTGT(client, contentPayload);
+                	if (flag) {
+                		storeTGT(client, contentPayload);
+                		flag = 0;
+                	}
 
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
@@ -598,11 +601,11 @@ _ccnx_RunTGTReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 }
             }
             ccnxMetaMessage_Release(&response);
-            response = ccnxPortal_Receive(client->portal, &receiveDelay);
+            if (!thput_test) response = ccnxPortal_Receive(client->portal, &receiveDelay);
             outstanding--;
         }
     }
-    if (rtt_test) printf("%d ", cum_delay/pings);
+    if (rtt_test && ! thput_test) printf("%d ", cum_delay/pings);
 }
 
 void
@@ -613,17 +616,15 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
     if (verbose) printf("Starting TGS request for user <%s>.\n", client->username);
 
-    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
-    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
-    ccnxPortalFactory_Release(&factory);
-
     size_t outstanding = 0;
     bool checkOustanding = client->numberOfOutstanding > 0;
 
     uint64_t nextPacketSendTime = 0;
     uint64_t currentTimeInUs = 0;
 
-    if (!rtt_test){
+    int flag = 1;
+
+    if (!rtt_test && !thput_test){
     	pings = 1;
     }
     int count = 0;
@@ -668,9 +669,12 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
         // Now wait for the response and record it`s time
         uint64_t receiveDelay = client->receiveTimeoutInUs;
         CCNxMetaMessage *response = ccnxPortal_Receive(client->portal, &receiveDelay);
+
         while (response != NULL && (!checkOustanding || (checkOustanding && outstanding < client->numberOfOutstanding))) {
+
             uint64_t currentTimeInUs = current_time();//_ccnx_CurrentTimeInUs(clock);
             if (ccnxMetaMessage_IsContentObject(response)) {
+
                 CCNxContentObject *contentObject = ccnxMetaMessage_GetContentObject(response);
                 CCNxName *responseName = ccnxContentObject_GetName(contentObject);
 
@@ -680,7 +684,11 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
 
                 if (reply == TGS_SUCCESS) {
                 	if (verbose) printf("<%s> authorization successful.\n", client->username);
-                	storeTGS(client, contentPayload);
+                	if (flag) {
+                		storeTGS(client, contentPayload);
+                		flag=0;
+                	}
+
 
                 } else {
                 	printf("User credentials for <%s> rejected. Contact your system administrator.\n", client->username);
@@ -698,11 +706,11 @@ _ccnx_RunTGSReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInUs)
                 }
             }
             ccnxMetaMessage_Release(&response);
-            response = ccnxPortal_Receive(client->portal, &receiveDelay);
+            if (!thput_test) response = ccnxPortal_Receive(client->portal, &receiveDelay);
             outstanding--;
         }
     }
-    if (rtt_test) printf("%d ", cum_delay/pings);
+    if (rtt_test && ! thput_test) printf("%d ", cum_delay/pings);
 }
 
 void
@@ -712,9 +720,6 @@ _ccnx_RunKRBServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInU
 
     if (verbose) printf("Starting content request for user <%s>.\n", client->username);
 
-    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
-    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
-    ccnxPortalFactory_Release(&factory);
 
     size_t outstanding = 0;
     bool checkOustanding = client->numberOfOutstanding > 0;
@@ -722,7 +727,7 @@ _ccnx_RunKRBServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInU
     uint64_t nextPacketSendTime = 0;
     uint64_t currentTimeInUs = 0;
 
-    if (!rtt_test){
+    if (!rtt_test && !thput_test){
     	pings = 1;
     }
     int count = 0;
@@ -795,11 +800,11 @@ _ccnx_RunKRBServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInU
                 }
             }
             ccnxMetaMessage_Release(&response);
-            response = ccnxPortal_Receive(client->portal, &receiveDelay);
+            if (rtt_test && ! thput_test) response = ccnxPortal_Receive(client->portal, &receiveDelay);
             outstanding--;
         }
     }
-    if (rtt_test) printf("%d ", cum_delay/pings);
+    if (rtt_test && ! thput_test) printf("%d ", cum_delay/pings);
 }
 
 void
@@ -809,17 +814,13 @@ _ccnx_RunRegServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInU
 
     if (verbose) printf("Starting content request for user <%s>.\n", client->username);
 
-    CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
-    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
-    ccnxPortalFactory_Release(&factory);
-
     size_t outstanding = 0;
     bool checkOustanding = client->numberOfOutstanding > 0;
 
     uint64_t nextPacketSendTime = 0;
     uint64_t currentTimeInUs = 0;
 
-    if (!rtt_test){
+    if (!rtt_test && !thput_test){
     	pings = 1;
     }
     int count = 0;
@@ -886,7 +887,7 @@ _ccnx_RunRegServiceReq(CCNxConsumer *client, size_t totalVPNs, uint64_t delayInU
             outstanding--;
         }
     }
-    if (rtt_test) printf("%d ", cum_delay/pings);
+    if (rtt_test && !thput_test) printf("%d ", cum_delay/pings);
 }
 
 
@@ -1107,6 +1108,11 @@ _ccnx_DisplayStatistics(CCNxConsumer *client)
 static void
 _ccnx_RunKerberizedClient(CCNxConsumer *client)
 {
+
+	CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
+    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
     switch (client->mode) {
 
         case CCNxConsumerMode_TGTReq:
@@ -1135,6 +1141,72 @@ _ccnx_RunKerberizedClient(CCNxConsumer *client)
             fprintf(stderr, "Error, unknown mode");
             break;
     }
+}
+
+static void
+_ccnx_RunFullKerberizedClient(CCNxConsumer *client)
+{
+	if (verbose) printf("running full req\n");
+
+	CCNxPortalFactory *factory = _setupConsumerPortalFactory(client->keystoreName, client->keystorePassword);
+    client->portal = ccnxPortalFactory_CreatePortal(factory, ccnxPortalRTA_Message);
+    ccnxPortalFactory_Release(&factory);
+
+	char * TGTFile = (char*)malloc(strlen(userTGTDir) + strlen(client->username) + strlen(client->domainname) + 2);
+	memset(TGTFile, 0, strlen(userTGTDir) + strlen(client->username) + strlen(client->domainname) + 2);
+	strcat(TGTFile, userTGTDir);
+	strcat(TGTFile,client->username);
+	strcat(TGTFile,"@");
+	strcat(TGTFile,client->domainname);
+
+	//printf("TGT file name:\n %s\n",TGTFile);
+
+	char trash;
+	uint64_t exp;
+	FILE* fp = fopen(TGTFile,"r");
+	if (fp == NULL) {
+		printf("TGT not found\n");
+		exit(0);
+	}
+
+	fread(&(client->tgt.expiration), sizeof(uint64_t), 1, fp);
+	fscanf(fp,"\n");
+	fread(client->tgt.tgtData, 1, RECEIVE_TGT_SIZE, fp);
+	fscanf(fp,"\n");
+	fread(&(client->tgt.k_tgs), 1, crypto_aead_aes256gcm_KEYBYTES+crypto_aead_aes256gcm_NPUBBYTES, fp);
+	fscanf(fp,"\n");
+	fclose(fp);
+
+    uint64_t end;
+/*
+    		client->prefix = ccnxName_CreateFromCString("ccnx:/localhost/TGT");
+            _ccnx_RunTGTReq(client, client->count, 0);
+
+            client->prefix = ccnxName_CreateFromCString("ccnx:/localhost/TGS");
+            _ccnx_RunTGSReq(client, client->count, 0);
+
+
+            char interest_name[strlen("ccnx:/localhost/uci/edu/fileA") + 1];
+            memset(interest_name, 0, strlen("ccnx:/localhost/uci/edu/fileA")+ 1);
+            strcat(interest_name, "ccnx:/localhost/uci/edu/fileA");
+            if (verbose) printf("content_name: <%s>\n", interest_name);
+            client->prefix = ccnxName_CreateFromCString(interest_name);
+       		client->namespace = malloc(strlen("ccnx:/localhost/uci/edu/fileA") + 1);
+       		strcpy(client->namespace, "ccnx:/localhost/uci/edu/fileA");
+            _ccnx_RunKRBServiceReq(client, client->count, 0);
+*/
+     uint64_t start = current_time();
+     	 	 client->mode = CCNxConsumerMode_Flood;
+     	 	 client->prefix = ccnxName_CreateFromCString(ccnx_DefaultPrefix);
+       		_ccnx_RunRegServiceReq(client, client->count, 0);
+     end = current_time();
+     int delay;
+     if ((end-start) < 1000000) {
+    	 delay = 1000000;
+     } else {
+    	 delay = end-start;
+     }
+     printf("%f ",8*1000000*(10240.0 *(pings)/delay));
 }
 
 static bool
@@ -1204,7 +1276,6 @@ _ccnx_KRB_Commandline(CCNxConsumer *client, int argc, char *argv[argc]) {
                 	}
                 }
                 //printf("writable domain name: %s\n", client->domainname);
-
                 char TGT_name[strlen(argv[3])+10];
                 memset(TGT_name,0,strlen(argv[3])+10);
                 strcat(TGT_name,argv[3]);
@@ -1352,17 +1423,24 @@ main(int argc, char *argv[argc])
 {
 	parcSecurity_Init();
 
+// test variables:
 //	verbose = 1;
 	rtt_test = 1;
+	thput_test = 1;
 	pings = 1;
+	b_pings = 1;
 
-	FILE* fp = fopen("pings.csv","r");
-	if (fp == NULL) {
-		printf("TGS not found\n");
-		exit(0);
-	} else {
-		fscanf(fp,"%d",&pings);
-		fclose(fp);
+	if (rtt_test || thput_test) {
+		FILE* fp = fopen("pings.csv","r");
+		if (fp == NULL) {
+			printf("ping file not found\n");
+			exit(0);
+		} else {
+			fscanf(fp,"%d",&pings);
+			b_pings = pings;
+			//printf("file found; %d\n", pings);
+			fclose(fp);
+		}
 	}
 
 	int check = sodium_init();
@@ -1374,9 +1452,13 @@ main(int argc, char *argv[argc])
 
     bool runKRB = _ccnx_KRB_Commandline(client, argc, argv);
 
-    if (runKRB) {
-        _ccnx_RunKerberizedClient(client);
-    }
+	if (runKRB && !thput_test) {
+		_ccnx_RunKerberizedClient(client);
+	} else {
+		thput_test = 1;
+		_ccnx_RunFullKerberizedClient(client);
+	}
+
 
     ccnxVPN_Release(&client);
 
