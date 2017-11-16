@@ -1,6 +1,10886 @@
-14661363.138090 14583505.791478 14705855.953700 14549626.712916 14586284.227779 
-27029680.020655 28551288.720202 27396550.181721 27649124.109702 27591479.716035 
-38709220.137426 39600450.532469 38521946.035418 38531307.471242 38760350.130116 
-48656446.258964 49284414.901737 49522914.246981 49267001.498247 49360325.252729 
-58272330.672714 56850672.603417 60140572.715620 58623450.954742 58424103.936709 
-67068744.371367 65505561.748974 66737089.648093 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+14752147.002840 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+14659631.522860 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+14508166.599516 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+14635928.596250 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+14468679.600522 
+
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+27442553.041812 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+27343740.221116 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+27493254.218630 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+27347870.791993 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+27551623.559800 
+
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+Interest 401
+Sent content request
+Interest 402
+Sent content request
+Interest 403
+Sent content request
+Interest 404
+Sent content request
+Interest 405
+Sent content request
+Interest 406
+Sent content request
+Interest 407
+Sent content request
+Interest 408
+Sent content request
+Interest 409
+Sent content request
+Interest 410
+Sent content request
+Interest 411
+Sent content request
+Interest 412
+Sent content request
+Interest 413
+Sent content request
+Interest 414
+Sent content request
+Interest 415
+Sent content request
+Interest 416
+Sent content request
+Interest 417
+Sent content request
+Interest 418
+Sent content request
+Interest 419
+Sent content request
+Interest 420
+Sent content request
+Interest 421
+Sent content request
+Interest 422
+Sent content request
+Interest 423
+Sent content request
+Interest 424
+Sent content request
+Interest 425
+Sent content request
+Interest 426
+Sent content request
+Interest 427
+Sent content request
+Interest 428
+Sent content request
+Interest 429
+Sent content request
+Interest 430
+Sent content request
+Interest 431
+Sent content request
+Interest 432
+Sent content request
+Interest 433
+Sent content request
+Interest 434
+Sent content request
+Interest 435
+Sent content request
+Interest 436
+Sent content request
+Interest 437
+Sent content request
+Interest 438
+Sent content request
+Interest 439
+Sent content request
+Interest 440
+Sent content request
+Interest 441
+Sent content request
+Interest 442
+Sent content request
+Interest 443
+Sent content request
+Interest 444
+Sent content request
+Interest 445
+Sent content request
+Interest 446
+Sent content request
+Interest 447
+Sent content request
+Interest 448
+Sent content request
+Interest 449
+Sent content request
+Interest 450
+Sent content request
+Interest 451
+Sent content request
+Interest 452
+Sent content request
+Interest 453
+Sent content request
+Interest 454
+Sent content request
+Interest 455
+Sent content request
+Interest 456
+Sent content request
+Interest 457
+Sent content request
+Interest 458
+Sent content request
+Interest 459
+Sent content request
+Interest 460
+Sent content request
+Interest 461
+Sent content request
+Interest 462
+Sent content request
+Interest 463
+Sent content request
+Interest 464
+Sent content request
+Interest 465
+Sent content request
+Interest 466
+Sent content request
+Interest 467
+Sent content request
+Interest 468
+Sent content request
+Interest 469
+Sent content request
+Interest 470
+Sent content request
+Interest 471
+Sent content request
+Interest 472
+Sent content request
+Interest 473
+Sent content request
+Interest 474
+Sent content request
+Interest 475
+Sent content request
+Interest 476
+Sent content request
+Interest 477
+Sent content request
+Interest 478
+Sent content request
+Interest 479
+Sent content request
+Interest 480
+Sent content request
+Interest 481
+Sent content request
+Interest 482
+Sent content request
+Interest 483
+Sent content request
+Interest 484
+Sent content request
+Interest 485
+Sent content request
+Interest 486
+Sent content request
+Interest 487
+Sent content request
+Interest 488
+Sent content request
+Interest 489
+Sent content request
+Interest 490
+Sent content request
+Interest 491
+Sent content request
+Interest 492
+Sent content request
+Interest 493
+Sent content request
+Interest 494
+Sent content request
+Interest 495
+Sent content request
+Interest 496
+Sent content request
+Interest 497
+Sent content request
+Interest 498
+Sent content request
+Interest 499
+Sent content request
+Interest 500
+Sent content request
+Interest 501
+Sent content request
+Interest 502
+Sent content request
+Interest 503
+Sent content request
+Interest 504
+Sent content request
+Interest 505
+Sent content request
+Interest 506
+Sent content request
+Interest 507
+Sent content request
+Interest 508
+Sent content request
+Interest 509
+Sent content request
+Interest 510
+Sent content request
+Interest 511
+Sent content request
+Interest 512
+Sent content request
+Interest 513
+Sent content request
+Interest 514
+Sent content request
+Interest 515
+Sent content request
+Interest 516
+Sent content request
+Interest 517
+Sent content request
+Interest 518
+Sent content request
+Interest 519
+Sent content request
+Interest 520
+Sent content request
+Interest 521
+Sent content request
+Interest 522
+Sent content request
+Interest 523
+Sent content request
+Interest 524
+Sent content request
+Interest 525
+Sent content request
+Interest 526
+Sent content request
+Interest 527
+Sent content request
+Interest 528
+Sent content request
+Interest 529
+Sent content request
+Interest 530
+Sent content request
+Interest 531
+Sent content request
+Interest 532
+Sent content request
+Interest 533
+Sent content request
+Interest 534
+Sent content request
+Interest 535
+Sent content request
+Interest 536
+Sent content request
+Interest 537
+Sent content request
+Interest 538
+Sent content request
+Interest 539
+Sent content request
+Interest 540
+Sent content request
+Interest 541
+Sent content request
+Interest 542
+Sent content request
+Interest 543
+Sent content request
+Interest 544
+Sent content request
+Interest 545
+Sent content request
+Interest 546
+Sent content request
+Interest 547
+Sent content request
+Interest 548
+Sent content request
+Interest 549
+Sent content request
+Interest 550
+Sent content request
+Interest 551
+Sent content request
+Interest 552
+Sent content request
+Interest 553
+Sent content request
+Interest 554
+Sent content request
+Interest 555
+Sent content request
+Interest 556
+Sent content request
+Interest 557
+Sent content request
+Interest 558
+Sent content request
+Interest 559
+Sent content request
+Interest 560
+Sent content request
+Interest 561
+Sent content request
+Interest 562
+Sent content request
+Interest 563
+Sent content request
+Interest 564
+Sent content request
+Interest 565
+Sent content request
+Interest 566
+Sent content request
+Interest 567
+Sent content request
+Interest 568
+Sent content request
+Interest 569
+Sent content request
+Interest 570
+Sent content request
+Interest 571
+Sent content request
+Interest 572
+Sent content request
+Interest 573
+Sent content request
+Interest 574
+Sent content request
+Interest 575
+Sent content request
+Interest 576
+Sent content request
+Interest 577
+Sent content request
+Interest 578
+Sent content request
+Interest 579
+Sent content request
+Interest 580
+Sent content request
+Interest 581
+Sent content request
+Interest 582
+Sent content request
+Interest 583
+Sent content request
+Interest 584
+Sent content request
+Interest 585
+Sent content request
+Interest 586
+Sent content request
+Interest 587
+Sent content request
+Interest 588
+Sent content request
+Interest 589
+Sent content request
+Interest 590
+Sent content request
+Interest 591
+Sent content request
+Interest 592
+Sent content request
+Interest 593
+Sent content request
+Interest 594
+Sent content request
+Interest 595
+Sent content request
+Interest 596
+Sent content request
+Interest 597
+Sent content request
+Interest 598
+Sent content request
+Interest 599
+Sent content request
+Interest 600
+Sent content request
+37892857.390657 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+Interest 401
+Sent content request
+Interest 402
+Sent content request
+Interest 403
+Sent content request
+Interest 404
+Sent content request
+Interest 405
+Sent content request
+Interest 406
+Sent content request
+Interest 407
+Sent content request
+Interest 408
+Sent content request
+Interest 409
+Sent content request
+Interest 410
+Sent content request
+Interest 411
+Sent content request
+Interest 412
+Sent content request
+Interest 413
+Sent content request
+Interest 414
+Sent content request
+Interest 415
+Sent content request
+Interest 416
+Sent content request
+Interest 417
+Sent content request
+Interest 418
+Sent content request
+Interest 419
+Sent content request
+Interest 420
+Sent content request
+Interest 421
+Sent content request
+Interest 422
+Sent content request
+Interest 423
+Sent content request
+Interest 424
+Sent content request
+Interest 425
+Sent content request
+Interest 426
+Sent content request
+Interest 427
+Sent content request
+Interest 428
+Sent content request
+Interest 429
+Sent content request
+Interest 430
+Sent content request
+Interest 431
+Sent content request
+Interest 432
+Sent content request
+Interest 433
+Sent content request
+Interest 434
+Sent content request
+Interest 435
+Sent content request
+Interest 436
+Sent content request
+Interest 437
+Sent content request
+Interest 438
+Sent content request
+Interest 439
+Sent content request
+Interest 440
+Sent content request
+Interest 441
+Sent content request
+Interest 442
+Sent content request
+Interest 443
+Sent content request
+Interest 444
+Sent content request
+Interest 445
+Sent content request
+Interest 446
+Sent content request
+Interest 447
+Sent content request
+Interest 448
+Sent content request
+Interest 449
+Sent content request
+Interest 450
+Sent content request
+Interest 451
+Sent content request
+Interest 452
+Sent content request
+Interest 453
+Sent content request
+Interest 454
+Sent content request
+Interest 455
+Sent content request
+Interest 456
+Sent content request
+Interest 457
+Sent content request
+Interest 458
+Sent content request
+Interest 459
+Sent content request
+Interest 460
+Sent content request
+Interest 461
+Sent content request
+Interest 462
+Sent content request
+Interest 463
+Sent content request
+Interest 464
+Sent content request
+Interest 465
+Sent content request
+Interest 466
+Sent content request
+Interest 467
+Sent content request
+Interest 468
+Sent content request
+Interest 469
+Sent content request
+Interest 470
+Sent content request
+Interest 471
+Sent content request
+Interest 472
+Sent content request
+Interest 473
+Sent content request
+Interest 474
+Sent content request
+Interest 475
+Sent content request
+Interest 476
+Sent content request
+Interest 477
+Sent content request
+Interest 478
+Sent content request
+Interest 479
+Sent content request
+Interest 480
+Sent content request
+Interest 481
+Sent content request
+Interest 482
+Sent content request
+Interest 483
+Sent content request
+Interest 484
+Sent content request
+Interest 485
+Sent content request
+Interest 486
+Sent content request
+Interest 487
+Sent content request
+Interest 488
+Sent content request
+Interest 489
+Sent content request
+Interest 490
+Sent content request
+Interest 491
+Sent content request
+Interest 492
+Sent content request
+Interest 493
+Sent content request
+Interest 494
+Sent content request
+Interest 495
+Sent content request
+Interest 496
+Sent content request
+Interest 497
+Sent content request
+Interest 498
+Sent content request
+Interest 499
+Sent content request
+Interest 500
+Sent content request
+Interest 501
+Sent content request
+Interest 502
+Sent content request
+Interest 503
+Sent content request
+Interest 504
+Sent content request
+Interest 505
+Sent content request
+Interest 506
+Sent content request
+Interest 507
+Sent content request
+Interest 508
+Sent content request
+Interest 509
+Sent content request
+Interest 510
+Sent content request
+Interest 511
+Sent content request
+Interest 512
+Sent content request
+Interest 513
+Sent content request
+Interest 514
+Sent content request
+Interest 515
+Sent content request
+Interest 516
+Sent content request
+Interest 517
+Sent content request
+Interest 518
+Sent content request
+Interest 519
+Sent content request
+Interest 520
+Sent content request
+Interest 521
+Sent content request
+Interest 522
+Sent content request
+Interest 523
+Sent content request
+Interest 524
+Sent content request
+Interest 525
+Sent content request
+Interest 526
+Sent content request
+Interest 527
+Sent content request
+Interest 528
+Sent content request
+Interest 529
+Sent content request
+Interest 530
+Sent content request
+Interest 531
+Sent content request
+Interest 532
+Sent content request
+Interest 533
+Sent content request
+Interest 534
+Sent content request
+Interest 535
+Sent content request
+Interest 536
+Sent content request
+Interest 537
+Sent content request
+Interest 538
+Sent content request
+Interest 539
+Sent content request
+Interest 540
+Sent content request
+Interest 541
+Sent content request
+Interest 542
+Sent content request
+Interest 543
+Sent content request
+Interest 544
+Sent content request
+Interest 545
+Sent content request
+Interest 546
+Sent content request
+Interest 547
+Sent content request
+Interest 548
+Sent content request
+Interest 549
+Sent content request
+Interest 550
+Sent content request
+Interest 551
+Sent content request
+Interest 552
+Sent content request
+Interest 553
+Sent content request
+Interest 554
+Sent content request
+Interest 555
+Sent content request
+Interest 556
+Sent content request
+Interest 557
+Sent content request
+Interest 558
+Sent content request
+Interest 559
+Sent content request
+Interest 560
+Sent content request
+Interest 561
+Sent content request
+Interest 562
+Sent content request
+Interest 563
+Sent content request
+Interest 564
+Sent content request
+Interest 565
+Sent content request
+Interest 566
+Sent content request
+Interest 567
+Sent content request
+Interest 568
+Sent content request
+Interest 569
+Sent content request
+Interest 570
+Sent content request
+Interest 571
+Sent content request
+Interest 572
+Sent content request
+Interest 573
+Sent content request
+Interest 574
+Sent content request
+Interest 575
+Sent content request
+Interest 576
+Sent content request
+Interest 577
+Sent content request
+Interest 578
+Sent content request
+Interest 579
+Sent content request
+Interest 580
+Sent content request
+Interest 581
+Sent content request
+Interest 582
+Sent content request
+Interest 583
+Sent content request
+Interest 584
+Sent content request
+Interest 585
+Sent content request
+Interest 586
+Sent content request
+Interest 587
+Sent content request
+Interest 588
+Sent content request
+Interest 589
+Sent content request
+Interest 590
+Sent content request
+Interest 591
+Sent content request
+Interest 592
+Sent content request
+Interest 593
+Sent content request
+Interest 594
+Sent content request
+Interest 595
+Sent content request
+Interest 596
+Sent content request
+Interest 597
+Sent content request
+Interest 598
+Sent content request
+Interest 599
+Sent content request
+Interest 600
+Sent content request
+38503146.319319 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+Interest 401
+Sent content request
+Interest 402
+Sent content request
+Interest 403
+Sent content request
+Interest 404
+Sent content request
+Interest 405
+Sent content request
+Interest 406
+Sent content request
+Interest 407
+Sent content request
+Interest 408
+Sent content request
+Interest 409
+Sent content request
+Interest 410
+Sent content request
+Interest 411
+Sent content request
+Interest 412
+Sent content request
+Interest 413
+Sent content request
+Interest 414
+Sent content request
+Interest 415
+Sent content request
+Interest 416
+Sent content request
+Interest 417
+Sent content request
+Interest 418
+Sent content request
+Interest 419
+Sent content request
+Interest 420
+Sent content request
+Interest 421
+Sent content request
+Interest 422
+Sent content request
+Interest 423
+Sent content request
+Interest 424
+Sent content request
+Interest 425
+Sent content request
+Interest 426
+Sent content request
+Interest 427
+Sent content request
+Interest 428
+Sent content request
+Interest 429
+Sent content request
+Interest 430
+Sent content request
+Interest 431
+Sent content request
+Interest 432
+Sent content request
+Interest 433
+Sent content request
+Interest 434
+Sent content request
+Interest 435
+Sent content request
+Interest 436
+Sent content request
+Interest 437
+Sent content request
+Interest 438
+Sent content request
+Interest 439
+Sent content request
+Interest 440
+Sent content request
+Interest 441
+Sent content request
+Interest 442
+Sent content request
+Interest 443
+Sent content request
+Interest 444
+Sent content request
+Interest 445
+Sent content request
+Interest 446
+Sent content request
+Interest 447
+Sent content request
+Interest 448
+Sent content request
+Interest 449
+Sent content request
+Interest 450
+Sent content request
+Interest 451
+Sent content request
+Interest 452
+Sent content request
+Interest 453
+Sent content request
+Interest 454
+Sent content request
+Interest 455
+Sent content request
+Interest 456
+Sent content request
+Interest 457
+Sent content request
+Interest 458
+Sent content request
+Interest 459
+Sent content request
+Interest 460
+Sent content request
+Interest 461
+Sent content request
+Interest 462
+Sent content request
+Interest 463
+Sent content request
+Interest 464
+Sent content request
+Interest 465
+Sent content request
+Interest 466
+Sent content request
+Interest 467
+Sent content request
+Interest 468
+Sent content request
+Interest 469
+Sent content request
+Interest 470
+Sent content request
+Interest 471
+Sent content request
+Interest 472
+Sent content request
+Interest 473
+Sent content request
+Interest 474
+Sent content request
+Interest 475
+Sent content request
+Interest 476
+Sent content request
+Interest 477
+Sent content request
+Interest 478
+Sent content request
+Interest 479
+Sent content request
+Interest 480
+Sent content request
+Interest 481
+Sent content request
+Interest 482
+Sent content request
+Interest 483
+Sent content request
+Interest 484
+Sent content request
+Interest 485
+Sent content request
+Interest 486
+Sent content request
+Interest 487
+Sent content request
+Interest 488
+Sent content request
+Interest 489
+Sent content request
+Interest 490
+Sent content request
+Interest 491
+Sent content request
+Interest 492
+Sent content request
+Interest 493
+Sent content request
+Interest 494
+Sent content request
+Interest 495
+Sent content request
+Interest 496
+Sent content request
+Interest 497
+Sent content request
+Interest 498
+Sent content request
+Interest 499
+Sent content request
+Interest 500
+Sent content request
+Interest 501
+Sent content request
+Interest 502
+Sent content request
+Interest 503
+Sent content request
+Interest 504
+Sent content request
+Interest 505
+Sent content request
+Interest 506
+Sent content request
+Interest 507
+Sent content request
+Interest 508
+Sent content request
+Interest 509
+Sent content request
+Interest 510
+Sent content request
+Interest 511
+Sent content request
+Interest 512
+Sent content request
+Interest 513
+Sent content request
+Interest 514
+Sent content request
+Interest 515
+Sent content request
+Interest 516
+Sent content request
+Interest 517
+Sent content request
+Interest 518
+Sent content request
+Interest 519
+Sent content request
+Interest 520
+Sent content request
+Interest 521
+Sent content request
+Interest 522
+Sent content request
+Interest 523
+Sent content request
+Interest 524
+Sent content request
+Interest 525
+Sent content request
+Interest 526
+Sent content request
+Interest 527
+Sent content request
+Interest 528
+Sent content request
+Interest 529
+Sent content request
+Interest 530
+Sent content request
+Interest 531
+Sent content request
+Interest 532
+Sent content request
+Interest 533
+Sent content request
+Interest 534
+Sent content request
+Interest 535
+Sent content request
+Interest 536
+Sent content request
+Interest 537
+Sent content request
+Interest 538
+Sent content request
+Interest 539
+Sent content request
+Interest 540
+Sent content request
+Interest 541
+Sent content request
+Interest 542
+Sent content request
+Interest 543
+Sent content request
+Interest 544
+Sent content request
+Interest 545
+Sent content request
+Interest 546
+Sent content request
+Interest 547
+Sent content request
+Interest 548
+Sent content request
+Interest 549
+Sent content request
+Interest 550
+Sent content request
+Interest 551
+Sent content request
+Interest 552
+Sent content request
+Interest 553
+Sent content request
+Interest 554
+Sent content request
+Interest 555
+Sent content request
+Interest 556
+Sent content request
+Interest 557
+Sent content request
+Interest 558
+Sent content request
+Interest 559
+Sent content request
+Interest 560
+Sent content request
+Interest 561
+Sent content request
+Interest 562
+Sent content request
+Interest 563
+Sent content request
+Interest 564
+Sent content request
+Interest 565
+Sent content request
+Interest 566
+Sent content request
+Interest 567
+Sent content request
+Interest 568
+Sent content request
+Interest 569
+Sent content request
+Interest 570
+Sent content request
+Interest 571
+Sent content request
+Interest 572
+Sent content request
+Interest 573
+Sent content request
+Interest 574
+Sent content request
+Interest 575
+Sent content request
+Interest 576
+Sent content request
+Interest 577
+Sent content request
+Interest 578
+Sent content request
+Interest 579
+Sent content request
+Interest 580
+Sent content request
+Interest 581
+Sent content request
+Interest 582
+Sent content request
+Interest 583
+Sent content request
+Interest 584
+Sent content request
+Interest 585
+Sent content request
+Interest 586
+Sent content request
+Interest 587
+Sent content request
+Interest 588
+Sent content request
+Interest 589
+Sent content request
+Interest 590
+Sent content request
+Interest 591
+Sent content request
+Interest 592
+Sent content request
+Interest 593
+Sent content request
+Interest 594
+Sent content request
+Interest 595
+Sent content request
+Interest 596
+Sent content request
+Interest 597
+Sent content request
+Interest 598
+Sent content request
+Interest 599
+Sent content request
+Interest 600
+Sent content request
+38389173.053537 
+Issuing authorized interest for content <ccnx:/localhost/uci/edu/fileA>.
+writable domain name: ccnx:.localhost
+content_name: <ccnx:/localhost/uci/edu/fileA>
+running full req
+Starting content request for user <ivan>.
+Interest 1
+Sent content request
+Interest 2
+Sent content request
+Interest 3
+Sent content request
+Interest 4
+Sent content request
+Interest 5
+Sent content request
+Interest 6
+Sent content request
+Interest 7
+Sent content request
+Interest 8
+Sent content request
+Interest 9
+Sent content request
+Interest 10
+Sent content request
+Interest 11
+Sent content request
+Interest 12
+Sent content request
+Interest 13
+Sent content request
+Interest 14
+Sent content request
+Interest 15
+Sent content request
+Interest 16
+Sent content request
+Interest 17
+Sent content request
+Interest 18
+Sent content request
+Interest 19
+Sent content request
+Interest 20
+Sent content request
+Interest 21
+Sent content request
+Interest 22
+Sent content request
+Interest 23
+Sent content request
+Interest 24
+Sent content request
+Interest 25
+Sent content request
+Interest 26
+Sent content request
+Interest 27
+Sent content request
+Interest 28
+Sent content request
+Interest 29
+Sent content request
+Interest 30
+Sent content request
+Interest 31
+Sent content request
+Interest 32
+Sent content request
+Interest 33
+Sent content request
+Interest 34
+Sent content request
+Interest 35
+Sent content request
+Interest 36
+Sent content request
+Interest 37
+Sent content request
+Interest 38
+Sent content request
+Interest 39
+Sent content request
+Interest 40
+Sent content request
+Interest 41
+Sent content request
+Interest 42
+Sent content request
+Interest 43
+Sent content request
+Interest 44
+Sent content request
+Interest 45
+Sent content request
+Interest 46
+Sent content request
+Interest 47
+Sent content request
+Interest 48
+Sent content request
+Interest 49
+Sent content request
+Interest 50
+Sent content request
+Interest 51
+Sent content request
+Interest 52
+Sent content request
+Interest 53
+Sent content request
+Interest 54
+Sent content request
+Interest 55
+Sent content request
+Interest 56
+Sent content request
+Interest 57
+Sent content request
+Interest 58
+Sent content request
+Interest 59
+Sent content request
+Interest 60
+Sent content request
+Interest 61
+Sent content request
+Interest 62
+Sent content request
+Interest 63
+Sent content request
+Interest 64
+Sent content request
+Interest 65
+Sent content request
+Interest 66
+Sent content request
+Interest 67
+Sent content request
+Interest 68
+Sent content request
+Interest 69
+Sent content request
+Interest 70
+Sent content request
+Interest 71
+Sent content request
+Interest 72
+Sent content request
+Interest 73
+Sent content request
+Interest 74
+Sent content request
+Interest 75
+Sent content request
+Interest 76
+Sent content request
+Interest 77
+Sent content request
+Interest 78
+Sent content request
+Interest 79
+Sent content request
+Interest 80
+Sent content request
+Interest 81
+Sent content request
+Interest 82
+Sent content request
+Interest 83
+Sent content request
+Interest 84
+Sent content request
+Interest 85
+Sent content request
+Interest 86
+Sent content request
+Interest 87
+Sent content request
+Interest 88
+Sent content request
+Interest 89
+Sent content request
+Interest 90
+Sent content request
+Interest 91
+Sent content request
+Interest 92
+Sent content request
+Interest 93
+Sent content request
+Interest 94
+Sent content request
+Interest 95
+Sent content request
+Interest 96
+Sent content request
+Interest 97
+Sent content request
+Interest 98
+Sent content request
+Interest 99
+Sent content request
+Interest 100
+Sent content request
+Interest 101
+Sent content request
+Interest 102
+Sent content request
+Interest 103
+Sent content request
+Interest 104
+Sent content request
+Interest 105
+Sent content request
+Interest 106
+Sent content request
+Interest 107
+Sent content request
+Interest 108
+Sent content request
+Interest 109
+Sent content request
+Interest 110
+Sent content request
+Interest 111
+Sent content request
+Interest 112
+Sent content request
+Interest 113
+Sent content request
+Interest 114
+Sent content request
+Interest 115
+Sent content request
+Interest 116
+Sent content request
+Interest 117
+Sent content request
+Interest 118
+Sent content request
+Interest 119
+Sent content request
+Interest 120
+Sent content request
+Interest 121
+Sent content request
+Interest 122
+Sent content request
+Interest 123
+Sent content request
+Interest 124
+Sent content request
+Interest 125
+Sent content request
+Interest 126
+Sent content request
+Interest 127
+Sent content request
+Interest 128
+Sent content request
+Interest 129
+Sent content request
+Interest 130
+Sent content request
+Interest 131
+Sent content request
+Interest 132
+Sent content request
+Interest 133
+Sent content request
+Interest 134
+Sent content request
+Interest 135
+Sent content request
+Interest 136
+Sent content request
+Interest 137
+Sent content request
+Interest 138
+Sent content request
+Interest 139
+Sent content request
+Interest 140
+Sent content request
+Interest 141
+Sent content request
+Interest 142
+Sent content request
+Interest 143
+Sent content request
+Interest 144
+Sent content request
+Interest 145
+Sent content request
+Interest 146
+Sent content request
+Interest 147
+Sent content request
+Interest 148
+Sent content request
+Interest 149
+Sent content request
+Interest 150
+Sent content request
+Interest 151
+Sent content request
+Interest 152
+Sent content request
+Interest 153
+Sent content request
+Interest 154
+Sent content request
+Interest 155
+Sent content request
+Interest 156
+Sent content request
+Interest 157
+Sent content request
+Interest 158
+Sent content request
+Interest 159
+Sent content request
+Interest 160
+Sent content request
+Interest 161
+Sent content request
+Interest 162
+Sent content request
+Interest 163
+Sent content request
+Interest 164
+Sent content request
+Interest 165
+Sent content request
+Interest 166
+Sent content request
+Interest 167
+Sent content request
+Interest 168
+Sent content request
+Interest 169
+Sent content request
+Interest 170
+Sent content request
+Interest 171
+Sent content request
+Interest 172
+Sent content request
+Interest 173
+Sent content request
+Interest 174
+Sent content request
+Interest 175
+Sent content request
+Interest 176
+Sent content request
+Interest 177
+Sent content request
+Interest 178
+Sent content request
+Interest 179
+Sent content request
+Interest 180
+Sent content request
+Interest 181
+Sent content request
+Interest 182
+Sent content request
+Interest 183
+Sent content request
+Interest 184
+Sent content request
+Interest 185
+Sent content request
+Interest 186
+Sent content request
+Interest 187
+Sent content request
+Interest 188
+Sent content request
+Interest 189
+Sent content request
+Interest 190
+Sent content request
+Interest 191
+Sent content request
+Interest 192
+Sent content request
+Interest 193
+Sent content request
+Interest 194
+Sent content request
+Interest 195
+Sent content request
+Interest 196
+Sent content request
+Interest 197
+Sent content request
+Interest 198
+Sent content request
+Interest 199
+Sent content request
+Interest 200
+Sent content request
+Interest 201
+Sent content request
+Interest 202
+Sent content request
+Interest 203
+Sent content request
+Interest 204
+Sent content request
+Interest 205
+Sent content request
+Interest 206
+Sent content request
+Interest 207
+Sent content request
+Interest 208
+Sent content request
+Interest 209
+Sent content request
+Interest 210
+Sent content request
+Interest 211
+Sent content request
+Interest 212
+Sent content request
+Interest 213
+Sent content request
+Interest 214
+Sent content request
+Interest 215
+Sent content request
+Interest 216
+Sent content request
+Interest 217
+Sent content request
+Interest 218
+Sent content request
+Interest 219
+Sent content request
+Interest 220
+Sent content request
+Interest 221
+Sent content request
+Interest 222
+Sent content request
+Interest 223
+Sent content request
+Interest 224
+Sent content request
+Interest 225
+Sent content request
+Interest 226
+Sent content request
+Interest 227
+Sent content request
+Interest 228
+Sent content request
+Interest 229
+Sent content request
+Interest 230
+Sent content request
+Interest 231
+Sent content request
+Interest 232
+Sent content request
+Interest 233
+Sent content request
+Interest 234
+Sent content request
+Interest 235
+Sent content request
+Interest 236
+Sent content request
+Interest 237
+Sent content request
+Interest 238
+Sent content request
+Interest 239
+Sent content request
+Interest 240
+Sent content request
+Interest 241
+Sent content request
+Interest 242
+Sent content request
+Interest 243
+Sent content request
+Interest 244
+Sent content request
+Interest 245
+Sent content request
+Interest 246
+Sent content request
+Interest 247
+Sent content request
+Interest 248
+Sent content request
+Interest 249
+Sent content request
+Interest 250
+Sent content request
+Interest 251
+Sent content request
+Interest 252
+Sent content request
+Interest 253
+Sent content request
+Interest 254
+Sent content request
+Interest 255
+Sent content request
+Interest 256
+Sent content request
+Interest 257
+Sent content request
+Interest 258
+Sent content request
+Interest 259
+Sent content request
+Interest 260
+Sent content request
+Interest 261
+Sent content request
+Interest 262
+Sent content request
+Interest 263
+Sent content request
+Interest 264
+Sent content request
+Interest 265
+Sent content request
+Interest 266
+Sent content request
+Interest 267
+Sent content request
+Interest 268
+Sent content request
+Interest 269
+Sent content request
+Interest 270
+Sent content request
+Interest 271
+Sent content request
+Interest 272
+Sent content request
+Interest 273
+Sent content request
+Interest 274
+Sent content request
+Interest 275
+Sent content request
+Interest 276
+Sent content request
+Interest 277
+Sent content request
+Interest 278
+Sent content request
+Interest 279
+Sent content request
+Interest 280
+Sent content request
+Interest 281
+Sent content request
+Interest 282
+Sent content request
+Interest 283
+Sent content request
+Interest 284
+Sent content request
+Interest 285
+Sent content request
+Interest 286
+Sent content request
+Interest 287
+Sent content request
+Interest 288
+Sent content request
+Interest 289
+Sent content request
+Interest 290
+Sent content request
+Interest 291
+Sent content request
+Interest 292
+Sent content request
+Interest 293
+Sent content request
+Interest 294
+Sent content request
+Interest 295
+Sent content request
+Interest 296
+Sent content request
+Interest 297
+Sent content request
+Interest 298
+Sent content request
+Interest 299
+Sent content request
+Interest 300
+Sent content request
+Interest 301
+Sent content request
+Interest 302
+Sent content request
+Interest 303
+Sent content request
+Interest 304
+Sent content request
+Interest 305
+Sent content request
+Interest 306
+Sent content request
+Interest 307
+Sent content request
+Interest 308
+Sent content request
+Interest 309
+Sent content request
+Interest 310
+Sent content request
+Interest 311
+Sent content request
+Interest 312
+Sent content request
+Interest 313
+Sent content request
+Interest 314
+Sent content request
+Interest 315
+Sent content request
+Interest 316
+Sent content request
+Interest 317
+Sent content request
+Interest 318
+Sent content request
+Interest 319
+Sent content request
+Interest 320
+Sent content request
+Interest 321
+Sent content request
+Interest 322
+Sent content request
+Interest 323
+Sent content request
+Interest 324
+Sent content request
+Interest 325
+Sent content request
+Interest 326
+Sent content request
+Interest 327
+Sent content request
+Interest 328
+Sent content request
+Interest 329
+Sent content request
+Interest 330
+Sent content request
+Interest 331
+Sent content request
+Interest 332
+Sent content request
+Interest 333
+Sent content request
+Interest 334
+Sent content request
+Interest 335
+Sent content request
+Interest 336
+Sent content request
+Interest 337
+Sent content request
+Interest 338
+Sent content request
+Interest 339
+Sent content request
+Interest 340
+Sent content request
+Interest 341
+Sent content request
+Interest 342
+Sent content request
+Interest 343
+Sent content request
+Interest 344
+Sent content request
+Interest 345
+Sent content request
+Interest 346
+Sent content request
+Interest 347
+Sent content request
+Interest 348
+Sent content request
+Interest 349
+Sent content request
+Interest 350
+Sent content request
+Interest 351
+Sent content request
+Interest 352
+Sent content request
+Interest 353
+Sent content request
+Interest 354
+Sent content request
+Interest 355
+Sent content request
+Interest 356
+Sent content request
+Interest 357
+Sent content request
+Interest 358
+Sent content request
+Interest 359
+Sent content request
+Interest 360
+Sent content request
+Interest 361
+Sent content request
+Interest 362
+Sent content request
+Interest 363
+Sent content request
+Interest 364
+Sent content request
+Interest 365
+Sent content request
+Interest 366
+Sent content request
+Interest 367
+Sent content request
+Interest 368
+Sent content request
+Interest 369
+Sent content request
+Interest 370
+Sent content request
+Interest 371
+Sent content request
+Interest 372
+Sent content request
+Interest 373
+Sent content request
+Interest 374
+Sent content request
+Interest 375
+Sent content request
+Interest 376
+Sent content request
+Interest 377
+Sent content request
+Interest 378
+Sent content request
+Interest 379
+Sent content request
+Interest 380
+Sent content request
+Interest 381
+Sent content request
+Interest 382
+Sent content request
+Interest 383
+Sent content request
+Interest 384
+Sent content request
+Interest 385
+Sent content request
+Interest 386
+Sent content request
+Interest 387
+Sent content request
+Interest 388
+Sent content request
+Interest 389
+Sent content request
+Interest 390
+Sent content request
+Interest 391
+Sent content request
+Interest 392
+Sent content request
+Interest 393
+Sent content request
+Interest 394
+Sent content request
+Interest 395
+Sent content request
+Interest 396
+Sent content request
+Interest 397
+Sent content request
+Interest 398
+Sent content request
+Interest 399
+Sent content request
+Interest 400
+Sent content request
+Interest 401
+Sent content request
+Interest 402
+Sent content request
+Interest 403
+Sent content request
+Interest 404
+Sent content request
+Interest 405
+Sent content request
+Interest 406
+Sent content request
+Interest 407
+Sent content request
+Interest 408
+Sent content request
+Interest 409
+Sent content request
+Interest 410
+Sent content request
+Interest 411
+Sent content request
+Interest 412
+Sent content request
+Interest 413
+Sent content request
+Interest 414
+Sent content request
+Interest 415
+Sent content request
+Interest 416
+Sent content request
+Interest 417
+Sent content request
+Interest 418
+Sent content request
+Interest 419
+Sent content request
+Interest 420
+Sent content request
+Interest 421
+Sent content request
+Interest 422
+Sent content request
+Interest 423
+Sent content request
+Interest 424
+Sent content request
+Interest 425
+Sent content request
+Interest 426
+Sent content request
+Interest 427
+Sent content request
+Interest 428
+Sent content request
+Interest 429
+Sent content request
+Interest 430
+Sent content request
+Interest 431
+Sent content request
+Interest 432
+Sent content request
+Interest 433
+Sent content request
+Interest 434
+Sent content request
+Interest 435
+Sent content request
+Interest 436
+Sent content request
+Interest 437
+Sent content request
+Interest 438
+Sent content request
+Interest 439
+Sent content request
+Interest 440
+Sent content request
+Interest 441
+Sent content request
+Interest 442
+Sent content request
+Interest 443
+Sent content request
+Interest 444
+Sent content request
+Interest 445
+Sent content request
+Interest 446
+Sent content request
+Interest 447
+Sent content request
+Interest 448
+Sent content request
+Interest 449
+Sent content request
+Interest 450
+Sent content request
+Interest 451
+Sent content request
+Interest 452
+Sent content request
+Interest 453
+Sent content request
+Interest 454
+Sent content request
+Interest 455
+Sent content request
+Interest 456
+Sent content request
+Interest 457
+Sent content request
+Interest 458
+Sent content request
+Interest 459
+Sent content request
+Interest 460
+Sent content request
+Interest 461
+Sent content request
+Interest 462
+Sent content request
+Interest 463
+Sent content request
+Interest 464
+Sent content request
+Interest 465
+Sent content request
+Interest 466
+Sent content request
+Interest 467
+Sent content request
+Interest 468
+Sent content request
+Interest 469
+Sent content request
+Interest 470
+Sent content request
+Interest 471
+Sent content request
+Interest 472
+Sent content request
+Interest 473
+Sent content request
+Interest 474
+Sent content request
+Interest 475
+Sent content request
+Interest 476
+Sent content request
+Interest 477
+Sent content request
+Interest 478
+Sent content request
+Interest 479
+Sent content request
+Interest 480
+Sent content request
+Interest 481
+Sent content request
+Interest 482
+Sent content request
+Interest 483
+Sent content request
+Interest 484
+Sent content request
+Interest 485
+Sent content request
+Interest 486
+Sent content request
+Interest 487
+Sent content request
+Interest 488
+Sent content request
+Interest 489
+Sent content request
+Interest 490
+Sent content request
+Interest 491
+Sent content request
+Interest 492
+Sent content request
+Interest 493
+Sent content request
+Interest 494
+Sent content request
+Interest 495
+Sent content request
+Interest 496
+Sent content request
+Interest 497
+Sent content request
+Interest 498
+Sent content request
+Interest 499
+Sent content request
+Interest 500
+Sent content request
+Interest 501
+Sent content request
+Interest 502
+Sent content request
+Interest 503
+Sent content request
+Interest 504
+Sent content request
+Interest 505
+Sent content request
+Interest 506
+Sent content request
+Interest 507
+Sent content request
+Interest 508
+Sent content request
+Interest 509
+Sent content request
+Interest 510
+Sent content request
+Interest 511
+Sent content request
+Interest 512
+Sent content request
+Interest 513
+Sent content request
+Interest 514
+Sent content request
+Interest 515
+Sent content request
+Interest 516
+Sent content request
+Interest 517
+Sent content request
+Interest 518
+Sent content request
+Interest 519
+Sent content request
+Interest 520
+Sent content request
+Interest 521
+Sent content request
+Interest 522
+Sent content request
+Interest 523
+Sent content request
+Interest 524
+Sent content request
+Interest 525
+Sent content request
+Interest 526
+Sent content request
+Interest 527
+Sent content request
+Interest 528
+Sent content request
+Interest 529
+Sent content request
+Interest 530
+Sent content request
+Interest 531
+Sent content request
+Interest 532
+Sent content request
+Interest 533
+Sent content request
+Interest 534
+Sent content request
+Interest 535
+Sent content request
+Interest 536
+Sent content request
+Interest 537
+Sent content request
+Interest 538
+Sent content request
+Interest 539
+Sent content request
+Interest 540
+Sent content request
+Interest 541
+Sent content request
+Interest 542
+Sent content request
+Interest 543
+Sent content request
+Interest 544
+Sent content request
+Interest 545
+Sent content request
+Interest 546
+Sent content request
+Interest 547
+Sent content request
+Interest 548
+Sent content request
+Interest 549
+Sent content request
+Interest 550
+Sent content request
+Interest 551
+Sent content request
+Interest 552
+Sent content request
+Interest 553
+Sent content request
+Interest 554
+Sent content request
+Interest 555
+Sent content request
+Interest 556
+Sent content request
+Interest 557
+Sent content request
+Interest 558
+Sent content request
+Interest 559
+Sent content request
+Interest 560
+Sent content request
+Interest 561
+Sent content request
+Interest 562
+Sent content request
+Interest 563
+Sent content request
+Interest 564
+Sent content request
+Interest 565
+Sent content request
+Interest 566
+Sent content request
+Interest 567
+Sent content request
+Interest 568
+Sent content request
+Interest 569
+Sent content request
+Interest 570
+Sent content request
+Interest 571
+Sent content request
+Interest 572
+Sent content request
+Interest 573
+Sent content request
+Interest 574
+Sent content request
+Interest 575
+Sent content request
+Interest 576
+Sent content request
+Interest 577
+Sent content request
+Interest 578
+Sent content request
+Interest 579
+Sent content request
+Interest 580
+Sent content request
+Interest 581
+Sent content request
+Interest 582
+Sent content request
+Interest 583
+Sent content request
+Interest 584
+Sent content request
+Interest 585
+Sent content request
+Interest 586
+Sent content request
+Interest 587
+Sent content request
+Interest 588
+Sent content request
+Interest 589
+Sent content request
+Interest 590
+Sent content request
+Interest 591
+Sent content request
+Interest 592
+Sent content request
+Interest 593
+Sent content request
+Interest 594
+Sent content request
+Interest 595
+Sent content request
+Interest 596
+Sent content request
+Interest 597
+Sent content request
+Interest 598
+Sent content request
+Interest 599
+Sent content request
+Interest 600
+Sent content request
+38605119.859504 
