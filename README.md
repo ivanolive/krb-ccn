@@ -9,6 +9,13 @@ A detailed description of KRB-CCN can be found in the corresponding research pap
 
 - TODO: Add link here
 
-# Citation information:
-
-
+# Citation Information (bibtex): 
+```latex
+@INPROCEEDINGS{
+    krb-ccn,
+    AUTHOR="Ivan O. Nunes and Gene Tsudik",
+    TITLE="KRB-CCN: Lightweight Authentication & Access Control for Private Content-Centric Networks",
+    BOOKTITLE="ACNS 2018 Applied Cryptography & Network security",
+    YEAR=2018
+}
+```
