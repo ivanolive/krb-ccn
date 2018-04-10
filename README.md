@@ -7,7 +7,7 @@ These issues motivate our design of KRB-CCN - a complete authorization and acces
 In this REPO we provide KRB-CCN implementation using CCNx software stack and the crypto-lib Sodium.
 A detailed description of KRB-CCN can be found in the corresponding research paper:
 
-- ./paper/krbccn.pdf
+- https://github.com/ivanolive/krb-ccn/blob/master/paper/krbccn.pdf
 
 # Citation Information (bibtex): 
 ```latex
